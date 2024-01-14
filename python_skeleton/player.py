@@ -144,20 +144,7 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
 
 
-    def get_action(self, game_state, round_state, active):
-        '''
-        Where the magic happens - your code should implement this function.
-        Called any time the engine needs an action from your bot.
-
-        Arguments:
-        game_state: the GameState object.
-        round_state: the RoundState object.
-        active: your player's index.
-
-        Returns:
-        Your action.
-        '''
-        def simulate_rest_of_game_postflop_preauction(my_hole, flop, num_sims):
+    def simulate_rest_of_game_postflop_preauction(self, my_hole, flop, num_sims):
             revealed_cards = [item for item in my_hole + flop]
             print(revealed_cards)
 
@@ -186,8 +173,21 @@ class Player(Bot):
                     my_wins_wo_auction += 1
 
             return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims
-        
-        
+
+    def get_action(self, game_state, round_state, active):
+        '''
+        Where the magic happens - your code should implement this function.
+        Called any time the engine needs an action from your bot.
+
+        Arguments:
+        game_state: the GameState object.
+        round_state: the RoundState object.
+        active: your player's index.
+
+        Returns:
+        Your action.
+        '''
+
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
         street = round_state.street  # 0, 3, 4, or 5 representing pre-flop, flop, turn, or river respectively
