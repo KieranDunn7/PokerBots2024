@@ -24,6 +24,18 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+
+        self.prelop_rankings = {}
+        ranks = {"2":1, "3":2, "4":3, "5":4, "6":5, "7":6, "8":7, "9":8, "T":9, "J":10, "Q": 11, "K": 12, "A":13}
+
+
+        for rank in ranks:
+            self.preflop_rankings.add(rank)
+            
+
+        
+
+
         pass
 
     def handle_new_round(self, game_state, round_state, active):
@@ -43,6 +55,8 @@ class Player(Bot):
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
+
+
 
 
         ###
