@@ -273,11 +273,14 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
 
-        if street == 3: ### Post-flop, pre-bid
-            prob_win_w_auction, prob_win_wo_auction = simulate_rest_of_game_postflop_preauction(board_cards, 1000)
-        
+        if street == 3:
+            if BidAction in legal_actions: ### Post-flop, pre-auction
+                prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
+            else: ### Post-flop, post-auction
+                prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
 
-
+        if street == 4:
+            
 
         if BidAction in legal_actions:
 
