@@ -143,23 +143,31 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
 
-        
-
-        #### HANDLE AUCTION
-        if street == 0 and not self.big_blind:
-            if self.pfp < 0.52:
-                return FoldAction()
-            return CallAction()
-        
-        if BidAction in legal_actions:
-            
-
-
-
         if RaiseAction in legal_actions:
            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
            min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
+            
+        if street == 0:
+            pfp = self.pfp
+            if not self.big_blind:
+                if pfp < 0.52:
+                    return FoldAction()
+                return CallAction()
+            if self.big_blind:
+                if pfp >= 0.8:
+                    return RaiseAction(min_raise)
+                if (0.85-pfp) * opp_contribution > 1:
+                    return FoldAction()
+                return CallAction()
+                    
+                
+        if BidAction in legal_actions:
+            pass
+
+
+
+        
         
         if RaiseAction in legal_actions and random.random() < 0.3:
             return RaiseAction(random.randint(min_raise, max_raise))
