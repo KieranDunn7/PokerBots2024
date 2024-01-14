@@ -76,11 +76,14 @@ class Player(Bot):
         self.pair = False
         self.suited = False
 
-        rank1,rank2 = ranks[my_cards[0][0]],ranks[my_cards[1][0]]
-        suit1,suit2 = self.my_cards[0][1],self.my_cards[1][1]
+        self.rank1,self.rank2 = ranks[my_cards[0][0]],ranks[my_cards[1][0]]
+        self.suit1,self.suit2 = self.my_cards[0][1],self.my_cards[1][1]
 
         if rank1 == rank2:
             self.pair = True
+        elif rank1 < rank2:
+            self.rank1,self.rank2 = self.rank2,self.rank1
+            self.suit1,self.suit2 = self.suit2,self.suit1
         if suit1 == suit2:
             self.suited = True
 
