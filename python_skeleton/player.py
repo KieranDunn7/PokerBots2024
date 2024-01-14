@@ -88,11 +88,11 @@ class Player(Bot):
             self.suited = True
 
         if self.pair:
-            self.pfp = self.pr[rank1]
+            self.pfp = self.pr[self.rank1]
         elif self.suited:
-            self.pfp = self.sr[rank1][rank2]
+            self.pfp = self.sr[self.rank1][self.rank2]
         else:
-            self.pfp = self.nr[rank1][rank2]
+            self.pfp = self.nr[self.rank1][self.rank2]
 
 
 
