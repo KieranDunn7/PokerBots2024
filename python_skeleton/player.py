@@ -7,6 +7,7 @@ from skeleton.states import NUM_ROUNDS, STARTING_STACK, BIG_BLIND, SMALL_BLIND
 from skeleton.bot import Bot
 from skeleton.runner import parse_args, run_bot
 import random
+import eval7
 
 
 class Player(Bot):
@@ -112,6 +113,8 @@ class Player(Bot):
 
         self.tpp = (0.4815, 0.508, 0.541, 0.567, 0.591, 0.616, 0.6405, 0.666, 0.6925, 0.715, 0.7375, 0.755, 0.7855)
 
+        self.ranks = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+
 
 
         
@@ -134,11 +137,12 @@ class Player(Bot):
         self.my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
 
+        self.rank1,self.rank2 = self.ranks[self.my_cards[0][0]], self.ranks[self.my_cards[1][0]]
+        self.suit1,self.suit2 = self.my_cards[0][1], self.my_cards[1][1]
+
         self.pair = self.rank1 == self.rank2
         self.suited = self.suit1 == self.suit2
 
-        self.rank1,self.rank2 = my_cards[0].rank, my_cards[1].rank
-        self.suit1,self.suit2 = my_cards[0].suit, my_cards[1].suit
         if self.rank1 < self.rank2:
             self.rank1,self.rank2 = self.rank2,self.rank1
             self.suit1,self.suit2 = self.suit2,self.suit1
@@ -152,7 +156,7 @@ class Player(Bot):
         else:
             self.pct = self.np[self.rank1][self.rank2]
             self.pctp = self.npp[self.rank1][self.rank2]
-
+        
         self.round_num = round_num
 
 
@@ -178,6 +182,8 @@ class Player(Bot):
 
     def simulate_rest_of_game_postflop_preauction(self, flop, num_sims):
             revealed_cards = self.my_cards + flop
+
+            ###### TO FIX: self.my_cards is STRING not card object
 
             my_wins_w_auction = 0
             my_wins_wo_auction = 0
@@ -217,6 +223,7 @@ class Player(Bot):
                 deck = eval7.Deck()
                 for card in revealed_cards:
                     deck.cards.remove(card)
+
 
                 deck.shuffle()
                 draw = deck.deal(4)
@@ -393,40 +400,40 @@ class Player(Bot):
                 else:
                     return FoldAction()
 
-                if street == 3:
-                    self.total_opp_bid += opp_bid
-                    prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
-                    if prob_win < 0.58:
-                        if CheckAction in legal_actions:
-                            return CheckAction()
-                        return FoldAction()
-                    elif prob_win > random.uniform(0.78, 0.83):
-                        return RaiseAction(random.uniform(min_raise, 1.4*min_raise)
-                    elif prob_win > random.uniform(0.7, 0.78) and my_pip == 0:
-                        return RaiseAction(random.uniform(min_raise, 1.2*min_raise)
-                    return CallAction()
-                if street == 4:
-                    prob_win = self.simulate_rest_of_game_post_turn(board_cards, my_cards[2:], 7500)
-                    if prob_win < 0.68:
-                        if CheckAction in legal_actions:
-                            return CheckAction()
-                        return FoldAction()
-                    elif prob_win > random.uniform(0.85, 0.9):
-                        return RaiseAction(random.uniform(min_raise, 1.5*min_raise)
-                    elif prob_win > random.uniform(0.75, 0.85) and my_pip == 0:
-                        return RaiseAction(random.uniform(min_raise, 1.2*min_raise)
-                    return CallAction()
-                if street == 5:
-                    prob_win = self.simulate_rest_of_game_post_river(board_cards, my_cards[2:], 10000)
-                    if prob_win < 0.72:
-                        if CheckAction in legal_actions:
-                            return CheckAction()
-                        return FoldAction()
-                    elif prob_win > random.uniform(0.9, 0.95):
-                        return RaiseAction(random.uniform(min_raise, 1.8*min_raise)
-                    elif prob_win > random.uniform(0.8, 0.9) and my_pip == 0:
-                        return RaiseAction(random.uniform(min_raise, 1.3*min_raise)
-                    return CallAction()
+            if street == 3:
+                self.total_opp_bid += opp_bid
+                prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
+                if prob_win < 0.58:
+                    if CheckAction in legal_actions:
+                        return CheckAction()
+                    return FoldAction()
+                elif prob_win > random.uniform(0.78, 0.83):
+                    return RaiseAction(random.uniform(min_raise, 1.4*min_raise))
+                elif prob_win > random.uniform(0.7, 0.78) and my_pip == 0:
+                    return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
+                return CallAction()
+            if street == 4:
+                prob_win = self.simulate_rest_of_game_post_turn(board_cards, my_cards[2:], 7500)
+                if prob_win < 0.68:
+                    if CheckAction in legal_actions:
+                        return CheckAction()
+                    return FoldAction()
+                elif prob_win > random.uniform(0.85, 0.9):
+                    return RaiseAction(random.uniform(min_raise, 1.5*min_raise))
+                elif prob_win > random.uniform(0.75, 0.85) and my_pip == 0:
+                    return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
+                return CallAction()
+            if street == 5:
+                prob_win = self.simulate_rest_of_game_post_river(board_cards, my_cards[2:], 10000)
+                if prob_win < 0.72:
+                    if CheckAction in legal_actions:
+                        return CheckAction()
+                    return FoldAction()
+                elif prob_win > random.uniform(0.9, 0.95):
+                    return RaiseAction(random.uniform(min_raise, 1.8*min_raise))
+                elif prob_win > random.uniform(0.8, 0.9) and my_pip == 0:
+                    return RaiseAction(random.uniform(min_raise, 1.3*min_raise))
+                return CallAction()
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
