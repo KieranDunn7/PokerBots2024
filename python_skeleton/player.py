@@ -142,11 +142,10 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
-
         if RaiseAction in legal_actions:
-           min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
-           min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
-           max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
+            min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
+            min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
+            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
             
         if street == 0:
             pfp = self.pfp
@@ -155,27 +154,26 @@ class Player(Bot):
                     return FoldAction()
                 return CallAction()
             if self.big_blind:
-                if pfp >= 0.8:
-                    return RaiseAction(min_raise)
-                if (0.85-pfp) * opp_contribution > 1:
+                if opp_pip > 8:
+                    alpha = 0
+                    beta = 0
+                alpha = 0
+                beta = 0
+                if pfp < beta:
                     return FoldAction()
+                if pfp < alpha:
+                    return CallAction()
+                if RaiseAction in legal_actions:
+                    return RaiseAction(random.randint(min_raise, 2*min_raise))
                 return CallAction()
+                
                     
                 
         if BidAction in legal_actions:
             pass
-
-
-
-        
-        
-        if RaiseAction in legal_actions and random.random() < 0.3:
-            return RaiseAction(random.randint(min_raise, max_raise))
         if CheckAction in legal_actions:
             return CheckAction()
-        elif BidAction in legal_actions:
-            return BidAction(my_stack) # random bid between 0 and our stack
-        return CallAction()
+        return FoldAction()
 
 
 if __name__ == '__main__':
