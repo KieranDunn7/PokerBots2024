@@ -24,7 +24,6 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
-
         self.pr = (0.51, 0.55, 0.58, 0.61, 0.64, 0.67, 0.69, 0.72, 0.75, 0.78, 0.8, 0.83, 0.85)
         
         self.sr = {12: (0.59, 0.6, 0.61, 0.62, 0.62, 0.63, 0.63, 0.64, 0.66, 0.66, 0.67, 0.68),
@@ -41,7 +40,7 @@ class Player(Bot):
                     1: (0.39),
                    }
         
-        self.or = {12: (0.57, 0.58, 0.59, 0.6, 0.59, 0.6, 0.61, 0.62, 0.64, 0.65, 0.65, 0.66),
+        self.nr = {12: (0.57, 0.58, 0.59, 0.6, 0.59, 0.6, 0.61, 0.62, 0.64, 0.65, 0.65, 0.66),
                    11: (0.53, 0.54, 0.54, 0.55, 0.56, 0.57, 0.58, 0.59, 0.61, 0.62, 0.62),
                    10: (0.49, 0.5, 0.51, 0.52, 0.53, 0.54, 0.55, 0.57, 0.59, 0.59),
                    9: (0.47, 0.48, 0.48, 0.49, 0.5, 0.52, 0.53, 0.55, 0.57),
@@ -55,16 +54,6 @@ class Player(Bot):
                    1: (0.35)
                   }
         self.ranks = {"2":0, "3":1, "4":2, "5":3, "6":4, "7":5, "8":6, "9":7, "T":8, "J":9, "Q": 10, "K": 11, "A":12}
-
-
-        for rank in ranks:
-            self.preflop_rankings.add(rank)
-            
-
-        
-
-
-        pass
 
     def handle_new_round(self, game_state, round_state, active):
         '''
@@ -83,13 +72,6 @@ class Player(Bot):
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
-
-
-
-
-        ###
-        suits = ("s", "c", "h", "d")
-        ranks = {"2":1, "3":2, "4":3, "5":4, "6":5, "7":6, "8":7, "9":8, "T":9, "J":10, "Q": 11, "K": 12, "A":13}
 
         self.pair = False
         self.suited = False
