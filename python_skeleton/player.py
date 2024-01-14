@@ -145,7 +145,7 @@ class Player(Bot):
 
 
     def simulate_rest_of_game_postflop_preauction(self, my_hole, flop, num_sims):
-            revealed_cards = [item for item in my_hole + flop]
+            revealed_cards = my_hole + flop
             print(revealed_cards)
 
             my_wins_w_auction = 0
