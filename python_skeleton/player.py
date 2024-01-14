@@ -79,19 +79,20 @@ class Player(Bot):
         self.rank1,self.rank2 = ranks[my_cards[0][0]],ranks[my_cards[1][0]]
         self.suit1,self.suit2 = self.my_cards[0][1],self.my_cards[1][1]
 
-        if rank1 == rank2:
+        if self.rank1 == self.rank2:
             self.pair = True
-        elif rank1 < rank2:
+        elif self.rank1 < self.rank2:
             self.rank1,self.rank2 = self.rank2,self.rank1
             self.suit1,self.suit2 = self.suit2,self.suit1
-        if suit1 == suit2:
+        if self.suit1 == self.suit2:
             self.suited = True
 
-
-
-        
-
-
+        if self.pair:
+            self.pfp = self.pr[rank1]
+        elif self.suited:
+            self.pfp = self.sr[rank1][rank2]
+        else:
+            self.pfp = self.nr[rank1][rank2]
 
 
 
