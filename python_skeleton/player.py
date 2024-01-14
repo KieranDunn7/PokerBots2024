@@ -146,6 +146,11 @@ class Player(Bot):
         
 
         #### HANDLE AUCTION
+        if street == 0 and not self.big_blind:
+            if self.pfp < 0.52:
+                return FoldAction()
+            return CallAction()
+        
         if BidAction in legal_actions:
             
 
