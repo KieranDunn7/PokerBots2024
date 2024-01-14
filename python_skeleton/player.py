@@ -157,6 +157,37 @@ class Player(Bot):
         Returns:
         Your action.
         '''
+        def simulate_rest_of_game_postflop_preauction(my_hole, flop, num_sims):
+            revealed_cards = [item for item in my_hole + flop]
+            print(revealed_cards)
+
+            my_wins_w_auction = 0
+            my_wins_wo_auction = 0
+            for _ in range(num_sims):
+                deck = eval7.Deck()
+                for card in revealed_cards:
+                    deck.cards.remove(card)
+
+                deck.shuffle()
+                draw = deck.deal(6)
+
+                opp_hole = draw[0:2]
+                comm = draw[2:4]
+                auction1,auction2 = [draw[4]],[draw[5]]
+
+                my_hand_auction = my_hole + flop + comm + auction1
+                opp_hand = opp_hole + flop + comm
+                if eval7.evaluate(my_hand_auction) >= eval7.evaluate(opp_hand):
+                    my_wins_w_auction += 1
+
+                my_hand = my_hole + flop + comm
+                opp_hand_auction = opp_hole + flop + comm + auction1
+                if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand_auction):
+                    my_wins_wo_auction += 1
+
+            return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims
+        
+        
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
         street = round_state.street  # 0, 3, 4, or 5 representing pre-flop, flop, turn, or river respectively
@@ -172,6 +203,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         if BidAction in legal_actions:
+
             pass
         else:
             if RaiseAction in legal_actions:
