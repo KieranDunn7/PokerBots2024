@@ -101,7 +101,7 @@ class Player(Bot):
         my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
-        my_cards = round_state.hands[active]  # your cards
+        self.my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
 
         self.pair = self.rank1 == self.rank2
@@ -144,8 +144,8 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
 
 
-    def simulate_rest_of_game_postflop_preauction(self, my_hole, flop, num_sims):
-            revealed_cards = my_hole + flop
+    def simulate_rest_of_game_postflop_preauction(self, flop, num_sims):
+            revealed_cards = self.my_cards + flop
 
             my_wins_w_auction = 0
             my_wins_wo_auction = 0
@@ -161,12 +161,12 @@ class Player(Bot):
                 comm = draw[2:4]
                 auction1,auction2 = [draw[4]],[draw[5]]
 
-                my_hand_auction = my_hole + flop + comm + auction1
+                my_hand_auction = self.my_cards + flop + comm + auction1
                 opp_hand = opp_hole + flop + comm
                 if eval7.evaluate(my_hand_auction) >= eval7.evaluate(opp_hand):
                     my_wins_w_auction += 1
 
-                my_hand = my_hole + flop + comm
+                my_hand = self.my_cards + flop + comm
                 opp_hand_auction = opp_hole + flop + comm + auction1
                 if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand_auction):
                     my_wins_wo_auction += 1
@@ -201,6 +201,13 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
+
+        if street == 3: ### Post-flop, pre-bid
+            prob_win_w_auction, prob_win_wo_auction = simulate_rest_of_game_postflop_preauction(board_cards, 1000)
+        
+
+
+
         if BidAction in legal_actions:
 
             pass
