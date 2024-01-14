@@ -238,4 +238,44 @@ print(turn)
 print(simulate_rest_of_game_post_turn(my_hole, flop, auction_card, turn))
 
 
+def simulate_rest_of_game_post_river(my_hole, flop, auction_card, turn, river, num_sims):
+    revealed_cards = my_hole + flop + auction_card + turn + river
+    my_wins = 0
+
+    if auction_card:
+        for _ in range(num_sims):
+            deck = eval7.Deck()
+            for card in revealed_cards:
+                deck.cards.remove(card)
+
+            deck.shuffle()
+            draw = deck.deal(2)
+
+            opp_hole = draw[0:2]
+
+            my_hand_auction = my_hole + flop + auction_card + turn + river
+            opp_hand = opp_hole + flop + turn + river
+            if eval7.evaluate(my_hand_auction) >= eval7.evaluate(opp_hand):
+                my_wins += 1
+
+    else:
+        for _ in range(num_sims):
+            deck = eval7.Deck()
+            for card in revealed_cards:
+                deck.cards.remove(card)
+
+            deck.shuffle()
+            draw = deck.deal(3)
+
+            opp_hole = draw[0:2]
+            opp_auction = [draw[2]]
+
+            my_hand = my_hole + flop + turn + river
+            opp_hand_auction = opp_hole + flop + turn + river + opp_auction
+            if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand_auction):
+                my_wins += 1
+
+
+    return my_wins/num_sims
+
 
