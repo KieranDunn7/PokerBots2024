@@ -183,6 +183,51 @@ class Player(Bot):
                     my_wins_wo_auction += 1
 
             return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims
+    
+def simulate_rest_of_game_postauction(self, flop, auction_card, num_sims):
+    """
+    auction_card is list of card types, if empty, it means we lost the auction
+    """
+    revealed_cards = self.my_cards + flop + auction_card
+
+    my_wins = 0
+    if auction_card:
+        for _ in range(num_sims):
+            deck = eval7.Deck()
+            for card in revealed_cards:
+                deck.cards.remove(card)
+
+            deck.shuffle()
+            draw = deck.deal(4)
+
+            opp_hole = draw[0:2]
+            comm = draw[2:4]
+
+            my_hand_auction = my_hole + flop + comm + auction_card
+            opp_hand = opp_hole + flop + comm
+            if eval7.evaluate(my_hand_auction) >= eval7.evaluate(opp_hand):
+                my_wins += 1
+
+    else:
+        for _ in range(num_sims):
+            deck = eval7.Deck()
+            for card in revealed_cards:
+                deck.cards.remove(card)
+
+            deck.shuffle()
+            draw = deck.deal(5)
+
+            opp_hole = draw[0:2]
+            comm = draw[2:4]
+            opp_auction = [draw[4]]
+
+            my_hand = my_hole + flop + comm
+            opp_hand_auction = opp_hole + flop + comm + opp_auction
+            if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand_auction):
+                my_wins += 1
+
+
+    return my_wins/num_sims
 
     def get_action(self, game_state, round_state, active):
         '''
