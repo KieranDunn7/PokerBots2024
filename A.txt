@@ -1,0 +1,4 @@
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 373
+    if diff > 0.3:
+                 ^
+SyntaxError: invalid syntax

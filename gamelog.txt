@@ -1,0 +1,10003 @@
+6.9630 MIT Pokerbots - A vs B
+
+Round #1, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c 5d]
+B dealt [Ac 7h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #2, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 3c]
+A dealt [Qd 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #3, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Kc]
+B dealt [4h 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #4, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Th]
+A dealt [6s 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #5, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh 8h]
+B dealt [Qc Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #6, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd 6d]
+A dealt [2d 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #7, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 5s]
+B dealt [4s 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #8, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s 4d]
+A dealt [5h 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #9, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad 2h]
+B dealt [9h 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #10, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h Qs]
+A dealt [6s Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #11, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kc Qs]
+B dealt [6c 7d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #12, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th Qh]
+A dealt [8s 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #13, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h Tc]
+B dealt [7h 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #14, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 9d]
+A dealt [As Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #15, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h Jd]
+B dealt [9c 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #16, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h 2s]
+A dealt [9h Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #17, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 6s]
+B dealt [3c Kh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #18, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 5c]
+A dealt [7c 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #19, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Ts]
+B dealt [8d 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #20, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Th]
+A dealt [As Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #21, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh Qc]
+B dealt [Kh 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #22, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c Ts]
+A dealt [Js 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #23, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 5c]
+B dealt [Ah Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #24, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 4d]
+A dealt [Ks 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #25, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 4h]
+B dealt [3s 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #26, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 6s]
+A dealt [Ad 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #27, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c Jh]
+B dealt [4c Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #28, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td Ac]
+A dealt [Tc 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #29, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh 2d]
+B dealt [9c 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #30, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah Kh]
+A dealt [Tc 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #31, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As 6c]
+B dealt [7s 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #32, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 5s]
+A dealt [Jc 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #33, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s Ts]
+B dealt [9c 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #34, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2c 8d]
+A dealt [6h 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #35, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d 7d]
+B dealt [4h 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #36, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 3h]
+A dealt [3d Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #37, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Ac]
+B dealt [Jh 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #38, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh As]
+A dealt [Qd 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #39, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4d 8c]
+B dealt [Ks Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #40, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5d Th]
+A dealt [Ac 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #41, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h Js]
+B dealt [6d 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #42, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Ts]
+A dealt [2s 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #43, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h 8h]
+B dealt [Kd 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #44, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 5s]
+A dealt [3c 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #45, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9s Kc]
+B dealt [2s 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #46, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th Ks]
+A dealt [7h 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #47, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s 4c]
+B dealt [As Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #48, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 3c]
+A dealt [Kc 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #49, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ah Th]
+B dealt [6d 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #50, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad Ac]
+A dealt [3s Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #51, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts Kd]
+B dealt [Kc Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #52, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh 3c]
+A dealt [7h 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #53, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Ah]
+B dealt [Qs Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #54, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Qh]
+A dealt [4c 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #55, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ks 5s]
+B dealt [8h 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #56, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Tc Qs]
+A dealt [Js Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #57, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h 3s]
+B dealt [Ts 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #58, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah Jc]
+A dealt [Qh Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #59, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3h Qh]
+B dealt [6d 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #60, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2c Jh]
+A dealt [Jd 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #61, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 3c]
+B dealt [Qh 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #62, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7s 9d]
+A dealt [3d 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #63, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4d Js]
+B dealt [Qh 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #64, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h Qd]
+A dealt [9d 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #65, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9s Ts]
+B dealt [7d 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #66, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 4d]
+A dealt [Qc 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #67, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc Jc]
+B dealt [Ad 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #68, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 8c]
+A dealt [7d 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #69, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad Ts]
+B dealt [Qd Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #70, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh 4d]
+A dealt [9h Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #71, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac 6h]
+B dealt [Qc 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #72, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s 5c]
+A dealt [4h Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #73, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d 2d]
+B dealt [8c 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #74, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s 3s]
+A dealt [5c 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #75, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 8c]
+B dealt [4d 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #76, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Th]
+A dealt [8h Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #77, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d 7s]
+B dealt [8h 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #78, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h Jd]
+A dealt [4d 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #79, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc Td]
+B dealt [Kd Ac]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #80, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6d Kc]
+A dealt [2s 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #81, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 9h]
+B dealt [Qc 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #82, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 2h]
+A dealt [Qs Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #83, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2h 8s]
+B dealt [6d 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #84, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 6h]
+A dealt [Qc 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #85, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h 2s]
+B dealt [9s Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #86, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 2s]
+A dealt [Ad 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #87, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td 2s]
+B dealt [4h Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #88, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 7c]
+A dealt [Ks Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #89, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 7d]
+B dealt [Ts Jc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #90, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 5h]
+A dealt [3d As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #91, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As Kc]
+B dealt [Qh 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #92, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s Td]
+A dealt [2h Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #93, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h Td]
+B dealt [5h Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #94, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 6h]
+A dealt [8c 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #95, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh Kc]
+B dealt [Js 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #96, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 7c]
+A dealt [As Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #97, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 3h]
+B dealt [9s 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #98, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d 3s]
+A dealt [7d 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #99, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac Ts]
+B dealt [As Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #100, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 8c]
+A dealt [6d Qd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #101, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ah 9d]
+B dealt [8d Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #102, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 2s]
+A dealt [3s 9d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #103, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 9d]
+B dealt [7s As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #104, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Ah]
+A dealt [5s Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #105, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h Th]
+B dealt [6c 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #106, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc Ad]
+A dealt [3h 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #107, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9c Ks]
+B dealt [Td Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #108, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 5h]
+A dealt [9d 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #109, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As 8d]
+B dealt [4s 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #110, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c Ts]
+A dealt [Qc 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #111, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac 3h]
+B dealt [As 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #112, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 8s]
+A dealt [Qd Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #113, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s 8d]
+B dealt [Kd Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #114, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Ad]
+A dealt [6c Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #115, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s 8c]
+B dealt [4c 6s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #116, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 5d]
+A dealt [Jd Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #117, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Ts]
+B dealt [8c 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #118, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h 2h]
+A dealt [8s Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #119, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9s 6h]
+B dealt [3c Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #120, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 9s]
+A dealt [9h 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #121, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc Qc]
+B dealt [Ah 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #122, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 8h]
+A dealt [Ad 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #123, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd Jh]
+B dealt [9c 7d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #124, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks Jc]
+A dealt [Tc Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #125, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh 5h]
+B dealt [Jc Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #126, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s Ad]
+A dealt [9h 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #127, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c 8s]
+B dealt [3c 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #128, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7s Qc]
+A dealt [4d 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #129, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d 9c]
+B dealt [Td 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #130, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh As]
+A dealt [Qh Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #131, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd 8h]
+B dealt [Jd 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #132, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2d Tc]
+A dealt [Ts 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #133, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 6c]
+B dealt [2c Jc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #134, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc 6c]
+A dealt [Ks 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #135, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ah Tc]
+B dealt [Kh Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #136, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Ts]
+A dealt [Qh Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #137, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s Kc]
+B dealt [3d Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #138, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 3h]
+A dealt [8d 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #139, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 8d]
+B dealt [Td 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #140, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd Js]
+A dealt [7h 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #141, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h 2h]
+B dealt [Jh 6s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #142, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 8h]
+A dealt [9h Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #143, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 3s]
+B dealt [8c 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #144, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 6s]
+A dealt [3s Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #145, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 5h]
+B dealt [6h 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #146, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 3h]
+A dealt [Ac 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #147, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6d Kh]
+B dealt [8d 6s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #148, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c 7c]
+A dealt [4c Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #149, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Jc]
+B dealt [7c Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #150, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 6d]
+A dealt [Ac Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #151, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd 6h]
+B dealt [4d 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #152, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Ks]
+A dealt [3c Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #153, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s 2h]
+B dealt [5d 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #154, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Tc 5s]
+A dealt [8s Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #155, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h 3d]
+B dealt [3s 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #156, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 5s]
+A dealt [Ts 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #157, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9s 9c]
+B dealt [Th 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #158, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh 3s]
+A dealt [8d 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #159, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd 3d]
+B dealt [Qh 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #160, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 5h]
+A dealt [5d 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #161, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s Jh]
+B dealt [Ac Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #162, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 8h]
+A dealt [2d Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #163, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 3h]
+B dealt [Qh Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #164, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d 9s]
+A dealt [Qs Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #165, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc 4c]
+B dealt [8d 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #166, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Ks]
+A dealt [3c Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #167, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d Ac]
+B dealt [Td 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #168, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s Kc]
+A dealt [8c Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #169, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c Ah]
+B dealt [8c 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #170, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 4h]
+A dealt [5h Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #171, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc Ah]
+B dealt [3d As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #172, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh Jd]
+A dealt [Ks 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #173, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 3s]
+B dealt [7h 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #174, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qs 6s]
+A dealt [5h 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #175, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d 9s]
+B dealt [Qd Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #176, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 4d]
+A dealt [8c 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #177, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h 6s]
+B dealt [3s 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #178, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h 4s]
+A dealt [5h As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #179, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s Ah]
+B dealt [Jh Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #180, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 9s]
+A dealt [5d Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #181, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc 7h]
+B dealt [7d 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #182, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kd 9h]
+A dealt [Kh 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #183, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s 7d]
+B dealt [Kc Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #184, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s 7c]
+A dealt [2c Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #185, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 7d]
+B dealt [4s 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #186, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4d Qc]
+A dealt [2h Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #187, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d Kc]
+B dealt [5h Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #188, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d 5c]
+A dealt [6c 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #189, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 2c]
+B dealt [Qd 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #190, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c 9s]
+A dealt [5c 2c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #191, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th 6c]
+B dealt [7c 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #192, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Qs]
+A dealt [2c 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #193, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc 6d]
+B dealt [4s 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #194, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks 6d]
+A dealt [4d Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #195, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h Jh]
+B dealt [5h 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #196, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6d 4s]
+A dealt [6h 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #197, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 9c]
+B dealt [9h 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #198, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 2s]
+A dealt [8h 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #199, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s Tc]
+B dealt [7h Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #200, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 2c]
+A dealt [Qh 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #201, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td 8h]
+B dealt [8s 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #202, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h Ah]
+A dealt [8c 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #203, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 9h]
+B dealt [9c Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #204, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h 3c]
+A dealt [8s Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #205, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 8d]
+B dealt [Qs Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #206, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 7c]
+A dealt [2c Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #207, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h 2d]
+B dealt [Kd 5d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #208, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 9s]
+A dealt [4d Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #209, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Qh]
+B dealt [2c 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #210, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h Th]
+A dealt [5s As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #211, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 4d]
+B dealt [Kc Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #212, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 6s]
+A dealt [8d Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #213, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d Ac]
+B dealt [4h Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #214, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c 8d]
+A dealt [As 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #215, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac 2d]
+B dealt [Ad 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #216, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks 2h]
+A dealt [8d 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #217, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac 4d]
+B dealt [Ts Kh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #218, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 4c]
+A dealt [6d 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #219, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad Qh]
+B dealt [Kc 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #220, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 7d]
+A dealt [6h 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #221, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd 6c]
+B dealt [Jd 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #222, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h 2d]
+A dealt [6d 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #223, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js Ad]
+B dealt [6s 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #224, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 5d]
+A dealt [2d Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #225, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd 7d]
+B dealt [Kh Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #226, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6d 4d]
+A dealt [7c 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #227, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s 7h]
+B dealt [5h 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #228, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh Jd]
+A dealt [9d 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #229, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 7h]
+B dealt [Qc 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #230, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As Kc]
+A dealt [2c 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #231, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s Jh]
+B dealt [4s 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #232, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh 5h]
+A dealt [4s 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #233, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s 8c]
+B dealt [8s 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #234, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c Td]
+A dealt [5h 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #235, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Qd]
+B dealt [Kc 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #236, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s Ks]
+A dealt [7s 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #237, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s Jc]
+B dealt [9s 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #238, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh Jh]
+A dealt [8s 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #239, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 7d]
+B dealt [Tc 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #240, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 5s]
+A dealt [7c 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #241, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h Kc]
+B dealt [8c 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #242, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 4h]
+A dealt [2d Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #243, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h 3c]
+B dealt [9s 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #244, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 2d]
+A dealt [Jh 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #245, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d 3d]
+B dealt [Ks 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #246, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad Js]
+A dealt [6h 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #247, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c Qh]
+B dealt [9s 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #248, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d Ah]
+A dealt [5h 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #249, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h Ac]
+B dealt [4h Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #250, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d 2c]
+A dealt [3c 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #251, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s Ah]
+B dealt [Td Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #252, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 3s]
+A dealt [2h 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #253, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ks 5c]
+B dealt [4d 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #254, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s Jd]
+A dealt [4c 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #255, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 3h]
+B dealt [5s Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #256, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c Kd]
+A dealt [6d 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #257, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h As]
+B dealt [Jd 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #258, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc 7s]
+A dealt [7d Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #259, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c Kc]
+B dealt [7d 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #260, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 6d]
+A dealt [Qs Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #261, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td 9h]
+B dealt [5d 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #262, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 3h]
+A dealt [Qs Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #263, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c Jd]
+B dealt [Tc Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #264, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 3s]
+A dealt [5c 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #265, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Kh]
+B dealt [3s 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #266, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 6s]
+A dealt [8d Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #267, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kc 3d]
+B dealt [2h 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #268, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s Kd]
+A dealt [Ts Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #269, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts Jc]
+B dealt [4c 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #270, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8d Ah]
+A dealt [2h Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #271, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s 6s]
+B dealt [8c 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #272, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h 4d]
+A dealt [4c 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #273, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s Qd]
+B dealt [Kc 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #274, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s Jd]
+A dealt [Qd Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #275, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d 5c]
+B dealt [7s Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #276, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2d 5h]
+A dealt [Kc 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #277, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c 5c]
+B dealt [8h Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #278, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7s Th]
+A dealt [Ac Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #279, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh Ts]
+B dealt [6d 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #280, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h 7d]
+A dealt [9s 7s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #281, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 9h]
+B dealt [9s Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #282, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 2s]
+A dealt [8s 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #283, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c Qh]
+B dealt [Ks Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #284, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8d 7d]
+A dealt [Jc 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #285, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s 5d]
+B dealt [9s Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #286, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 2h]
+A dealt [9h 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #287, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac Ah]
+B dealt [Qs Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #288, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 2h]
+A dealt [4h Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #289, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ks 4s]
+B dealt [4h 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #290, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s 9c]
+A dealt [3c 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #291, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c 9s]
+B dealt [Kd 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #292, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s Kd]
+A dealt [9d Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #293, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh Qc]
+B dealt [Js Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #294, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 8s]
+A dealt [3d 7c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #295, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h Js]
+B dealt [Th 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #296, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2c Jh]
+A dealt [Ad 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #297, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d 9s]
+B dealt [Jd 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #298, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Jh]
+A dealt [Td 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #299, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 4h]
+B dealt [3h 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #300, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 8c]
+A dealt [7s Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #301, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 7s]
+B dealt [Ts Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #302, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h 8d]
+A dealt [Jh Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #303, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s Kc]
+B dealt [Qd 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #304, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd Tc]
+A dealt [Qc 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #305, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Kc]
+B dealt [3s 7h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #306, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5d Js]
+A dealt [7d Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #307, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h 5d]
+B dealt [8h Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #308, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s 4d]
+A dealt [5s 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #309, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 9c]
+B dealt [Jd 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #310, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 6c]
+A dealt [2c Qd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #311, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h Ks]
+B dealt [Kh 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #312, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 9s]
+A dealt [Tc Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #313, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 4c]
+B dealt [9c Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #314, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 3h]
+A dealt [9c Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #315, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ah 7d]
+B dealt [9s Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #316, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c Js]
+A dealt [Kh Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #317, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh 4s]
+B dealt [Th 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #318, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 4c]
+A dealt [Kc 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #319, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 9d]
+B dealt [7c 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #320, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh 8h]
+A dealt [3h 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #321, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6d 5s]
+B dealt [Js 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #322, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h 9d]
+A dealt [2s 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #323, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c Qh]
+B dealt [Jh 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #324, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 2h]
+A dealt [As 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #325, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js Jd]
+B dealt [Jh 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #326, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 8c]
+A dealt [7c 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #327, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 5d]
+B dealt [7h Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #328, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c 8h]
+A dealt [2h 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #329, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s Ad]
+B dealt [5c 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #330, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 4h]
+A dealt [9d Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #331, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh Tc]
+B dealt [2h 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #332, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6h 8h]
+A dealt [4d 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #333, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 9h]
+B dealt [9d Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #334, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c Th]
+A dealt [Ac Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #335, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 8h]
+B dealt [Js 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #336, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 4c]
+A dealt [8c 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #337, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6d Ts]
+B dealt [4d Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #338, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h Jc]
+A dealt [6c 7s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #339, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 2s]
+B dealt [4d 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #340, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h 8d]
+A dealt [7h As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #341, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ah As]
+B dealt [Jc 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #342, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Qd]
+A dealt [Th Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #343, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c Ks]
+B dealt [Jh Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #344, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh 7c]
+A dealt [2h 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #345, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 2h]
+B dealt [2s Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #346, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 2h]
+A dealt [Tc 7c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #347, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 7s]
+B dealt [4d 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #348, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c 7h]
+A dealt [Ah Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #349, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js 8d]
+B dealt [8c 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #350, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d 8c]
+A dealt [As 7s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #351, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 4h]
+B dealt [2d 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #352, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 2c]
+A dealt [9c 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #353, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js 4s]
+B dealt [3s 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #354, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 9d]
+A dealt [Ad 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #355, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc Ac]
+B dealt [Jh 6c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #356, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kd Jc]
+A dealt [7c Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #357, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad Js]
+B dealt [Jc 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #358, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 9h]
+A dealt [Ts Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #359, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 4d]
+B dealt [7s 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #360, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Kd]
+A dealt [3d Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #361, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s 3c]
+B dealt [9s 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #362, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks Td]
+A dealt [7d 9d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #363, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 9s]
+B dealt [7s 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #364, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 7h]
+A dealt [Tc 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #365, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 7h]
+B dealt [2s Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #366, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 9d]
+A dealt [Qh 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #367, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd Ac]
+B dealt [2s Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #368, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 5s]
+A dealt [7d Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #369, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s Jh]
+B dealt [Ah Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #370, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 7d]
+A dealt [8s 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #371, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h 7c]
+B dealt [2s Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #372, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 6d]
+A dealt [4c Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #373, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c 6s]
+B dealt [7s 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #374, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 2s]
+A dealt [Jc 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #375, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 9d]
+B dealt [8s Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #376, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4d Jd]
+A dealt [2h 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #377, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd 3h]
+B dealt [3c 5d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #378, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 6s]
+A dealt [5c 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #379, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 6d]
+B dealt [7s 7d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #380, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d Td]
+A dealt [Ah 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #381, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd Js]
+B dealt [Qs 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #382, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ac 4c]
+A dealt [3d Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #383, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d Jc]
+B dealt [5h 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #384, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s 3c]
+A dealt [9h 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #385, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d 3h]
+B dealt [9s Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #386, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 3d]
+A dealt [Js 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #387, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 5s]
+B dealt [Qh 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #388, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Ts]
+A dealt [9c Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #389, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 7h]
+B dealt [Ac 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #390, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c Qc]
+A dealt [Tc 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #391, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s 3s]
+B dealt [9c Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #392, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d 2s]
+A dealt [6h Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #393, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s 7h]
+B dealt [Td Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #394, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh Qs]
+A dealt [2d Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #395, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d 2s]
+B dealt [Ts 6s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #396, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c Td]
+A dealt [8h 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #397, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As 4c]
+B dealt [7h 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #398, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2c Ts]
+A dealt [5s 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #399, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9c Kh]
+B dealt [6s Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #400, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 8c]
+A dealt [Qc Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #401, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 8s]
+B dealt [3h 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #402, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 4d]
+A dealt [Tc 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #403, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 7s]
+B dealt [Ts 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #404, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c Kd]
+A dealt [Kh Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #405, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s Jd]
+B dealt [Kc Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #406, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h 9h]
+A dealt [Ts 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #407, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h Ks]
+B dealt [Ac 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #408, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh 6c]
+A dealt [4s 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #409, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 4c]
+B dealt [Kc 5d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #410, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 4d]
+A dealt [Jc Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #411, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 6s]
+B dealt [7c 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #412, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh Kc]
+A dealt [6c 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #413, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d Kd]
+B dealt [6s 5d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #414, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 7d]
+A dealt [3c Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #415, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 9s]
+B dealt [Kc Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #416, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h Jd]
+A dealt [Ks Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #417, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s Ks]
+B dealt [Jd 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #418, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 7d]
+A dealt [5s Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #419, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh 8s]
+B dealt [Qs 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #420, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h 2d]
+A dealt [Qc Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #421, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c Ks]
+B dealt [9s 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #422, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8d 4s]
+A dealt [6s 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #423, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td 3c]
+B dealt [4c Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #424, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Ah]
+A dealt [Jd Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #425, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4d Qc]
+B dealt [2d As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #426, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d Jd]
+A dealt [Kh 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #427, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 6d]
+B dealt [Kh 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #428, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kd 5d]
+A dealt [Kc Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #429, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h 5c]
+B dealt [9s Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #430, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s Th]
+A dealt [5s Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #431, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c Ad]
+B dealt [7c 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #432, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd 3h]
+A dealt [5c 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #433, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d 6s]
+B dealt [2h 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #434, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js Tc]
+A dealt [4c Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #435, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h 4h]
+B dealt [Ad Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #436, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4d 7h]
+A dealt [7c Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #437, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc 4h]
+B dealt [Qh 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #438, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As Td]
+A dealt [8s 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #439, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6d 6c]
+B dealt [5s 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #440, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 8c]
+A dealt [Jh 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #441, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c 3d]
+B dealt [3c 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #442, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s Jc]
+A dealt [Ah 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #443, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 6d]
+B dealt [9s Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #444, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s 4s]
+A dealt [6h 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #445, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h Jd]
+B dealt [8d 7h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #446, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 7s]
+A dealt [5c Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #447, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kc 5h]
+B dealt [8s 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #448, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 4c]
+A dealt [4d Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #449, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c 4h]
+B dealt [3d Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #450, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 8c]
+A dealt [Ac Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #451, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h 6d]
+B dealt [Qh 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #452, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5d 3s]
+A dealt [2s 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #453, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc 2h]
+B dealt [Qs 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #454, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks Td]
+A dealt [7h Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #455, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h 2s]
+B dealt [Qc 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #456, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td As]
+A dealt [2c 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #457, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d Qd]
+B dealt [8c Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #458, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c 3c]
+A dealt [Th 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #459, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c Qs]
+B dealt [Ac 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #460, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 9c]
+A dealt [4s Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #461, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d Qd]
+B dealt [6c 7c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #462, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh 9s]
+A dealt [Tc 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #463, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad 3d]
+B dealt [8h Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #464, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s Jh]
+A dealt [5s Td]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #465, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Js]
+B dealt [4h Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #466, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d Js]
+A dealt [4c 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #467, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s Jd]
+B dealt [6d 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #468, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks 9s]
+A dealt [4c Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #469, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d 5s]
+B dealt [Ks 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #470, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h 2h]
+A dealt [6h 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #471, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js Ah]
+B dealt [4d Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #472, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 2c]
+A dealt [6d 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #473, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 9s]
+B dealt [Qh Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #474, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 8c]
+A dealt [As 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #475, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd Qc]
+B dealt [Ac Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #476, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ks 2h]
+A dealt [9s 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #477, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd 4s]
+B dealt [Kh 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #478, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh Qc]
+A dealt [Ah 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #479, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 3s]
+B dealt [2c Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #480, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 7s]
+A dealt [8d Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #481, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d Qh]
+B dealt [5h 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #482, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 7c]
+A dealt [Kc 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #483, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9s 9c]
+B dealt [3d 6h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #484, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Qs]
+A dealt [Tc 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #485, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh 6c]
+B dealt [Js Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #486, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 8h]
+A dealt [5h 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #487, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3h Ts]
+B dealt [9d 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #488, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h 9h]
+A dealt [6s 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #489, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 2c]
+B dealt [7h 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #490, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js Tc]
+A dealt [3s 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #491, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s 7d]
+B dealt [2h Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #492, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th Ad]
+A dealt [Jh 9d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #493, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c Ac]
+B dealt [As 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #494, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Qh]
+A dealt [Kh 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #495, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 2h]
+B dealt [2s 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #496, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah Jd]
+A dealt [2d 7s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #497, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h Ts]
+B dealt [4s 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #498, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 9c]
+A dealt [5c Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #499, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c Qc]
+B dealt [6s 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #500, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h 3s]
+A dealt [Jd Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #501, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs Th]
+B dealt [8d 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #502, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c Ad]
+A dealt [Qc 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #503, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 4h]
+B dealt [9h 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #504, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 5c]
+A dealt [Ad 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #505, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 6s]
+B dealt [2d 6c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #506, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Jc]
+A dealt [3d 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #507, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9c Ah]
+B dealt [5s Ac]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #508, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s Kh]
+A dealt [2d 2c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #509, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad Qs]
+B dealt [Kd Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #510, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 5d]
+A dealt [4c 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #511, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad 7s]
+B dealt [7h Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #512, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2d Kc]
+A dealt [8s Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #513, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 8c]
+B dealt [Tc Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #514, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 2h]
+A dealt [9s 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #515, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 6s]
+B dealt [5s 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #516, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d Ks]
+A dealt [Qc Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #517, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 8c]
+B dealt [2d Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #518, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qs Kh]
+A dealt [Ad 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #519, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c 7h]
+B dealt [As 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #520, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s 3s]
+A dealt [Ad 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #521, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js Ac]
+B dealt [5h 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #522, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh Tc]
+A dealt [4d 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #523, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 4d]
+B dealt [3c 7h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #524, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 6s]
+A dealt [Jh Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #525, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d 8d]
+B dealt [5d 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #526, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s Jh]
+A dealt [9h 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #527, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac 2h]
+B dealt [Qh 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #528, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd Th]
+A dealt [6d 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #529, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 7d]
+B dealt [7c 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #530, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 2d]
+A dealt [Ts Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #531, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h Qs]
+B dealt [6h Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #532, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 7h]
+A dealt [As Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #533, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c Ks]
+B dealt [4h 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #534, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s 9d]
+A dealt [5s 7s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #535, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 2d]
+B dealt [Ks Ac]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #536, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h 2c]
+A dealt [5h 7s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #537, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 8c]
+B dealt [Ts Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #538, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Td 7c]
+A dealt [5s 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #539, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td 9h]
+B dealt [3s Jc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #540, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h Qs]
+A dealt [Td 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #541, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 4h]
+B dealt [Qs 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #542, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8d 7d]
+A dealt [Jh 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #543, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd 5s]
+B dealt [Jc Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #544, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Kd]
+A dealt [4c Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #545, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ah As]
+B dealt [Ad 7d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #546, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c Ts]
+A dealt [3c Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #547, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 8s]
+B dealt [8c 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #548, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Ks]
+A dealt [9d Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #549, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd Qc]
+B dealt [8h 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #550, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Th]
+A dealt [4d 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #551, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As 6s]
+B dealt [Th Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #552, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 9d]
+A dealt [6h 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #553, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 6c]
+B dealt [7h Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #554, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h 6c]
+A dealt [3d 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #555, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 9c]
+B dealt [Td 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #556, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 8s]
+A dealt [Js 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #557, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h As]
+B dealt [3d 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #558, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Tc Ad]
+A dealt [Th 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #559, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 8c]
+B dealt [9s 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #560, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 9s]
+A dealt [5s 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #561, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 6h]
+B dealt [Qd Jc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #562, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 2c]
+A dealt [7s 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #563, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h Kd]
+B dealt [7s Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #564, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d Jh]
+A dealt [2h 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #565, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c Ad]
+B dealt [2c 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #566, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s 4s]
+A dealt [Qc 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #567, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c 2d]
+B dealt [3c Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #568, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7s 2c]
+A dealt [6s Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #569, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h Qs]
+B dealt [Ah 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #570, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 7d]
+A dealt [4c Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #571, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h 2s]
+B dealt [3h 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #572, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Ac]
+A dealt [7s 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #573, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d 3s]
+B dealt [8d 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #574, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d Jh]
+A dealt [3h Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #575, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h 7c]
+B dealt [Qc Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #576, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 7d]
+A dealt [Ad 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #577, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d 4h]
+B dealt [3h 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #578, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7s Ah]
+A dealt [4s Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #579, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2h 3d]
+B dealt [2s 6c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #580, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh Qd]
+A dealt [Kd Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #581, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c As]
+B dealt [Qh Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #582, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6h 4h]
+A dealt [8d 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #583, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2h Qd]
+B dealt [Qc Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #584, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh Tc]
+A dealt [Td 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #585, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h Td]
+B dealt [2c As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #586, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd 2s]
+A dealt [As Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #587, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c Kh]
+B dealt [5h 5d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #588, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c As]
+A dealt [7c 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #589, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s Ac]
+B dealt [7d Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #590, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h 2c]
+A dealt [3s 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #591, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Tc]
+B dealt [2d 6s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #592, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd Jh]
+A dealt [4s Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #593, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 2c]
+B dealt [5d 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #594, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 3h]
+A dealt [4c Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #595, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c Th]
+B dealt [4s 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #596, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh As]
+A dealt [4c 2c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #597, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh 7d]
+B dealt [Td Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #598, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Js]
+A dealt [3h 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #599, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh 7s]
+B dealt [Qc 7d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #600, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 2d]
+A dealt [3d 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #601, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6d 7c]
+B dealt [8d 7d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #602, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c 3s]
+A dealt [As Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #603, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c Kc]
+B dealt [As 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #604, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c Jh]
+A dealt [Kc 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #605, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9s Tc]
+B dealt [4s 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #606, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Tc 4h]
+A dealt [5s 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #607, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 2h]
+B dealt [As Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #608, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 2h]
+A dealt [3h 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #609, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 8d]
+B dealt [5d Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #610, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 9h]
+A dealt [7d Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #611, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc 5c]
+B dealt [9c Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #612, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah Qc]
+A dealt [Jc 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #613, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 2h]
+B dealt [8s Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #614, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 5c]
+A dealt [2h 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #615, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s Ad]
+B dealt [5d 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #616, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h 5s]
+A dealt [Qh 2c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #617, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 6d]
+B dealt [8h 6s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #618, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 4h]
+A dealt [6d 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #619, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s 6d]
+B dealt [4h 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #620, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 8h]
+A dealt [Ah Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #621, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d Td]
+B dealt [Qs 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #622, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js Kc]
+A dealt [2s 9d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #623, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2h 4s]
+B dealt [Ah 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #624, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d 4c]
+A dealt [Ts Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #625, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h Js]
+B dealt [6s 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #626, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2d Ad]
+A dealt [3c Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #627, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 5s]
+B dealt [7c 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #628, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ac 2s]
+A dealt [8s 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #629, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 5c]
+B dealt [5h As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #630, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Ad]
+A dealt [8d 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #631, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 4c]
+B dealt [8s 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #632, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s Tc]
+A dealt [7h Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #633, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c As]
+B dealt [Ts 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #634, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th Ts]
+A dealt [5s 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #635, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9c 3s]
+B dealt [2s 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #636, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 3s]
+A dealt [Kc 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #637, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c Qs]
+B dealt [Qd 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #638, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 6h]
+A dealt [9c 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #639, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d Th]
+B dealt [Kd 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #640, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 9s]
+A dealt [6d 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #641, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Qs]
+B dealt [3c 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #642, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h 7d]
+A dealt [Td 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #643, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 4h]
+B dealt [9c 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #644, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6h Jh]
+A dealt [3h Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #645, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 3c]
+B dealt [3d Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #646, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 7d]
+A dealt [Qd Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #647, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s Qh]
+B dealt [Qd 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #648, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c Kd]
+A dealt [2c Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #649, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c 2s]
+B dealt [Qc Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #650, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h 7s]
+A dealt [Ac 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #651, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4d 3s]
+B dealt [Kd Ac]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #652, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th 4s]
+A dealt [Ad Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #653, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd Qd]
+B dealt [9d 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #654, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd Qd]
+A dealt [Kd 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #655, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d Kc]
+B dealt [2d 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #656, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h 3s]
+A dealt [9h Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #657, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 2h]
+B dealt [Kh 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #658, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6d 3h]
+A dealt [4d Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #659, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h Qs]
+B dealt [3h 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #660, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d Qh]
+A dealt [8c 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #661, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d Js]
+B dealt [2h 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #662, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Ad]
+A dealt [Th 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #663, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d 7c]
+B dealt [6s Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #664, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4d 5h]
+A dealt [6c 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #665, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3h Kd]
+B dealt [Tc 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #666, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 7h]
+A dealt [Qc 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #667, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Ts]
+B dealt [7s 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #668, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s Td]
+A dealt [Jd Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #669, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c Kh]
+B dealt [6h 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #670, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js Th]
+A dealt [8s 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #671, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3h 2d]
+B dealt [2c 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #672, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 7h]
+A dealt [Jh Qd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #673, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh Qc]
+B dealt [Qd 2h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #674, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 5c]
+A dealt [Ah 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #675, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s 4h]
+B dealt [3h 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #676, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d 7c]
+A dealt [8d Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #677, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js Qc]
+B dealt [8d 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #678, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s Jh]
+A dealt [Ad Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #679, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2h Ts]
+B dealt [Jd 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #680, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 7s]
+A dealt [Qh 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #681, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 5s]
+B dealt [3s 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #682, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 5h]
+A dealt [Qs Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #683, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s 2d]
+B dealt [Qc 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #684, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 4h]
+A dealt [5d 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #685, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 7h]
+B dealt [4h 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #686, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6h Ah]
+A dealt [7s As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #687, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Jc]
+B dealt [Ah Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #688, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h Ah]
+A dealt [2d 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #689, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 8h]
+B dealt [Ah 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #690, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh Td]
+A dealt [Ah 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #691, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s Js]
+B dealt [3h 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #692, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c Jd]
+A dealt [3h Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #693, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh 8c]
+B dealt [8h Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #694, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c Qs]
+A dealt [Qd 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #695, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c 2h]
+B dealt [As Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #696, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc 9d]
+A dealt [7s 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #697, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d Ks]
+B dealt [Jc 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #698, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Tc]
+A dealt [4h 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #699, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s 9s]
+B dealt [7h As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #700, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Js]
+A dealt [Jc Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #701, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d Ad]
+B dealt [3c 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #702, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 7h]
+A dealt [9d 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #703, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qh Qd]
+B dealt [9s As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #704, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c Ad]
+A dealt [9h 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #705, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9c Qh]
+B dealt [2d 6c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #706, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 3h]
+A dealt [Ah Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #707, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c 7c]
+B dealt [6d Kh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #708, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 9d]
+A dealt [6d Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #709, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc As]
+B dealt [Th 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #710, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 4c]
+A dealt [5s 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #711, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 8d]
+B dealt [8s 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #712, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Ac]
+A dealt [6d Td]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #713, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh Th]
+B dealt [7h Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #714, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Tc 2c]
+A dealt [Ad Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #715, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s Qh]
+B dealt [3s 7h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #716, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d Jd]
+A dealt [Jh 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #717, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 4c]
+B dealt [Qd Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #718, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Qd]
+A dealt [2d Td]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #719, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h Qd]
+B dealt [Ad 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #720, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8s Jc]
+A dealt [5c 2c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #721, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qc Td]
+B dealt [Qd 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #722, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 8s]
+A dealt [Qc 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #723, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s As]
+B dealt [Th 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #724, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 5h]
+A dealt [Js 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #725, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jd 6d]
+B dealt [3s Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #726, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d Kc]
+A dealt [5h 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #727, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2h Js]
+B dealt [Ac 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #728, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s Ac]
+A dealt [5d 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #729, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ac 9c]
+B dealt [Ah As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #730, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c Jd]
+A dealt [4d 7c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #731, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 5h]
+B dealt [Kc 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #732, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h 3c]
+A dealt [6h 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #733, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 7s]
+B dealt [Ac 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #734, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc Qc]
+A dealt [7c 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #735, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd 2h]
+B dealt [Qs Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #736, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad Jd]
+A dealt [3h Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #737, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s Qc]
+B dealt [As Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #738, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh 9h]
+A dealt [8c Td]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #739, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h 9c]
+B dealt [7h 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #740, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c Ac]
+A dealt [4c 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #741, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4s Js]
+B dealt [4c 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #742, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h 2d]
+A dealt [Js Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #743, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 9d]
+B dealt [Js 7c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #744, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3s Ad]
+A dealt [Jd 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #745, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 3s]
+B dealt [Kh Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #746, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 7c]
+A dealt [8c Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #747, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c 5h]
+B dealt [Js Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #748, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2c Kh]
+A dealt [7c 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #749, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c Js]
+B dealt [7s 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #750, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 8d]
+A dealt [Kh 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #751, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 4s]
+B dealt [Jd 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #752, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8d 9d]
+A dealt [7s 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #753, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c 3h]
+B dealt [Kc 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #754, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qc 2h]
+A dealt [7d Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #755, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kd 8d]
+B dealt [4h 6c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #756, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 9c]
+A dealt [6d Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #757, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s Jd]
+B dealt [5c Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #758, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 6h]
+A dealt [7c 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #759, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th 6c]
+B dealt [Jc Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #760, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qs 6s]
+A dealt [Th 5s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #761, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6c 8h]
+B dealt [8s 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #762, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 3c]
+A dealt [6s Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #763, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ks 5s]
+B dealt [Ts Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #764, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Ad]
+A dealt [Qd Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #765, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h Kd]
+B dealt [Qd 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #766, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 6h]
+A dealt [Qh 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #767, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 4h]
+B dealt [2s 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #768, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h 7c]
+A dealt [6d 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #769, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c Ac]
+B dealt [9d Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #770, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Tc Qs]
+A dealt [Kh 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #771, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 4c]
+B dealt [Jh 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #772, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc Kc]
+A dealt [Ts Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #773, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td 3c]
+B dealt [2c 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #774, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c Ks]
+A dealt [Ac 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #775, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs Th]
+B dealt [9d 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #776, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 3c]
+A dealt [6s 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #777, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h 7d]
+B dealt [8d Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #778, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6d 4c]
+A dealt [7d Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #779, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c 4d]
+B dealt [4s Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #780, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Kd]
+A dealt [6c Qd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #781, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d 4c]
+B dealt [3d Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #782, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js Kh]
+A dealt [Jc Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #783, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh Jc]
+B dealt [Kd 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #784, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 4c]
+A dealt [7d 5d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #785, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 4d]
+B dealt [Kc Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #786, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc 7d]
+A dealt [9s Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #787, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad Qd]
+B dealt [5d 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #788, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c 8d]
+A dealt [6h 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #789, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s 9d]
+B dealt [9c 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #790, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h 2d]
+A dealt [4s Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #791, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h 7c]
+B dealt [4d Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #792, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 5d]
+A dealt [2h 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #793, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kh 9c]
+B dealt [6d 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #794, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h Qs]
+A dealt [Qc Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #795, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h Td]
+B dealt [9s 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #796, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Ts]
+A dealt [As Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #797, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 7h]
+B dealt [Ts 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #798, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts Td]
+A dealt [5s 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #799, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As 4d]
+B dealt [3s Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #800, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 4s]
+A dealt [9d 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #801, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Ks]
+B dealt [Ac 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #802, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 6h]
+A dealt [7h 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #803, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h 3d]
+B dealt [Jh 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #804, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 7h]
+A dealt [Js 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #805, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 8c]
+B dealt [9c Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #806, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5d 8d]
+A dealt [6s 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #807, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h 4h]
+B dealt [8c 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #808, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s Tc]
+A dealt [7s 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #809, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 9s]
+B dealt [7c 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #810, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h 4c]
+A dealt [Ac 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #811, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s 7h]
+B dealt [4s Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #812, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qs 5s]
+A dealt [Qd As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #813, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Ks]
+B dealt [8s Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #814, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h 7s]
+A dealt [9s Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #815, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs Ts]
+B dealt [2s 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #816, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s Js]
+A dealt [As 8h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #817, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d 5h]
+B dealt [2s Ac]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #818, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h 9c]
+A dealt [Ad 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #819, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 3s]
+B dealt [Th 9c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #820, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2h Ts]
+A dealt [7c 7d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #821, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h 8c]
+B dealt [Th 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #822, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h 7d]
+A dealt [Qc 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #823, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 4c]
+B dealt [Td 5h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #824, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Js 6s]
+A dealt [Ts Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #825, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s Qh]
+B dealt [Ts 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #826, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h 2s]
+A dealt [Th Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #827, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 2h]
+B dealt [9d 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #828, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qs 6d]
+A dealt [4s Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #829, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9d 5h]
+B dealt [Td 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #830, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h 4d]
+A dealt [Ah Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #831, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ks Th]
+B dealt [Ac Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #832, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 2d]
+A dealt [3s Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #833, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h 2s]
+B dealt [2c 2h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #834, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c Jd]
+A dealt [2s 9c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #835, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c Td]
+B dealt [Ac Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #836, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c Kd]
+A dealt [3c 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #837, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h Ks]
+B dealt [Jh As]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #838, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s Kh]
+A dealt [7s Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #839, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc 3d]
+B dealt [7d 7h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #840, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 4c]
+A dealt [Js Td]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #841, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Tc Td]
+B dealt [8c Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #842, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7c 2h]
+A dealt [Ac 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #843, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d 2c]
+B dealt [9h Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #844, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 9d]
+A dealt [8d Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #845, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js 2h]
+B dealt [2s Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #846, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jh Tc]
+A dealt [7d 6d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #847, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 9c]
+B dealt [Ts 5s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #848, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h Qc]
+A dealt [7c 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #849, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c 2s]
+B dealt [Ts 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #850, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c Kd]
+A dealt [Js 8d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #851, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d 3h]
+B dealt [Jh Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #852, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c Jc]
+A dealt [2s 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #853, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh 2c]
+B dealt [9h 4s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #854, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 2c]
+A dealt [2d 6c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #855, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js 2d]
+B dealt [6c 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #856, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d Ac]
+A dealt [Jc 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #857, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d Ac]
+B dealt [Ah 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #858, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6c 3d]
+A dealt [4d 7h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #859, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4d 8s]
+B dealt [Tc 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #860, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s Ac]
+A dealt [Th Ks]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #861, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd 9d]
+B dealt [8h Ks]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #862, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h Ks]
+A dealt [5c 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #863, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8d Js]
+B dealt [7d 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #864, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2d 3h]
+A dealt [3d Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #865, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Ks]
+B dealt [As 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #866, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h 6s]
+A dealt [Tc 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #867, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 6s]
+B dealt [Kc 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #868, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 9c]
+A dealt [6c Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #869, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9c 5d]
+B dealt [Jc 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #870, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah 6h]
+A dealt [2d As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #871, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qd Jh]
+B dealt [4d 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #872, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ad 4c]
+A dealt [5h Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #873, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh Jc]
+B dealt [7d 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #874, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2c 4d]
+A dealt [Ts 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #875, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s 9c]
+B dealt [8d Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #876, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 8d]
+A dealt [2c 5h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #877, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 7s]
+B dealt [7c 8c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #878, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ac Kc]
+A dealt [6s 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #879, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c 7d]
+B dealt [7h Qs]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #880, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 8d]
+A dealt [Jc Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #881, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s Jh]
+B dealt [Th 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #882, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 2d]
+A dealt [5h Jh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #883, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 8s]
+B dealt [Ks 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #884, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5c Ac]
+A dealt [Qs 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #885, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Qs 9h]
+B dealt [7s Qh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #886, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 8d]
+A dealt [Kh 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #887, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c 5d]
+B dealt [3d 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #888, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5d 6c]
+A dealt [4h Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #889, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ad 8c]
+B dealt [9c 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #890, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h Tc]
+A dealt [4d 4c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #891, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Qc]
+B dealt [6h Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #892, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9h 2h]
+A dealt [Qh Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #893, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts Kd]
+B dealt [4s Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #894, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th Ks]
+A dealt [Td Jc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #895, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d 8h]
+B dealt [Th Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #896, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kd 3h]
+A dealt [Kc 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #897, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 7d]
+B dealt [6d Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #898, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 2d]
+A dealt [Kc Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #899, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8h 2c]
+B dealt [4c 8s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #900, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c Kc]
+A dealt [9h Qd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #901, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4h 8c]
+B dealt [Tc 4c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #902, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3d 8h]
+A dealt [Jd 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #903, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2c Kh]
+B dealt [9s Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #904, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [As 2c]
+A dealt [9d Tc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #905, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s Ah]
+B dealt [Qs 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #906, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h Th]
+A dealt [3c Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #907, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kc 6d]
+B dealt [5s 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #908, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6d 8h]
+A dealt [Kc 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #909, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8s 8d]
+B dealt [6h 6c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #910, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c Kd]
+A dealt [Ah 4s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #911, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c 3c]
+B dealt [Th 2h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #912, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jd 8c]
+A dealt [Qc Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #913, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Kd]
+B dealt [6d 2d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #914, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s 2h]
+A dealt [2c Kc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #915, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 8h]
+B dealt [3s 3d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #916, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4s 6c]
+A dealt [8c 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #917, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 8c]
+B dealt [2h Jc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #918, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s 9d]
+A dealt [Qc 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #919, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5d Ks]
+B dealt [6c 2h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #920, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8h 3s]
+A dealt [Qh 8c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #921, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ks Ah]
+B dealt [7c 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #922, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2s Qc]
+A dealt [9h Ad]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #923, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6d 2d]
+B dealt [Kc Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #924, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ac Ad]
+A dealt [Ah 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #925, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3d Ad]
+B dealt [3s 7s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #926, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9c 9h]
+A dealt [Js As]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #927, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3c Jh]
+B dealt [4c 8d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #928, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Jh]
+A dealt [Qd 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #929, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7d 3s]
+B dealt [Tc Kc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #930, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Th Tc]
+A dealt [8h Qs]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #931, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s Ts]
+B dealt [9d 7c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #932, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 2s]
+A dealt [7c Ah]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #933, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c 7s]
+B dealt [9d 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #934, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s Ah]
+A dealt [2d 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #935, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c Kd]
+B dealt [Th 4d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #936, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc 9h]
+A dealt [6d 3s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #937, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [3s 2d]
+B dealt [Jc Kd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #938, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8d 3c]
+A dealt [Jc Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #939, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s Ks]
+B dealt [5c 8h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #940, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c Tc]
+A dealt [4s 2h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #941, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7s Js]
+B dealt [4h 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #942, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 3s]
+A dealt [Ts 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #943, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 8h]
+B dealt [5c Th]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #944, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c Ks]
+A dealt [4h Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #945, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5h 8h]
+B dealt [9h Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #946, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 5s]
+A dealt [6c Js]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #947, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Kc Jh]
+B dealt [5h Tc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #948, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Jc 2c]
+A dealt [7c Ts]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #949, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [As 7s]
+B dealt [8d 9s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #950, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qd 2c]
+A dealt [Th Td]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #951, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d 7d]
+B dealt [3s Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #952, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d 4s]
+A dealt [7c 4h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #953, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 8h]
+B dealt [8c Jd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #954, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d Js]
+A dealt [Ac Kh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #955, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6s 8d]
+B dealt [Qc 9h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #956, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [8c 7s]
+A dealt [4c 9d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #957, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Ah]
+B dealt [Ts Td]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #958, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Qh 9h]
+A dealt [2c Th]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #959, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [8c Jc]
+B dealt [5h 4h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #960, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7h 9h]
+A dealt [Qc 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #961, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Js]
+B dealt [6h Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #962, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 6c]
+A dealt [Th Qh]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #963, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jh 4s]
+B dealt [6c 3c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #964, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Th]
+A dealt [Qd 3c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #965, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5s Ks]
+B dealt [8d Ad]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #966, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ts 4s]
+A dealt [3c 2c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #967, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2d Kh]
+B dealt [6d Qd]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #968, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kc Ac]
+A dealt [4s 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #969, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [2s 2c]
+B dealt [8s Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #970, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3h Ah]
+A dealt [Ks 4d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #971, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Th Jd]
+B dealt [2d Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #972, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [2d 8d]
+A dealt [As 9s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #973, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc Kd]
+B dealt [8h Ts]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #974, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4c 6c]
+A dealt [Qc 8s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #975, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 6c]
+B dealt [3d 9d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #976, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s Ac]
+A dealt [7c Kd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #977, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 6s]
+B dealt [5s 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #978, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9s 8s]
+A dealt [8h Qc]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #979, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Js Ks]
+B dealt [9c 6d]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #980, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [6s 4c]
+A dealt [7c 9h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #981, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Jc 3d]
+B dealt [Ks 2c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #982, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5s 6s]
+A dealt [8d 6h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #983, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [5c 2c]
+B dealt [Ah 2s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #984, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Ah Kh]
+A dealt [9s 6s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #985, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7h 2c]
+B dealt [8c Ah]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #986, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kd 9d]
+A dealt [Qs 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #987, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4c 9c]
+B dealt [Jh Js]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #988, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c 7s]
+A dealt [Kd Jd]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #989, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [7c 7h]
+B dealt [4h 3h]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #990, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [3c Js]
+A dealt [Kd 2s]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #991, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [6h 5d]
+B dealt [3h Ac]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #992, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [Kh 8h]
+A dealt [4s Ac]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #993, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Td Ad]
+B dealt [2h Qc]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #994, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [7d 9h]
+A dealt [2s 2d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #995, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [4d 3h]
+B dealt [2c 5c]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #996, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [9d Qc]
+A dealt [2h 3d]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #997, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [9h Jc]
+B dealt [7c 3s]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #998, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [5h 2h]
+A dealt [6s 3h]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Round #999, A (0), B (0)
+A posts the blind of 1
+B posts the blind of 2
+A dealt [Ts 4s]
+B dealt [5s Jh]
+A folds
+A awarded -1
+B awarded 1
+Players did not reach flop. No auction occured.
+
+Round #1000, B (1), A (-1)
+B posts the blind of 1
+A posts the blind of 2
+B dealt [4h Ks]
+A dealt [7d 5c]
+B folds
+B awarded -1
+A awarded 1
+Players did not reach flop. No auction occured.
+
+Final, A (0), B (0)
