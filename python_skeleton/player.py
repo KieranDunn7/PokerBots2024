@@ -222,7 +222,8 @@ class Player(Bot):
     
     def simulate_rest_of_game_postauction(self, flop, opp_auction, num_sims):
         """
-        auction_card is list of card types, if empty, it means we lost the auction
+        opp_auction is a Boolean representing whether the other bot received an extra card
+        from the auction.
         """
         hole_cards = [eval7.Card(card) for card in self.my_cards]
         flop_cards = [eval7.Card(card) for card in flop]
@@ -232,25 +233,14 @@ class Player(Bot):
             deck.cards.remove(card)
         my_wins = 0
         if opp_auction:
-            for _ in range(num_sims):
-                deck.shuffle()
-                draw = deck.peek(5)
-                opp_hole = draw[0:3]
-                r_and_t = draw[3:]
-                my_hand = revealed_cards + r_and_t
-                opp_hand = opp_hole + flop_cards + r_and_t
-                my_score = eval7.evaluate(my_hand)
-                opp_score = eval7.evaluate(opp_hand)
-                if my_score > opp_score:
-                    my_wins += 1
-                elif my_score == opp_score:
-                    my_wins += 0.5
+            peek_max = 5
         else:
-            for _ in range(num_sims):
+            peek_max = 4
+        for _ in range(num_sims):
                 deck.shuffle()
-                draw = deck.peek(4)
-                opp_hole = draw[0:2]
-                r_and_t = draw[2:]
+                draw = deck.peek(peek_max)
+                r_and_t = draw[0:2]
+                opp_hole = draw[2:]
                 my_hand = revealed_cards + r_and_t
                 opp_hand = opp_hole + flop_cards + r_and_t
                 my_score = eval7.evaluate(my_hand)
@@ -259,7 +249,6 @@ class Player(Bot):
                     my_wins += 1
                 elif my_score == opp_score:
                     my_wins += 0.5
-
         return my_wins/num_sims
     
 
