@@ -386,45 +386,45 @@ class Player(Bot):
             opp_auction = opp_bid >= my_bid
         if street == 3:
             if self.street3:
-                prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 3000)
+                self.prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 3000)
                 self.street3 = False
-            if prob_win < 0.58:
+            if self.prob_win < 0.58:
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return FoldAction()
-            elif prob_win > random.uniform(0.78, 0.83):
+            elif self.prob_win > random.uniform(0.78, 0.83):
                 return RaiseAction(int(random.uniform(min_raise, min(1.4*min_raise, max_raise))))
-            elif prob_win > random.uniform(0.7, 0.78) and my_pip == 0:
+            elif self.prob_win > random.uniform(0.7, 0.78) and my_pip == 0:
                 return RaiseAction(int(random.uniform(min_raise, min(1.2*min_raise, max_raise))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
         if street == 4:
             if self.street4:
-                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 5000)
+                self.prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 5000)
                 self.street4 = False
-            if prob_win < 0.68:
+            if self.prob_win < 0.68:
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return FoldAction()
-            elif prob_win > random.uniform(0.85, 0.9):
+            elif self.prob_win > random.uniform(0.85, 0.9):
                 return RaiseAction(int(random.uniform(min_raise, min(1.5*min_raise, max_raise))))
-            elif prob_win > random.uniform(0.75, 0.85) and my_pip == 0:
+            elif self.prob_win > random.uniform(0.75, 0.85) and my_pip == 0:
                 return RaiseAction(int(random.uniform(min_raise, min(1.2*min_raise, max_raise))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
         if street == 5:
             if self.street5:
-                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 7500)
+                self.prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 7500)
                 self.street5 = False
-            if prob_win < 0.72:
+            if self.prob_win < 0.72:
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return FoldAction()
-            elif prob_win > random.uniform(0.9, 0.95):
+            elif self.prob_win > random.uniform(0.9, 0.95):
                 return RaiseAction(int(random.uniform(min_raise, min(1.8*min_raise, max_raise))))
-            elif prob_win > random.uniform(0.8, 0.9) and my_pip == 0:
+            elif self.prob_win > random.uniform(0.8, 0.9) and my_pip == 0:
                 return RaiseAction(int(random.uniform(min_raise, min(1.3*min_raise, max_raise))))
             if CheckAction in legal_actions:
                 return CheckAction()
