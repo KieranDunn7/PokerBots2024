@@ -178,9 +178,9 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
 
 
-    def simulate_rest_of_game_postflop_preauction(self, num_sims):
-        hole_cards = [eval7.Card(card) for card in self.my_cards]
-        flop_cards = [eval7.Card(card) for card in self.board_cards]
+    def simulate_rest_of_game_postflop_preauction(my_cards, board_cards, num_sims):
+        hole_cards = [eval7.Card(card) for card in my_cards]
+        flop_cards = [eval7.Card(card) for card in board_cards]
         revealed_cards = hole_cards + flop_cards
 
         ###### TO FIX: self.my_cards is STRING not card object
@@ -220,13 +220,13 @@ class Player(Bot):
 
         return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
     
-    def simulate_rest_of_game_postauction(self, opp_auction, num_sims):
+    def simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, num_sims):
         """
         opp_auction is a Boolean representing whether the other bot received an extra card
         from the auction.
         """
-        hole_cards = [eval7.Card(card) for card in self.my_cards]
-        flop_cards = [eval7.Card(card) for card in self.board_cards]
+        hole_cards = [eval7.Card(card) for card in my_cards]
+        flop_cards = [eval7.Card(card) for card in board_cards]
         revealed_cards = hole_cards + flop_cards
         deck = eval7.Deck()
         for card in revealed_cards:
@@ -252,9 +252,9 @@ class Player(Bot):
         return my_wins/num_sims
     
 
-    def simulate_rest_of_game_post_turn(self, auction_card, num_sims):
-        hole_cards = [eval7.Card(card) for card in self.my_cards]
-        comm_cards = [eval7.Card(card) for card in self.board_cards]
+    def simulate_rest_of_game_post_turn(my_cards, board_cards, auction_card, num_sims):
+        hole_cards = [eval7.Card(card) for card in my_cards]
+        comm_cards = [eval7.Card(card) for card in board_cards]
         revealed_cards = hole_cards + comm_cards
         deck = eval7.Deck()
         for card in revealed_cards:
@@ -280,9 +280,9 @@ class Player(Bot):
         return my_wins/num_sims
 
 
-    def simulate_rest_of_game_post_river(self, flop, auction_card, turn, river, num_sims):
-        hole_cards = [eval7.Card(card) for card in self.my_cards]
-        comm_cards = [eval7.Card(card) for card in comm]
+    def simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, num_sims):
+        hole_cards = [eval7.Card(card) for card in my_cards]
+        comm_cards = [eval7.Card(card) for card in board_cards]
         revealed_cards = hole_cards + comm_cards
         deck = eval7.Deck()
         for card in revealed_cards:
@@ -322,8 +322,8 @@ class Player(Bot):
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
         street = round_state.street  # 0, 3, 4, or 5 representing pre-flop, flop, turn, or river respectively
-        self.my_cards = round_state.hands[active]  # your cards
-        self.board_cards = round_state.deck[:street]  # the board cards
+        my_cards = round_state.hands[active]  # your cards
+        board_cards = round_state.deck[:street]  # the board cards
         my_pip = round_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = round_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
         my_stack = round_state.stacks[active]  # the number of chips you have remaining
@@ -334,7 +334,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         if BidAction in legal_actions:
-            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
+            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = self.simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if self.round_num < 30:
                 average_opp_bid = 0.75*pot
@@ -368,7 +368,7 @@ class Player(Bot):
                 opp_auction = opp_bid >= my_bid
             if street == 3:
                 self.total_opp_bid += opp_bid
-                prob_win = self.simulate_rest_of_game_postauction(opp_auction, 5000)
+                prob_win = self.simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 5000)
                 if prob_win < 0.58:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -379,7 +379,7 @@ class Player(Bot):
                     return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
                 return CallAction()
             if street == 4:
-                prob_win = self.simulate_rest_of_game_post_turn(opp_auction, 7500)
+                prob_win = self.simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
                 if prob_win < 0.68:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -390,7 +390,7 @@ class Player(Bot):
                     return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
                 return CallAction()
             if street == 5:
-                prob_win = self.simulate_rest_of_game_post_river(opp_auction, 10000)
+                prob_win = self.simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 10000)
                 if prob_win < 0.72:
                     if CheckAction in legal_actions:
                         return CheckAction()
