@@ -391,7 +391,7 @@ class Player(Bot):
             self.opp_total_bids += 1
             self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:
-                self.prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 2500)
+                self.prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
             if self.prob_win < 0.58:
                 if CheckAction in legal_actions:
@@ -406,7 +406,7 @@ class Player(Bot):
             return CallAction()
         if street == 4:
             if self.street4:
-                self.prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 4000)
+                self.prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 1500)
                 self.street4 = False
             if self.prob_win < 0.68:
                 if CheckAction in legal_actions:
@@ -421,7 +421,7 @@ class Player(Bot):
             return CallAction()
         if street == 5:
             if self.street5:
-                self.prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 6000)
+                self.prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 1000)
                 self.street5 = False
             if self.prob_win < 0.72:
                 if CheckAction in legal_actions:
