@@ -26,7 +26,6 @@ class Player(Bot):
         Nothing.
         '''
         print("this")
-        self.total_opp_bid = 0
         
         self.pp = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
         
@@ -338,10 +337,7 @@ class Player(Bot):
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
-            if self.round_num < 30:
-                average_opp_bid = 0.75*(my_contribution+opp_contribution)
-            else:
-                average_opp_bid = self.total_opp_bid/self.round_num
+            average_opp_bid = 0.75*(my_contribution+opp_contribution)
             if prob_win_w_auction < 0.55:
                 return BidAction(int(random.uniform(0.6*average_opp_bid, 0.8*average_opp_bid)))
             if diff > 0.3:
@@ -375,7 +371,6 @@ class Player(Bot):
             else:
                 opp_auction = opp_bid >= my_bid
             if street == 3:
-                self.total_opp_bid += opp_bid
                 prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 5000)
                 if prob_win < 0.58:
                     if CheckAction in legal_actions:
