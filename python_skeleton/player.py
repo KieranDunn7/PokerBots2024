@@ -364,9 +364,9 @@ class Player(Bot):
                     return CallAction()
                 else:
                     return FoldAction()
-
-            if street == 3:
+            else:
                 opp_auction = opp_bid >= my_bid
+            if street == 3:
                 self.total_opp_bid += opp_bid
                 prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
                 if prob_win < 0.58:
