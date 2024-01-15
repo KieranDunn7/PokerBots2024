@@ -351,7 +351,7 @@ class Player(Bot):
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 750)
             diff = prob_win_w_auction - prob_win_wo_auction
             pot_size = my_contribution + opp_contribution
-            if self.num_round < 30:
+            if self.opp_total_bids < 30:
                 bid = int(diff * pot_size * 2)
             else:
                 average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
