@@ -133,7 +133,7 @@ class Player(Bot):
         '''
         my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
-        round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
+        self.round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         self.my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
 
@@ -156,8 +156,6 @@ class Player(Bot):
         else:
             self.pct = self.np[self.rank1][self.rank2]
             self.pctp = self.npp[self.rank1][self.rank2]
-        
-        self.round_num = round_num
 
 
 
