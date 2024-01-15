@@ -24,6 +24,8 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.total_opp_bid = 0
+        
         self.pp = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
         
         self.sp = {12: (0.389, 0.393, 0.404, 0.412, 0.411, 0.416, 0.423, 0.43, 0.452, 0.463, 0.47, 0.48),
@@ -150,6 +152,8 @@ class Player(Bot):
         else:
             self.pct = self.np[self.rank1][self.rank2]
             self.pctp = self.npp[self.rank1][self.rank2]
+
+        self.round_num = round_num
 
 
 
@@ -359,6 +363,14 @@ class Player(Bot):
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
+            diff = prob_win_w_auction - prob_win_wo_auction
+            if self.round_num < 30:
+                average_opp_bid = pot
+            else:
+                average_opp_bid = self.total_opp_bid/self.round_num
+            if prob_win_wo_auction < 0.5:
+                return BidAction(random.uniform(0.4*average_opp_bid, 0.6*average_opp_bid)
+            
         else:
             if RaiseAction in legal_actions:
                 min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
@@ -380,6 +392,7 @@ class Player(Bot):
                     return FoldAction()
 
                 if street == 3:
+                    self.total_opp_bid += opp_bid
                     prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
                 if street == 4:
                     prob_win = self.simulate_rest_of_game_post_turn(board_cards, my_cards[2:], 7500)
