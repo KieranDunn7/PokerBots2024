@@ -348,6 +348,8 @@ class Player(Bot):
                 min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
                 min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
                 max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
+            else:
+                min_raise, max_raise = 0, 0
                 
             if street == 0:
                 if CheckAction in legal_actions:
