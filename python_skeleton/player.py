@@ -334,7 +334,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         if BidAction in legal_actions:
-            prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
+            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if self.round_num < 30:
                 average_opp_bid = 0.75*pot
