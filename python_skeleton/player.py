@@ -368,9 +368,11 @@ class Player(Bot):
                 average_opp_bid = pot
             else:
                 average_opp_bid = self.total_opp_bid/self.round_num
-            if prob_win_wo_auction < 0.5:
+            if prob_win_w_auction < 0.55:
                 return BidAction(random.uniform(0.4*average_opp_bid, 0.6*average_opp_bid)
-            
+            if diff > 0.3:
+                return BidAction(random.uniform(average_opp_bid, 1.2*average_opp_bid)
+            return BidAction(random.uniform(0.8*average_opp_bid, average_opp_bid)
         else:
             if RaiseAction in legal_actions:
                 min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
