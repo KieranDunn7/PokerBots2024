@@ -132,6 +132,10 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.street0 = True
+        self.street3 = True
+        self.street4 = True
+        self.street5 = True
         my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
@@ -381,7 +385,9 @@ class Player(Bot):
         else:
             opp_auction = opp_bid >= my_bid
         if street == 3:
-            prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 3000)
+            if self.street3:
+                prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 3000)
+                self.street3 = False
             if prob_win < 0.58:
                 if CheckAction in legal_actions:
                     return CheckAction()
@@ -394,7 +400,9 @@ class Player(Bot):
                 return CheckAction()
             return CallAction()
         if street == 4:
-            prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 5000)
+            if self.street4:
+                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 5000)
+                self.street4 = False
             if prob_win < 0.68:
                 if CheckAction in legal_actions:
                     return CheckAction()
@@ -407,7 +415,9 @@ class Player(Bot):
                 return CheckAction()
             return CallAction()
         if street == 5:
-            prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 7500)
+            if self.street5:
+                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 7500)
+                self.street5 = False
             if prob_win < 0.72:
                 if CheckAction in legal_actions:
                     return CheckAction()
