@@ -104,26 +104,24 @@ class Player(Bot):
         my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
 
-        self.pair = False
-        self.suited = False
+        self.pair = self.rank1 == self.rank2
+        self.suited = self.suit1 == self.suit2
 
         self.rank1,self.rank2 = my_cards[0].rank, my_cards[1].rank
         self.suit1,self.suit2 = my_cards[0].suit, my_cards[1].suit
-
-        if self.rank1 == self.rank2:
-            self.pair = True
-        elif self.rank1 < self.rank2:
+        if self.rank1 < self.rank2:
             self.rank1,self.rank2 = self.rank2,self.rank1
             self.suit1,self.suit2 = self.suit2,self.suit1
-        if self.suit1 == self.suit2:
-            self.suited = True
 
         if self.pair:
-            self.pfp = self.pr[self.rank1]
+            self.pct = self.pp[self.rank1]
+            self.pctp = self.ppp[self.rank1]
         elif self.suited:
-            self.pfp = self.sr[self.rank1][self.rank2]
+            self.pct = self.sp[self.rank1][self.rank2]
+            self.pctp = self.spp[self.rank1][self.rank2]
         else:
-            self.pfp = self.nr[self.rank1][self.rank2]
+            self.pct = self.np[self.rank1][self.rank2]
+            self.pctp = self.npp[self.rank1][self.rank2]
 
 
 
