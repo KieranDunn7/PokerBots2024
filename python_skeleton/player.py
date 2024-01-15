@@ -155,10 +155,10 @@ class Player(Bot):
                 return CallAction()
             if self.big_blind:
                 if opp_pip > 8:
-                    alpha = 0
-                    beta = 0
-                alpha = 0
-                beta = 0
+                    alpha = 0.8
+                    beta = 0.72
+                alpha = 0.72
+                beta = 0.6
                 if pfp < beta:
                     return FoldAction()
                 if pfp < alpha:
