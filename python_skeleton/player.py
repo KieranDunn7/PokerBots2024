@@ -25,7 +25,11 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+<<<<<<< HEAD
         self.total_opp_bid = 0
+=======
+        print("this")
+>>>>>>> 16460b39fa39daac55974a59fd4a550047f56a60
         
         self.pp = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
         
@@ -337,10 +341,7 @@ class Player(Bot):
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
-            if self.round_num < 30:
-                average_opp_bid = 0.75*(my_contribution+opp_contribution)
-            else:
-                average_opp_bid = self.total_opp_bid/self.round_num
+            average_opp_bid = 0.75*(my_contribution+opp_contribution)
             if prob_win_w_auction < 0.55:
                 return BidAction(int(random.uniform(0.6*average_opp_bid, 0.8*average_opp_bid)))
             if diff > 0.3:
@@ -351,6 +352,8 @@ class Player(Bot):
                 min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
                 min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
                 max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
+            else:
+                min_raise, max_raise = 0, 0
                 
             if street == 0:
                 if CheckAction in legal_actions:
@@ -374,8 +377,7 @@ class Player(Bot):
             else:
                 opp_auction = opp_bid >= my_bid
             if street == 3:
-                self.total_opp_bid += opp_bid
-                prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 5000)
+                prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 3000)
                 if prob_win < 0.58:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -388,7 +390,7 @@ class Player(Bot):
                     return CheckAction()
                 return CallAction()
             if street == 4:
-                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
+                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 5000)
                 if prob_win < 0.68:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -401,7 +403,7 @@ class Player(Bot):
                     return CheckAction()
                 return CallAction()
             if street == 5:
-                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 10000)
+                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 7500)
                 if prob_win < 0.72:
                     if CheckAction in legal_actions:
                         return CheckAction()
