@@ -138,7 +138,7 @@ class Player(Bot):
         self.street3 = True
         self.street4 = True
         self.street5 = True
-        self.my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
+        my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         self.round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         self.my_cards = round_state.hands[active]  # your cards
