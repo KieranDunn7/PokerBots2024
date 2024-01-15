@@ -384,7 +384,7 @@ class Player(Bot):
                     return CheckAction()
                 return CallAction()
             if street == 4:
-                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
+                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 6500)
                 if prob_win < 0.68:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -397,7 +397,7 @@ class Player(Bot):
                     return CheckAction()
                 return CallAction()
             if street == 5:
-                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 10000)
+                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 7500)
                 if prob_win < 0.72:
                     if CheckAction in legal_actions:
                         return CheckAction()
