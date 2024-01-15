@@ -179,58 +179,62 @@ class Player(Bot):
 
 
     def simulate_rest_of_game_postflop_preauction(self, flop, num_sims):
-            hole_cards = [eval7.Card(card) for card in self.my_cards]
-            flop_cards = [eval7.Card(card) for card in flop]
-            revealed_cards = hole_cards + flop_cards
+        hole_cards = [eval7.Card(card) for card in self.my_cards]
+        flop_cards = [eval7.Card(card) for card in flop]
+        revealed_cards = hole_cards + flop_cards
 
-            ###### TO FIX: self.my_cards is STRING not card object
-            deck = eval7.Deck()
-            for card in revealed_cards:
-                deck.cards.remove(card)
-            my_wins_w_auction = 0
-            my_wins_wo_auction = 0
-            for _ in range(num_sims):
-                deck.shuffle()
-                draw = deck.peek(6)
-                opp_hole = draw[0:2]
-                r_and_t = draw[2:4]
-                auction1,auction2 = [draw[4]],[draw[5]]
+        ###### TO FIX: self.my_cards is STRING not card object
+        deck = eval7.Deck()
+        for card in revealed_cards:
+            deck.cards.remove(card)
+        my_wins_w_auction = 0
+        my_wins_wo_auction = 0
+        my_wins_both_auction = 0
+        for _ in range(num_sims):
+            deck.shuffle()
+            draw = deck.peek(6)
+            opp_hole = draw[0:2]
+            r_and_t = draw[2:4]
+            auction1,auction2 = [draw[4]],[draw[5]]
 
-                my_hand_auction = revealed_cards + r_and_t + auction1
-                opp_hand = opp_hole + flop_cards + r_and_t
-                self_score_p = eval7.evaluate(my_hand_auction)
-                opp_score = eval7.evaluate(opp_hand)
-                if self_score_p > opp_score:
-                    my_wins_w_auction += 1
-                elif self_score_p == opp_score:
-                    my_wins_w_auction += 0.5
-                my_hand = revealed_cards + r_and_t
-                opp_hand_auction = opp_hole + flop_cards + r_and_t + auction2
-                self_score = eval7.evaluate(my_hand)
-                opp_score_p = eval7.evaluate(opp_hand_p)
-                if self_score > opp_score_p:
-                    my_wins_wo_auction += 1
-                elif self_score == opp_score_p:
-                    my_wins_wo_auction += 0.5
+            my_hand_auction = revealed_cards + r_and_t + auction1
+            opp_hand = opp_hole + flop_cards + r_and_t
+            self_score_p = eval7.evaluate(my_hand_auction)
+            opp_score = eval7.evaluate(opp_hand)
+            if self_score_p > opp_score:
+                my_wins_w_auction += 1
+            elif self_score_p == opp_score:
+                my_wins_w_auction += 0.5
+            my_hand = revealed_cards + r_and_t
+            opp_hand_auction = opp_hole + flop_cards + r_and_t + auction2
+            self_score = eval7.evaluate(my_hand)
+            opp_score_p = eval7.evaluate(opp_hand_p)
+            if self_score > opp_score_p:
+                my_wins_wo_auction += 1
+            elif self_score == opp_score_p:
+                my_wins_wo_auction += 0.5
+            if self_score_p > opp_score_p:
+                my_wins_both_auction += 1
+            elif self_score_p == opp_score_p:
+                my_wins_both_auction += 0.5
 
-            return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims
+        return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
     
     def simulate_rest_of_game_postauction(self, flop, auction_card, num_sims):
         """
         auction_card is list of card types, if empty, it means we lost the auction
         """
-        revealed_cards = self.my_cards + flop + auction_card
-
+        hole_cards = [eval7.Card(card) for card in self.my_cards]
+        flop_cards = [eval7.Card(card) for card in flop]
+        revealed_cards = hole_cards + flop_cards
+        deck = eval7.Deck()
+        for card in revealed_cards:
+            deck.cards.remove(card)
         my_wins = 0
         if auction_card:
             for _ in range(num_sims):
-                deck = eval7.Deck()
-                for card in revealed_cards:
-                    deck.cards.remove(card)
-
-
                 deck.shuffle()
-                draw = deck.deal(4)
+                draw = deck.peek(4)
 
                 opp_hole = draw[0:2]
                 comm = draw[2:4]
@@ -242,12 +246,8 @@ class Player(Bot):
 
         else:
             for _ in range(num_sims):
-                deck = eval7.Deck()
-                for card in revealed_cards:
-                    deck.cards.remove(card)
-
                 deck.shuffle()
-                draw = deck.deal(5)
+                draw = deck.peek(5)
 
                 opp_hole = draw[0:2]
                 comm = draw[2:4]
