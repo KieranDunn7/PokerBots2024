@@ -25,11 +25,6 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
-<<<<<<< HEAD
-        self.total_opp_bid = 0
-=======
-        print("this")
->>>>>>> 16460b39fa39daac55974a59fd4a550047f56a60
         
         self.pp = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
         
