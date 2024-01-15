@@ -218,7 +218,6 @@ class Player(Bot):
                 opp_hole = draw[0:2]
                 r_and_t = draw[2:4]
                 auction1,auction2 = [draw[4]],[draw[5]]
-    
                 my_hand_p = revealed_cards + r_and_t + auction1
                 opp_hand = opp_hole + flop_cards + r_and_t
                 my_score_p = eval7.evaluate(my_hand_p)
@@ -241,67 +240,7 @@ class Player(Bot):
                     my_wins_both_auction += 0.5
     
             return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
-        
-        def simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, num_sims):
-            """
-            opp_auction is a Boolean representing whether the other bot received an extra card
-            from the auction.
-            """
-            hole_cards = [eval7.Card(card) for card in my_cards]
-            flop_cards = [eval7.Card(card) for card in board_cards]
-            revealed_cards = hole_cards + flop_cards
-            deck = eval7.Deck()
-            for card in revealed_cards:
-                deck.cards.remove(card)
-            my_wins = 0
-            if opp_auction:
-                peek_max = 5
-            else:
-                peek_max = 4
-            for _ in range(num_sims):
-                    deck.shuffle()
-                    draw = deck.peek(peek_max)
-                    r_and_t = draw[0:2]
-                    opp_hole = draw[2:]
-                    my_hand = revealed_cards + r_and_t
-                    opp_hand = opp_hole + flop_cards + r_and_t
-                    my_score = eval7.evaluate(my_hand)
-                    opp_score = eval7.evaluate(opp_hand)
-                    if my_score > opp_score:
-                        my_wins += 1
-                    elif my_score == opp_score:
-                        my_wins += 0.5
-            return my_wins/num_sims
-        
-    
-        def simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, num_sims):
-            hole_cards = [eval7.Card(card) for card in my_cards]
-            comm_cards = [eval7.Card(card) for card in board_cards]
-            revealed_cards = hole_cards + comm_cards
-            deck = eval7.Deck()
-            for card in revealed_cards:
-                deck.cards.remove(card)
-            my_wins = 0
-            if opp_auction:
-                peek_max = 4
-            else:
-                peek_max = 3
-            for _ in range(num_sims):
-                    deck.shuffle()
-                    draw = deck.peek(peek_max)
-                    river = draw[0]
-                    opp_hole = draw[1:]
-                    my_hand = revealed_cards + [river]
-                    opp_hand = opp_hole + comm_cards + [river]
-                    my_score = eval7.evaluate(my_hand)
-                    opp_score = eval7.evaluate(opp_hand)
-                    if my_score > opp_score:
-                        my_wins += 1
-                    elif my_score == opp_score:
-                        my_wins += 0.5
-            return my_wins/num_sims
-    
-    
+
         def simulate_rest_of_game(my_cards, board_cards, opp_auction, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
             comm_cards = [eval7.Card(card) for card in board_cards]
