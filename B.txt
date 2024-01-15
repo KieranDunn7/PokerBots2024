@@ -1,12 +1,12 @@
+this
+['Ks', '4s']
 Traceback (most recent call last):
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 441, in <module>
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 411, in <module>
     run_bot(Player(), parse_args())
   File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
     runner.run()
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 118, in run
-    action = self.pokerbot.get_action(game_state, round_state, active)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 370, in get_action
-    prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 191, in simulate_rest_of_game_postflop_preauction
-    deck.cards.remove(card)
-ValueError: list.remove(x): x not in list
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 69, in run
+    self.pokerbot.handle_new_round(game_state, round_state, active)
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 158, in handle_new_round
+    self.pct = self.np[self.rank1][self.rank2]
+TypeError: 'float' object is not subscriptable

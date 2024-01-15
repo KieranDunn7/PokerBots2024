@@ -1,12 +1,37 @@
+this
+['4s', '6d']
+['Jc', 'Tc']
+['4d', 'Kd']
+['6c', 'Kh']
+['2s', 'Ad']
+['3s', '9h']
+['7d', '3c']
+['7s', 'Tc']
+['4c', '6h']
+['5h', 'Td']
+['Jd', '9h']
+['4s', 'Qc']
+['7h', '2h']
+['As', 'Kd']
+['Ks', '2d']
+['Th', 'Jc']
+['9h', '5h']
+['3d', 'As']
+['Th', '5s']
+['Jd', '2c']
+['Ks', '3c']
+['9s', '2h']
+['9d', '9h']
+['9d', '9h']
 Traceback (most recent call last):
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 441, in <module>
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 411, in <module>
     run_bot(Player(), parse_args())
   File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
     runner.run()
   File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 118, in run
     action = self.pokerbot.get_action(game_state, round_state, active)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 370, in get_action
-    prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 191, in simulate_rest_of_game_postflop_preauction
-    deck.cards.remove(card)
-ValueError: list.remove(x): x not in list
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 339, in get_action
+    prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 229, in simulate_rest_of_game_postflop_preauction
+    elif self_score == opp_score_p:
+NameError: name 'self_score' is not defined

@@ -226,7 +226,7 @@ class Player(Bot):
                 opp_score_p = eval7.evaluate(opp_hand_p)
                 if my_score > opp_score_p:
                     my_wins_wo_auction += 1
-                elif self_score == opp_score_p:
+                elif my_score == opp_score_p:
                     my_wins_wo_auction += 0.5
                 if my_score_p > opp_score_p:
                     my_wins_both_auction += 1
