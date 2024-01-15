@@ -353,6 +353,8 @@ class Player(Bot):
                 max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
                 
             if street == 0:
+                if CheckAction in legal_actions:
+                    return CheckAction()
                 pct, pctp = self.pct, self.pctp
                 tpct = (pct + pctp)/2
                 if tpct < 0.5:
@@ -360,7 +362,7 @@ class Player(Bot):
                 elif tpct > random.uniform(0.56, 0.62):
                     return CallAction()
                 elif my_pip == SMALL_BLIND:
-                    return RaiseAction(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.5*min_raise, max_raise))))
                 elif tpct > 0.52:
                     return CallAction()
                 else:
@@ -375,9 +377,9 @@ class Player(Bot):
                         return CheckAction()
                     return FoldAction()
                 elif prob_win > random.uniform(0.78, 0.83):
-                    return RaiseAction(random.uniform(min_raise, 1.4*min_raise))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.4*min_raise, max_raise))))
                 elif prob_win > random.uniform(0.7, 0.78) and my_pip == 0:
-                    return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.2*min_raise, max_raise))))
                 return CallAction()
             if street == 4:
                 prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
@@ -386,9 +388,9 @@ class Player(Bot):
                         return CheckAction()
                     return FoldAction()
                 elif prob_win > random.uniform(0.85, 0.9):
-                    return RaiseAction(random.uniform(min_raise, 1.5*min_raise))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.5*min_raise, max_raise))))
                 elif prob_win > random.uniform(0.75, 0.85) and my_pip == 0:
-                    return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.2*min_raise, max_raise))))
                 return CallAction()
             if street == 5:
                 prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 10000)
@@ -397,9 +399,9 @@ class Player(Bot):
                         return CheckAction()
                     return FoldAction()
                 elif prob_win > random.uniform(0.9, 0.95):
-                    return RaiseAction(random.uniform(min_raise, 1.8*min_raise))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.8*min_raise, max_raise))))
                 elif prob_win > random.uniform(0.8, 0.9) and my_pip == 0:
-                    return RaiseAction(random.uniform(min_raise, 1.3*min_raise))
+                    return RaiseAction(int(random.uniform(min_raise, min(1.3*min_raise, max_raise))))
                 return CallAction()
             if CheckAction in legal_actions:
                 return CheckAction()
