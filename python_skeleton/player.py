@@ -355,7 +355,7 @@ class Player(Bot):
                 bid = int(diff * pot_size * 2)
             else:
                 average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
-                bid = int(average_opp_bid * diff * pot_size/4)
+                bid = int(average_opp_bid * diff * pot_size**3/4)
             return BidAction(bid)
 
         if RaiseAction in legal_actions:
@@ -387,8 +387,9 @@ class Player(Bot):
         else:
             opp_auction = opp_bid >= my_bid
         if street == 3:
+            pot_size = my_contribution + opp_contribution
             self.opp_total_bids += 1
-            self.opp_total_bid_amount += opp_bid
+            self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:
                 self.prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 2500)
                 self.street3 = False
