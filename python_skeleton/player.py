@@ -253,7 +253,7 @@ class Player(Bot):
         return my_wins/num_sims
     
 
-    def simulate_rest_of_game_post_turn(my_cards, board_cards, auction_card, num_sims):
+    def simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, num_sims):
         hole_cards = [eval7.Card(card) for card in my_cards]
         comm_cards = [eval7.Card(card) for card in board_cards]
         revealed_cards = hole_cards + comm_cards
