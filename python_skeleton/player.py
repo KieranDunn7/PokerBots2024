@@ -336,7 +336,7 @@ class Player(Bot):
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         print(my_cards)
         if BidAction in legal_actions:
-            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = self.simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
+            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if self.round_num < 30:
                 average_opp_bid = 0.75*pot
@@ -370,7 +370,7 @@ class Player(Bot):
                 opp_auction = opp_bid >= my_bid
             if street == 3:
                 self.total_opp_bid += opp_bid
-                prob_win = self.simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 5000)
+                prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 5000)
                 if prob_win < 0.58:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -381,7 +381,7 @@ class Player(Bot):
                     return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
                 return CallAction()
             if street == 4:
-                prob_win = self.simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
+                prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
                 if prob_win < 0.68:
                     if CheckAction in legal_actions:
                         return CheckAction()
@@ -392,7 +392,7 @@ class Player(Bot):
                     return RaiseAction(random.uniform(min_raise, 1.2*min_raise))
                 return CallAction()
             if street == 5:
-                prob_win = self.simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 10000)
+                prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 10000)
                 if prob_win < 0.72:
                     if CheckAction in legal_actions:
                         return CheckAction()
