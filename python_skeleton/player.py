@@ -347,7 +347,7 @@ class Player(Bot):
                 elif tpct > random.uniform(0.56, 0.62):
                     return CallAction()
                 elif my_pip == SMALL_BLIND:
-                    return RaiseAction(random.uniform(min_raise, 1.5*min_raise))
+                    return RaiseAction(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
                 elif tpct > 0.52:
                     return CallAction()
                 else:
