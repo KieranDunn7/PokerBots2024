@@ -117,6 +117,7 @@ class Player(Bot):
         self.forfeit = False
 
         self.opp_total_bids = 0
+        self.opp_total_bid_amount = 0
 
 
 
@@ -134,13 +135,12 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
-        self.street0 = True
         self.street3 = True
         self.street4 = True
         self.street5 = True
-        my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
+        self.my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
-        round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
+        self.round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         self.my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 2:
@@ -347,16 +347,13 @@ class Player(Bot):
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
-        print(opp_bid)
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
-            average_opp_bid = 0.75*(my_contribution+opp_contribution)
-            if prob_win_w_auction < 0.55:
-                return BidAction(int(random.uniform(0.6*average_opp_bid, 0.8*average_opp_bid)))
-            if diff > 0.3:
-                return BidAction(int(random.uniform(1.25*average_opp_bid, 1.75*average_opp_bid)))
-            return BidAction(int(random.uniform(average_opp_bid, 1.25*average_opp_bid)))
+            average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
+            pot_size = my_contribution + opp_contribution
+            bid = average_opp_bid * diff * pot_size/4
+            return BidAction(bid)
 
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
@@ -387,6 +384,8 @@ class Player(Bot):
         else:
             opp_auction = opp_bid >= my_bid
         if street == 3:
+            self.opp_total_bids += 1
+            self.opp_total_bid_amount += opp_bid
             if self.street3:
                 self.prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 3000)
                 self.street3 = False
