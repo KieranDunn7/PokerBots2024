@@ -344,12 +344,14 @@ class Player(Bot):
                 tpct = (pct + pctp)/2
                 if tpct < 0.5:
                     return FoldAction()
-                elif tpct > 0.6:
+                elif tpct > random.uniform(0.56, 0.62):
                     return CallAction()
                 elif my_pip == SMALL_BLIND:
-                    return RaiseAction(min_raise)
-                else:
+                    return RaiseAction(random.uniform(min_raise, 1.5*min_raise))
+                elif tpct > 0.52:
                     return CallAction()
+                else:
+                    return FoldAction()
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
