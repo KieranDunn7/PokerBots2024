@@ -332,7 +332,6 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
-        print(my_cards)
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
