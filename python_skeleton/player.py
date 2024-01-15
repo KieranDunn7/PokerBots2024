@@ -296,7 +296,7 @@ class Player(Bot):
         for _ in range(num_sims):
                 deck.shuffle()
                 opp_hole = deck.peek(peek_max)
-                my_hand = revealed_cards + river
+                my_hand = revealed_cards
                 opp_hand = opp_hole + comm_cards
                 my_score = eval7.evaluate(my_hand)
                 opp_score = eval7.evaluate(opp_hand)
