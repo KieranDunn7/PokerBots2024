@@ -357,24 +357,8 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
-
-        if street == 3:
-            if BidAction in legal_actions: ### Post-flop, pre-auction
-                prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
-            else: ### Post-flop, post-auction
-                prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
-
-        if street == 4: ### Post-turn
-            prob_win = self.simulate_rest_of_game_post_turn(board_cards, my_cards[2:], 7500)
-
-        if street == 5: ### Post-river
-            prob_win = self.simulate_rest_of_game_post_river(board_cards, my_cards[2:], 10000)
-            
-
-
         if BidAction in legal_actions:
-
-            pass
+            prob_win_w_auction, prob_win_wo_auction = self.simulate_rest_of_game_postflop_preauction(board_cards, 1000)
         else:
             if RaiseAction in legal_actions:
                 min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
@@ -394,6 +378,13 @@ class Player(Bot):
                     return CallAction()
                 else:
                     return FoldAction()
+
+                if street == 3:
+                    prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
+                if street == 4:
+                    prob_win = self.simulate_rest_of_game_post_turn(board_cards, my_cards[2:], 7500)
+                if street == 5:
+                    prob_win = self.simulate_rest_of_game_post_river(board_cards, my_cards[2:], 10000)
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
