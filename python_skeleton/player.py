@@ -178,9 +178,9 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
 
 
-    def simulate_rest_of_game_postflop_preauction(self, flop, num_sims):
+    def simulate_rest_of_game_postflop_preauction(self, num_sims):
         hole_cards = [eval7.Card(card) for card in self.my_cards]
-        flop_cards = [eval7.Card(card) for card in flop]
+        flop_cards = [eval7.Card(card) for card in self.board_cards]
         revealed_cards = hole_cards + flop_cards
 
         ###### TO FIX: self.my_cards is STRING not card object
@@ -220,13 +220,13 @@ class Player(Bot):
 
         return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
     
-    def simulate_rest_of_game_postauction(self, flop, opp_auction, num_sims):
+    def simulate_rest_of_game_postauction(self, opp_auction, num_sims):
         """
         opp_auction is a Boolean representing whether the other bot received an extra card
         from the auction.
         """
         hole_cards = [eval7.Card(card) for card in self.my_cards]
-        flop_cards = [eval7.Card(card) for card in flop]
+        flop_cards = [eval7.Card(card) for card in self.board_cards]
         revealed_cards = hole_cards + flop_cards
         deck = eval7.Deck()
         for card in revealed_cards:
@@ -252,9 +252,9 @@ class Player(Bot):
         return my_wins/num_sims
     
 
-    def simulate_rest_of_game_post_turn(self, comm, auction_card, turn, num_sims):
+    def simulate_rest_of_game_post_turn(self, auction_card, num_sims):
         hole_cards = [eval7.Card(card) for card in self.my_cards]
-        comm_cards = [eval7.Card(card) for card in comm]
+        comm_cards = [eval7.Card(card) for card in self.board_cards]
         revealed_cards = hole_cards + comm_cards
         deck = eval7.Deck()
         for card in revealed_cards:
@@ -322,8 +322,8 @@ class Player(Bot):
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
         street = round_state.street  # 0, 3, 4, or 5 representing pre-flop, flop, turn, or river respectively
-        my_cards = round_state.hands[active]  # your cards
-        board_cards = round_state.deck[:street]  # the board cards
+        self.my_cards = round_state.hands[active]  # your cards
+        self.board_cards = round_state.deck[:street]  # the board cards
         my_pip = round_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = round_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
         my_stack = round_state.stacks[active]  # the number of chips you have remaining
@@ -366,6 +366,7 @@ class Player(Bot):
                     return FoldAction()
 
             if street == 3:
+                opp_auction = opp_bid >= my_bid
                 self.total_opp_bid += opp_bid
                 prob_win = self.simulate_rest_of_game_postauction(board_cards, my_cards[2:], 5000)
                 if prob_win < 0.58:
