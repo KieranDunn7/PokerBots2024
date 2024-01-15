@@ -348,7 +348,7 @@ class Player(Bot):
                 return CheckAction()
             return FoldAction()
         if BidAction in legal_actions:
-            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
+            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 750)
             diff = prob_win_w_auction - prob_win_wo_auction
             pot_size = my_contribution + opp_contribution
             if self.num_round < 30:
