@@ -180,24 +180,10 @@ class Player(Bot):
                 max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
                 
             if street == 0:
-                pfp = self.pfp
-                if not self.big_blind:
-                    if pfp < 0.52:
-                        return FoldAction()
-                    return CallAction()
-                if self.big_blind:
-                    if opp_pip > 8:
-                        alpha = 0.8
-                        beta = 0.72
-                    alpha = 0.72
-                    beta = 0.6
-                    if pfp < beta:
-                        return FoldAction()
-                    if pfp < alpha:
-                        return CallAction()
-                    if RaiseAction in legal_actions:
-                        return RaiseAction(random.randint(min_raise, 2*min_raise))
-                    return CallAction()
+                pct, pctp = self.pct, self.pctp
+                tpct = (pct + pctp)/2
+                if tpct < 1/2:
+                    return FoldAction()
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
