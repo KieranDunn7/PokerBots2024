@@ -284,8 +284,8 @@ class Player(Bot):
                     draw = deck.peek(peek_max)
                     river = draw[0]
                     opp_hole = draw[1:]
-                    my_hand = revealed_cards + river
-                    opp_hand = opp_hole + comm_cards + river
+                    my_hand = revealed_cards + [river]
+                    opp_hand = opp_hole + comm_cards + [river]
                     my_score = eval7.evaluate(my_hand)
                     opp_score = eval7.evaluate(opp_hand)
                     if my_score > opp_score:

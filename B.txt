@@ -1,12 +1,34 @@
 this
-['Ks', '4s']
+['8s', '3c']
+['8h', '4s']
+['7c', '2h']
+['2d', '6c']
+['4d', '7d']
+['8s', 'Tc']
+['9s', '4h']
+['Ks', '9s']
+['8c', 'Th']
+['2s', '2d']
+['Ad', 'Qh']
+['Ks', '2s']
+['7d', 'As']
+['4c', '2c']
+['Kc', '7d']
+['Jd', '9c']
+['4c', '6s']
+['8d', '9d']
+['8d', '9d']
+['8d', '9d', '4d']
+['8d', '9d', '4d']
 Traceback (most recent call last):
   File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 411, in <module>
     run_bot(Player(), parse_args())
   File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
     runner.run()
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 69, in run
-    self.pokerbot.handle_new_round(game_state, round_state, active)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 158, in handle_new_round
-    self.pct = self.np[self.rank1][self.rank2]
-TypeError: 'float' object is not subscriptable
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 118, in run
+    action = self.pokerbot.get_action(game_state, round_state, active)
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 384, in get_action
+    prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 7500)
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 287, in simulate_rest_of_game_post_turn
+    my_hand = revealed_cards + river
+TypeError: can only concatenate list (not "eval7.cards.Card") to list
