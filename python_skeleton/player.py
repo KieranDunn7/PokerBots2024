@@ -198,25 +198,25 @@ class Player(Bot):
             r_and_t = draw[2:4]
             auction1,auction2 = [draw[4]],[draw[5]]
 
-            my_hand_auction = revealed_cards + r_and_t + auction1
+            my_hand_p = revealed_cards + r_and_t + auction1
             opp_hand = opp_hole + flop_cards + r_and_t
-            self_score_p = eval7.evaluate(my_hand_auction)
+            my_score_p = eval7.evaluate(my_hand_p)
             opp_score = eval7.evaluate(opp_hand)
-            if self_score_p > opp_score:
+            if my_score_p > opp_score:
                 my_wins_w_auction += 1
-            elif self_score_p == opp_score:
+            elif my_score_p == opp_score:
                 my_wins_w_auction += 0.5
             my_hand = revealed_cards + r_and_t
-            opp_hand_auction = opp_hole + flop_cards + r_and_t + auction2
-            self_score = eval7.evaluate(my_hand)
+            opp_hand_p = opp_hole + flop_cards + r_and_t + auction2
+            my_score = eval7.evaluate(my_hand)
             opp_score_p = eval7.evaluate(opp_hand_p)
-            if self_score > opp_score_p:
+            if my_score > opp_score_p:
                 my_wins_wo_auction += 1
             elif self_score == opp_score_p:
                 my_wins_wo_auction += 0.5
-            if self_score_p > opp_score_p:
+            if my_score_p > opp_score_p:
                 my_wins_both_auction += 1
-            elif self_score_p == opp_score_p:
+            elif my_score_p == opp_score_p:
                 my_wins_both_auction += 0.5
 
         return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
