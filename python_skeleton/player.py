@@ -252,46 +252,31 @@ class Player(Bot):
         return my_wins/num_sims
     
 
-    def simulate_rest_of_game_post_turn(self, flop, auction_card, turn, num_sims):
-        revealed_cards = self.my_cards + flop + auction_card + turn
-        
+    def simulate_rest_of_game_post_turn(self, comm, auction_card, turn, num_sims):
+        hole_cards = [eval7.Card(card) for card in self.my_cards]
+        comm_cards = [eval7.Card(card) for card in comm]
+        revealed_cards = hole_cards + comm_cards
+        deck = eval7.Deck()
+        for card in revealed_cards:
+            deck.cards.remove(card)
         my_wins = 0
-        if auction_card:
-            for _ in range(num_sims):
-                deck = eval7.Deck()
-                for card in revealed_cards:
-                    deck.cards.remove(card)
-
-                deck.shuffle()
-                draw = deck.deal(3)
-
-                opp_hole = draw[0:2]
-                river = [draw[2]]
-
-                my_hand_auction = self.my_cards + flop + auction_card + turn + river
-                opp_hand = opp_hole + flop + turn + river
-                if eval7.evaluate(my_hand_auction) >= eval7.evaluate(opp_hand):
-                    my_wins += 1
-
+        if opp_auction:
+            peek_max = 4
         else:
-            for _ in range(num_sims):
-                deck = eval7.Deck()
-                for card in revealed_cards:
-                    deck.cards.remove(card)
-
+            peek_max = 3
+        for _ in range(num_sims):
                 deck.shuffle()
-                draw = deck.deal(4)
-
-                opp_hole = draw[0:2]
-                river = [draw[2]]
-                opp_auction = [draw[3]]
-
-                my_hand = self.my_cards + flop + turn + river
-                opp_hand_auction = opp_hole + flop + turn + river + opp_auction
-                if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand_auction):
+                draw = deck.peek(peek_max)
+                river = draw[0]
+                opp_hole = draw[1:]
+                my_hand = revealed_cards + river
+                opp_hand = opp_hole + flop_cards + river
+                my_score = eval7.evaluate(my_hand)
+                opp_score = eval7.evaluate(opp_hand)
+                if my_score > opp_score:
                     my_wins += 1
-
-
+                elif my_score == opp_score:
+                    my_wins += 0.5
         return my_wins/num_sims
 
 
