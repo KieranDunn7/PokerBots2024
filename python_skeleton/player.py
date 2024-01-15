@@ -107,8 +107,8 @@ class Player(Bot):
         self.pair = False
         self.suited = False
 
-        self.rank1,self.rank2 = ranks[my_cards[0][0]],ranks[my_cards[1][0]]
-        self.suit1,self.suit2 = self.my_cards[0][1],self.my_cards[1][1]
+        self.rank1,self.rank2 = my_cards[0].rank, my_cards[1].rank
+        self.suit1,self.suit2 = my_cards[0].suit, my_cards[1].suit
 
         if self.rank1 == self.rank2:
             self.pair = True
