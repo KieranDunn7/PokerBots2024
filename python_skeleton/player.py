@@ -355,7 +355,7 @@ class Player(Bot):
                 bid = int(diff * pot_size * 2)
             else:
                 average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
-                bid = int(average_opp_bid * diff * pot_size**3/4)
+                bid = int(average_opp_bid * diff * pot_size**3/2)
             return BidAction(bid)
 
         if RaiseAction in legal_actions:
