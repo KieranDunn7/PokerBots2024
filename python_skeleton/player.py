@@ -350,9 +350,12 @@ class Player(Bot):
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
-            average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
             pot_size = my_contribution + opp_contribution
-            bid = average_opp_bid * diff * pot_size/4
+            if self.num_round < 30:
+                bid = diff * pot_size * 2
+            else:
+                average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
+                bid = average_opp_bid * diff * pot_size/4
             return BidAction(bid)
 
         if RaiseAction in legal_actions:
