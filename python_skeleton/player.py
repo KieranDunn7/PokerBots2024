@@ -185,11 +185,11 @@ class Player(Bot):
                 if tpct < 0.5:
                     return FoldAction()
                 elif tpct > 0.6:
-                    return CheckAction()
+                    return CallAction()
                 elif my_pip == SMALL_BLIND:
                     return RaiseAction(min_raise)
                 else:
-                    return CheckAction()
+                    return CallAction()
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
