@@ -302,7 +302,7 @@ class Player(Bot):
             return my_wins/num_sims
     
     
-        def simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, num_sims):
+        def simulate_rest_of_game(my_cards, board_cards, opp_auction, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
             comm_cards = [eval7.Card(card) for card in board_cards]
             revealed_cards = hole_cards + comm_cards
@@ -310,15 +310,19 @@ class Player(Bot):
             for card in revealed_cards:
                 deck.cards.remove(card)
             my_wins = 0
+            peek_max = 7 - len(board_cards)
             if opp_auction:
-                peek_max = 3
+                peek_max += 1
+                opp_hand_size = 3
             else:
-                peek_max = 2
+                opp_hand_size = 2
             for _ in range(num_sims):
                     deck.shuffle()
-                    opp_hole = deck.peek(peek_max)
-                    my_hand = revealed_cards
-                    opp_hand = opp_hole + comm_cards
+                    draw = deck.peek(peek_max)
+                    opp_hole = draw[0:opp_hand_size]
+                    new_comm_cards = draw[opp_hand_size:]
+                    my_hand = revealed_cards + new_comm_cards
+                    opp_hand = opp_hole + comm_cards + new_comm_cards
                     my_score = eval7.evaluate(my_hand)
                     opp_score = eval7.evaluate(opp_hand)
                     if my_score > opp_score:
@@ -391,7 +395,7 @@ class Player(Bot):
             self.opp_total_bids += 1
             self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:
-                self.prob_win = simulate_rest_of_game_postauction(my_cards, board_cards, opp_auction, 1500)
+                self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
             if self.prob_win < 0.58:
                 if CheckAction in legal_actions:
@@ -406,7 +410,7 @@ class Player(Bot):
             return CallAction()
         if street == 4:
             if self.street4:
-                self.prob_win = simulate_rest_of_game_post_turn(my_cards, board_cards, opp_auction, 1500)
+                self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street4 = False
             if self.prob_win < 0.68:
                 if CheckAction in legal_actions:
@@ -421,7 +425,7 @@ class Player(Bot):
             return CallAction()
         if street == 5:
             if self.street5:
-                self.prob_win = simulate_rest_of_game_post_river(my_cards, board_cards, opp_auction, 1000)
+                self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
                 self.street5 = False
             if self.prob_win < 0.72:
                 if CheckAction in legal_actions:
