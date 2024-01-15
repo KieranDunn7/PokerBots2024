@@ -116,6 +116,8 @@ class Player(Bot):
 
         self.forfeit = False
 
+        self.opp_total_bids = 0
+
 
 
         
@@ -345,7 +347,7 @@ class Player(Bot):
             if CheckAction in legal_actions:
                 return CheckAction()
             return FoldAction()
-        
+        print(opp_bid)
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards, 1000)
             diff = prob_win_w_auction - prob_win_wo_auction
