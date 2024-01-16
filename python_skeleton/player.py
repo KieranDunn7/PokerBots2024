@@ -124,6 +124,10 @@ class Player(Bot):
         self.tpfcr = 0 # sum of amounts they've folded on
 
 
+        self.opp_bid_total = 0 # For crazy opp auction mean calculation
+        self.opp_bid_mse = 0 # FOr crazy opp auction variance calculation
+        
+
     def handle_new_round(self, game_state, round_state, active):
         '''
         Called when a new round starts. Called NUM_ROUNDS times.
@@ -192,11 +196,21 @@ class Player(Bot):
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         big_blind = bool(active)  # True if you are the big blind
+        self.opp_bid_total += previous_state.opp_bid
+        self.opp_bid_avg = self.opp_bid_total/game_state.round_num
+        self.opp_bid_mse += (previous_state.opp_bid - self.opp_bid_avg)**2
+        self.opp_bid_variance = self.opp_bid_mse/game_state.round_num
+
+
         if street == 0 and not self.folded and not big_blind:
             self.pff += 1
             self.tpffr += previous_state.pips[1-active]
             print("Pre-flop Opponent Fold")
             print(previous_state.pips[active])
+
+
+
+
             
 
 
@@ -284,6 +298,9 @@ class Player(Bot):
                         my_wins += 0.5
             return my_wins/num_sims
 
+        def crazy_opp_bid_behaviour(avg, var):
+            return avg > 100 and 0 <= var <= 50 and game_state.round_num > 20
+
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
         street = round_state.street  # 0, 3, 4, or 5 representing pre-flop, flop, turn, or river respectively
@@ -307,6 +324,8 @@ class Player(Bot):
             self.folded = True
             return FoldAction()
         if BidAction in legal_actions:
+            if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_variance):
+                return BidAction(int(self.opp_bid_avg - (self.opp_bid_variance)**(1/2)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if self.opp_total_bids < 30:
