@@ -379,7 +379,9 @@ class Player(Bot):
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if not self.opp_forfeit:
-                print("diff: ", diff)
+                print("prob_win_w_auction:", prob_win_w_auction)
+                print("prob_win_wo_auction:", prob_win_wo_auction)
+                print("diff:", diff)
             if self.opp_bids_num < 30:
                 bid = int(diff * pot_size * 2)
             else:
