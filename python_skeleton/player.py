@@ -156,6 +156,7 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.all_in_pre_flop = False
         self.folded = False
         self.street3 = True
         self.street4 = True
@@ -223,7 +224,7 @@ class Player(Bot):
         final_pot_size = my_contribution + opp_contribution # pot size at the end of the round
         my_pip = previous_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
-        if street >= 3:
+        if street >= 3 and not self.all_in_pre_flop:
             opp_bid = previous_state.bids[1-active]
             self.opp_bids.append(opp_bid)
             self.opp_bids_sum += opp_bid
@@ -353,6 +354,8 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
+            if my_stack == 0:
+                self.all_in_pre_flop = True
             self.bid_pot_sizes.append(pot_size)
             self.bid_pot_sum += pot_size
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
