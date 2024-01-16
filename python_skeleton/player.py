@@ -153,7 +153,7 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
-        self.pre_flop_raise = False
+        self.pre_flop_raise = 0
         self.all_in_pre_flop = False
         self.folded = False
         self.street3 = True
@@ -339,11 +339,11 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
-            if pot_size > 4 and self.pre_flop_raise:
-                self.pfc.append(opp_contribution - 2)
-                self.pfc_sum += opp_contribution - 2
+            if pot_size > 4 and self.pre_flop_raise != 0:
+                self.pfc.append(self.pre_flop_raise)
+                self.pfc_sum += self.pre_flop_raise
                 self.pfc_num += 1
-                print("Pre-flop Opponent Call", opp_contribution - 2)
+                print("Pre-flop Opponent Call", self.pre_flop_raise)
             if my_stack == 0:
                 self.all_in_pre_flop = True
                 print("All in pre-flop")
@@ -382,7 +382,7 @@ class Player(Bot):
                 return CallAction()
             if RaiseAction in legal_actions:
                 raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
-                self.pre_flop_raise = True
+                self.pre_flop_raise = raise_amt + my_contribution - 2
                 return RaiseAction(min(max_raise, raise_amt))
             return CallAction()
         else:
