@@ -356,6 +356,8 @@ class Player(Bot):
         if BidAction in legal_actions:
             if my_stack == 0:
                 self.all_in_pre_flop = True
+                print("All in pre-flop")
+                return BidAction(0)
             self.bid_pot_sizes.append(pot_size)
             self.bid_pot_sum += pot_size
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
