@@ -118,10 +118,11 @@ class Player(Bot):
 
         self.opp_total_bids = 0
         self.opp_total_bid_amount = 0
+        self.pff = 0 # preflop folds for opp
+        self.tpffr = 0 # sum of amounts they've folded on
+        self.pfc = 0 # preflop calls for opp
+        self.tpfcr = 0 # sum of amounts they've folded on
 
-
-
-        
 
     def handle_new_round(self, game_state, round_state, active):
         '''
