@@ -199,7 +199,7 @@ class Player(Bot):
             print("bid_pot_sizes =", self.bid_pot_sizes)
             print("opp_pff =", self.pff)
             print("opp_pfc =", self.pfc)
-            print("opp_pfr =" self.pfr)
+            print("opp_pfr =", self.pfr)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
