@@ -156,7 +156,6 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
-        self.raise_amt = None
         self.folded = False
         self.street3 = True
         self.street4 = True
@@ -357,7 +356,7 @@ class Player(Bot):
             self.bid_pot_sizes.append(pot_size)
             self.bid_pot_sum += pot_size
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
-                return BidAction(max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1))
+                return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if self.opp_bids_num < 30:
@@ -365,7 +364,7 @@ class Player(Bot):
             else:
                 average_opp_bid = self.opp_total_bid_amount/self.opp_bids_num
                 bid = int(average_opp_bid * diff * pot_size**3/2)
-            return BidAction(max(bid, 10))
+            return BidAction(min(my_stack, max(bid, 10)))
 
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
@@ -388,22 +387,21 @@ class Player(Bot):
                 return CallAction()
             if RaiseAction in legal_actions:
                 raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
-                self.raise_amt = raise_amt
-                return RaiseAction(raise_amt)
+                return RaiseAction(min(my_stack, raise_amt))
             return CallAction()
         else:
             opp_auction = opp_bid >= my_bid
 
-        def betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2, min_raise, max_raise, legal_actions):
+        def betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2, min_raise, max_raise, legal_actions, my_stack):
             if self.prob_win < prob1:
                 if CheckAction in legal_actions:
                     return CheckAction()
                 self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(prob2, prob3):
-                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
+                return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
             elif self.prob_win > random.uniform(prob4, prob5) and my_pip == 0:
-                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
+                return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
@@ -415,21 +413,21 @@ class Player(Bot):
                 self.street3 = False
             probs = (0.58, 0.78, 0.83, 0.7, 0.78)
             raise1, raise2 = 1.4, 1.2
-            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions)
+            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions, my_stack)
         if street == 4:
             if self.street4:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street4 = False
             probs = (0.68, 0.85, 0.9, 0.75, 0.85)
             raise1, raise2 = 1.5, 1.2
-            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions)
+            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions, my_stack)
         if street == 5:
             if self.street5:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
                 self.street5 = False
             probs = (0.72, 0.9, 0.95, 0.8, 0.9)
             raise1, raise2 = 1.8, 1.3
-            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions)
+            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions, my_stack)
         if CheckAction in legal_actions:
             return CheckAction()
         self.folded = True
