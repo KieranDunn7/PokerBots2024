@@ -194,8 +194,9 @@ class Player(Bot):
 
         print(f"Round #{round_num}")
         if round_num == NUM_ROUNDS:
-            print(self.opp_bids)
-            print(self.bid_pot_sizes)
+            print("opp_bids: ", self.opp_bids)
+            print("bid_pot_sizes: ", self.bid_pot_sizes)
+            print("opp pff: ", self.pff)
 
 
     def handle_round_over(self, game_state, terminal_state, active):
