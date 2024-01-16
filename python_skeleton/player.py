@@ -203,7 +203,7 @@ class Player(Bot):
         Returns:
         Your action.
         '''
-        def simulate_rest_of_game_postflop_preauction(my_cards, board_cards, num_sims):
+        def simulate_auction(my_cards, board_cards, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
             flop_cards = [eval7.Card(card) for card in board_cards]
             revealed_cards = hole_cards + flop_cards
@@ -294,7 +294,7 @@ class Player(Bot):
                 return CheckAction()
             return FoldAction()
         if BidAction in legal_actions:
-            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_rest_of_game_postflop_preauction(my_cards, board_cards,1000)
+            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             pot_size = my_contribution + opp_contribution
             if self.opp_total_bids < 30:
