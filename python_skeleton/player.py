@@ -366,6 +366,10 @@ class Player(Bot):
         else:
             opp_auction = opp_bid >= my_bid
         if street == 3:
+            if my_contribution != 2:
+                self.pfc += 1
+                self.tpfcr += my_contribution - 1
+                print("Pre-flop Call")
             self.opp_total_bids += 1
             self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:
