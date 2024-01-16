@@ -192,8 +192,8 @@ class Player(Bot):
         self.rank1, self.rank2 = rank1, rank2
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
-
-        print(f"Round #{round_num}")
+        if not self.forfeit:
+            print(f"Round #{round_num}")
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
             print("bid_pot_sizes =", self.bid_pot_sizes)
@@ -231,13 +231,15 @@ class Player(Bot):
             self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
             self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
             self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
-            print("Opp bid previous bid", previous_state.bids[1-active])
-            print("Opps bid cv", self.opp_bid_cv)
-            print("Opps bid mean", self.opp_bid_avg)
+            if not self.forfeit:
+                print("Opp bid previous bid", previous_state.bids[1-active])
+                print("Opps bid cv", self.opp_bid_cv)
+                print("Opps bid mean", self.opp_bid_avg)
 
         if street == 0 and not self.folded and opp_pip == BIG_BLIND:
             self.pff.append(my_pip-opp_pip)
-            print("Pre-flop Opponent Fold", my_pip-opp_pip)
+            if not self.forfeit:
+                print("Pre-flop Opponent Fold", my_pip-opp_pip)
 
     def get_action(self, game_state, round_state, active):
         '''
@@ -333,7 +335,8 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         pot_size = my_contribution + opp_contribution
-        print("pot_size: ", pot_size)
+        if not self.forfeit:
+            print("pot_size: ", pot_size)
         if self.forfeit:
             if BidAction in legal_actions:
                 return BidAction(0)
@@ -348,15 +351,18 @@ class Player(Bot):
                     self.pfc.append(self.pre_flop_raise)
                     self.pfc_sum += self.pre_flop_raise
                     self.pfc_num += 1
-                    print("Pre-flop Opponent Call", self.pre_flop_raise)
+                    if not self.forfeit:
+                        print("Pre-flop Opponent Call", self.pre_flop_raise)
                 else:
                     self.pfr.append(self.pre_flop_raise)
                     self.pfr_sum += self.pre_flop_raise
                     self.pfr_num += 1
-                    print("Pre-flop Opponent Raise", self.pre_flop_raise)
+                    if not self.forfeit:
+                        print("Pre-flop Opponent Raise", self.pre_flop_raise)
             if my_stack == 0:
                 self.all_in_pre_flop = True
-                print("All in pre-flop")
+                if not self.forfeit:
+                    print("All in pre-flop")
                 return BidAction(0)
             self.bid_pot_sizes.append(pot_size)
             self.bid_pot_sum += pot_size
