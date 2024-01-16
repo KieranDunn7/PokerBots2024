@@ -218,6 +218,8 @@ class Player(Bot):
             print("Pre-flop Opponent Fold")
             print(previous_state.pips[active])
 
+        if street != 0 and not self.folded and not big_blind:
+
 
     def get_action(self, game_state, round_state, active):
         '''
