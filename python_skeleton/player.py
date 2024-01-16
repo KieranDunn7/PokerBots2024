@@ -376,6 +376,7 @@ class Player(Bot):
                 return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
+            print("diff: ", diff)
             if self.opp_bids_num < 30:
                 bid = int(diff * pot_size * 2)
             else:
