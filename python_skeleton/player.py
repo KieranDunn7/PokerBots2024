@@ -116,8 +116,8 @@ class Player(Bot):
 
         self.forfeit = False
 
-        self.opp_total_bids = 0
-        self.opp_total_bid_amount = 0
+        self.opp_total_bids = 0 # total times the opponent has bid (no pre flop fold)
+        self.opp_total_bid_amount = 0 # sum of opponent bids
         self.pff = 0 # preflop folds for opp
         self.tpffr = 0 # sum of amounts they've folded on
         self.pfc = 0 # preflop calls for opp
@@ -136,6 +136,7 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.folded = False
         self.street3 = True
         self.street4 = True
         self.street5 = True
@@ -188,6 +189,10 @@ class Player(Bot):
         street = previous_state.street  # 0, 3, 4, or 5 representing when this round ended
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
+        if street == 0 and not self.folded:
+            self.pff += 1
+            self.tpffr += previous_state.pips[active]
+            
 
 
     
@@ -294,6 +299,7 @@ class Player(Bot):
                 return BidAction(0)
             if CheckAction in legal_actions:
                 return CheckAction()
+            self.folded = True
             return FoldAction()
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
@@ -318,6 +324,7 @@ class Player(Bot):
             pct, pctp = self.pct, self.pctp
             tpct = (pct + pctp)/2
             if tpct < 0.5:
+                self.folded = True
                 return FoldAction()
             elif tpct > random.uniform(0.56, 0.62):
                 if CheckAction in legal_actions:
@@ -330,6 +337,7 @@ class Player(Bot):
                     return CheckAction()
                 return CallAction()
             else:
+                self.folded = True
                 return FoldAction()
         else:
             opp_auction = opp_bid >= my_bid
@@ -342,6 +350,7 @@ class Player(Bot):
             if self.prob_win < 0.58:
                 if CheckAction in legal_actions:
                     return CheckAction()
+                self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(0.78, 0.83):
                 return RaiseAction(int(random.uniform(min_raise, min(1.4*min_raise, max_raise))))
@@ -372,6 +381,7 @@ class Player(Bot):
             if self.prob_win < 0.72:
                 if CheckAction in legal_actions:
                     return CheckAction()
+                self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(0.9, 0.95):
                 return RaiseAction(int(random.uniform(min_raise, min(1.8*min_raise, max_raise))))
@@ -382,6 +392,7 @@ class Player(Bot):
             return CallAction()
         if CheckAction in legal_actions:
             return CheckAction()
+        self.folded = True
         return FoldAction()
 
 
