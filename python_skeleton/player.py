@@ -339,7 +339,7 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
-            pot_size > 4 and self.pre_flop_raise:
+            if pot_size > 4 and self.pre_flop_raise:
                 self.pfc.append(opp_contribution - 2)
                 self.pfc_sum += opp_contribution - 2
                 self.pfc_num += 1
