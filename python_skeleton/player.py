@@ -358,7 +358,7 @@ class Player(Bot):
             else:
                 average_opp_bid = self.opp_total_bid_amount/self.opp_bids_num
                 bid = int(average_opp_bid * diff * pot_size**3/2)
-            return BidAction(bid)
+            return BidAction(max(bid, 10))
 
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
