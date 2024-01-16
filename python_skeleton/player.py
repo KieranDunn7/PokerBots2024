@@ -144,7 +144,7 @@ class Player(Bot):
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
-        self.big_blind = bool(active)  # True if you are the big blind
+        big_blind = bool(active)  # True if you are the big blind
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 2:
             self.forfeit = True
         rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
@@ -170,7 +170,7 @@ class Player(Bot):
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
 
-    print(f"Round #{round_num}")
+        print(f"Round #{round_num}")
 
 
 
@@ -191,9 +191,11 @@ class Player(Bot):
         street = previous_state.street  # 0, 3, 4, or 5 representing when this round ended
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
+        big_blind = bool(active)  # True if you are the big blind
         if street == 0 and not self.folded:
             self.pff += 1
-            self.tpffr += previous_state.pips[active]
+            self.tpffr += previous_state.pips[1-active]
+            print("Pre-flop Opponent Fold")
             
 
 
