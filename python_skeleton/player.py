@@ -200,7 +200,7 @@ class Player(Bot):
             print(f"Round #{round_num}") 
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
-            print("my_bids =": self.my_bids)
+            print("my_bids =", self.my_bids)
             print("bid_pot_sizes =", self.bid_pot_sizes)
             print("opp_pff =", self.pff)
             print("opp_pfc =", self.pfc)
