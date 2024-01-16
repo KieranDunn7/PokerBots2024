@@ -144,6 +144,16 @@ class Player(Bot):
         self.opp_bid_cv = 1
         self.opp_bid_var = 2500
 
+        self.my_pff = [] # preflop folds for opp
+        self.my_pff_sum = 0
+        self.my_pff_num = 0 # amount of preflop folds
+        self.my_pfc = [] # preflop calls for opp
+        self.my_pfc_sum = 0
+        self.my_pfc_num = 0 # amount of preflop calls
+        self.my_pfr = [] # preflop raises for opp
+        self.my_pfr_sum = 0
+        self.my_pfr_num = 0 # amount of preflop raises
+
         self.diffs = []
 
 
