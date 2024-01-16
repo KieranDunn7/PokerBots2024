@@ -124,7 +124,7 @@ class Player(Bot):
         self.tpfcr = 0 # sum of amounts they've folded on
 
 
-        self.opp_bid_total = 0 # For crazy opp auction mean calculation
+        self.opp_bids = [] # For crazy opp auction mean calculation
         self.opp_bid_mse = 0 # For crazy opp auction variance calculation
         self.rounds_with_auction = 0
         self.opp_bid_avg = 0
@@ -202,13 +202,12 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         big_blind = bool(active)  # True if you are the big blind
         if street >= 3:
-            self.rounds_with_auction += 1
-            self.opp_bid_total += previous_state.bids[1-active]
-            self.opp_bid_avg = self.opp_bid_total/self.rounds_with_auction
-            self.opp_bid_mse += (previous_state.bids[1-active] - self.opp_bid_avg)**2
+            self.opp_bids.append(previous_state.bids[1-active])
+            n = len(self.opp_bids)
+            self.opp_bid_avg = sum(self.opp_bids)/n
+            self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/n
             print("Opp bid previous bid", previous_state.bids[1-active])
             print("Opp bid mse from this turn", self.opp_bid_mse)
-            self.opp_bid_variance = self.opp_bid_mse/self.rounds_with_auction
             print("Opps bid variance", self.opp_bid_variance)
             print("Opps bid mean", self.opp_bid_avg)
 
