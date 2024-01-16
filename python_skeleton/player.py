@@ -135,6 +135,7 @@ class Player(Bot):
         self.pfr_num = 0 # amount of preflop raises
 
         self.opp_bids = [] # For crazy opp auction mean calculation
+        self.my_bids = []
         self.bid_pot_sizes = [] # size of pot during bid
         self.bid_pot_sum = 0
         self.opp_bids_sum = 0
@@ -200,6 +201,7 @@ class Player(Bot):
             print(f"Round #{round_num}") 
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
+            print("my_bids =": self.my_bids)
             print("bid_pot_sizes =", self.bid_pot_sizes)
             print("opp_pff =", self.pff)
             print("opp_pfc =", self.pfc)
@@ -481,6 +483,7 @@ class Player(Bot):
                     if opp_bid != 0:
                         self.opp_forfeit = False
                         self.opp_bids.append(opp_bid)
+                        self.my_bids.append(my_bid)
                         self.opp_bids_sum += opp_bid
                         self.opp_bids_num += 1
                         self.opp_bid_calc += opp_bid/pot_size**2
