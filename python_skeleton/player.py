@@ -354,6 +354,8 @@ class Player(Bot):
             pct, pctp = self.pct, self.pctp
             tpct = (pct + pctp)/2
             if tpct < 0.5:
+                if CheckAction in legal_actions:
+                    return CheckAction()
                 self.folded = True
                 return FoldAction()
             elif tpct > random.uniform(0.56, 0.62):
