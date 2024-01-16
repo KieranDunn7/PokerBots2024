@@ -141,29 +141,32 @@ class Player(Bot):
         my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
-        self.my_cards = round_state.hands[active]  # your cards
+        my_cards = round_state.hands[active]  # your cards
         self.big_blind = bool(active)  # True if you are the big blind
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 2:
             self.forfeit = True
-        self.rank1,self.rank2 = self.ranks[self.my_cards[0][0]], self.ranks[self.my_cards[1][0]]
-        self.suit1,self.suit2 = self.my_cards[0][1], self.my_cards[1][1]
+        rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
+        suit1,suit2 = my_cards[0][1], my_cards[1][1]
 
-        self.pair = self.rank1 == self.rank2
-        self.suited = self.suit1 == self.suit2
+        pair = rank1 == rank2
+        suited = suit1 == suit2
 
-        if self.rank1 < self.rank2:
-            self.rank1,self.rank2 = self.rank2,self.rank1
-            self.suit1,self.suit2 = self.suit2,self.suit1
+        if rank1 < rank2:
+            rank1,rank2 = rank2,rank1
+            suit1,suit2 = suit2,suit1
 
-        if self.pair:
-            self.pct = self.pp[self.rank1]
-            self.pctp = self.ppp[self.rank1]
-        elif self.suited:
-            self.pct = self.sp[self.rank1][self.rank2]
-            self.pctp = self.spp[self.rank1][self.rank2]
+        if pair:
+            self.pct = self.pp[rank1]
+            self.pctp = self.ppp[rank1]
+        elif suited:
+            self.pct = self.sp[rank1][rank2]
+            self.pctp = self.spp[rank1][rank2]
         else:
-            self.pct = self.np[self.rank1][self.rank2]
-            self.pctp = self.npp[self.rank1][self.rank2]
+            self.pct = self.np[rank1][rank2]
+            self.pctp = self.npp[rank1][rank2]
+        self.rank1, self.rank2 = rank1, rank2
+        self.pair, self.suited = pair, suited
+        self.suit1, self.suit2 = suit1, suit2
 
 
 
