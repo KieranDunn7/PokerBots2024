@@ -318,6 +318,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         pot_size = my_contribution + opp_contribution
+        print(pot_size)
         if self.forfeit:
             if BidAction in legal_actions:
                 return BidAction(0)
@@ -325,6 +326,7 @@ class Player(Bot):
                 return CheckAction()
             self.folded = True
             return FoldAction()
+    
         if BidAction in legal_actions:
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_variance):
                 return BidAction(max(int(self.opp_bid_avg - (self.opp_bid_variance)**(1/2)),1))
