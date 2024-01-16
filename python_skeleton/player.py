@@ -407,6 +407,28 @@ class Player(Bot):
         if street == 0:
             pct, pctp = self.pct, self.pctp
             tpct = (pct + pctp)/2
+            if my_pip > BIG_BLIND:
+                if tpct < 0.5:
+                    if CheckAction in legal_actions:
+                        return CheckAction()
+                    self.folded = True
+                    return FoldAction()
+                if tpct > 0.6:
+                    if RaiseAction in legal_actions:
+                        return RaiseAction(min_raise)
+                    return CallAction()
+                if continue_cost > 3*pot_size:
+                    if CheckAction in legal_actions:
+                        return CheckAction()
+                    self.folded = True
+                    return FoldAction()
+                if continue_cost < 0.5*pot_size:
+                    if CheckAction in legal_actions:
+                        return CheckAction()
+                    return CallAction()
+                
+                        
+                    
             if tpct < 0.5:
                 if CheckAction in legal_actions:
                     return CheckAction()
