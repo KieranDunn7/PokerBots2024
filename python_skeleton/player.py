@@ -355,6 +355,7 @@ class Player(Bot):
     
         if BidAction in legal_actions:
             if pot_size > 4 and self.pre_flop_raise != 0 and not self.opp_forfeit:
+                # opponent either called or raised on our pre-flop raise
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
                     self.pfc.append(self.pre_flop_raise)
                     self.pfc_sum += self.pre_flop_raise
@@ -368,12 +369,13 @@ class Player(Bot):
                     if not self.forfeit and not self.opp_forfeit:
                         print("Pre-flop Opponent Raise", self.pre_flop_raise)
             if my_stack == 0:
+                # all in pre-flop, need to bid 0
                 self.all_in_pre_flop = True
                 if not self.forfeit and not self.opp_forfeit:
                     print("All in pre-flop")
                 return BidAction(0)
-            if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
-                return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
+            #if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
+                #return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             print("diff: ", diff)
