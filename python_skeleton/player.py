@@ -141,6 +141,7 @@ class Player(Bot):
         self.opp_bid_avg = 0
         self.opp_bid_cv = 1
         self.opp_total_bid_amount = 0
+        self.opp_bid_var = 2500
 
 
 
