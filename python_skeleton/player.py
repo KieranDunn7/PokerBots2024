@@ -378,7 +378,7 @@ class Player(Bot):
             #if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
                 #return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
-            diff = prob_win_w_auction - prob_win_wo_auction
+            diff = round(prob_win_w_auction - prob_win_wo_auction, 4)
             if not self.opp_forfeit:
                 print("prob_win_w_auction:", prob_win_w_auction)
                 print("prob_win_wo_auction:", prob_win_wo_auction)
