@@ -411,12 +411,12 @@ class Player(Bot):
             return CallAction()
         
         if street == 3:
-            if not self.all_in_pre_flop:
-                self.opp_bids.append(opp_bid)
-                self.opp_bids_sum += opp_bid
-                self.opp_bids_num += 1
-                self.opp_bid_calc += opp_bid/pot_size**2
             if self.street3:
+                if not self.all_in_pre_flop:
+                    self.opp_bids.append(opp_bid)
+                    self.opp_bids_sum += opp_bid
+                    self.opp_bids_num += 1
+                    self.opp_bid_calc += opp_bid/pot_size**2
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
             probs = (0.58, 0.78, 0.83, 0.7, 0.78)
