@@ -122,6 +122,7 @@ class Player(Bot):
         self.ranks = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
 
         self.forfeit = False # decides whether the bot can win by folding/checking every future action
+        self.opp_forfeit = False
         
         self.pff = [] # preflop folds for opp
         self.pff_sum = 0
@@ -243,7 +244,7 @@ class Player(Bot):
                     print("Opps bid cv", self.opp_bid_cv)
                     print("Opps bid mean", self.opp_bid_avg)
 
-        if street == 0 and not self.folded and opp_pip == BIG_BLIND:
+        if street == 0 and not self.folded and opp_pip == BIG_BLIND and not self.opp_forfeit:
             self.pff.append(my_pip-opp_pip)
             if not self.forfeit:
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
@@ -353,7 +354,7 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
-            if pot_size > 4 and self.pre_flop_raise != 0:
+            if pot_size > 4 and self.pre_flop_raise != 0 and not self.opp_forfeit:
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
                     self.pfc.append(self.pre_flop_raise)
                     self.pfc_sum += self.pre_flop_raise
@@ -433,6 +434,7 @@ class Player(Bot):
             if self.street3:
                 if not self.all_in_pre_flop:
                     if opp_bid != 0:
+                        self.opp_forfeit = False
                         self.opp_bids.append(opp_bid)
                         self.opp_bids_sum += opp_bid
                         self.opp_bids_num += 1
@@ -446,6 +448,8 @@ class Player(Bot):
                         else:
                             self.bid_pot_sizes.append(pot_size)
                             self.bid_pot_sum += pot_size
+                    else:
+                        self.opp_forfeit = True              
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
             probs = (0.58, 0.78, 0.83, 0.7, 0.78)
