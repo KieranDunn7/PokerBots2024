@@ -125,10 +125,13 @@ class Player(Bot):
         
         self.pff = [] # preflop folds for opp
         self.pff_sum = 0
-        self.pff_num = 0
+        self.pff_num = 0 # amount of preflop folds
         self.pfc = [] # preflop calls for opp
         self.pfc_sum = 0
-        self.pfc_num = 0
+        self.pfc_num = 0 # amount of preflop calls
+        self.pfr = [] # preflop raises for opp
+        self.pfr_sum = 0
+        self.pfr_num = 0 # amount of preflop raises
 
         self.opp_bids = [] # For crazy opp auction mean calculation
         self.bid_pot_sizes = [] # size of pot during bid
@@ -194,8 +197,9 @@ class Player(Bot):
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
             print("bid_pot_sizes =", self.bid_pot_sizes)
-            print("opp pff =", self.pff)
-            print("opp pfc =", self.pfc)
+            print("opp_pff =", self.pff)
+            print("opp_pfc =", self.pfc)
+            print("opp_pfr =" self.pfr)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -231,7 +235,7 @@ class Player(Bot):
             print("Opps bid cv", self.opp_bid_cv)
             print("Opps bid mean", self.opp_bid_avg)
 
-        if street == 0 and not self.folded and my_pip-opp_pip > 1:
+        if street == 0 and not self.folded and opp_pip == BIG_BLIND:
             self.pff.append(my_pip-opp_pip)
             print("Pre-flop Opponent Fold", my_pip-opp_pip)
 
@@ -340,10 +344,16 @@ class Player(Bot):
     
         if BidAction in legal_actions:
             if pot_size > 4 and self.pre_flop_raise != 0:
-                self.pfc.append(self.pre_flop_raise)
-                self.pfc_sum += self.pre_flop_raise
-                self.pfc_num += 1
-                print("Pre-flop Opponent Call", self.pre_flop_raise)
+                if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
+                    self.pfc.append(self.pre_flop_raise)
+                    self.pfc_sum += self.pre_flop_raise
+                    self.pfc_num += 1
+                    print("Pre-flop Opponent Call", self.pre_flop_raise)
+                else:
+                    self.pfr.append(self.pre_flop_raise)
+                    self.pfr_sum += self.pre_flop_raise
+                    self.pfr_num += 1
+                    print("Pre-flop Opponent Raise", self.pre_flop_raise)
             if my_stack == 0:
                 self.all_in_pre_flop = True
                 print("All in pre-flop")
@@ -382,7 +392,8 @@ class Player(Bot):
                 return CallAction()
             if RaiseAction in legal_actions:
                 raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
-                self.pre_flop_raise = raise_amt + my_contribution - 2
+                if opp_pip == BIG_BLIND:
+                    self.pre_flop_raise = raise_amt + my_pip - 2
                 return RaiseAction(min(max_raise, raise_amt))
             return CallAction()
         else:
