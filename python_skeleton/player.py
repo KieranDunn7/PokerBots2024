@@ -192,10 +192,11 @@ class Player(Bot):
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         big_blind = bool(active)  # True if you are the big blind
-        if street == 0 and not self.folded:
+        if street == 0 and not self.folded and not big_blind:
             self.pff += 1
             self.tpffr += previous_state.pips[1-active]
             print("Pre-flop Opponent Fold")
+            print(previous_state.pips[1-active])
             
 
 
