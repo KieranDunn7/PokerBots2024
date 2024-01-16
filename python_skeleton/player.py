@@ -395,11 +395,16 @@ class Player(Bot):
                 self.folded = True
                 return FoldAction()
             elif tpct > random.uniform(0.56, 0.62):
+                if random.uniform(0, 1) > 0.5 and RaiseAction in legal_actions:
+                    raise_amt = min_raise
+                    if opp_pip == BIG_BLIND:
+                        self.pre_flop_raise = raise_amt + my_pip - 3
+                    return RaiseAction(raise_amt)
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
             if RaiseAction in legal_actions:
-                raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
+                raise_amt = int(random.uniform(min_raise, min(4*min_raise, max_raise)))
                 if opp_pip == BIG_BLIND:
                     self.pre_flop_raise = raise_amt + my_pip - 3
                 return RaiseAction(min(max_raise, raise_amt))
