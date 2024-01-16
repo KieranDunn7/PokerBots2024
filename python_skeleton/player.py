@@ -134,13 +134,13 @@ class Player(Bot):
 
 
         self.opp_bids = [] # For crazy opp auction mean calculation
-        self.bid_pot_sizes = []
+        self.bid_pot_sizes = [] # size of pot during bid
         self.bid_pot_sum = 0
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
         self.opp_bid_avg = 0
         self.opp_bid_cv = 1
-        self.opp_total_bid_amount = 0
+        self.opp_bid_calc = 0
         self.opp_bid_var = 2500
 
 
@@ -227,9 +227,6 @@ class Player(Bot):
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
         if street >= 3 and not self.all_in_pre_flop:
             opp_bid = previous_state.bids[1-active]
-            self.opp_bids.append(opp_bid)
-            self.opp_bids_sum += opp_bid
-            self.opp_bids_num += 1
             self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
             self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
             self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
@@ -369,7 +366,7 @@ class Player(Bot):
             if self.opp_bids_num < 30:
                 bid = int(diff * pot_size * 2)
             else:
-                average_opp_bid = self.opp_total_bid_amount/self.opp_bids_num
+                average_opp_bid = self.opp_bid_calc/self.opp_bids_num
                 bid = int(average_opp_bid * diff * pot_size**3/2)
             return BidAction(min(my_stack, max(bid, 10)))
 
@@ -414,7 +411,11 @@ class Player(Bot):
             return CallAction()
         
         if street == 3:
-            self.opp_total_bid_amount += opp_bid/pot_size**2
+            if not self.all_in_pre_flop:
+                self.opp_bids.append(opp_bid)
+                self.opp_bids_sum += opp_bid
+                self.opp_bids_num += 1
+                self.opp_bid_calc += opp_bid/pot_size**2
             if self.street3:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
