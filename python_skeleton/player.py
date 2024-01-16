@@ -144,6 +144,8 @@ class Player(Bot):
         self.opp_bid_calc = 0
         self.opp_bid_var = 2500
 
+        self.diffs = []
+
 
     def handle_new_round(self, game_state, round_state, active):
         '''
@@ -205,6 +207,8 @@ class Player(Bot):
             print("opp_bid_avg =", self.opp_bid_avg)
             print("opp_bid_cv =", self.opp_bid_cv)
             print("final_time =", game_clock)
+            print("diffs =", self.diff)
+            print("avg_diff =", sum(self.diff)/len(self.diff))
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -383,6 +387,7 @@ class Player(Bot):
                 print("prob_win_w_auction:", prob_win_w_auction)
                 print("prob_win_wo_auction:", prob_win_wo_auction)
                 print("diff:", diff)
+                self.diffs.append(diff)
             if self.opp_bids_num < 30:
                 bid = int(diff * pot_size * 2)
             else:
