@@ -42,7 +42,6 @@ class Player(Bot):
                  2: (0.248, 0.268),
                  1: (0.239,)}
         # suited with no extra card, high card is key, low card is index in tuple
-
         
         self.np = {12: (0.352, 0.365, 0.371, 0.38, 0.378, 0.388, 0.398, 0.403, 0.425, 0.436, 0.444, 0.458),
                  11: (0.316, 0.326, 0.333, 0.345, 0.351, 0.357, 0.363, 0.385, 0.406, 0.417, 0.427),
@@ -74,7 +73,6 @@ class Player(Bot):
                  2: (0.6, 0.619),
                  1: (0.594,)}
         # suited with extra card, high card is key, low card is index in tuple
-
 
         self.npp = {12: (0.675, 0.685, 0.693, 0.703, 0.7, 0.707, 0.715, 0.718, 0.734, 0.739, 0.74, 0.746),
                  11: (0.649, 0.658, 0.667, 0.678, 0.682, 0.687, 0.689, 0.702, 0.719, 0.724, 0.727),
@@ -132,7 +130,6 @@ class Player(Bot):
         self.pfc_sum = 0
         self.pfc_num = 0
 
-
         self.opp_bids = [] # For crazy opp auction mean calculation
         self.bid_pot_sizes = [] # size of pot during bid
         self.bid_pot_sum = 0
@@ -142,7 +139,6 @@ class Player(Bot):
         self.opp_bid_cv = 1
         self.opp_bid_calc = 0
         self.opp_bid_var = 2500
-
 
 
     def handle_new_round(self, game_state, round_state, active):
@@ -196,10 +192,10 @@ class Player(Bot):
 
         print(f"Round #{round_num}")
         if round_num == NUM_ROUNDS:
-            print("opp_bids: ", self.opp_bids)
-            print("bid_pot_sizes: ", self.bid_pot_sizes)
-            print("opp pff: ", self.pff)
-
+            print("opp_bids:", self.opp_bids)
+            print("bid_pot_sizes:", self.bid_pot_sizes)
+            print("opp pff:", self.pff)
+            print("opp pfc:", self.pfc)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -436,7 +432,6 @@ class Player(Bot):
             return CheckAction()
         self.folded = True
         return FoldAction()
-
 
 if __name__ == '__main__':
     run_bot(Player(), parse_args())
