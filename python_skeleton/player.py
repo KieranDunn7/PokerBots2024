@@ -121,6 +121,8 @@ class Player(Bot):
 
 
         self.opp_bids = [] # For crazy opp auction mean calculation
+        self.opp_bids_sum = 0
+        self.opp_bids_num = 0
 
 
 
@@ -194,10 +196,12 @@ class Player(Bot):
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         big_blind = bool(active)  # True if you are the big blind
         if street >= 3:
-            self.opp_bids.append(previous_state.bids[1-active])
-            n = len(self.opp_bids)
-            self.opp_bid_avg = sum(self.opp_bids)/n
-            self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/n
+            opp_bid = previous_state.bids[1-active]
+            self.opp_bids.append(opp_bid)
+            self.opp_bids_sum += opp_bid
+            self.opp_bids_num += 1
+            self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
+            self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
             print("Opp bid previous bid", previous_state.bids[1-active])
             print("Opp bid mse from this turn", self.opp_bid_mse)
             print("Opps bid variance", self.opp_bid_variance)
@@ -205,18 +209,11 @@ class Player(Bot):
 
 
         if street == 0 and not self.folded and not big_blind:
-            self.pff += 1
-            self.tpffr += previous_state.pips[1-active]
+            self.pff.append(previous_state.pips[1-active])
             print("Pre-flop Opponent Fold")
             print(previous_state.pips[active])
 
 
-
-
-            
-
-
-    
     def get_action(self, game_state, round_state, active):
         '''
         Where the magic happens - your code should implement this function.
