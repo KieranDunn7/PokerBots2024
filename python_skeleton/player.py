@@ -157,6 +157,7 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.pre_flop_raise = False
         self.all_in_pre_flop = False
         self.folded = False
         self.street3 = True
@@ -259,14 +260,16 @@ class Player(Bot):
             hole_cards = [eval7.Card(card) for card in my_cards]
             flop_cards = [eval7.Card(card) for card in board_cards]
             revealed_cards = hole_cards + flop_cards
-    
-            ###### TO FIX: self.my_cards is STRING not card object
+            def compare(score1, score2):
+                if score1 > score2:
+                    return 1
+                elif score1 == score2:
+                    return 0.5
+                return 0
             deck = eval7.Deck()
             for card in revealed_cards:
                 deck.cards.remove(card)
-            my_wins_w_auction = 0
-            my_wins_wo_auction = 0
-            my_wins_both_auction = 0
+            my_wins_w_auction, my_wins_wo_auction, my_wins_both_auction = 0, 0, 0
             for _ in range(num_sims):
                 deck.shuffle()
                 draw = deck.peek(6)
@@ -277,22 +280,13 @@ class Player(Bot):
                 opp_hand = opp_hole + flop_cards + r_and_t
                 my_score_p = eval7.evaluate(my_hand_p)
                 opp_score = eval7.evaluate(opp_hand)
-                if my_score_p > opp_score:
-                    my_wins_w_auction += 1
-                elif my_score_p == opp_score:
-                    my_wins_w_auction += 0.5
+                my_wins_w_auction += compare(my_score_p, opp_score)
                 my_hand = revealed_cards + r_and_t
                 opp_hand_p = opp_hole + flop_cards + r_and_t + auction2
                 my_score = eval7.evaluate(my_hand)
                 opp_score_p = eval7.evaluate(opp_hand_p)
-                if my_score > opp_score_p:
-                    my_wins_wo_auction += 1
-                elif my_score == opp_score_p:
-                    my_wins_wo_auction += 0.5
-                if my_score_p > opp_score_p:
-                    my_wins_both_auction += 1
-                elif my_score_p == opp_score_p:
-                    my_wins_both_auction += 0.5
+                my_wins_wo_auction += compare(my_score, opp_score_p)
+                my_wins_both_auction += compare(my_score_p, opp_score_p)
     
             return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
 
@@ -353,6 +347,9 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
+            pot_size > 4 and self.pre_flop_raise:
+                self.pfc.append(opp_contribution - 2)
+                print("Pre-flop Opponent Call", opp_contribution - 2)
             if my_stack == 0:
                 self.all_in_pre_flop = True
                 print("All in pre-flop")
@@ -391,6 +388,7 @@ class Player(Bot):
                 return CallAction()
             if RaiseAction in legal_actions:
                 raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
+                self.pre_flop_raise = True
                 return RaiseAction(min(max_raise, raise_amt))
             return CallAction()
         else:
