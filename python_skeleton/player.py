@@ -117,7 +117,11 @@ class Player(Bot):
         self.forfeit = False
         
         self.pff = [] # preflop folds for opp
+        self.pff_sum = 0
+        self.pff_num = 0
         self.pfc = [] # preflop calls for opp
+        self.pfc_sum = 0
+        self.pfc_num = 0
 
 
         self.opp_bids = [] # For crazy opp auction mean calculation
@@ -138,6 +142,7 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
+        self.raise_amt = None
         self.folded = False
         self.street3 = True
         self.street4 = True
@@ -355,7 +360,11 @@ class Player(Bot):
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
-            return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))))
+            if RaiseAction in legal_actions:
+                raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
+                self.raise_amt = raise_amt
+                return RaiseAction(raise_amt)
+            return CallAction()
         else:
             opp_auction = opp_bid >= my_bid
 
