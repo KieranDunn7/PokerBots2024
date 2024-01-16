@@ -245,7 +245,7 @@ class Player(Bot):
                 except ZeroDivisionError:
                     self.opp_bid_cv = 100
                 if not self.forfeit and not self.opp_forfeit:
-                    print("Opp bid previous bid", previous_state.bids[1-active])
+                    print("Opp previous bid", previous_state.bids[1-active])
                     print("Opps bid cv", self.opp_bid_cv)
                     print("Opps bid mean", self.opp_bid_avg)
 
