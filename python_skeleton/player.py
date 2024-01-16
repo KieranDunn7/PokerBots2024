@@ -196,7 +196,7 @@ class Player(Bot):
             self.pff += 1
             self.tpffr += previous_state.pips[1-active]
             print("Pre-flop Opponent Fold")
-            print(previous_state.pips[1-active])
+            print(previous_state.pips[active])
             
 
 
