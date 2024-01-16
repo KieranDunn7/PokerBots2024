@@ -235,13 +235,9 @@ class Player(Bot):
             print("Opps bid cv", self.opp_bid_cv)
             print("Opps bid mean", self.opp_bid_avg)
 
-
         if street == 0 and not self.folded and my_pip-opp_pip > 1:
             self.pff.append(my_pip-opp_pip)
             print("Pre-flop Opponent Fold", my_pip-opp_pip)
-
-        # if street != 0 and not self.folded and not big_blind:
-
 
     def get_action(self, game_state, round_state, active):
         '''
@@ -349,6 +345,8 @@ class Player(Bot):
         if BidAction in legal_actions:
             pot_size > 4 and self.pre_flop_raise:
                 self.pfc.append(opp_contribution - 2)
+                self.pfc_sum += opp_contribution - 2
+                self.pfc_num += 1
                 print("Pre-flop Opponent Call", opp_contribution - 2)
             if my_stack == 0:
                 self.all_in_pre_flop = True
