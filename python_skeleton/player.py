@@ -349,8 +349,6 @@ class Player(Bot):
             min_raise, max_raise = 0, 0
             
         if street == 0:
-            if CheckAction in legal_actions:
-                return CheckAction()
             pct, pctp = self.pct, self.pctp
             tpct = (pct + pctp)/2
             if tpct < 0.5:
@@ -362,15 +360,7 @@ class Player(Bot):
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
-            elif my_pip == SMALL_BLIND:
-                return RaiseAction(int(random.uniform(min_raise, min(1.5*min_raise, max_raise))))
-            elif tpct > 0.52:
-                if CheckAction in legal_actions:
-                    return CheckAction()
-                return CallAction()
-            else:
-                self.folded = True
-                return FoldAction()
+            return RaiseAction(int(random.uniform(min_raise, min(1.5*min_raise, max_raise))))
         else:
             opp_auction = opp_bid >= my_bid
 
