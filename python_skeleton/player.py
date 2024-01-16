@@ -449,9 +449,10 @@ class Player(Bot):
                             self.bid_pot_sizes.append(pot_size)
                             self.bid_pot_sum += pot_size
                     else:
-                        round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
-                        self.opp_forfeit = True      
-                        print(f"Opponent Forfeit in Round #{round_num}")
+                        if not self.opp_forfeit:
+                            round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
+                            print(f"Opponent Forfeit in Round #{round_num}")
+                        self.opp_forfeit = True                     
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
             probs = (0.58, 0.78, 0.83, 0.7, 0.78)
