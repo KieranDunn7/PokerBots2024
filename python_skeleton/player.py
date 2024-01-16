@@ -361,20 +361,20 @@ class Player(Bot):
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
-            return RaiseAction(int(random.uniform(min_raise, min(1.5*min_raise, max_raise))))
+            return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))))
         else:
             opp_auction = opp_bid >= my_bid
 
-        def betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2):
+        def betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2, min_raise, max_raise, legal_actions):
             if self.prob_win < prob1:
                 if CheckAction in legal_actions:
                     return CheckAction()
                 self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(prob2, prob3):
-                return RaiseAction(int(random.uniform(min_raise, min(raise1*min_raise, max_raise))))
+                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise1*min_raise, max_raise))))
             elif self.prob_win > random.uniform(prob4, prob5) and my_pip == 0:
-                return RaiseAction(int(random.uniform(min_raise, min(raise2*min_raise, max_raise))))
+                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise2*min_raise, max_raise))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
@@ -385,23 +385,23 @@ class Player(Bot):
             if self.street3:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
-            prob1, prob2, prob3, prob4, prob5 = 0.58, 0.78, 0.83, 0.7, 0.78
+            probs = (0.58, 0.78, 0.83, 0.7, 0.78)
             raise1, raise2 = 1.4, 1.2
-            return betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2)
+            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions)
         if street == 4:
             if self.street4:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street4 = False
-            prob1, prob2, prob3, prob4, prob5 = 0.68, 0.85, 0.9, 0.75, 0.85
+            probs = (0.68, 0.85, 0.9, 0.75, 0.85)
             raise1, raise2 = 1.5, 1.2
-            return betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2)
+            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions)
         if street == 5:
             if self.street5:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
                 self.street5 = False
-            prob1, prob2, prob3, prob4, prob5 = 0.72, 0.9, 0.95, 0.8, 0.9
+            probs = (0.72, 0.9, 0.95, 0.8, 0.9)
             raise1, raise2 = 1.8, 1.3
-            return betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2)
+            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions)
         if CheckAction in legal_actions:
             return CheckAction()
         self.folded = True
