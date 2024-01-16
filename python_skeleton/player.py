@@ -353,10 +353,10 @@ class Player(Bot):
                 return BidAction(max(int(self.opp_bid_avg - (self.opp_bid_variance)**(1/2)),1))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
-            if self.opp_total_bids < 30:
+            if self.opp_bids_num < 30:
                 bid = int(diff * pot_size * 2)
             else:
-                average_opp_bid = self.opp_total_bid_amount/self.opp_total_bids
+                average_opp_bid = self.opp_total_bid_amount/self.opp_bids_num
                 bid = int(average_opp_bid * diff * pot_size**3/2)
             return BidAction(bid)
 
@@ -402,7 +402,6 @@ class Player(Bot):
             return CallAction()
         
         if street == 3:
-            self.opp_total_bids += 1
             self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
