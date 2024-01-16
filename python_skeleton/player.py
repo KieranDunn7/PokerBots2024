@@ -206,9 +206,11 @@ class Player(Bot):
             self.opp_bid_total += previous_state.bids[1-active]
             self.opp_bid_avg = self.opp_bid_total/self.rounds_with_auction
             self.opp_bid_mse += (previous_state.bids[1-active] - self.opp_bid_avg)**2
+            print("Opp bid previous bid", previous_state.bids[1-active])
+            print("Opp bid mse from this turn", self.opp_bid_mse)
             self.opp_bid_variance = self.opp_bid_mse/self.rounds_with_auction
             print("Opps bid variance", self.opp_bid_variance)
-            print("Opss bid mean", self.opp_bid_avg)
+            print("Opps bid mean", self.opp_bid_avg)
 
 
         if street == 0 and not self.folded and not big_blind:
@@ -347,7 +349,9 @@ class Player(Bot):
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
             min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
-            max_cost = max_raise - my_pip  # the cost of a maximum bet/r
+            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
+        else:
+            min_raise, max_raise = 0, 0
             
         if street == 0:
             pct, pctp = self.pct, self.pctp
@@ -361,9 +365,7 @@ class Player(Bot):
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
-            if RaiseAction in legal_actions:
-                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))))
-            return CallAction()
+            return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))))
         else:
             opp_auction = opp_bid >= my_bid
 
@@ -374,13 +376,9 @@ class Player(Bot):
                 self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(prob2, prob3):
-                if RaiseAction in legal_actions:
-                    return RaiseAction(int(random.uniform(min_raise, min(raise1*min_raise, max_raise))))
-                return CallAction()
+                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
             elif self.prob_win > random.uniform(prob4, prob5) and my_pip == 0:
-                if RaiseAction in legal_actions:
-                    return RaiseAction(int(random.uniform(min_raise, min(raise2*min_raise, max_raise))))
-                return CallAction()
+                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
