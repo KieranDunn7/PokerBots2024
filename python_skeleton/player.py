@@ -194,8 +194,8 @@ class Player(Bot):
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
         if not self.forfeit and not self.opp_forfeit:
-            print(f"Round #{round_num}")
             print()
+            print(f"Round #{round_num}") 
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
             print("bid_pot_sizes =", self.bid_pot_sizes)
