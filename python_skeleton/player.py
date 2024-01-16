@@ -139,7 +139,7 @@ class Player(Bot):
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
         self.opp_bid_avg = 0
-        self.opp_bid_variance = 10000
+        self.opp_bid_var = 10000
         self.opp_total_bid_amount = 0
 
 
@@ -224,7 +224,7 @@ class Player(Bot):
             self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
             self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
             print("Opp bid previous bid", previous_state.bids[1-active])
-            print("Opps bid variance", self.opp_bid_variance)
+            print("Opps bid variance", self.opp_bid_var)
             print("Opps bid mean", self.opp_bid_avg)
 
 
