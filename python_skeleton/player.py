@@ -153,8 +153,9 @@ class Player(Bot):
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
         big_blind = bool(active)  # True if you are the big blind
-        if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 2:
+        if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 2 and not self.forfeit:
             self.forfeit = True
+            print("Forfeit")
         rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
         suit1,suit2 = my_cards[0][1], my_cards[1][1]
 
