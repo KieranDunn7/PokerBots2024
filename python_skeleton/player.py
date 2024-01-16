@@ -287,6 +287,7 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
+        pot_size = my_contribution + opp_contribution
         if self.forfeit:
             if BidAction in legal_actions:
                 return BidAction(0)
@@ -296,7 +297,6 @@ class Player(Bot):
         if BidAction in legal_actions:
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
-            pot_size = my_contribution + opp_contribution
             if self.opp_total_bids < 30:
                 bid = int(diff * pot_size * 2)
             else:
@@ -333,7 +333,6 @@ class Player(Bot):
         else:
             opp_auction = opp_bid >= my_bid
         if street == 3:
-            pot_size = my_contribution + opp_contribution
             self.opp_total_bids += 1
             self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:
