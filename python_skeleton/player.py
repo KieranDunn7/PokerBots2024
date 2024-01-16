@@ -138,6 +138,7 @@ class Player(Bot):
         self.bid_pot_sum = 0
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
+        self.opp_bid_avg = 0
 
 
 
