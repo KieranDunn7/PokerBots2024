@@ -139,6 +139,7 @@ class Player(Bot):
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
         self.opp_bid_avg = 0
+        self.opp_bid_variance = 10000
 
 
 
