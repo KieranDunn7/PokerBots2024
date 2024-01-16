@@ -202,6 +202,7 @@ class Player(Bot):
             print("opp_pfr =", self.pfr)
             print("opp_bid_avg =", self.opp_bid_avg)
             print("opp_bid_cv =", self.opp_bid_cv)
+            print("final_time =", game_clock)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
