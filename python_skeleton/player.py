@@ -169,7 +169,7 @@ class Player(Bot):
         big_blind = bool(active)  # True if you are the big blind
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 4 and not self.forfeit:
             self.forfeit = True
-            print("Forfeit")
+            print(f"Forfeit in Round #{round_num}")
         rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
         suit1,suit2 = my_cards[0][1], my_cards[1][1]
 
