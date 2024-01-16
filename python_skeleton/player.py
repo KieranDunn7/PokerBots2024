@@ -125,7 +125,8 @@ class Player(Bot):
 
 
         self.opp_bid_total = 0 # For crazy opp auction mean calculation
-        self.opp_bid_mse = 0 # FOr crazy opp auction variance calculation
+        self.opp_bid_mse = 0 # For crazy opp auction variance calculation
+        self.rounds_with_auction = 0
         
 
     def handle_new_round(self, game_state, round_state, active):
@@ -196,10 +197,12 @@ class Player(Bot):
         my_cards = previous_state.hands[active]  # your cards
         opp_cards = previous_state.hands[1-active]  # opponent's cards or [] if not revealed
         big_blind = bool(active)  # True if you are the big blind
-        self.opp_bid_total += previous_state.opp_bid
-        self.opp_bid_avg = self.opp_bid_total/game_state.round_num
-        self.opp_bid_mse += (previous_state.opp_bid - self.opp_bid_avg)**2
-        self.opp_bid_variance = self.opp_bid_mse/game_state.round_num
+        if street >= 3:
+            self.rounds_with_auction += 1
+            self.opp_bid_total += previous_state.bids[1-active]
+            self.opp_bid_avg = self.opp_bid_total/self.rounds_with_auction
+            self.opp_bid_mse += (previous_state.bids[1-active] - self.opp_bid_avg)**2
+            self.opp_bid_variance = self.opp_bid_mse/self.rounds_with_auction
 
 
         if street == 0 and not self.folded and not big_blind:
@@ -366,10 +369,6 @@ class Player(Bot):
         else:
             opp_auction = opp_bid >= my_bid
         if street == 3:
-            if my_contribution != 2:
-                self.pfc += 1
-                self.tpfcr += my_contribution - 1
-                print("Pre-flop Call")
             self.opp_total_bids += 1
             self.opp_total_bid_amount += opp_bid/pot_size**2
             if self.street3:

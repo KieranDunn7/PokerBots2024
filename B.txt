@@ -1,0 +1,11 @@
+Round #1
+Traceback (most recent call last):
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 424, in <module>
+    run_bot(Player(), parse_args())
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
+    runner.run()
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 109, in run
+    self.pokerbot.handle_round_over(game_state, round_state, active)
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 199, in handle_round_over
+    self.opp_bid_total += previous_state.opp_bid
+AttributeError: 'RoundState' object has no attribute 'opp_bid'
