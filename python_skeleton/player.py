@@ -200,6 +200,8 @@ class Player(Bot):
             print("opp_pff =", self.pff)
             print("opp_pfc =", self.pfc)
             print("opp_pfr =", self.pfr)
+            print("opp_bid_avg =", self.opp_bid_avg)
+            print("opp_bid_cv =", self.opp_bid_cv)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
