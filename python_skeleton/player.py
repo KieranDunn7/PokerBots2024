@@ -387,7 +387,7 @@ class Player(Bot):
                 return CallAction()
             if RaiseAction in legal_actions:
                 raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
-                return RaiseAction(min(my_stack, raise_amt))
+                return RaiseAction(min(max_raise, raise_amt))
             return CallAction()
         else:
             opp_auction = opp_bid >= my_bid
