@@ -115,20 +115,12 @@ class Player(Bot):
         self.ranks = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
 
         self.forfeit = False
-
-        self.opp_total_bids = 0 # total times the opponent has bid (no pre flop fold)
-        self.opp_total_bid_amount = 0 # sum of opponent bids
-        self.pff = 0 # preflop folds for opp
-        self.tpffr = 0 # sum of amounts they've folded on
-        self.pfc = 0 # preflop calls for opp
-        self.tpfcr = 0 # sum of amounts they've folded on
+        
+        self.pff = [] # preflop folds for opp
+        self.pfc = [] # preflop calls for opp
 
 
         self.opp_bids = [] # For crazy opp auction mean calculation
-        self.opp_bid_mse = 0 # For crazy opp auction variance calculation
-        self.rounds_with_auction = 0
-        self.opp_bid_avg = 0
-        self.opp_bid_variance = 0
 
 
 
