@@ -347,9 +347,7 @@ class Player(Bot):
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
             min_cost = min_raise - my_pip  # the cost of a minimum bet/raise
-            max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
-        else:
-            min_raise, max_raise = 0, 0
+            max_cost = max_raise - my_pip  # the cost of a maximum bet/r
             
         if street == 0:
             pct, pctp = self.pct, self.pctp
@@ -363,7 +361,9 @@ class Player(Bot):
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
-            return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))))
+            if RaiseAction in legal_actions:
+                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))))
+            return CallAction()
         else:
             opp_auction = opp_bid >= my_bid
 
@@ -374,9 +374,13 @@ class Player(Bot):
                 self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(prob2, prob3):
-                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
+                if RaiseAction in legal_actions:
+                    return RaiseAction(int(random.uniform(min_raise, min(raise1*min_raise, max_raise))))
+                return CallAction()
             elif self.prob_win > random.uniform(prob4, prob5) and my_pip == 0:
-                return RaiseAction(min(max_raise, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
+                if RaiseAction in legal_actions:
+                    return RaiseAction(int(random.uniform(min_raise, min(raise2*min_raise, max_raise))))
+                return CallAction()
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
