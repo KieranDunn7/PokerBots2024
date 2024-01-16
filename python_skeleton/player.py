@@ -127,7 +127,10 @@ class Player(Bot):
         self.opp_bid_total = 0 # For crazy opp auction mean calculation
         self.opp_bid_mse = 0 # For crazy opp auction variance calculation
         self.rounds_with_auction = 0
-        
+        self.opp_bid_avg = 0
+        self.opp_bid_variance = 0
+
+
 
     def handle_new_round(self, game_state, round_state, active):
         '''

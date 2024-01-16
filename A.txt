@@ -1,11 +1,23 @@
 Round #1
+Round #2
+Round #3
+Round #4
+Round #5
+Round #6
+Round #7
+Pre-flop Opponent Fold
+5
+Round #8
+Round #9
+Round #10
+Round #11
 Traceback (most recent call last):
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 424, in <module>
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 427, in <module>
     run_bot(Player(), parse_args())
   File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
     runner.run()
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 109, in run
-    self.pokerbot.handle_round_over(game_state, round_state, active)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 199, in handle_round_over
-    self.opp_bid_total += previous_state.opp_bid
-AttributeError: 'RoundState' object has no attribute 'opp_bid'
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 118, in run
+    action = self.pokerbot.get_action(game_state, round_state, active)
+  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 330, in get_action
+    if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_variance):
+AttributeError: 'Player' object has no attribute 'opp_bid_avg'. Did you mean: 'opp_bid_mse'?
