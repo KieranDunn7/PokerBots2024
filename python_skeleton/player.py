@@ -207,6 +207,8 @@ class Player(Bot):
             self.opp_bid_avg = self.opp_bid_total/self.rounds_with_auction
             self.opp_bid_mse += (previous_state.bids[1-active] - self.opp_bid_avg)**2
             self.opp_bid_variance = self.opp_bid_mse/self.rounds_with_auction
+            print("Opps bid variance", self.opp_bid_variance)
+            print("Opss bid mean", self.opp_bid_avg)
 
 
         if street == 0 and not self.folded and not big_blind:
@@ -332,7 +334,7 @@ class Player(Bot):
             return FoldAction()
         if BidAction in legal_actions:
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_variance):
-                return BidAction(int(self.opp_bid_avg - (self.opp_bid_variance)**(1/2)))
+                return BidAction(max(int(self.opp_bid_avg - (self.opp_bid_variance)**(1/2)),1))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = prob_win_w_auction - prob_win_wo_auction
             if self.opp_total_bids < 30:
