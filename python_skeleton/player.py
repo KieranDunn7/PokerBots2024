@@ -233,7 +233,10 @@ class Player(Bot):
             opp_bid = previous_state.bids[1-active]
             self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
             self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
-            self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
+            try:
+                self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
+            except ZeroDivisionError:
+                self.opp_bid_cv = 100
             if not self.forfeit:
                 print("Opp bid previous bid", previous_state.bids[1-active])
                 print("Opps bid cv", self.opp_bid_cv)
