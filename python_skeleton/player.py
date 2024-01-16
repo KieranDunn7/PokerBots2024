@@ -394,7 +394,7 @@ class Player(Bot):
             else:
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
-            bid = opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10
+            bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 1
             return BidAction(min(my_stack, max(bid, 25)))
 
         if RaiseAction in legal_actions:
