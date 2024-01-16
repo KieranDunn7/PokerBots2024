@@ -125,12 +125,24 @@ class Player(Bot):
         self.opp_forfeit = False
         
         self.pff = [] # preflop folds for opp
+        self.pff_1 = [] # raises 2-4
+        self.pff_2 = [] # raises 5-10
+        self.pff_3 = [] # raises 11-20
+        self.pff_4 = [] # raises 21+
         self.pff_sum = 0
         self.pff_num = 0 # amount of preflop folds
         self.pfc = [] # preflop calls for opp
+        self.pfc_1 = [] # raises 2-4
+        self.pfc_2 = [] # raises 5-10
+        self.pfc_3 = [] # raises 11-20
+        self.pfc_4 = [] # raises 21+
         self.pfc_sum = 0
         self.pfc_num = 0 # amount of preflop calls
         self.pfr = [] # preflop raises for opp
+        self.pfr_1 = [] # raises 2-4
+        self.pfr_2 = [] # raises 5-10
+        self.pfr_3 = [] # raises 11-20
+        self.pfr_4 = [] # raises 21+
         self.pfr_sum = 0
         self.pfr_num = 0 # amount of preflop raises
 
