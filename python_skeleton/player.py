@@ -388,12 +388,14 @@ class Player(Bot):
                 print("prob_win_wo_auction:", prob_win_wo_auction)
                 print("diff:", diff)
                 self.diffs.append(diff)
-            if self.opp_bids_num < 30:
-                bid = int(diff * pot_size * 2)
+            if self.opp_bids_num < 3:
+                opp_bid_avg = 100
+                opp_bid_stdv = 25
             else:
-                average_opp_bid = self.opp_bid_calc/self.opp_bids_num
-                bid = int(average_opp_bid * diff * pot_size**3/2)
-            return BidAction(min(my_stack, max(bid, 10)))
+                opp_bid_avg = self.opp_bid_avg
+                opp_bid_stdv = self.opp_bid_var**(1/2)
+            bid = opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10
+            return BidAction(min(my_stack, max(bid, 25)))
 
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
