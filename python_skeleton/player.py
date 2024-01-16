@@ -181,7 +181,9 @@ class Player(Bot):
         self.suit1, self.suit2 = suit1, suit2
 
         print(f"Round #{round_num}")
-
+        if round_num == NUM_ROUNDS:
+            print(self.opp_bids)
+            print(self.bid_pot_sizes)
 
 
     def handle_round_over(self, game_state, terminal_state, active):
