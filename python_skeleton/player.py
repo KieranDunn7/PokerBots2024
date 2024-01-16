@@ -393,7 +393,7 @@ class Player(Bot):
             if RaiseAction in legal_actions:
                 raise_amt = int(random.uniform(min_raise, min(1.5*min_raise, max_raise)))
                 if opp_pip == BIG_BLIND:
-                    self.pre_flop_raise = raise_amt + my_pip - 2
+                    self.pre_flop_raise = raise_amt + my_pip - 3
                 return RaiseAction(min(max_raise, raise_amt))
             return CallAction()
         else:
