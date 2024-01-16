@@ -418,21 +418,21 @@ class Player(Bot):
                         return RaiseAction(min_raise)
                     return CallAction()
                 if tpct > 0.6:
-                    if RaiseAction in legal_actions and continue_cost < pot_size:
+                    if RaiseAction in legal_actions and continue_cost < my_pip*2:
                         return RaiseAction(min_raise)
                     return CallAction()
-                if continue_cost > 2.5*pot_size:
+                if continue_cost > 5*my_pip:
                     if CheckAction in legal_actions:
                         return CheckAction()
                     self.folded = True
                     return FoldAction()
                 if CheckAction in legal_actions:
                         return CheckAction()
-                if continue_cost < 0.5*pot_size:
+                if continue_cost < my_pip:
                     return CallAction()
                 if tpct > 0.55:
                     return CallAction()
-                if continue_cost > 1.8*pot_size:
+                if continue_cost > 3.6*my_pip:
                     self.folded = True
                     return FoldAction()
                 return CallAction()
