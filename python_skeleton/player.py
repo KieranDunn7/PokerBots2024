@@ -170,6 +170,8 @@ class Player(Bot):
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
 
+    print(f"Round #{round_num}")
+
 
 
     def handle_round_over(self, game_state, terminal_state, active):
