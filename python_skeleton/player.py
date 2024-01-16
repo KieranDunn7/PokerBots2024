@@ -231,16 +231,17 @@ class Player(Bot):
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
         if street >= 3 and not self.all_in_pre_flop:
             opp_bid = previous_state.bids[1-active]
-            self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
-            self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
-            try:
-                self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
-            except ZeroDivisionError:
-                self.opp_bid_cv = 100
-            if not self.forfeit:
-                print("Opp bid previous bid", previous_state.bids[1-active])
-                print("Opps bid cv", self.opp_bid_cv)
-                print("Opps bid mean", self.opp_bid_avg)
+            if opp_bid != 0:
+                self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
+                self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
+                try:
+                    self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
+                except ZeroDivisionError:
+                    self.opp_bid_cv = 100
+                if not self.forfeit:
+                    print("Opp bid previous bid", previous_state.bids[1-active])
+                    print("Opps bid cv", self.opp_bid_cv)
+                    print("Opps bid mean", self.opp_bid_avg)
 
         if street == 0 and not self.folded and opp_pip == BIG_BLIND:
             self.pff.append(my_pip-opp_pip)
@@ -370,8 +371,6 @@ class Player(Bot):
                 if not self.forfeit:
                     print("All in pre-flop")
                 return BidAction(0)
-            self.bid_pot_sizes.append(pot_size)
-            self.bid_pot_sum += pot_size
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
                 return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
@@ -433,10 +432,20 @@ class Player(Bot):
         if street == 3:
             if self.street3:
                 if not self.all_in_pre_flop:
-                    self.opp_bids.append(opp_bid)
-                    self.opp_bids_sum += opp_bid
-                    self.opp_bids_num += 1
-                    self.opp_bid_calc += opp_bid/pot_size**2
+                    if opp_bid != 0:
+                        self.opp_bids.append(opp_bid)
+                        self.opp_bids_sum += opp_bid
+                        self.opp_bids_num += 1
+                        self.opp_bid_calc += opp_bid/pot_size**2
+                        if opp_bid > my_bid:
+                            self.bid_pot_sizes.append(pot_size - opp_bid)
+                            self.bid_pot_sum += pot_size-opp_bid
+                        elif opp_bid == my_bid:
+                            self.bid_pot_sizes.append(pot_size - 2*opp_bid)
+                            self.bid_pot_sum += pot_size-2*opp_bid
+                        else:
+                            self.bid_pot_sizes.append(pot_size)
+                            self.bid_pot_sum += pot_size
                 self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
                 self.street3 = False
             probs = (0.58, 0.78, 0.83, 0.7, 0.78)
