@@ -224,7 +224,6 @@ class Player(Bot):
             self.opp_bid_avg = self.opp_bids_sum/self.opp_bids_num
             self.opp_bid_var = sum((x - self.opp_bid_avg) ** 2 for x in self.opp_bids)/self.opp_bids_num
             print("Opp bid previous bid", previous_state.bids[1-active])
-            print("Opp bid mse from this turn", self.opp_bid_mse)
             print("Opps bid variance", self.opp_bid_variance)
             print("Opps bid mean", self.opp_bid_avg)
 
