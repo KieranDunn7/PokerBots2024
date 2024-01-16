@@ -236,7 +236,7 @@ class Player(Bot):
             print("Opps bid mean", self.opp_bid_avg)
 
 
-        if street == 0 and not self.folded:
+        if street == 0 and not self.folded and my_pip-opp_pip > 1:
             self.pff.append(my_pip-opp_pip)
             print("Pre-flop Opponent Fold")
             print(my_pip-opp_pip)
