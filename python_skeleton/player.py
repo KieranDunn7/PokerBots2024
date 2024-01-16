@@ -125,6 +125,8 @@ class Player(Bot):
 
 
         self.opp_bids = [] # For crazy opp auction mean calculation
+        self.bid_pot_sizes = []
+        self.bid_pot_sum = 0
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
 
@@ -332,6 +334,8 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
+            self.bid_pot_sizes.append(pot_size)
+            self.bid_pot_sum += pot_size
             if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_variance):
                 return BidAction(max(int(self.opp_bid_avg - (self.opp_bid_variance)**(1/2)),1))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
