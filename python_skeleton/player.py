@@ -142,7 +142,6 @@ class Player(Bot):
         self.opp_bids_num = 0
         self.opp_bid_avg = 0
         self.opp_bid_cv = 1
-        self.opp_bid_calc = 0
         self.opp_bid_var = 2500
 
         self.diffs = []
@@ -486,16 +485,8 @@ class Player(Bot):
                         self.my_bids.append(my_bid)
                         self.opp_bids_sum += opp_bid
                         self.opp_bids_num += 1
-                        self.opp_bid_calc += opp_bid/pot_size**2
-                        if opp_bid > my_bid:
-                            self.bid_pot_sizes.append(pot_size - opp_bid)
-                            self.bid_pot_sum += pot_size-opp_bid
-                        elif opp_bid == my_bid:
-                            self.bid_pot_sizes.append(pot_size - 2*opp_bid)
-                            self.bid_pot_sum += pot_size-2*opp_bid
-                        else:
-                            self.bid_pot_sizes.append(pot_size)
-                            self.bid_pot_sum += pot_size
+                        self.bid_pot_sizes.append(pot_size)
+                        self.bid_pot_sum += pot_size
                     else:
                         if not self.opp_forfeit:
                             round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
