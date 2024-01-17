@@ -147,7 +147,10 @@ class Player(Bot):
         self.diffs = []
 
         self.post_auction_pcts = []
-        self.
+        self.post_turn_pcts = []
+        self.post_river_pcts = []
+        self.win_loss_tie = []
+        # gives the calculated percentages on the flop, turn, river, and whether we won, lost, or tied (0.5 for tie)
 
 
     def handle_new_round(self, game_state, round_state, active):
@@ -215,6 +218,10 @@ class Player(Bot):
             print("final_time =", game_clock)
             print("diffs =", self.diffs)
             print("avg_diff =", sum(self.diffs)/len(self.diffs))
+            print("post_auction_pcts:", self.post_auction_pcts)
+            print("post_turn_pcts:", self.post_turn_pcts)
+            print("post_river_pcts:", self.post_river_pcts)
+            print("win-loss-tie history:", self.win_loss_tie)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -257,6 +264,20 @@ class Player(Bot):
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
         if self.folded:
             print("Fold")
+            if street >= 3:
+                self.post_auction_pcts.pop()
+            if street >= 4:
+                self.post_turn_pcts.pop()
+            if street ==5:
+                self.post_river_pcts.pop()
+        else:
+            if my_delta == opp_contribution:
+                self.win_loss_tie.append(1)
+            elif my_delta == -1*my_contribution:
+                self.win_loss_tie.append(0)
+            else:
+                self.win_loss_tie.append(0.5)
+        
 
     def get_action(self, game_state, round_state, active):
         '''
