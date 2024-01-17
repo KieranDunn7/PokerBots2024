@@ -248,13 +248,14 @@ class Player(Bot):
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
         if self.folded:
             print("Fold")
+        if opp_cards
             if street >= 3:
                 self.post_auction_pcts.pop()
             if street >= 4:
                 self.post_turn_pcts.pop()
             if street == 5:
                 self.post_river_pcts.pop()
-        elif opp_cards:
+        else:
             if my_delta == opp_contribution:
                 self.win_loss_tie.append(1)
             elif my_delta == -1*my_contribution:
