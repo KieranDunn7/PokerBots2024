@@ -296,9 +296,10 @@ class Player(Bot):
             print("post_turn_pcts:", self.post_turn_pcts)
             print("post_river_pcts:", self.post_river_pcts)
             print("win-loss-tie history:", self.win_loss_tie)
-            print(len(self.post_auction_pcts) == len(self.win_loss_tie))
-            print(len(self.post_turn_pcts) == len(self.win_loss_tie))
-            print(len(self.post_river_pcts) == len(self.win_loss_tie))
+            print(len(self.post_auction_pcts))
+            print(len(self.post_turn_pcts))
+            print(len(self.post_river_pcts))
+            print(len(self.win_loss_tie))
         
 
     def get_action(self, game_state, round_state, active):
