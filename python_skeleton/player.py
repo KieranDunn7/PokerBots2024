@@ -535,18 +535,31 @@ class Player(Bot):
         
         if continue_cost == 0 and not big_blind:
             # opponent starts betting and checks
+            if RaiseAction not in legal_actions:
+                return CheckAction()
+            if street == 5 and self.prob_win > 0.7:
+                # check on final round means opponent has bad hand
+                return RaiseAction(min(min_raise, (self.prob_win+0.3)*max_raise/1.3))
             
 
             
         if continue_cost == 0 and big_blind:
             # we start betting and can raise or check
-
+            if RaiseAction not in legal_actions:
+                return CheckAction()
+            if self.prob_win > 0.6 + (street-3)*0.1:
+                
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
             # and they raised again in response
 
         if continue_cost != 0 and big_blind:
             # we raised as big blind at least once, and opponent raised again in response
+
+
+
+
+            
         if street == 3:
             if self.street3:
                 if not self.all_in_pre_flop:
