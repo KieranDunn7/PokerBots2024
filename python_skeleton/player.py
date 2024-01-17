@@ -374,9 +374,7 @@ class Player(Bot):
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         big_blind = bool(active)  # True if you are the big blind
         pot_size = my_contribution + opp_contribution - continue_cost
-        
-        if not self.forfeit and not self.opp_forfeit:
-            print("pot_size: ", pot_size)
+            
         if self.forfeit:
             if BidAction in legal_actions:
                 return BidAction(0)
@@ -386,6 +384,7 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
+            print("pot_size:", pot_size)
             if pot_size > 4 and self.pre_flop_raise != 0 and not self.opp_forfeit:
                 # opponent either called or raised on our pre-flop raise
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
@@ -499,6 +498,7 @@ class Player(Bot):
             opp_auction = opp_bid >= my_bid
         
         if street == 3 and self.street3:
+            print("pot_size:", pot_size)
             if not self.all_in_pre_flop:
                 if opp_bid != 0:
                     self.opp_forfeit = False
@@ -518,11 +518,13 @@ class Player(Bot):
             print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
+            print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street4 = False
             print("Post-turn pct:", self.prob_win)
 
         if street == 5 and self.street5:
+            print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
             print("Post-river pct:", self.prob_win)
