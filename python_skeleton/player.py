@@ -220,7 +220,8 @@ class Player(Bot):
         self.suit1, self.suit2 = suit1, suit2
         if not self.forfeit and not self.opp_forfeit:
             print()
-            print(f"Round #{round_num}") 
+            print(f"Round #{round_num}")
+            print("My cards:", my_cards)
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
             print("my_bids =", self.my_bids)
