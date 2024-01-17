@@ -269,8 +269,6 @@ class Player(Bot):
                     self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
                 except ZeroDivisionError:
                     self.opp_bid_cv = 100
-                if not self.forfeit and not self.opp_forfeit:
-                    print("Opp previous bid", previous_state.bids[1-active])
 
         if street == 0 and not self.folded and opp_pip == BIG_BLIND and not self.opp_forfeit:
             self.pre_flop_folds.append(my_pip-opp_pip)
