@@ -246,7 +246,7 @@ class Player(Bot):
             self.pre_flop_folds.append(my_pip-opp_pip)
             if not self.forfeit and not self.opp_forfeit:
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
-        if self.folded:
+        if self.folded and not self.forfeit and not self.opp_forfeit:
             print("Fold")
         if opp_cards:
             if street >= 3:
