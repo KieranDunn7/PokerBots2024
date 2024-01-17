@@ -248,20 +248,21 @@ class Player(Bot):
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
         if self.folded and not self.forfeit and not self.opp_forfeit:
             print("Fold")
-        if opp_cards:
-            if my_delta == opp_contribution:
-                self.win_loss_tie.append(1)
-            elif my_delta == -1*my_contribution:
-                self.win_loss_tie.append(0)
+        if not self.foreit and not self.opp_forfeit:
+            if opp_cards:
+                if my_delta == opp_contribution:
+                    self.win_loss_tie.append(1)
+                elif my_delta == -1*my_contribution:
+                    self.win_loss_tie.append(0)
+                else:
+                    self.win_loss_tie.append(0.5)
             else:
-                self.win_loss_tie.append(0.5)
-        else:
-            if street >= 3:
-                self.post_auction_pcts.pop()
-            if street >= 4:
-                self.post_turn_pcts.pop()
-            if street == 5:
-                self.post_river_pcts.pop()
+                if street >= 3:
+                    self.post_auction_pcts.pop()
+                if street >= 4:
+                    self.post_turn_pcts.pop()
+                if street == 5:
+                    self.post_river_pcts.pop()
 
         if game_state.round_num == NUM_ROUNDS:
             print()
@@ -399,13 +400,13 @@ class Player(Bot):
                     self.pre_flop_calls.append(self.pre_flop_raise)
                     self.pre_flop_calls_sum += self.pre_flop_raise
                     self.pre_flop_calls_num += 1
-                    if not self.forfeit and not self.opp_forfeit:
+                    if not self.opp_forfeit:
                         print("Pre-flop Opponent Call", self.pre_flop_raise)
                 else:
                     self.pre_flop_raises.append(self.pre_flop_raise)
                     self.pre_flop_raises_sum += self.pre_flop_raise
                     self.pre_flop_raises_num += 1
-                    if not self.forfeit and not self.opp_forfeit:
+                    if not self.opp_forfeit:
                         print("Pre-flop Opponent Raise", self.pre_flop_raise)
             if my_stack == 0:
                 # all in pre-flop, need to bid 0
@@ -427,7 +428,8 @@ class Player(Bot):
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
             bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 1
-            print("My bid:", bid)
+            if not self.opp_forfeit:
+                print("My bid:", bid)
             return BidAction(min(my_stack, max(bid, 25)))
 
         if RaiseAction in legal_actions:
@@ -506,7 +508,8 @@ class Player(Bot):
             opp_auction = opp_bid >= my_bid
         
         if street == 3 and self.street3:
-            print("Opp bid:", opp_bid)
+            if not self.opp_forfeit:
+                print("Opp bid:", opp_bid)
             #print("pot_size:", pot_size)
             if not self.all_in_pre_flop:
                 if opp_bid != 0:
@@ -525,21 +528,24 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street3 = False
             self.post_auction_pcts.append(round(self.prob_win, 3))
-            print("Post-auction pct:", self.prob_win)
+            if not self.opp_forfeit:
+                print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street4 = False
             self.post_turn_pcts.append(round(self.prob_win, 3))
-            print("Post-turn pct:", self.prob_win)
+            if not self.opp_forfeit:
+                print("Post-turn pct:", self.prob_win)
 
         if street == 5 and self.street5:
             #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
             self.post_river_pcts.append(round(self.prob_win, 3))
-            print("Post-river pct:", self.prob_win)
+            if not self.opp_forfeit:
+                print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
             # opponent starts betting and checks
