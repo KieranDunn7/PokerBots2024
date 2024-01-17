@@ -352,6 +352,7 @@ class Player(Bot):
                         my_wins += 1
                     elif my_score == opp_score:
                         my_wins += 0.5
+            print(my_wins/num_sims)
             return my_wins/num_sims
 
         def crazy_opp_bid_behaviour(avg, var):
