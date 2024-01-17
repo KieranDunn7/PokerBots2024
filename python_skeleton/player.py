@@ -585,7 +585,7 @@ class Player(Bot):
                 if self.prob_win > 0.6 + (street-3)*0.1:
                     return RaiseAction(min_raise*2*self.prob_win)
                 return CallAction()
-            if call_fold_ration < 0.25:
+            if call_fold_ratio < 0.25:
                 if self.prob_win > 0.6 + (street-3)*0.1:
                     return RaiseAction(min_raise*2*self.prob_win)
                 elif self.prob_win > 0.5 + (street-3)*0.1:
