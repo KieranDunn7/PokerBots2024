@@ -537,10 +537,13 @@ class Player(Bot):
             # opponent starts betting and checks
             if RaiseAction not in legal_actions:
                 return CheckAction()
-            if street == 5 and self.prob_win > 0.7:
-                # check on final round means opponent has bad hand
-                return RaiseAction(min(min_raise, self.prob_win*max_raise))
-                # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
+            if street == 5:
+                if self.prob_win > 0.7
+                    # check on final round means opponent has bad hand
+                    return RaiseAction(min(min_raise, self.prob_win*max_raise))
+                    # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
+                return RaiseAction(min_raise) 
+                
             
 
             
