@@ -271,8 +271,6 @@ class Player(Bot):
                     self.opp_bid_cv = 100
                 if not self.forfeit and not self.opp_forfeit:
                     print("Opp previous bid", previous_state.bids[1-active])
-                    print("Opps bid cv", self.opp_bid_cv)
-                    print("Opps bid mean", self.opp_bid_avg)
 
         if street == 0 and not self.folded and opp_pip == BIG_BLIND and not self.opp_forfeit:
             self.pre_flop_folds.append(my_pip-opp_pip)
@@ -374,6 +372,7 @@ class Player(Bot):
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         big_blind = bool(active)  # True if you are the big blind
         pot_size = my_contribution + opp_contribution
+        
         if not self.forfeit and not self.opp_forfeit:
             print("pot_size: ", pot_size)
         if self.forfeit:
@@ -421,6 +420,7 @@ class Player(Bot):
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
             bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 1
+            print("My bid:", bid)
             return BidAction(min(my_stack, max(bid, 25)))
 
         if RaiseAction in legal_actions:
