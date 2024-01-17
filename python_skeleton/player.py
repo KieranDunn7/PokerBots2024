@@ -538,11 +538,19 @@ class Player(Bot):
             if RaiseAction not in legal_actions:
                 return CheckAction()
             if street == 5:
-                if self.prob_win > 0.7
-                    # check on final round means opponent has bad hand
+                # check on final round means opponent has bad hand
+                if self.prob_win > 0.7:
                     return RaiseAction(min(min_raise, self.prob_win*max_raise))
                     # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
-                return RaiseAction(min_raise) 
+                return RaiseAction(min_raise)
+            if self.prob_win > 0.65 + (street-3)*0.1:
+                    return RaiseAction(min(min_raise, self.prob_win*pot_size))
+                    # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
+            if self.prob_win > 0.55 + (street-3)*0.1:
+                return RaiseAction(min_raise)
+            return CheckAction()
+            
+            
                 
             
 
@@ -551,7 +559,18 @@ class Player(Bot):
             # we start betting and can raise or check
             if RaiseAction not in legal_actions:
                 return CheckAction()
+            if street == 5:
+                if self.prob_win > 0.85:
+                    return RaiseAction(min(min_raise, self.prob_win*max_raise))
+                if self.prob_win > 0.7:
+                    return RaiseAction(min_raise)
+                return CheckAction()
+            if self.prob_win > 0.7 + (street-3)*0.1:
+                    return RaiseAction(min(min_raise, self.prob_win*pot_size))
+                    # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
             if self.prob_win > 0.6 + (street-3)*0.1:
+                return RaiseAction(min_raise)
+            return CheckAction()
                 
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
