@@ -352,7 +352,6 @@ class Player(Bot):
                         my_wins += 1
                     elif my_score == opp_score:
                         my_wins += 0.5
-            print(my_wins/num_sims)
             return my_wins/num_sims
 
         def crazy_opp_bid_behaviour(avg, var):
@@ -508,14 +507,17 @@ class Player(Bot):
                     self.opp_forfeit = True                     
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street3 = False
+            print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street4 = False
+            print("Post-turn pct:", self.prob_win)
 
         if street == 5 and self.street5:
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
+            print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
             # opponent starts betting and checks
