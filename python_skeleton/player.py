@@ -563,21 +563,31 @@ class Player(Bot):
                 if self.prob_win > 0.85:
                     return RaiseAction(min(min_raise, self.prob_win*max_raise))
                 if self.prob_win > 0.7:
-                    return RaiseAction(min_raise)
+                    return RaiseAction(min_raise*2*self.prob_win)
                 return CheckAction()
             if self.prob_win > 0.7 + (street-3)*0.1:
                     return RaiseAction(min(min_raise, self.prob_win*pot_size))
                     # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
             if self.prob_win > 0.6 + (street-3)*0.1:
-                return RaiseAction(min_raise)
+                return RaiseAction(min_raise*2*self.prob_win)
             return CheckAction()
                 
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
             # and they raised again in response
+            call_fold_ratio = continue_cost/(2*my_contribution)
+            if call_fold_ratio < 0.1:
+                # always calls relatively small raises
+                return CallAction()
+            if call_fold_ratio * 
+                
 
         if continue_cost != 0 and big_blind:
             # we raised as big blind at least once, and opponent raised again in response
+            call_fold_ratio = continue_cost/(2*my_contribution)
+            if call_fold_ratio < 0.1:
+                # always calls relatively small raises
+                return CallAction()
 
 
 
