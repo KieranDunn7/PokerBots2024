@@ -373,7 +373,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         big_blind = bool(active)  # True if you are the big blind
-        pot_size = my_contribution + opp_contribution
+        pot_size = my_contribution + opp_contribution - continue_cost
         
         if not self.forfeit and not self.opp_forfeit:
             print("pot_size: ", pot_size)
@@ -451,21 +451,21 @@ class Player(Bot):
                         return RaiseAction(min_raise)
                     return CallAction()
                 if total_percentage > 0.6:
-                    if RaiseAction in legal_actions and continue_cost < my_pip*2:
+                    if RaiseAction in legal_actions and continue_cost < pot_size:
                         return RaiseAction(min_raise)
                     return CallAction()
-                if continue_cost > 5*my_pip:
+                if continue_cost > 2.5*pot_size:
                     if CheckAction in legal_actions:
                         return CheckAction()
                     self.folded = True
                     return FoldAction()
                 if CheckAction in legal_actions:
                         return CheckAction()
-                if continue_cost < my_pip:
+                if continue_cost < 0.5*pot_size:
                     return CallAction()
                 if total_percentage > 0.55:
                     return CallAction()
-                if continue_cost > 3.6*my_pip:
+                if continue_cost > 1.8*pot_size:
                     self.folded = True
                     return FoldAction()
                 return CallAction()
@@ -564,7 +564,7 @@ class Player(Bot):
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
             # and they raised again in response
-            call_fold_ratio = continue_cost/(2*my_contribution)
+            call_fold_ratio = continue_cost/pot_size
             if call_fold_ratio < 0.1:
                 # always calls relatively small raises
                 if street == 5:
