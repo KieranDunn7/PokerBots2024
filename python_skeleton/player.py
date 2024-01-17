@@ -549,12 +549,7 @@ class Player(Bot):
             if self.prob_win > 0.55 + (street-3)*0.1:
                 return RaiseAction(min_raise)
             return CheckAction()
-            
-            
                 
-            
-
-            
         if continue_cost == 0 and big_blind:
             # we start betting and can raise or check
             if RaiseAction not in legal_actions:
@@ -578,8 +573,32 @@ class Player(Bot):
             call_fold_ratio = continue_cost/(2*my_contribution)
             if call_fold_ratio < 0.1:
                 # always calls relatively small raises
+                if street == 5:
+                    if self.prob_win > 0.85:
+                        return RaiseAction(min(min_raise, self.prob_win*max_raise))
+                    if self.prob_win > 0.7:
+                        return RaiseAction(min_raise*2*self.prob_win)
+                    return CallAction()
+                if self.prob_win > 0.7 + (street-3)*0.1:
+                        return RaiseAction(min(min_raise, self.prob_win*pot_size))
+                        # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
+                if self.prob_win > 0.6 + (street-3)*0.1:
+                    return RaiseAction(min_raise*2*self.prob_win)
                 return CallAction()
-            if call_fold_ratio * 
+            if call_fold_ration < 0.25:
+                if self.prob_win > 0.6 + (street-3)*0.1:
+                    return RaiseAction(min_raise*2*self.prob_win)
+                elif self.prob_win > 0.5 + (street-3)*0.1:
+                    return CallAction()
+                else:
+                    return FoldAction()
+            if call_fold_ratio >= 2:
+                if self.prob_win > 0.8 + (street-3)*0.05:
+                    return CallAction()
+                return FoldAction()
+            if call_fold_ratio * (self.prob_win - 0.65 + (street-3)*0.05) > 0.05:
+                return CallAction()
+            return FoldAction()
                 
 
         if continue_cost != 0 and big_blind:
@@ -588,6 +607,17 @@ class Player(Bot):
             if call_fold_ratio < 0.1:
                 # always calls relatively small raises
                 return CallAction()
+            if call_fold_ratio < 0.25 and self.prob_win > 0.5 + (street-3)*0.1:
+                return CallAction()
+            if call_fold_ratio >= 2:
+                if self.prob_win > 0.8 + (street-3)*0.05:
+                    return CallAction()
+            if call_fold_ratio * (self.prob_win - 0.65 + (street-3)*0.05) > 0.05:
+                return CallAction()
+            return FoldAction()
+            
+                
+                
 
 
 
