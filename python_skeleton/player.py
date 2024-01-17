@@ -252,7 +252,7 @@ class Player(Bot):
                 self.post_auction_pcts.pop()
             if street >= 4:
                 self.post_turn_pcts.pop()
-            if street ==5:
+            if street == 5:
                 self.post_river_pcts.pop()
         elif opp_cards:
             if my_delta == opp_contribution:
