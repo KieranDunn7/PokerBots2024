@@ -249,19 +249,19 @@ class Player(Bot):
         if self.folded and not self.forfeit and not self.opp_forfeit:
             print("Fold")
         if opp_cards:
-            if street >= 3:
-                self.post_auction_pcts.pop()
-            if street >= 4:
-                self.post_turn_pcts.pop()
-            if street == 5:
-                self.post_river_pcts.pop()
-        else:
             if my_delta == opp_contribution:
                 self.win_loss_tie.append(1)
             elif my_delta == -1*my_contribution:
                 self.win_loss_tie.append(0)
             else:
                 self.win_loss_tie.append(0.5)
+        else:
+            if street >= 3:
+                self.post_auction_pcts.pop()
+            if street >= 4:
+                self.post_turn_pcts.pop()
+            if street == 5:
+                self.post_river_pcts.pop()
 
         if game_state.round_num == NUM_ROUNDS:
             print()
