@@ -187,6 +187,7 @@ class Player(Bot):
         self.street3 = True
         self.street4 = True
         self.street5 = True
+
         my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
@@ -370,6 +371,7 @@ class Player(Bot):
         continue_cost = opp_pip - my_pip  # the number of chips needed to stay in the pot
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
+        big_blind = bool(active)  # True if you are the big blind
         pot_size = my_contribution + opp_contribution
         if not self.forfeit and not self.opp_forfeit:
             print("pot_size: ", pot_size)
@@ -505,7 +507,46 @@ class Player(Bot):
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
+        if street == 3 and self.street3:
+            if not self.all_in_pre_flop:
+                if opp_bid != 0:
+                    self.opp_forfeit = False
+                    self.opp_bids.append(opp_bid)
+                    self.my_bids.append(my_bid)
+                    self.opp_bids_sum += opp_bid
+                    self.opp_bids_num += 1
+                    self.bid_pot_sizes.append(pot_size)
+                    self.bid_pot_sum += pot_size
+                else:
+                    if not self.opp_forfeit:
+                        round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
+                        print(f"Opponent Forfeit in Round #{round_num}")
+                    self.opp_forfeit = True                     
+            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
+            self.street3 = False
+    
+        if street == 4 and self.street4:
+            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
+            self.street4 = False
+
+        if street == 5 and self.street5:
+            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
+            self.street5 = False
         
+        if continue_cost == 0 and not big_blind:
+            # opponent starts betting and checks
+            
+
+            
+        if continue_cost == 0 and big_blind:
+            # we start betting and can raise or check
+
+        if continue_cost != 0 and not big_blind:
+            # opponent raised and started betting, but we may have also raised this round
+            # and they raised again in response
+
+        if continue_cost != 0 and big_blind:
+            # we raised as big blind at least once, and opponent raised again in response
         if street == 3:
             if self.street3:
                 if not self.all_in_pre_flop:
