@@ -489,24 +489,7 @@ class Player(Bot):
             return CallAction()
         else:
             opp_auction = opp_bid >= my_bid
-
-        def betting_strategy(prob1, prob2, prob3, prob4, prob5, raise1, raise2, min_raise, max_raise, legal_actions, my_stack):
-            if self.prob_win < prob1:
-                if CheckAction in legal_actions:
-                    return CheckAction()
-                self.folded = True
-                return FoldAction()
-            elif self.prob_win > random.uniform(prob2, prob3):
-                if RaiseAction in legal_actions:
-                    return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
-                return CallAction()
-            elif self.prob_win > random.uniform(prob4, prob5) and my_pip == 0:
-                if RaiseAction in legal_actions:
-                    return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
-                return CallAction()
-            if CheckAction in legal_actions:
-                return CheckAction()
-            return CallAction()
+        
         if street == 3 and self.street3:
             if not self.all_in_pre_flop:
                 if opp_bid != 0:
@@ -624,48 +607,6 @@ class Player(Bot):
                 return CallAction()
             return FoldAction()
             
-                
-                
-
-
-
-
-            
-        if street == 3:
-            if self.street3:
-                if not self.all_in_pre_flop:
-                    if opp_bid != 0:
-                        self.opp_forfeit = False
-                        self.opp_bids.append(opp_bid)
-                        self.my_bids.append(my_bid)
-                        self.opp_bids_sum += opp_bid
-                        self.opp_bids_num += 1
-                        self.bid_pot_sizes.append(pot_size)
-                        self.bid_pot_sum += pot_size
-                    else:
-                        if not self.opp_forfeit:
-                            round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
-                            print(f"Opponent Forfeit in Round #{round_num}")
-                        self.opp_forfeit = True                     
-                self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
-                self.street3 = False
-            probs = (0.58, 0.78, 0.83, 0.7, 0.78)
-            raise1, raise2 = 1.4, 1.2
-            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions, my_stack)
-        if street == 4:
-            if self.street4:
-                self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
-                self.street4 = False
-            probs = (0.68, 0.85, 0.9, 0.75, 0.85)
-            raise1, raise2 = 1.5, 1.2
-            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions, my_stack)
-        if street == 5:
-            if self.street5:
-                self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
-                self.street5 = False
-            probs = (0.72, 0.9, 0.95, 0.8, 0.9)
-            raise1, raise2 = 1.8, 1.3
-            return betting_strategy(*probs, raise1, raise2, min_raise, max_raise, legal_actions, my_stack)
         if CheckAction in legal_actions:
             return CheckAction()
         self.folded = True
