@@ -125,24 +125,12 @@ class Player(Bot):
         self.opp_forfeit = False
         
         self.pre_flop_folds = [] # preflop folds for opp
-        self.pff_1 = [] # raises 2-4
-        self.pff_2 = [] # raises 5-10
-        self.pff_3 = [] # raises 11-20
-        self.pff_4 = [] # raises 21+
         self.pre_flop_folds_sum = 0
         self.pre_flop_folds_num = 0 # amount of preflop folds
         self.pre_flop_calls = [] # preflop calls for opp
-        self.pfc_1 = [] # raises 2-4
-        self.pfc_2 = [] # raises 5-10
-        self.pfc_3 = [] # raises 11-20
-        self.pfc_4 = [] # raises 21+
         self.pre_flop_calls_sum = 0
         self.pre_flop_calls_num = 0 # amount of preflop calls
         self.pre_flop_raises = [] # preflop raises for opp
-        self.pfr_1 = [] # raises 2-4
-        self.pfr_2 = [] # raises 5-10
-        self.pfr_3 = [] # raises 11-20
-        self.pfr_4 = [] # raises 21+
         self.pre_flop_raises_sum = 0
         self.pre_flop_raises_num = 0 # amount of preflop raises
 
@@ -156,17 +144,10 @@ class Player(Bot):
         self.opp_bid_cv = 1
         self.opp_bid_var = 2500
 
-        self.my_pff = [] # preflop folds for opp
-        self.my_pff_sum = 0
-        self.my_pff_num = 0 # amount of preflop folds
-        self.my_pfc = [] # preflop calls for opp
-        self.my_pfc_sum = 0
-        self.my_pfc_num = 0 # amount of preflop calls
-        self.my_pfr = [] # preflop raises for opp
-        self.my_pfr_sum = 0
-        self.my_pfr_num = 0 # amount of preflop raises
-
         self.diffs = []
+
+        self.post_auction_pcts = []
+        self.
 
 
     def handle_new_round(self, game_state, round_state, active):
