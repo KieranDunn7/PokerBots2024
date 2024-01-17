@@ -206,22 +206,6 @@ class Player(Bot):
             print()
             print(f"Round #{round_num}")
             #print("My cards:", my_cards)
-        if round_num == NUM_ROUNDS:
-            print("opp_bids =", self.opp_bids)
-            print("my_bids =", self.my_bids)
-            #print("bid_pot_sizes =", self.bid_pot_sizes)
-            print("opp_pff =", self.pre_flop_folds)
-            print("opp_pfc =", self.pre_flop_calls)
-            print("opp_pfr =", self.pre_flop_raises)
-            print("opp_bid_avg =", self.opp_bid_avg)
-            print("opp_bid_cv =", self.opp_bid_cv)
-            print("final_time =", game_clock)
-            print("diffs =", self.diffs)
-            print("avg_diff =", sum(self.diffs)/len(self.diffs))
-            print("post_auction_pcts:", self.post_auction_pcts)
-            print("post_turn_pcts:", self.post_turn_pcts)
-            print("post_river_pcts:", self.post_river_pcts)
-            print("win-loss-tie history:", self.win_loss_tie)
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
