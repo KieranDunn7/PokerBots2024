@@ -248,6 +248,7 @@ class Player(Bot):
         final_pot_size = my_contribution + opp_contribution # pot size at the end of the round
         my_pip = previous_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
+        round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         if street >= 3 and not self.all_in_pre_flop:
             opp_bid = previous_state.bids[1-active]
             if opp_bid != 0:
