@@ -471,7 +471,9 @@ class Player(Bot):
                     raise_amt = min_raise
                     if opp_pip == BIG_BLIND:
                         self.pre_flop_raise = raise_amt + my_pip - 3
-                    return RaiseAction(raise_amt)
+                    if RaiseAction in legal_actions:
+                        return RaiseAction(raise_amt)
+                    return CallAction()
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
@@ -479,7 +481,9 @@ class Player(Bot):
                 raise_amt = int(random.uniform(min_raise, min(4*min_raise, max_raise)))
                 if opp_pip == BIG_BLIND:
                     self.pre_flop_raise = raise_amt + my_pip - 3
-                return RaiseAction(min(max_raise, raise_amt))
+                if RaiseAction in legal_actions:
+                    return RaiseAction(min(max_raise, raise_amt))
+                return CallAction()
             return CallAction()
         else:
             opp_auction = opp_bid >= my_bid
@@ -491,9 +495,13 @@ class Player(Bot):
                 self.folded = True
                 return FoldAction()
             elif self.prob_win > random.uniform(prob2, prob3):
-                return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
+                if RaiseAction in legal_actions:
+                    return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise1*min_raise, max_raise)))))
+                return CallAction()
             elif self.prob_win > random.uniform(prob4, prob5) and my_pip == 0:
-                return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
+                if RaiseAction in legal_actions:
+                    return RaiseAction(min(my_stack, int(random.uniform(min_raise, min(raise2*min_raise, max_raise)))))
+                return CallAction()
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
