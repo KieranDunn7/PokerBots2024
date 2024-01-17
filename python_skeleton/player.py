@@ -221,7 +221,7 @@ class Player(Bot):
         if not self.forfeit and not self.opp_forfeit:
             print()
             print(f"Round #{round_num}")
-            print("My cards:", my_cards)
+            #print("My cards:", my_cards)
         if round_num == NUM_ROUNDS:
             print("opp_bids =", self.opp_bids)
             print("my_bids =", self.my_bids)
@@ -384,7 +384,7 @@ class Player(Bot):
             return FoldAction()
     
         if BidAction in legal_actions:
-            print("pot_size:", pot_size)
+            #print("pot_size:", pot_size)
             if pot_size > 4 and self.pre_flop_raise != 0 and not self.opp_forfeit:
                 # opponent either called or raised on our pre-flop raise
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
@@ -402,8 +402,6 @@ class Player(Bot):
             if my_stack == 0:
                 # all in pre-flop, need to bid 0
                 self.all_in_pre_flop = True
-                if not self.forfeit and not self.opp_forfeit:
-                    print("All in pre-flop")
                 return BidAction(0)
             #if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
                 #return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
@@ -432,9 +430,11 @@ class Player(Bot):
             min_raise, max_raise = 0, 0
 
         if continue_cost > 1:
-            print("Opp raise:", continue_cost)
+            #print("Opp raise:", continue_cost)
+            pass
         elif not big_blind and street != 0:
-            print("Opp check")
+            #print("Opp check")
+            pass
             
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
@@ -498,7 +498,8 @@ class Player(Bot):
             opp_auction = opp_bid >= my_bid
         
         if street == 3 and self.street3:
-            print("pot_size:", pot_size)
+            print("Opp bid:", opp_bid)
+            #print("pot_size:", pot_size)
             if not self.all_in_pre_flop:
                 if opp_bid != 0:
                     self.opp_forfeit = False
@@ -518,13 +519,13 @@ class Player(Bot):
             print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
-            print("pot_size:", pot_size)
+            #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street4 = False
             print("Post-turn pct:", self.prob_win)
 
         if street == 5 and self.street5:
-            print("pot_size:", pot_size)
+            #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
             print("Post-river pct:", self.prob_win)
