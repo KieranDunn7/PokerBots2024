@@ -575,19 +575,27 @@ class Player(Bot):
                 # always calls relatively small raises
                 if street == 5:
                     if self.prob_win > 0.85:
-                        return RaiseAction(min(min_raise, int(self.prob_win*max_raise)))
+                        if RaiseAction not in legal_actions: 
+                            return RaiseAction(min(min_raise, int(self.prob_win*max_raise)))
+                        return CallAction()
                     if self.prob_win > 0.7:
-                        return RaiseAction(min(min_raise, int(min_raise*2*self.prob_win)))
+                        if RaiseAction not in legal_actions:
+                            return RaiseAction(min(min_raise, int(min_raise*2*self.prob_win)))
                     return CallAction()
                 if self.prob_win > 0.7 + (street-3)*0.1:
+                    if RaiseAction not in legal_actions:
                         return RaiseAction(min(min_raise, int(self.prob_win*pot_size)))
+                    return CallAction()
                         # will raise to max with 100% chance of win, will raise to 70% of max raise with 70% chance to win
                 if self.prob_win > 0.6 + (street-3)*0.1:
-                    return RaiseAction(min_raise*2*self.prob_win)
+                    if RaiseAction not in legal_actions:
+                        return RaiseAction(min_raise*2*self.prob_win)
                 return CallAction()
             if call_fold_ratio < 0.25:
                 if self.prob_win > 0.6 + (street-3)*0.1:
-                    return RaiseAction(min(min_raise, int(min_raise*2*self.prob_win)))
+                    if RaiseAction not in legal_actions:
+                        return RaiseAction(min(min_raise, int(min_raise*2*self.prob_win)))
+                    return CallAction()
                 elif self.prob_win > 0.5 + (street-3)*0.1:
                     return CallAction()
                 else:
