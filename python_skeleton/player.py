@@ -516,21 +516,21 @@ class Player(Bot):
                     self.opp_forfeit = True                     
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street3 = False
-            self.post_auction_pcts.append(round(self.prob_win, 4))
+            self.post_auction_pcts.append(round(self.prob_win, 3))
             print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
             self.street4 = False
-            self.post_turn_pcts.append(round(self.prob_win, 4))
+            self.post_turn_pcts.append(round(self.prob_win, 3))
             print("Post-turn pct:", self.prob_win)
 
         if street == 5 and self.street5:
             #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
-            self.post_river_pcts.append(round(self.prob_win, 4))
+            self.post_river_pcts.append(round(self.prob_win, 3))
             print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
