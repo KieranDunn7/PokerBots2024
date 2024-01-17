@@ -276,6 +276,8 @@ class Player(Bot):
             self.pre_flop_folds.append(my_pip-opp_pip)
             if not self.forfeit and not self.opp_forfeit:
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
+        if self.folded:
+            print("Fold")
 
     def get_action(self, game_state, round_state, active):
         '''
@@ -591,13 +593,16 @@ class Player(Bot):
                 elif self.prob_win > 0.5 + (street-3)*0.1:
                     return CallAction()
                 else:
+                    self.folded = True
                     return FoldAction()
             if call_fold_ratio >= 2:
                 if self.prob_win > 0.8 + (street-3)*0.05:
                     return CallAction()
+                self.folded = True
                 return FoldAction()
             if call_fold_ratio * (self.prob_win - 0.65 + (street-3)*0.05) > 0.05:
                 return CallAction()
+            self.folded = True
             return FoldAction()
                 
 
@@ -614,6 +619,7 @@ class Player(Bot):
                     return CallAction()
             if call_fold_ratio * (self.prob_win - 0.65 + (street-3)*0.05) > 0.05:
                 return CallAction()
+            self.folded = True
             return FoldAction()
             
         if CheckAction in legal_actions:
