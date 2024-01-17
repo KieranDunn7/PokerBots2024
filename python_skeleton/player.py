@@ -429,6 +429,11 @@ class Player(Bot):
             max_cost = max_raise - my_pip  # the cost of a maximum bet/raise
         else:
             min_raise, max_raise = 0, 0
+
+        if continue_cost > 1:
+            print("Opp raise:", continue_cost)
+        elif not big_blind and street != 0:
+            print("Opp check")
             
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
