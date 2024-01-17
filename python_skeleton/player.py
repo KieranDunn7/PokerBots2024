@@ -26,10 +26,10 @@ class Player(Bot):
         Nothing.
         '''
         
-        self.pair_percentage = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
+        self.pair_percentages = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
         # pairs with no extra card
         
-        self.suited_percentage = {12: (0.389, 0.393, 0.404, 0.412, 0.411, 0.416, 0.423, 0.43, 0.452, 0.463, 0.47, 0.48),
+        self.suited_percentages = {12: (0.389, 0.393, 0.404, 0.412, 0.411, 0.416, 0.423, 0.43, 0.452, 0.463, 0.47, 0.48),
                  11: (0.348, 0.357, 0.367, 0.379, 0.381, 0.39, 0.393, 0.409, 0.429, 0.444, 0.451),
                  10: (0.327, 0.337, 0.344, 0.352, 0.358, 0.36, 0.381, 0.396, 0.422, 0.433),
                  9: (0.309, 0.315, 0.324, 0.333, 0.337, 0.352, 0.37, 0.389, 0.41),
@@ -43,7 +43,7 @@ class Player(Bot):
                  1: (0.239,)}
         # suited with no extra card, high card is key, low card is index in tuple
         
-        self.nonsuited_percentage = {12: (0.352, 0.365, 0.371, 0.38, 0.378, 0.388, 0.398, 0.403, 0.425, 0.436, 0.444, 0.458),
+        self.nonsuited_percentages = {12: (0.352, 0.365, 0.371, 0.38, 0.378, 0.388, 0.398, 0.403, 0.425, 0.436, 0.444, 0.458),
                  11: (0.316, 0.326, 0.333, 0.345, 0.351, 0.357, 0.363, 0.385, 0.406, 0.417, 0.427),
                  10: (0.29, 0.302, 0.309, 0.317, 0.326, 0.333, 0.35, 0.369, 0.391, 0.4),
                  9: (0.272, 0.278, 0.289, 0.298, 0.305, 0.32, 0.339, 0.36, 0.38),
@@ -57,10 +57,10 @@ class Player(Bot):
                  1: (0.202,)}
         # non-suited with no extra card, high card is key, low card is index in tuple
 
-        self.pair_percentage_plus = (0.641, 0.663, 0.692, 0.711, 0.732, 0.75, 0.77, 0.79, 0.812, 0.828, 0.845, 0.858, 0.882)
+        self.pair_percentages_plus = (0.641, 0.663, 0.692, 0.711, 0.732, 0.75, 0.77, 0.79, 0.812, 0.828, 0.845, 0.858, 0.882)
         # pairs with extra card
 
-        self.suited_percentage_plus = {12: (0.699, 0.71, 0.717, 0.722, 0.721, 0.728, 0.732, 0.735, 0.752, 0.756, 0.76, 0.762),
+        self.suited_percentages_plus = {12: (0.699, 0.71, 0.717, 0.722, 0.721, 0.728, 0.732, 0.735, 0.752, 0.756, 0.76, 0.762),
                  11: (0.672, 0.68, 0.693, 0.699, 0.704, 0.711, 0.712, 0.722, 0.738, 0.741, 0.746),
                  10: (0.659, 0.669, 0.679, 0.687, 0.69, 0.691, 0.702, 0.716, 0.735, 0.74),
                  9: (0.65, 0.659, 0.668, 0.678, 0.678, 0.686, 0.699, 0.711, 0.726),
@@ -74,7 +74,7 @@ class Player(Bot):
                  1: (0.594,)}
         # suited with extra card, high card is key, low card is index in tuple
 
-        self.nonsuited_percentage_plus = {12: (0.675, 0.685, 0.693, 0.703, 0.7, 0.707, 0.715, 0.718, 0.734, 0.739, 0.74, 0.746),
+        self.nonsuited_percentages_plus = {12: (0.675, 0.685, 0.693, 0.703, 0.7, 0.707, 0.715, 0.718, 0.734, 0.739, 0.74, 0.746),
                  11: (0.649, 0.658, 0.667, 0.678, 0.682, 0.687, 0.689, 0.702, 0.719, 0.724, 0.727),
                  10: (0.633, 0.642, 0.651, 0.66, 0.668, 0.669, 0.683, 0.694, 0.71, 0.713),
                  9: (0.62, 0.628, 0.639, 0.65, 0.653, 0.666, 0.677, 0.689, 0.706),
@@ -88,7 +88,7 @@ class Player(Bot):
                  1: (0.556,)}
         # non-suited with extra card, high card is key, low card is index in tuple
 
-        self.total_suited_percentage = {12: (0.544, 0.5515, 0.5585, 0.5675, 0.566, 0.572, 0.5775, 0.5825, 0.602, 0.6095, 0.615, 0.621),
+        self.total_suited_percentages = {12: (0.544, 0.5515, 0.5585, 0.5675, 0.566, 0.572, 0.5775, 0.5825, 0.602, 0.6095, 0.615, 0.621),
                  11: (0.51, 0.5185, 0.53, 0.539, 0.5425, 0.5505, 0.5525, 0.5655, 0.5835, 0.5925, 0.5985),
                  10: (0.493, 0.5035, 0.5115, 0.5185, 0.524, 0.5255, 0.5415, 0.556, 0.5785, 0.5865),
                  9: (0.4795, 0.4865, 0.4965, 0.5065, 0.5075, 0.519, 0.5375, 0.55, 0.568),
@@ -102,7 +102,7 @@ class Player(Bot):
                  1: (0.416,)}
         # averages from sp and spp
 
-        self.total_nonsuited_percentage = {12: (0.5135, 0.525, 0.532, 0.5415, 0.539, 0.5475, 0.5565, 0.5605, 0.5795, 0.5875, 0.592, 0.602),
+        self.total_nonsuited_percentages = {12: (0.5135, 0.525, 0.532, 0.5415, 0.539, 0.5475, 0.5565, 0.5605, 0.5795, 0.5875, 0.592, 0.602),
                  11: (0.4825, 0.492, 0.5, 0.5115, 0.5165, 0.522, 0.526, 0.5435, 0.5625, 0.5705, 0.577),
                  10: (0.4615, 0.472, 0.4805, 0.4885, 0.497, 0.501, 0.5165, 0.5315, 0.5505, 0.5565),
                  9: (0.446, 0.453, 0.464, 0.474, 0.479, 0.493, 0.508, 0.5245, 0.543),
@@ -116,7 +116,7 @@ class Player(Bot):
                  1: (0.379,)}
         # averages from np and npp
 
-        self.total_pair_percentage = (0.4815, 0.508, 0.541, 0.567, 0.591, 0.616, 0.6405, 0.666, 0.6925, 0.715, 0.7375, 0.755, 0.7855)
+        self.total_pair_percentages = (0.4815, 0.508, 0.541, 0.567, 0.591, 0.616, 0.6405, 0.666, 0.6925, 0.715, 0.7375, 0.755, 0.7855)
         # averages from pp and ppp
 
         self.ranks = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
@@ -428,19 +428,19 @@ class Player(Bot):
             min_raise, max_raise = 0, 0
             
         if street == 0:
-            pct, pctp = self.pct, self.pctp
-            tpct = (pct + pctp)/2
+            percentage, percentage_plus = self.percentage, self.percentage_plus
+            total_percentage = (percentage + percentage_plus)/2
             if my_pip > BIG_BLIND:
-                if tpct < 0.5:
+                if ttotal_percentagepct < 0.5:
                     if CheckAction in legal_actions:
                         return CheckAction()
                     self.folded = True
                     return FoldAction()
-                if tpct > 0.65:
+                if total_percentage > 0.65:
                     if RaiseAction in legal_actions:
                         return RaiseAction(min_raise)
                     return CallAction()
-                if tpct > 0.6:
+                if total_percentage > 0.6:
                     if RaiseAction in legal_actions and continue_cost < my_pip*2:
                         return RaiseAction(min_raise)
                     return CallAction()
@@ -453,7 +453,7 @@ class Player(Bot):
                         return CheckAction()
                 if continue_cost < my_pip:
                     return CallAction()
-                if tpct > 0.55:
+                if total_percentage > 0.55:
                     return CallAction()
                 if continue_cost > 3.6*my_pip:
                     self.folded = True
@@ -461,28 +461,28 @@ class Player(Bot):
                 return CallAction()
                         
                     
-            if tpct < 0.5:
+            if total_percentage < 0.5:
                 if CheckAction in legal_actions:
                     return CheckAction()
                 self.folded = True
                 return FoldAction()
-            elif tpct > random.uniform(0.56, 0.62):
+            elif total_percentage > random.uniform(0.56, 0.62):
                 if random.uniform(0, 1) > 0.5 and RaiseAction in legal_actions:
-                    raise_amt = min_raise
+                    raise_amount = min_raise
                     if opp_pip == BIG_BLIND:
-                        self.pre_flop_raise = raise_amt + my_pip - 3
+                        self.pre_flop_raise = raise_amount + my_pip - 3
                     if RaiseAction in legal_actions:
-                        return RaiseAction(raise_amt)
+                        return RaiseAction(raise_amount)
                     return CallAction()
                 if CheckAction in legal_actions:
                     return CheckAction()
                 return CallAction()
             if RaiseAction in legal_actions:
-                raise_amt = int(random.uniform(min_raise, min(4*min_raise, max_raise)))
+                raise_amount = int(random.uniform(min_raise, min(4*min_raise, max_raise)))
                 if opp_pip == BIG_BLIND:
-                    self.pre_flop_raise = raise_amt + my_pip - 3
+                    self.pre_flop_raise = raise_amount + my_pip - 3
                 if RaiseAction in legal_actions:
-                    return RaiseAction(min(max_raise, raise_amt))
+                    return RaiseAction(min(max_raise, raise_amount))
                 return CallAction()
             return CallAction()
         else:
