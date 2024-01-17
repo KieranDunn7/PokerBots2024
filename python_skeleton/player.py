@@ -248,7 +248,7 @@ class Player(Bot):
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
         if self.folded:
             print("Fold")
-        if opp_cards
+        if opp_cards:
             if street >= 3:
                 self.post_auction_pcts.pop()
             if street >= 4:
