@@ -270,7 +270,7 @@ class Player(Bot):
                 self.post_turn_pcts.pop()
             if street ==5:
                 self.post_river_pcts.pop()
-        else:
+        elif opp_cards:
             if my_delta == opp_contribution:
                 self.win_loss_tie.append(1)
             elif my_delta == -1*my_contribution:
