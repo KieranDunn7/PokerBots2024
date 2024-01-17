@@ -431,7 +431,7 @@ class Player(Bot):
             percentage, percentage_plus = self.percentage, self.percentage_plus
             total_percentage = (percentage + percentage_plus)/2
             if my_pip > BIG_BLIND:
-                if ttotal_percentagepct < 0.5:
+                if total_percentage < 0.5:
                     if CheckAction in legal_actions:
                         return CheckAction()
                     self.folded = True
