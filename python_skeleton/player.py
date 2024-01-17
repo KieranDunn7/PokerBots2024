@@ -248,7 +248,6 @@ class Player(Bot):
         final_pot_size = my_contribution + opp_contribution # pot size at the end of the round
         my_pip = previous_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
-        round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         if street >= 3 and not self.all_in_pre_flop:
             opp_bid = previous_state.bids[1-active]
             if opp_bid != 0:
@@ -279,7 +278,7 @@ class Player(Bot):
             else:
                 self.win_loss_tie.append(0.5)
 
-        if round_num == NUM_ROUNDS:
+        if game_state.round_num == NUM_ROUNDS:
             print()
             print()
             print("opp_bids =", self.opp_bids)
@@ -290,7 +289,7 @@ class Player(Bot):
             print("opp_pfr =", self.pre_flop_raises)
             print("opp_bid_avg =", self.opp_bid_avg)
             print("opp_bid_cv =", self.opp_bid_cv)
-            print("final_time =", game_clock)
+            print("final_time =", game_state.game_clock)
             #print("diffs =", self.diffs)
             #print("avg_diff =", sum(self.diffs)/len(self.diffs))
             print("post_auction_pcts:", self.post_auction_pcts)
