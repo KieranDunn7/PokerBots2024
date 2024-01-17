@@ -206,14 +206,14 @@ class Player(Bot):
             suit1,suit2 = suit2,suit1
 
         if pair:
-            self.pct = self.pp[rank1]
-            self.pctp = self.ppp[rank1]
+            self.percentage = self.pair_percentages[rank1]
+            self.percentage_plus = self.pair_percentages_plus[rank1]
         elif suited:
-            self.pct = self.sp[rank1][rank2]
-            self.pctp = self.spp[rank1][rank2]
+            self.percentage = self.suited_percentages[rank1][rank2]
+            self.percentage_plus = self.suited_percentages_plus[rank1][rank2]
         else:
-            self.pct = self.np[rank1][rank2]
-            self.pctp = self.npp[rank1][rank2]
+            self.percentage = self.nonsuited_percentages[rank1][rank2]
+            self.percentage_plus = self.nonsuited_percentages_plus[rank1][rank2]
         self.rank1, self.rank2 = rank1, rank2
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
@@ -224,9 +224,9 @@ class Player(Bot):
             print("opp_bids =", self.opp_bids)
             print("my_bids =", self.my_bids)
             print("bid_pot_sizes =", self.bid_pot_sizes)
-            print("opp_pff =", self.pff)
-            print("opp_pfc =", self.pfc)
-            print("opp_pfr =", self.pfr)
+            print("opp_pff =", self.pre_flop_folds)
+            print("opp_pfc =", self.pre_flop_calls)
+            print("opp_pfr =", self.pre_flop_raises)
             print("opp_bid_avg =", self.opp_bid_avg)
             print("opp_bid_cv =", self.opp_bid_cv)
             print("final_time =", game_clock)
@@ -273,7 +273,7 @@ class Player(Bot):
                     print("Opps bid mean", self.opp_bid_avg)
 
         if street == 0 and not self.folded and opp_pip == BIG_BLIND and not self.opp_forfeit:
-            self.pff.append(my_pip-opp_pip)
+            self.pre_flop_folds.append(my_pip-opp_pip)
             if not self.forfeit and not self.opp_forfeit:
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
 
@@ -385,15 +385,15 @@ class Player(Bot):
             if pot_size > 4 and self.pre_flop_raise != 0 and not self.opp_forfeit:
                 # opponent either called or raised on our pre-flop raise
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
-                    self.pfc.append(self.pre_flop_raise)
-                    self.pfc_sum += self.pre_flop_raise
-                    self.pfc_num += 1
+                    self.pre_flop_calls.append(self.pre_flop_raise)
+                    self.pre_flop_calls_sum += self.pre_flop_raise
+                    self.pre_flop_calls_num += 1
                     if not self.forfeit and not self.opp_forfeit:
                         print("Pre-flop Opponent Call", self.pre_flop_raise)
                 else:
-                    self.pfr.append(self.pre_flop_raise)
-                    self.pfr_sum += self.pre_flop_raise
-                    self.pfr_num += 1
+                    self.pre_flop_raises.append(self.pre_flop_raise)
+                    self.pre_flop_raises_sum += self.pre_flop_raise
+                    self.pre_flop_raises_num += 1
                     if not self.forfeit and not self.opp_forfeit:
                         print("Pre-flop Opponent Raise", self.pre_flop_raise)
             if my_stack == 0:
