@@ -363,6 +363,106 @@ class Player(Bot):
         def crazy_opp_bid_behaviour(avg, var):
             return avg > 100 and 0 <= var <= 50 and game_state.round_num > 20
 
+        def get_actual_post_auction_pct(post_auction_pct):
+            if post_auction_pct > 0.95:
+                return 43/(43+1)
+            if post_auction_pct > 0.9:
+                return 58/(58+6)
+            if post_auction_pct > 0.85:
+                return 106/(106+18)
+            if post_auction_pct > 0.8:
+                return 133/(133+24)
+            if post_auction_pct > 0.75:
+                return 90/(90+42)
+            if post_auction_pct > 0.7:
+                return 88/(88+41)
+            if post_auction_pct > 0.65:
+                return 114/114+43)
+            if post_auction_pct > 0.6:
+                return 119/(119+59)
+            if post_auction_pct > 0.55:
+                return 77/(77+50)
+            if post_auction_pct > 0.5:
+                return 65/(65+43)
+            if post_auction_pct > 0.45:
+                return 42/(42+44)
+            if post_auction_pct > 0.4:
+                return 23/(23+38)
+            if post_auction_pct > 0.35:
+                return 13/(13+27)
+            if post_auction_pct > 0.3:
+                return 7/(7+22)
+            if post_auction_pct > 0.25:
+                return 4/(4+26)
+            return 0
+
+        def get_actual_post_turn_pct(post_turn_pct):
+            if post_turn_pct > 0.95:
+                return 124/(124+2)
+            if post_turn_pct > 0.9:
+                return 93/(93+6)
+            if post_turn_pct > 0.85:
+                return 127/(127+25)
+            if post_turn_pct > 0.8:
+                return 113/(113+25)
+            if post_turn_pct > 0.75:
+                return 99/(99+45)
+            if post_turn_pct > 0.7:
+                return 76/(76+31)
+            if post_turn_pct > 0.65:
+                return 77/(77+31)
+            if post_turn_pct > 0.6:
+                return 78/(78+41)
+            if post_turn_pct > 0.55:
+                return 64/(64+51)
+            if post_turn_pct > 0.5:
+                return 44/(44+33)
+            if post_turn_pct > 0.45:
+                return 28/(28+30)
+            if post_turn_pct > 0.4:
+                return 23/(23+39)
+            if post_turn_pct > 0.35:
+                return 16/(16+38)
+            if post_turn_pct > 0.3:
+                return 14/(14+38)
+            if post_turn_pct > 0.25:
+                return 6/(6+25)
+            return 0
+
+        def get_actual_post_river_pct(post_river_pct):
+            if post_river_pct > 0.95:
+                return 124/(124+2)
+            if post_river_pct > 0.9:
+                return 93/(93+6)
+            if post_river_pct > 0.85:
+                return 127/(127+25)
+            if post_river_pct > 0.8:
+                return 113/(113+25)
+            if post_river_pct > 0.75:
+                return 99/(99+45)
+            if post_river_pct > 0.7:
+                return 76/(76+31)
+            if post_river_pct > 0.65:
+                return 77/(77+31)
+            if post_river_pct > 0.6:
+                return 78/(78+41)
+            if post_river_pct > 0.55:
+                return 64/(64+51)
+            if post_river_pct > 0.5:
+                return 44/(44+33)
+            if post_river_pct > 0.45:
+                return 28/(28+30)
+            if post_river_pct > 0.4:
+                return 23/(23+39)
+            if post_river_pct > 0.35:
+                return 16/(16+38)
+            if post_river_pct > 0.3:
+                return 14/(14+38)
+            if post_river_pct > 0.25:
+                return 6/(6+25)
+            return 0
+            
+
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
         street = round_state.street  # 0, 3, 4, or 5 representing pre-flop, flop, turn, or river respectively
