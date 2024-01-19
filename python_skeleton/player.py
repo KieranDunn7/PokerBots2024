@@ -626,6 +626,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.post_auction_pct = self.prob_win
             self.street3 = False
+            self.actual_win_pct = get_actual_post_auction_pct(self.prob_win)
             if not self.opp_forfeit:
                 print("Post-auction pct:", self.prob_win)
     
@@ -634,6 +635,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street4 = False
             self.post_turn_pct = self.prob_win
+            self.actual_win_pct = get_actual_post_turn_pct(self.prob_win)
             if not self.opp_forfeit:
                 print("Post-turn pct:", self.prob_win)
                 
@@ -642,6 +644,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
             self.post_river_pct = self.prob_win
+            self.actual_win_pct = get_actual_post_river_pct(self.prob_win)
             if not self.opp_forfeit:
                 print("Post-river pct:", self.prob_win)
         
