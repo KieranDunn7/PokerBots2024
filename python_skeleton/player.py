@@ -248,7 +248,7 @@ class Player(Bot):
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
         if self.folded and not self.forfeit and not self.opp_forfeit:
             print("Fold")
-        if not self.foreit and not self.opp_forfeit:
+        if not self.forfeit and not self.opp_forfeit:
             if opp_cards:
                 if my_delta == opp_contribution:
                     self.win_loss_tie.append(1)
