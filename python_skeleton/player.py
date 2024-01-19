@@ -431,35 +431,35 @@ class Player(Bot):
 
         def get_actual_post_river_pct(post_river_pct):
             if post_river_pct > 0.95:
-                return 124/(124+2)
+                return 247/(247+5)
             if post_river_pct > 0.9:
-                return 93/(93+6)
+                return 113/(113+9)
             if post_river_pct > 0.85:
-                return 127/(127+25)
+                return 122/(122+17)
             if post_river_pct > 0.8:
-                return 113/(113+25)
+                return 106/(106+15)
             if post_river_pct > 0.75:
-                return 99/(99+45)
+                return 65/(65+27)
             if post_river_pct > 0.7:
-                return 76/(76+31)
+                return 60/(60+37)
             if post_river_pct > 0.65:
-                return 77/(77+31)
+                return 53/(53+38)
             if post_river_pct > 0.6:
-                return 78/(78+41)
+                return 46/(46+28)
             if post_river_pct > 0.55:
-                return 64/(64+51)
+                return 41/(41+28)
             if post_river_pct > 0.5:
-                return 44/(44+33)
+                return 38/(38+27)
             if post_river_pct > 0.45:
-                return 28/(28+30)
+                return 30/(30+33)
             if post_river_pct > 0.4:
-                return 23/(23+39)
+                return 22/(22+29)
             if post_river_pct > 0.35:
-                return 16/(16+38)
+                return 11/(11+29)
             if post_river_pct > 0.3:
-                return 14/(14+38)
+                return 12/(12+28)
             if post_river_pct > 0.25:
-                return 6/(6+25)
+                return 7/(7+25)
             return 0
             
 
