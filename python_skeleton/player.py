@@ -525,7 +525,7 @@ class Player(Bot):
                         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
                         print(f"Opponent Forfeit in Round #{round_num}")
                     self.opp_forfeit = True                     
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
+            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street3 = False
             self.post_auction_pcts.append(round(self.prob_win, 3))
             if not self.opp_forfeit:
@@ -533,7 +533,7 @@ class Player(Bot):
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1500)
+            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street4 = False
             self.post_turn_pcts.append(round(self.prob_win, 3))
             if not self.opp_forfeit:
