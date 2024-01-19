@@ -256,13 +256,9 @@ class Player(Bot):
                     self.win_loss_tie.append(0)
                 else:
                     self.win_loss_tie.append(0.5)
-            else:
-                if street >= 3:
-                    self.post_auction_pcts.pop()
-                if street >= 4:
-                    self.post_turn_pcts.pop()
-                if street == 5:
-                    self.post_river_pcts.pop()
+                self.post_auction_pcts.append(self.post_auction_pct)
+                self.post_turn_pcts.append(self.post_turn_pct)
+                self.post_river_pcts.append(self.post_river_pct)
 
         if game_state.round_num == NUM_ROUNDS:
             print()
@@ -526,25 +522,25 @@ class Player(Bot):
                         print(f"Opponent Forfeit in Round #{round_num}")
                     self.opp_forfeit = True                     
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
+            self.post_auction_pct = self.prob_win
             self.street3 = False
             if not self.opp_forfeit:
-                self.post_auction_pcts.append(round(self.prob_win, 3))
                 print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street4 = False
+            self.post_turn_pct = self.prob_win
             if not self.opp_forfeit:
-                self.post_turn_pcts.append(round(self.prob_win, 3))
                 print("Post-turn pct:", self.prob_win)
                 
         if street == 5 and self.street5:
             #print("pot_size:", pot_size)
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
             self.street5 = False
+            self.post_river_pct = self.prob_win
             if not self.opp_forfeit:
-                self.post_river_pcts.append(round(self.prob_win, 3))
                 print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
