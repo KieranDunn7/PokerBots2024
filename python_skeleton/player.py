@@ -379,7 +379,7 @@ class Player(Bot):
             if post_auction_pct > 0.7:
                 return 88/(88+41)
             if post_auction_pct > 0.65:
-                return 114/114+43)
+                return 114/(114+43)
             if post_auction_pct > 0.6:
                 return 119/(119+59)
             if post_auction_pct > 0.55:
