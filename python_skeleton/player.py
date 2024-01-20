@@ -576,7 +576,7 @@ class Player(Bot):
                         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
                         print(f"Opponent Forfeit in Round #{round_num}")
                     self.opp_forfeit = True                     
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, opp_auction, 1000)
+            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 1000)
             self.post_auction_pct = self.prob_win
             self.street3 = False
             self.actual_win_pct = get_actual_post_auction_pct(self.prob_win)
