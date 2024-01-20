@@ -551,7 +551,7 @@ class Player(Bot):
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions and total_percentage > 0.6:
-                return RaiseAction(min_raise)
+                return RaiseAction(max(min_raise, min(max_raise, pot_size*0.6/(1 - 2*0.6))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
