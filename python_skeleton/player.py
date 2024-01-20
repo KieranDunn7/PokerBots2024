@@ -492,7 +492,7 @@ class Player(Bot):
     
         if BidAction in legal_actions:
             #print("pot_size:", pot_size)
-            if pot_size > 4 and self.pre_flop_raise != 0 and not self.opp_forfeit:
+            if pot_size > 2*BIG_BLIND and self.pre_flop_raise != 0 and not self.opp_forfeit:
                 # opponent either called or raised on our pre-flop raise
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
                     self.pre_flop_calls.append(self.pre_flop_raise)
@@ -547,63 +547,15 @@ class Player(Bot):
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
             total_percentage = (percentage + percentage_plus)/2
-            if my_pip > BIG_BLIND:
-                if total_percentage < 0.5:
-                    if CheckAction in legal_actions:
-                        return CheckAction()
-                    self.folded = True
-                    return FoldAction()
-                if total_percentage > 0.65:
-                    if RaiseAction in legal_actions:
-                        return RaiseAction(min_raise)
-                    return CallAction()
-                if total_percentage > 0.6:
-                    if RaiseAction in legal_actions and continue_cost < pot_size:
-                        return RaiseAction(min_raise)
-                    return CallAction()
-                if continue_cost > 2.5*pot_size:
-                    if CheckAction in legal_actions:
-                        return CheckAction()
-                    self.folded = True
-                    return FoldAction()
-                if CheckAction in legal_actions:
-                        return CheckAction()
-                if continue_cost < 0.5*pot_size:
-                    return CallAction()
-                if total_percentage > 0.55:
-                    return CallAction()
-                if continue_cost > 1.8*pot_size:
-                    self.folded = True
-                    return FoldAction()
-                return CallAction()
-                        
-                    
-            if total_percentage < 0.5:
-                if CheckAction in legal_actions:
-                    return CheckAction()
+            if continue_cost/(2*continue_cost + pot_size) > total_percentage:
                 self.folded = True
                 return FoldAction()
-            elif total_percentage > random.uniform(0.56, 0.62):
-                if random.uniform(0, 1) > 0.5 and RaiseAction in legal_actions:
-                    raise_amount = min_raise
-                    if opp_pip == BIG_BLIND:
-                        self.pre_flop_raise = raise_amount + my_pip - 3
-                    if RaiseAction in legal_actions:
-                        return RaiseAction(raise_amount)
-                    return CallAction()
-                if CheckAction in legal_actions:
-                    return CheckAction()
-                return CallAction()
-            if RaiseAction in legal_actions:
-                raise_amount = int(random.uniform(min_raise, min(4*min_raise, max_raise)))
-                if opp_pip == BIG_BLIND:
-                    self.pre_flop_raise = raise_amount + my_pip - 3
-                if RaiseAction in legal_actions:
-                    return RaiseAction(min(max_raise, raise_amount))
-                return CallAction()
+            if RaiseAction in legal_actions and total_percentage > 0.6:
+                return RaiseAction(min_raise)
+            if CheckAction in legal_actions:
+                return CheckAction()
             return CallAction()
-        else:
-            opp_auction = opp_bid >= my_bid
+            
         
         if street == 3 and self.street3:
             if not self.opp_forfeit:
