@@ -688,8 +688,8 @@ class Player(Bot):
             if continue_cost/(2*continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
-            if RaiseAction in legal_actions:
-                pass
+            if RaiseAction in legal_actions and self.actual_win_pct >= 0.95:
+                return RaiseAction(max_raise)
             return CallAction()
             
                 
@@ -699,7 +699,7 @@ class Player(Bot):
             if continue_cost/(2*continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
-            if RaiseAction in legal_actions and self.actual_win_pct == 1:
+            if RaiseAction in legal_actions and self.actual_win_pct >= 0.95:
                 return RaiseAction(max_raise)
             return CallAction()
             
