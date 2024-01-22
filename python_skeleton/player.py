@@ -205,10 +205,12 @@ class Player(Bot):
         self.rank1, self.rank2 = rank1, rank2
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
+        """
         if not self.forfeit and not self.opp_forfeit:
             print()
             print(f"Round #{round_num}")
             #print("My cards:", my_cards)
+            """
 
     def handle_round_over(self, game_state, terminal_state, active):
         '''
@@ -244,13 +246,14 @@ class Player(Bot):
                     self.opp_bid_cv = (self.opp_bid_var**(1/2))/self.opp_bid_avg
                 except ZeroDivisionError:
                     self.opp_bid_cv = 100
-
+        """
         if street == 0 and not self.folded and opp_pip == BIG_BLIND and not self.opp_forfeit:
             self.pre_flop_folds.append(my_pip-opp_pip)
             if not self.forfeit and not self.opp_forfeit:
                 print("Pre-flop Opponent Fold", my_pip-opp_pip)
         if self.folded and not self.forfeit and not self.opp_forfeit:
             print("Fold")
+            """
         if not self.forfeit and not self.opp_forfeit:
             if opp_cards:
                 if my_delta == opp_contribution:
@@ -272,9 +275,9 @@ class Player(Bot):
             print("opp_bids =", self.opp_bids)
             print("my_bids =", self.my_bids)
             #print("bid_pot_sizes =", self.bid_pot_sizes)
-            print("opp_pff =", self.pre_flop_folds)
-            print("opp_pfc =", self.pre_flop_calls)
-            print("opp_pfr =", self.pre_flop_raises)
+            #print("opp_pff =", self.pre_flop_folds)
+            #print("opp_pfc =", self.pre_flop_calls)
+            #print("opp_pfr =", self.pre_flop_raises)
             print("opp_bid_avg =", self.opp_bid_avg)
             print("opp_bid_cv =", self.opp_bid_cv)
             print("final_time =", game_state.game_clock)
@@ -485,7 +488,7 @@ class Player(Bot):
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         big_blind = bool(active)  # True if you are the big blind
         pot_size = my_contribution + opp_contribution
-            
+        
         if self.forfeit:
             if BidAction in legal_actions:
                 return BidAction(0)
@@ -493,9 +496,13 @@ class Player(Bot):
                 return CheckAction()
             self.folded = True
             return FoldAction()
+
+        self.all_in = my_stack == 0
+            
     
         if BidAction in legal_actions:
             #print("pot_size:", pot_size)
+            """
             if pot_size > 2*BIG_BLIND and self.pre_flop_raise != 0 and not self.opp_forfeit:
                 # opponent either called or raised on our pre-flop raise
                 if pot_size == (self.pre_flop_raise + BIG_BLIND) * 2:
@@ -510,19 +517,19 @@ class Player(Bot):
                     self.pre_flop_raises_num += 1
                     if not self.opp_forfeit:
                         print("Pre-flop Opponent Raise", self.pre_flop_raise)
-            if my_stack == 0:
+                        """
+            if self.all_in:
                 # all in pre-flop, need to bid 0
-                self.all_in_pre_flop = True
                 return BidAction(0)
-            #if crazy_opp_bid_behaviour(self.opp_bid_avg, self.opp_bid_var):
-                #return BidAction(min(my_stack, max(int(self.opp_bid_avg - (self.opp_bid_var)**(1/2)),1)))
             prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
             diff = round(prob_win_w_auction - prob_win_wo_auction, 4)
+            """
             if not self.opp_forfeit:
                 print("prob_win_w_auction:", prob_win_w_auction)
                 print("prob_win_wo_auction:", prob_win_wo_auction)
                 print("diff:", diff)
-                self.diffs.append(diff)
+                """
+                # self.diffs.append(diff)
             if self.opp_bids_num < 3:
                 opp_bid_avg = 100
                 opp_bid_stdv = 25
@@ -530,9 +537,13 @@ class Player(Bot):
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
             bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 1
+            """
             if not self.opp_forfeit:
                 print("My bid:", bid)
+                """
             return BidAction(min(my_stack, max(bid, 25)))
+        if self.all_in:
+            return CheckAction()
 
         if RaiseAction in legal_actions:
             min_raise, max_raise = round_state.raise_bounds()  # the smallest and largest numbers of chips for a legal bet/raise
@@ -541,12 +552,10 @@ class Player(Bot):
         else:
             min_raise, max_raise = 0, 0
 
-        if continue_cost > 1:
+        #if continue_cost > 1:
             #print("Opp raise:", continue_cost)
-            pass
-        elif not big_blind and street != 0:
+        #elif not big_blind and street != 0:
             #print("Opp check")
-            pass
             
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
@@ -584,8 +593,8 @@ class Player(Bot):
             self.post_auction_pct = self.prob_win
             self.street3 = False
             self.actual_win_pct = 1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
-            if not self.opp_forfeit:
-                print("Post-auction pct:", self.prob_win)
+            #if not self.opp_forfeit:
+                #print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
@@ -593,8 +602,8 @@ class Player(Bot):
             self.street4 = False
             self.post_turn_pct = self.prob_win
             self.actual_win_pct = 1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
-            if not self.opp_forfeit:
-                print("Post-turn pct:", self.prob_win)
+            #if not self.opp_forfeit:
+                #print("Post-turn pct:", self.prob_win)
                 
         if street == 5 and self.street5:
             #print("pot_size:", pot_size)
@@ -602,8 +611,8 @@ class Player(Bot):
             self.street5 = False
             self.post_river_pct = self.prob_win
             self.actual_win_pct = 1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
-            if not self.opp_forfeit:
-                print("Post-river pct:", self.prob_win)
+            #if not self.opp_forfeit:
+                #print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
             # opponent starts betting and checks
