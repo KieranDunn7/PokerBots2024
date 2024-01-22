@@ -480,7 +480,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         big_blind = bool(active)  # True if you are the big blind
-        pot_size = my_contribution + opp_contribution - continue_cost
+        pot_size = my_contribution + opp_contribution
             
         if self.forfeit:
             if BidAction in legal_actions:
@@ -620,7 +620,7 @@ class Player(Bot):
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
             # and they raised again in response
-            if continue_cost/(2*continue_cost + pot_size) > self.actual_win_pct:
+            if continue_cost/(continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions:
@@ -634,7 +634,7 @@ class Player(Bot):
 
         if continue_cost != 0 and big_blind:
             # we raised as big blind at least once, and opponent raised again in response
-            if continue_cost/(2*continue_cost + pot_size) > self.actual_win_pct:
+            if continue_cost/(continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions: 
