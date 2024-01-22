@@ -169,7 +169,7 @@ class Player(Bot):
         Nothing.
         '''
         self.pre_flop_raise = 0
-        self.all_in_pre_flop = False
+        self.all_in = False
         self.folded = False
         self.street3 = True
         self.street4 = True
