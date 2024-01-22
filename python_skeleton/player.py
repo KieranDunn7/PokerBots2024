@@ -152,6 +152,7 @@ class Player(Bot):
         self.win_loss_tie = []
 
         self.pre_calc_win_pct = 0.6651
+        self.calc_win_pct = 0.5
         # gives the calculated percentages on the flop, turn, river, and whether we won, lost, or tied (0.5 for tie)
 
 
@@ -261,6 +262,9 @@ class Player(Bot):
                 self.post_auction_pcts.append(self.post_auction_pct)
                 self.post_turn_pcts.append(self.post_turn_pct)
                 self.post_river_pcts.append(self.post_river_pct)
+                
+                if len(self.win_loss_tie) > 10:
+                    self.calc_win_pct = sum(self.win_loss_tie)/len(self.win_loss_tie)
 
         if game_state.round_num == NUM_ROUNDS:
             print()
@@ -579,7 +583,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 1000)
             self.post_auction_pct = self.prob_win
             self.street3 = False
-            self.actual_win_pct = get_actual_post_auction_pct(self.prob_win)
+            self.actual_win_pct = 1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
             if not self.opp_forfeit:
                 print("Post-auction pct:", self.prob_win)
     
@@ -588,7 +592,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 1000)
             self.street4 = False
             self.post_turn_pct = self.prob_win
-            self.actual_win_pct = get_actual_post_turn_pct(self.prob_win)
+            self.actual_win_pct = 1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
             if not self.opp_forfeit:
                 print("Post-turn pct:", self.prob_win)
                 
@@ -597,7 +601,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 1000)
             self.street5 = False
             self.post_river_pct = self.prob_win
-            self.actual_win_pct = get_actual_post_river_pct(self.prob_win)
+            self.actual_win_pct = 1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
             if not self.opp_forfeit:
                 print("Post-river pct:", self.prob_win)
         
