@@ -135,7 +135,6 @@ class Player(Bot):
 
         self.opp_bids = [] # For crazy opp auction mean calculation
         self.my_bids = []
-        self.bid_pot_sizes = [] # size of pot during bid
         self.bid_pot_sum = 0
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
@@ -236,6 +235,7 @@ class Player(Bot):
         final_pot_size = my_contribution + opp_contribution # pot size at the end of the round
         my_pip = previous_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
+        
         if street >= 3 and not self.all_in:
             opp_bid = previous_state.bids[1-active]
             if opp_bid != 0:
@@ -273,7 +273,6 @@ class Player(Bot):
             print()
             print("opp_bids =", self.opp_bids)
             print("my_bids =", self.my_bids)
-            #print("bid_pot_sizes =", self.bid_pot_sizes)
             #print("opp_pff =", self.pre_flop_folds)
             #print("opp_pfc =", self.pre_flop_calls)
             #print("opp_pfr =", self.pre_flop_raises)
@@ -570,19 +569,15 @@ class Player(Bot):
         
         if street == 3 and self.street3:
             self.opp_auction = opp_bid >= my_bid
-            #print("Opp bid:", opp_bid)
-            #print("pot_size:", pot_size)
             if opp_bid != 0:
                 self.opp_bids.append(opp_bid)
                 self.my_bids.append(my_bid)
                 self.opp_bids_sum += opp_bid
                 self.opp_bids_num += 1
-                self.bid_pot_sizes.append(pot_size)
-                self.bid_pot_sum += pot_size
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
             self.post_auction_pct = self.prob_win
             self.street3 = False
-            self.actual_win_pct = 1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
+            self.actual_win_pct = round(1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
             #print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
@@ -590,7 +585,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
             self.street4 = False
             self.post_turn_pct = self.prob_win
-            self.actual_win_pct = 1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
+            self.actual_win_pct = round(1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
             #print("Post-turn pct:", self.prob_win)
                 
         if street == 5 and self.street5:
@@ -598,7 +593,7 @@ class Player(Bot):
             self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
             self.street5 = False
             self.post_river_pct = self.prob_win
-            self.actual_win_pct = 1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
+            self.actual_win_pct = round(1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
             #print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
