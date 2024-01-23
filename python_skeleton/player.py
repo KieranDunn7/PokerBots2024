@@ -556,7 +556,7 @@ class Player(Bot):
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
             total_percentage = (percentage + percentage_plus)/2
-            if continue_cost/(continue_cost + pot_size) > total_percentage:
+            if (my_pip + continue_cost)/(continue_cost + pot_size) > total_percentage:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions and total_percentage > 0.6:
@@ -614,7 +614,7 @@ class Player(Bot):
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
             # and they raised again in response
-            if continue_cost/(continue_cost + pot_size) > self.actual_win_pct:
+            if (my_pip + continue_cost)/(continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions:
@@ -628,7 +628,7 @@ class Player(Bot):
 
         if continue_cost != 0 and big_blind:
             # we raised as big blind at least once, and opponent raised again in response
-            if continue_cost/(continue_cost + pot_size) > self.actual_win_pct:
+            if (my_pip + continue_cost)/(continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions: 
