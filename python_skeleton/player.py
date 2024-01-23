@@ -325,21 +325,49 @@ class Player(Bot):
             
             return most_common_suit, cards_needed_for_flush
         
-        def cards_needed_for_straight(cards, opp_auction):
+        def check_for_straight(board_cards):
             # Extract the ranks from each card
-            ranks = [card[:-1] for card in cards]
+            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+            ranks = [card[:-1] for card in board_cards]
             
             # Convert face cards to numeric values
-            ranks = [self.ranks[rank] for rank in ranks]
+            ranks = [ranks_dict[rank] for rank in ranks]
             
             # Sort the ranks in ascending order
             sorted_ranks = sorted(ranks)
+            not_in_board = []
+            index = 0
+            for number in range(13):
+                if sorted_ranks[index] == number:
+                    if index != len(sorted_ranks)-1:
+                        index += 1
+                else:
+                    not_in_board.append(number)
+            max_num_in = 0
+            max_start = [-1]
+            starting_card = 12
+            num_in = 0
+            ace_low_straight = {12, 0, 1, 2, 3}
+            for card in ace_low_straight:
+                if card in sorted_ranks:
+                    num_in += 1
+                if num_in == max_num_in:
+                    max_start.append(starting_card)
+                if num_in > max_num_in:
+                    max_num_in = num_in
+                    max_start = [starting_card]
+            for starting_card in range(9):
+                num_in = 0
+                for card in range(starting_card, starting_card + 5):
+                    if card in sorted_ranks:
+                        num_in += 1
+                if num_in == max_num_in:
+                    max_start.append(starting_card)
+                if num_in > max_num_in:
+                    max_num_in = num_in
+                    max_start = [starting_card]
             
-            for card_rank in sorted_ranks:
-                if 
-            
-            # If no straight is found, return the number of cards needed
-            return 5 - len(current_straight)
+            return max_start, max_num_in
         
         def simulate_auction(my_cards, board_cards, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
