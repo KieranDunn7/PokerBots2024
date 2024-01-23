@@ -557,11 +557,11 @@ class Player(Bot):
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
             total_percentage = (percentage + percentage_plus)/2
-            if continue_cost/(2*continue_cost + pot_size) > total_percentage:
+            if continue_cost/(continue_cost + pot_size) > total_percentage:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions and total_percentage > 0.6:
-                return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.6/(1 - 2*0.6)))))
+                return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.6/(1 - 0.6)))))
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
@@ -605,7 +605,7 @@ class Player(Bot):
             if RaiseAction not in legal_actions:
                 return CheckAction()
             if self.actual_win_pct > 0.6:
-                return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.6/(1 - 2*0.6))))) # using 0.6 as a baseline for the opp percent chance of winning
+                return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.6/(1 - 0.6))))) # using 0.6 as a baseline for the opp percent chance of winning
             return CheckAction()
                 
         if continue_cost == 0 and big_blind:
@@ -613,7 +613,7 @@ class Player(Bot):
             if RaiseAction not in legal_actions:
                 return CheckAction()
             if self.actual_win_pct > 0.7:
-                return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.7/(1 - 2*0.7))))) # using 0.7 as a baseline for the opp percent chance of winning
+                return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.7/(1 - 0.7))))) # using 0.7 as a baseline for the opp percent chance of winning
             return CheckAction()
                 
         if continue_cost != 0 and not big_blind:
@@ -626,7 +626,7 @@ class Player(Bot):
                 if self.actual_win_pct >= 0.95:
                     return RaiseAction(max_raise)
                 if self.actual_win_pct > 0.85:
-                    return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.85/(1 - 2*0.85))))) # using 0.7 as a baseline for the opp percent chance of winning
+                    return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.85/(1 - 0.85))))) # using 0.7 as a baseline for the opp percent chance of winning
             return CallAction()
             
                 
@@ -640,7 +640,7 @@ class Player(Bot):
                 if self.actual_win_pct >= 0.95:
                     return RaiseAction(max_raise)
                 if self.actual_win_pct > 0.9:
-                    return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.9/(1 - 2*0.9))))) # using 0.7 as a baseline for the opp percent chance of winning
+                    return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.9/(1 - 0.9))))) # using 0.7 as a baseline for the opp percent chance of winning
             return CallAction()
             
         if CheckAction in legal_actions:
