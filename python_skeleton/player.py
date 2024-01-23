@@ -290,6 +290,7 @@ class Player(Bot):
             print(len(self.post_turn_pcts))
             print(len(self.post_river_pcts))
             print(len(self.win_loss_tie))
+            print(sum(self.win_loss_tie)/len(self.win_loss_tie))
         
 
     def get_action(self, game_state, round_state, active):
