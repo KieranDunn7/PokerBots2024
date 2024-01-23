@@ -325,7 +325,7 @@ class Player(Bot):
                     draw = deck[drawing:drawing+5]
                     opp_hole = draw[0:2]
                     r_and_t = draw[2:4]
-                    auction1 = [draw[4]]
+                    auction = [draw[4]]
                     my_hand = revealed_cards + r_and_t
                     my_hand_p = revealed_cards + r_and_t + auction
                     opp_hand = opp_hole + flop_cards + r_and_t
