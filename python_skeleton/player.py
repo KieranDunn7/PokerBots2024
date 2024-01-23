@@ -149,6 +149,11 @@ class Player(Bot):
         self.post_river_pcts = []
         self.win_loss_tie = []
 
+        self.post_auction_pct = 0
+        self.post_turn_pct = 0
+        self.post_river_pct = 0
+        
+
         self.pre_calc_win_pct = 0.6651
         self.calc_win_pct = 0.5
         # gives the calculated percentages on the flop, turn, river, and whether we won, lost, or tied (0.5 for tie)
