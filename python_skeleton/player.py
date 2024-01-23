@@ -253,20 +253,19 @@ class Player(Bot):
         if self.folded and not self.forfeit:
             print("Fold")
             """
-        if not self.forfeit:
-            if opp_cards and final_pot_size > 25:
-                if my_delta == opp_contribution:
-                    self.win_loss_tie.append(1)
-                elif my_delta == -1*my_contribution:
-                    self.win_loss_tie.append(0)
-                else:
-                    self.win_loss_tie.append(0.5)
-                self.post_auction_pcts.append(self.post_auction_pct)
-                self.post_turn_pcts.append(self.post_turn_pct)
-                self.post_river_pcts.append(self.post_river_pct)
-                
-                if len(self.win_loss_tie) > 10:
-                    self.calc_win_pct = sum(self.win_loss_tie)/len(self.win_loss_tie)
+        if not self.forfeit and opp_cards and final_pot_size > 25:
+            if my_delta == opp_contribution:
+                self.win_loss_tie.append(1)
+            elif my_delta == -1*my_contribution:
+                self.win_loss_tie.append(0)
+            else:
+                self.win_loss_tie.append(0.5)
+            self.post_auction_pcts.append(self.post_auction_pct)
+            self.post_turn_pcts.append(self.post_turn_pct)
+            self.post_river_pcts.append(self.post_river_pct)
+            
+            if len(self.win_loss_tie) > 10:
+                self.calc_win_pct = sum(self.win_loss_tie)/len(self.win_loss_tie)
 
         if game_state.round_num == NUM_ROUNDS:
             print()
