@@ -174,7 +174,7 @@ class Player(Bot):
         self.street4 = True
         self.street5 = True
 
-        my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
+        # my_bankroll = game_state.bankroll  # the total number of chips you've gained or lost from the beginning of the game to the start of this round
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
@@ -319,25 +319,25 @@ class Player(Bot):
             for card in revealed_cards:
                 deck.cards.remove(card)
             my_wins_w_auction, my_wins_wo_auction, my_wins_both_auction = 0, 0, 0
-            for _ in range(num_sims):
+            for trial in range(num_sims):
                 deck.shuffle()
-                draw = deck.peek(6)
-                opp_hole = draw[0:2]
-                r_and_t = draw[2:4]
-                auction1,auction2 = [draw[4]],[draw[5]]
-                my_hand_p = revealed_cards + r_and_t + auction1
-                opp_hand = opp_hole + flop_cards + r_and_t
-                my_score_p = eval7.evaluate(my_hand_p)
-                opp_score = eval7.evaluate(opp_hand)
-                my_wins_w_auction += compare(my_score_p, opp_score)
-                my_hand = revealed_cards + r_and_t
-                opp_hand_p = opp_hole + flop_cards + r_and_t + auction2
-                my_score = eval7.evaluate(my_hand)
-                opp_score_p = eval7.evaluate(opp_hand_p)
-                my_wins_wo_auction += compare(my_score, opp_score_p)
-                my_wins_both_auction += compare(my_score_p, opp_score_p)
+                for drawing in range(9):
+                    draw = deck[drawing:drawing+5]
+                    opp_hole = draw[0:2]
+                    r_and_t = draw[2:4]
+                    auction1 = [draw[4]]
+                    my_hand = revealed_cards + r_and_t
+                    my_hand_p = revealed_cards + r_and_t + auction
+                    opp_hand = opp_hole + flop_cards + r_and_t
+                    opp_hand_p = opp_hole + flop_cards + r_and_t + auction
+                    my_score = eval7.evaluate(my_hand)
+                    my_score_p = eval7.evaluate(my_hand_p)
+                    opp_score = eval7.evaluate(opp_hand)
+                    opp_score_p = eval7.evaluate(opp_hand_p)
+                    my_wins_w_auction += compare(my_score_p, opp_score)
+                    my_wins_wo_auction += compare(my_score, opp_score_p)
     
-            return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims, my_wins_both_auction/num_sims
+            return my_wins_w_auction/(num_sims*9), my_wins_wo_auction/(num_sims*9)
 
         def simulate_rest_of_game(my_cards, board_cards, opp_auction, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
@@ -353,9 +353,11 @@ class Player(Bot):
                 opp_hand_size = 3
             else:
                 opp_hand_size = 2
-            for _ in range(num_sims):
-                    deck.shuffle()
-                    draw = deck.peek(peek_max)
+            drawings_per_shuffle = (52 - (len(my_cards)+len(board_cards)))//peek_max
+            for trial in range(num_sims):
+                deck.shuffle()
+                for drawing in range(drawings_per_shuffle):
+                    draw = deck[peek_max*drawing:peek_max*(drawing+1)]
                     opp_hole = draw[0:opp_hand_size]
                     new_comm_cards = draw[opp_hand_size:]
                     my_hand = revealed_cards + new_comm_cards
@@ -366,7 +368,7 @@ class Player(Bot):
                         my_wins += 1
                     elif my_score == opp_score:
                         my_wins += 0.5
-            return my_wins/num_sims
+            return my_wins/(num_sims*drawings_per_shuffle)
 
         def crazy_opp_bid_behaviour(avg, var):
             return avg > 100 and 0 <= var <= 50 and game_state.round_num > 20
@@ -518,7 +520,7 @@ class Player(Bot):
             if self.all_in:
                 # all in pre-flop, need to bid 0
                 return BidAction(0)
-            prob_win_w_auction, prob_win_wo_auction, prob_win_both_auction = simulate_auction(my_cards, board_cards,1000)
+            prob_win_w_auction, prob_win_wo_auction = simulate_auction(my_cards, board_cards,1000)
             diff = round(prob_win_w_auction - prob_win_wo_auction, 4)
             """
             print("prob_win_w_auction:", prob_win_w_auction)
