@@ -325,30 +325,18 @@ class Player(Bot):
             
             return most_common_suit, cards_needed_for_flush
         
-        def cards_needed_for_straight(cards):
+        def cards_needed_for_straight(cards, opp_auction):
             # Extract the ranks from each card
             ranks = [card[:-1] for card in cards]
             
             # Convert face cards to numeric values
-            rank_values = {"A": 14, "K": 13, "Q": 12, "J": 11, "T": 10}
-            ranks = [rank_values.get(rank, int(rank)) for rank in ranks]
+            ranks = [self.ranks[rank] for rank in ranks]
             
             # Sort the ranks in ascending order
             sorted_ranks = sorted(ranks)
             
-            # Initialize variables to track the longest straight
-            current_straight = [sorted_ranks[0]]
-            
-            # Iterate through the sorted ranks to find the longest straight
-            for i in range(1, len(sorted_ranks)):
-                if sorted_ranks[i] == current_straight[-1] + 1:
-                    current_straight.append(sorted_ranks[i])
-                else:
-                    current_straight = [sorted_ranks[i]]
-                
-                # Check if the current straight satisfies the condition
-                if len(current_straight) >= 5:
-                    return len(current_straight) - 5
+            for card_rank in sorted_ranks:
+                if 
             
             # If no straight is found, return the number of cards needed
             return 5 - len(current_straight)
