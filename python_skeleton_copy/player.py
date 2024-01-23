@@ -184,12 +184,13 @@ class Player(Bot):
             self.forfeit = True
             print(f"Forfeit in Round #{round_num}")
 
-        if my_bankroll > 150 and not self.fuck_machine_learning:
+        if my_bankroll > 400 and not self.fuck_machine_learning:
             self.fuck_machine_learning = True
-            print(f"Folding now down to 25")
+            print(f"Folding now down to 100 in round {round_num}")
         
-        if my_bankroll < 25 and self.fuck_machine_learning:
+        if my_bankroll < 100 and self.fuck_machine_learning:
             self.fuck_machine_learning = False
+            print(f"back in da game in round {round_num}")
 
 
         rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
