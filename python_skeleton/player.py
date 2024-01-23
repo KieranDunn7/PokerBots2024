@@ -574,7 +574,7 @@ class Player(Bot):
                 self.my_bids.append(my_bid)
                 self.opp_bids_sum += opp_bid
                 self.opp_bids_num += 1
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
+            self.prob_win = round(simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100), 3)
             self.post_auction_pct = self.prob_win
             self.street3 = False
             self.actual_win_pct = round(1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
@@ -582,7 +582,7 @@ class Player(Bot):
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
+            self.prob_win = round(simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100), 3)
             self.street4 = False
             self.post_turn_pct = self.prob_win
             self.actual_win_pct = round(1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
@@ -590,7 +590,7 @@ class Player(Bot):
                 
         if street == 5 and self.street5:
             #print("pot_size:", pot_size)
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
+            self.prob_win = round(simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100), 3)
             self.street5 = False
             self.post_river_pct = self.prob_win
             self.actual_win_pct = round(1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
