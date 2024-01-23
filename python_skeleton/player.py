@@ -254,7 +254,7 @@ class Player(Bot):
             print("Fold")
             """
         if not self.forfeit:
-            if opp_cards:
+            if opp_cards and final_pot_size > 25:
                 if my_delta == opp_contribution:
                     self.win_loss_tie.append(1)
                 elif my_delta == -1*my_contribution:
