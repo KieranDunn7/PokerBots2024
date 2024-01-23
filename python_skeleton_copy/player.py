@@ -317,6 +317,12 @@ class Player(Bot):
         Returns:
         Your action.
         '''
+        def str_to_ranksuit(card):
+            ranks = {"2": 1, "3": 2, "4":3, "5":4, "6": 5, "7":6, "8":7, "9":8, "T":9, "J":10, "Q":11, "K":12, "A":13}
+            suits = {"c":1, "d":2, "h":3, "s":4}
+            return f"{suits[card[1]]}{ranks[card[0]]}"
+
+
         def simulate_auction(my_cards, board_cards, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
             flop_cards = [eval7.Card(card) for card in board_cards]
@@ -483,6 +489,33 @@ class Player(Bot):
             if post_river_pct > 0.25:
                 return 7/(7+25)
             return 0
+        
+        def check_for_pair_on_board(board_cards):
+            suits_on_board = [str_to_ranksuit(card)[0] for card in board_cards]
+            ranks_on_board = [str_to_ranksuit(card)[1:] for card in board_cards]
+
+            pair_on_board = False
+            two_pair_on_board = False
+            trips_on_board = False
+
+            # Dictionary to store the count of each number
+            count = {}
+            # Counting the frequency of each number
+            for number in ranks_on_board:
+                if number in count:
+                    if count[number] == 1:
+                        if pair_on_board:
+                            two_pair_on_board = True
+                        else:
+                            pair_on_board = True
+                    if count[number] == 2:
+                        trips_on_board = True
+                    count[number] += 1
+                else:
+                    count[number] = 1
+
+            return pair_on_board, two_pair_on_board, trips_on_board, count
+
             
 
         # May be useful, but you may choose to not use.
