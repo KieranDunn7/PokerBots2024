@@ -8,6 +8,7 @@ from skeleton.bot import Bot
 from skeleton.runner import parse_args, run_bot
 import random
 import eval7
+from collections import Counter
 
 
 class Player(Bot):
@@ -309,6 +310,49 @@ class Player(Bot):
         Returns:
         Your action.
         '''
+        def cards_needed_for_flush(cards):
+            # Extract the suits from each card
+            suits = [card[-1] for card in cards]
+            
+            # Count the occurrences of each suit
+            suit_counts = Counter(suits)
+            
+            # Find the most common suit and the count
+            most_common_suit, most_common_count = suit_counts.most_common(1)[0]
+            
+            # Calculate the number of cards needed for a flush
+            cards_needed_for_flush = 5 - most_common_count
+            
+            return most_common_suit, cards_needed_for_flush
+        
+        def cards_needed_for_straight(cards):
+            # Extract the ranks from each card
+            ranks = [card[:-1] for card in cards]
+            
+            # Convert face cards to numeric values
+            rank_values = {"A": 14, "K": 13, "Q": 12, "J": 11, "T": 10}
+            ranks = [rank_values.get(rank, int(rank)) for rank in ranks]
+            
+            # Sort the ranks in ascending order
+            sorted_ranks = sorted(ranks)
+            
+            # Initialize variables to track the longest straight
+            current_straight = [sorted_ranks[0]]
+            
+            # Iterate through the sorted ranks to find the longest straight
+            for i in range(1, len(sorted_ranks)):
+                if sorted_ranks[i] == current_straight[-1] + 1:
+                    current_straight.append(sorted_ranks[i])
+                else:
+                    current_straight = [sorted_ranks[i]]
+                
+                # Check if the current straight satisfies the condition
+                if len(current_straight) >= 5:
+                    return len(current_straight) - 5
+            
+            # If no straight is found, return the number of cards needed
+            return 5 - len(current_straight)
+        
         def simulate_auction(my_cards, board_cards, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
             flop_cards = [eval7.Card(card) for card in board_cards]
