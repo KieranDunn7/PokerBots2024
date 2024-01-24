@@ -26,102 +26,6 @@ class Player(Bot):
         Returns:
         Nothing.
         '''
-        
-        self.pair_percentages = (0.322, 0.353, 0.39, 0.423, 0.45, 0.482, 0.511, 0.542, 0.573, 0.602, 0.63, 0.652, 0.689)
-        # pairs with no extra card
-        
-        self.suited_percentages = {12: (0.389, 0.393, 0.404, 0.412, 0.411, 0.416, 0.423, 0.43, 0.452, 0.463, 0.47, 0.48),
-                 11: (0.348, 0.357, 0.367, 0.379, 0.381, 0.39, 0.393, 0.409, 0.429, 0.444, 0.451),
-                 10: (0.327, 0.337, 0.344, 0.352, 0.358, 0.36, 0.381, 0.396, 0.422, 0.433),
-                 9: (0.309, 0.315, 0.324, 0.333, 0.337, 0.352, 0.37, 0.389, 0.41),
-                 8: (0.29, 0.299, 0.307, 0.31, 0.329, 0.344, 0.364, 0.38),
-                 7: (0.277, 0.286, 0.286, 0.304, 0.328, 0.335, 0.357),
-                 6: (0.264, 0.267, 0.284, 0.304, 0.318, 0.338),
-                 5: (0.25, 0.268, 0.287, 0.302, 0.323),
-                 4: (0.251, 0.269, 0.288, 0.305),
-                 3: (0.261, 0.275, 0.291),
-                 2: (0.248, 0.268),
-                 1: (0.239,)}
-        # suited with no extra card, high card is key, low card is index in tuple
-        
-        self.nonsuited_percentages = {12: (0.352, 0.365, 0.371, 0.38, 0.378, 0.388, 0.398, 0.403, 0.425, 0.436, 0.444, 0.458),
-                 11: (0.316, 0.326, 0.333, 0.345, 0.351, 0.357, 0.363, 0.385, 0.406, 0.417, 0.427),
-                 10: (0.29, 0.302, 0.309, 0.317, 0.326, 0.333, 0.35, 0.369, 0.391, 0.4),
-                 9: (0.272, 0.278, 0.289, 0.298, 0.305, 0.32, 0.339, 0.36, 0.38),
-                 8: (0.255, 0.264, 0.272, 0.278, 0.296, 0.314, 0.333, 0.353),
-                 7: (0.239, 0.248, 0.252, 0.272, 0.29, 0.309, 0.328),
-                 6: (0.226, 0.233, 0.25, 0.269, 0.291, 0.308),
-                 5: (0.211, 0.233, 0.252, 0.271, 0.288),
-                 4: (0.215, 0.234, 0.252, 0.273),
-                 3: (0.223, 0.239, 0.258),
-                 2: (0.211, 0.231),
-                 1: (0.202,)}
-        # non-suited with no extra card, high card is key, low card is index in tuple
-
-        self.pair_percentages_plus = (0.641, 0.663, 0.692, 0.711, 0.732, 0.75, 0.77, 0.79, 0.812, 0.828, 0.845, 0.858, 0.882)
-        # pairs with extra card
-
-        self.suited_percentages_plus = {12: (0.699, 0.71, 0.717, 0.722, 0.721, 0.728, 0.732, 0.735, 0.752, 0.756, 0.76, 0.762),
-                 11: (0.672, 0.68, 0.693, 0.699, 0.704, 0.711, 0.712, 0.722, 0.738, 0.741, 0.746),
-                 10: (0.659, 0.669, 0.679, 0.687, 0.69, 0.691, 0.702, 0.716, 0.735, 0.74),
-                 9: (0.65, 0.659, 0.668, 0.678, 0.678, 0.686, 0.699, 0.711, 0.726),
-                 8: (0.641, 0.649, 0.657, 0.659, 0.672, 0.681, 0.696, 0.708),
-                 7: (0.63, 0.634, 0.639, 0.655, 0.668, 0.678, 0.694),
-                 6: (0.614, 0.621, 0.637, 0.655, 0.665, 0.678),
-                 5: (0.603, 0.622, 0.64, 0.653, 0.667),
-                 4: (0.605, 0.622, 0.637, 0.654),
-                 3: (0.614, 0.627, 0.641),
-                 2: (0.6, 0.619),
-                 1: (0.594,)}
-        # suited with extra card, high card is key, low card is index in tuple
-
-        self.nonsuited_percentages_plus = {12: (0.675, 0.685, 0.693, 0.703, 0.7, 0.707, 0.715, 0.718, 0.734, 0.739, 0.74, 0.746),
-                 11: (0.649, 0.658, 0.667, 0.678, 0.682, 0.687, 0.689, 0.702, 0.719, 0.724, 0.727),
-                 10: (0.633, 0.642, 0.651, 0.66, 0.668, 0.669, 0.683, 0.694, 0.71, 0.713),
-                 9: (0.62, 0.628, 0.639, 0.65, 0.653, 0.666, 0.677, 0.689, 0.706),
-                 8: (0.609, 0.618, 0.629, 0.635, 0.648, 0.661, 0.674, 0.688),
-                 7: (0.597, 0.607, 0.613, 0.632, 0.641, 0.656, 0.668),
-                 6: (0.586, 0.591, 0.61, 0.626, 0.64, 0.655),
-                 5: (0.57, 0.59, 0.609, 0.627, 0.638),
-                 4: (0.573, 0.59, 0.607, 0.629),
-                 3: (0.578, 0.6, 0.615),
-                 2: (0.568, 0.588),
-                 1: (0.556,)}
-        # non-suited with extra card, high card is key, low card is index in tuple
-
-        self.total_suited_percentages = {12: (0.544, 0.5515, 0.5585, 0.5675, 0.566, 0.572, 0.5775, 0.5825, 0.602, 0.6095, 0.615, 0.621),
-                 11: (0.51, 0.5185, 0.53, 0.539, 0.5425, 0.5505, 0.5525, 0.5655, 0.5835, 0.5925, 0.5985),
-                 10: (0.493, 0.5035, 0.5115, 0.5185, 0.524, 0.5255, 0.5415, 0.556, 0.5785, 0.5865),
-                 9: (0.4795, 0.4865, 0.4965, 0.5065, 0.5075, 0.519, 0.5375, 0.55, 0.568),
-                 8: (0.4655, 0.474, 0.478, 0.4845, 0.5, 0.5125, 0.529, 0.544),
-                 7: (0.4535, 0.46, 0.4625, 0.4795, 0.498, 0.5065, 0.5255),
-                 6: (0.439, 0.444, 0.4605, 0.4795, 0.4915, 0.508),
-                 5: (0.4265, 0.445, 0.4635, 0.4775, 0.4955),
-                 4: (0.428, 0.4455, 0.4625, 0.4795),
-                 3: (0.4375, 0.451, 0.4645),
-                 2: (0.424, 0.4435),
-                 1: (0.416,)}
-        # averages from sp and spp
-
-        self.total_nonsuited_percentages = {12: (0.5135, 0.525, 0.532, 0.5415, 0.539, 0.5475, 0.5565, 0.5605, 0.5795, 0.5875, 0.592, 0.602),
-                 11: (0.4825, 0.492, 0.5, 0.5115, 0.5165, 0.522, 0.526, 0.5435, 0.5625, 0.5705, 0.577),
-                 10: (0.4615, 0.472, 0.4805, 0.4885, 0.497, 0.501, 0.5165, 0.5315, 0.5505, 0.5565),
-                 9: (0.446, 0.453, 0.464, 0.474, 0.479, 0.493, 0.508, 0.5245, 0.543),
-                 8: (0.432, 0.441, 0.4505, 0.4565, 0.472, 0.4875, 0.5035, 0.5205),
-                 7: (0.418, 0.4275, 0.4325, 0.452, 0.4655, 0.4825, 0.498),
-                 6: (0.406, 0.412, 0.43, 0.4475, 0.4655, 0.4815),
-                 5: (0.3905, 0.4115, 0.4305, 0.449, 0.463),
-                 4: (0.394, 0.412, 0.4295, 0.451),
-                 3: (0.4005, 0.4195, 0.4365),
-                 2: (0.3895, 0.4095),
-                 1: (0.379,)}
-        # averages from np and npp
-
-        self.total_pair_percentages = (0.4815, 0.508, 0.541, 0.567, 0.591, 0.616, 0.6405, 0.666, 0.6925, 0.715, 0.7375, 0.755, 0.7855)
-        # averages from pp and ppp
-
-        self.ranks = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
-
         self.forfeit = False # decides whether the bot can win by folding/checking every future action
 
         self.opp_bids = []
@@ -152,10 +56,47 @@ class Player(Bot):
         round_num = game_state.round_num  # the round number from 1 to NUM_ROUNDS
         my_cards = round_state.hands[active]  # your cards
         big_blind = bool(active)  # True if you are the big blind
+        
+        ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+        
+        total_suited_percentages = {12: (0.544, 0.5515, 0.5585, 0.5675, 0.566, 0.572, 0.5775, 0.5825, 0.602, 0.6095, 0.615, 0.621),
+                 11: (0.51, 0.5185, 0.53, 0.539, 0.5425, 0.5505, 0.5525, 0.5655, 0.5835, 0.5925, 0.5985),
+                 10: (0.493, 0.5035, 0.5115, 0.5185, 0.524, 0.5255, 0.5415, 0.556, 0.5785, 0.5865),
+                 9: (0.4795, 0.4865, 0.4965, 0.5065, 0.5075, 0.519, 0.5375, 0.55, 0.568),
+                 8: (0.4655, 0.474, 0.478, 0.4845, 0.5, 0.5125, 0.529, 0.544),
+                 7: (0.4535, 0.46, 0.4625, 0.4795, 0.498, 0.5065, 0.5255),
+                 6: (0.439, 0.444, 0.4605, 0.4795, 0.4915, 0.508),
+                 5: (0.4265, 0.445, 0.4635, 0.4775, 0.4955),
+                 4: (0.428, 0.4455, 0.4625, 0.4795),
+                 3: (0.4375, 0.451, 0.4645),
+                 2: (0.424, 0.4435),
+                 1: (0.416,)}
+        # averages from sp and spp
+
+        total_nonsuited_percentages = {12: (0.5135, 0.525, 0.532, 0.5415, 0.539, 0.5475, 0.5565, 0.5605, 0.5795, 0.5875, 0.592, 0.602),
+                 11: (0.4825, 0.492, 0.5, 0.5115, 0.5165, 0.522, 0.526, 0.5435, 0.5625, 0.5705, 0.577),
+                 10: (0.4615, 0.472, 0.4805, 0.4885, 0.497, 0.501, 0.5165, 0.5315, 0.5505, 0.5565),
+                 9: (0.446, 0.453, 0.464, 0.474, 0.479, 0.493, 0.508, 0.5245, 0.543),
+                 8: (0.432, 0.441, 0.4505, 0.4565, 0.472, 0.4875, 0.5035, 0.5205),
+                 7: (0.418, 0.4275, 0.4325, 0.452, 0.4655, 0.4825, 0.498),
+                 6: (0.406, 0.412, 0.43, 0.4475, 0.4655, 0.4815),
+                 5: (0.3905, 0.4115, 0.4305, 0.449, 0.463),
+                 4: (0.394, 0.412, 0.4295, 0.451),
+                 3: (0.4005, 0.4195, 0.4365),
+                 2: (0.3895, 0.4095),
+                 1: (0.379,)}
+        # averages from np and npp
+
+        total_pair_percentages = (0.4815, 0.508, 0.541, 0.567, 0.591, 0.616, 0.6405, 0.666, 0.6925, 0.715, 0.7375, 0.755, 0.7855)
+        # averages from pp and ppp
+
+    
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 4 and not self.forfeit:
             self.forfeit = True
             print(f"Forfeit in Round #{round_num}")
-        rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
+            
+            
+        rank1,rank2 = ranks_dict[my_cards[0][0]], ranks_dict[my_cards[1][0]]
         suit1,suit2 = my_cards[0][1], my_cards[1][1]
 
         pair = rank1 == rank2
@@ -166,34 +107,56 @@ class Player(Bot):
             suit1,suit2 = suit2,suit1
 
         if pair:
-            percentage = self.pair_percentages[rank1]
-            percentage_plus = self.pair_percentages_plus[rank1]
+            self.total_percentage = total_pair_percentages[rank1]
         elif suited:
-            percentage = self.suited_percentages[rank1][rank2]
-            percentage_plus = self.suited_percentages_plus[rank1][rank2]
+            self.total_percentage = total_suited_percentages[rank1][rank2]
         else:
-            percentage = self.nonsuited_percentages[rank1][rank2]
-            percentage_plus = self.nonsuited_percentages_plus[rank1][rank2]
+            self.total_percentage = total_nonsuited_percentages[rank1][rank2]
         self.rank1, self.rank2 = rank1, rank2
         self.pair, self.suited = pair, suited
         self.suit1, self.suit2 = suit1, suit2
-        self.total_percentage = percentage + percentage_plus
         
-        self.high_cards_likely = False
+        self.high_cards_or_pair_likely = False
+        
+        self.double_flush_draw = False
         self.flush_draw = False
         self.flush = False
-        self.flush_high = -1
+        self.flush_suit = -1
+        self.my_flush = set() # cards in our hand for a flush
+        self.board_flush = set() # cards on the board for a flush
+        self.my_num_in_suit = 0 # number we have in the suit
+        self.flush_high = -1 # high in the flush for tie-break
+        
+        self.double_straight_draw = False
         self.straight_draw = False
         self.straight = False
+        self.my_straight = set() # cards in our hand for a straight
+        self.board_straight = set() # cards on the board for a straight
         self.straight_high = -1
+        self.draw_needed = set() # cards needed for a draw
+        self.double_draw_needed = set() # pairs of cards needed for a double draw
+        self.my_num_in_straight = 0 # number we have making up the straight
+        
         self.trips = False
         self.trips_rank = -1
+        
         self.pair = False
         self.pair_rank = -1
+        
         self.two_pair = False
         self.two_pair_ranks = -1, -1 # higher rank first
+        
         self.full_house = False
         self.full_house_ranks = -1, -1 # three of a kind first
+        
+        self.quads = False
+        self.quads_rank = -1
+        
+        self.my_high_card = -1
+        
+        self.high_hand = "High Card" # string representing the best hand we have
+        
+        self.street_num = 0 # used for checking if hand strength has already been calculated
         
         
     def handle_round_over(self, game_state, terminal_state, active):
@@ -246,53 +209,66 @@ class Player(Bot):
         Returns:
         Your action.
         '''
+        ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+        suits_dict = {"s": 3, "h": 2, "c": 1, "d": 0}
         
         
         def check_for_straight(board_cards, num_needed):
             """
             Takes the board cards as a list of strings and the number in a straight
-            needed and returns a dictionary with rank indexes as keys and the number
-            of cards in the straight ending with that rank as values if there are at
-            least num_needed in that straight
+            needed and returns a dictionary with straight high rank indexes as keys
+            and a tuple with sets of cards in and cards out as values if there are more
+            than num_needed in that straight
             """
             ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
             ranks = set()
             for card in board_cards:
                 ranks.add(ranks_dict[card[0]])
-
             starts_in = {}
             
             num_in = 0
-            ace_low_straight = {12, 0, 1, 2, 3}
+            ace_low_straight = (12, 0, 1, 2, 3)
+            cards_in = set()
+            cards_needed = set()
             for card in ace_low_straight:
                 if card in ranks:
                     num_in += 1
+                    cards_in.add(card)
+                else:
+                    cards_needed.add(card)
             if num_in >= num_needed:
-                starts_in[4] = num_in
+                starts_in[3] = cards_in, cards_needed
             for starting_card in range(9):
                 num_in = 0
+                cards_in = set()
+                cards_needed = set()
                 for card in range(starting_card, starting_card + 5):
                     if card in ranks:
                         num_in += 1
+                        cards_in.add(card)
+                    else:
+                        cards_needed.add(card)
                 if num_in >= num_needed:
-                    starts_in[starting_card+4] = num_in
-            
+                    starts_in[starting_card+4] = cards_in, cards_needed
+
             return starts_in
 
 
         def check_for_flush(board_cards, num_needed):
             """
             Takes the board cards as a list of strings and the number in one suit
-            needed and returns a dictionary with suit indexes as keys and the number of
-            cards in that suit as values if there are at least num_needed in that suit
+            needed and returns a dictionary with suit indexes as keys and a set of ranks
+            in that suit as values if there are at least num_needed of that suit
             """
+            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
             suits_dict = {"s": 3, "h": 2, "c": 1, "d": 0}
-            suits = [0, 0, 0, 0]
+            suits = [set(), set(), set(), set()]
             for card in board_cards:
-                suits[suits_dict[card[1]]] += 1
+                rank, suit = ranks_dict[card[0]], suits_dict[card[1]]
+                suits[suit].add(rank)
             suits_in = {}
             for suit_index, suit in enumerate(suits):
-                if suit >= num_needed:
+                if len(suit) >= num_needed:
                     suits_in[suit_index] = suit
             return suits_in
 
@@ -418,7 +394,6 @@ class Player(Bot):
 
         all_in = my_stack == 0
     
-    
         if BidAction in legal_actions:
             if all_in:
                 # all in pre-flop, need to bid 0
@@ -474,8 +449,179 @@ class Player(Bot):
                 return RaiseAction(max(min_raise, min(necessary_pct/(1-necessary_pct) * pot_size, max_raise)))
             return CallAction()
         
-        our_total_cards = my_cards + board_cards
         
+        if self.street_num < street: # new card dealt
+            
+            # analyzing our hand
+            
+            self.street_num = street
+            our_total_cards = my_cards + board_cards
+            
+            for card in my_cards: # find hand high card
+                rank = ranks_dict[card[0]]
+                if rank > self.my_high_card:
+                    self.my_high_card = rank
+            
+            our_pairs = check_for_pair(our_total_cards)
+            pairs = set()
+            trips = set()
+            quads = set()
+            for rank, num in our_pairs.items():
+                if num == 4:
+                    quads.add(rank)
+                if num == 3:
+                    trips.add(rank)
+                if num == 2:
+                    pairs.add(rank)
+                    
+            if quads: # quads
+                self.quads = True
+                self.quads_rank = max(quads)
+                
+            elif len(trips) > 1 or trips and pairs: # full house
+                self.full_house = True
+                if len(trips) > 1 and pairs:
+                    self.full_house_ranks = max(trips), max(min(trips), max(pairs))
+                elif pairs:
+                    self.full_house_ranks = max(trips), max(pairs)
+                else:
+                    self.full_house_ranks = max(trips), min(trips)
+                    
+            elif trips: # trips
+                self.trips = True
+                self.trips_rank = max(trips)
+                
+            elif len(pairs) > 1: # two pair
+                self.two_pair = True
+                high_pair = pairs.pop(max(pairs))
+                low_pair = max(pairs)
+                self.two_pair_ranks = high_pair, low_pair
+                
+            elif pairs: # pair
+                self.pair = True
+                self.pair_rank = max(pairs)
+             
+                    
+            our_flush = check_for_flush(our_total_cards, street)
+            if our_flush:
+                for suit_index, cards_in in our_flush.items():
+                    if len(cards_in) >= 5: # full flush
+                        self.flush = True
+                        self.flush_suit = suit_index
+                        self.my_flush, self.board_flush = set(), set()
+                        for card in our_total_cards:
+                            rank, card_suit_index = ranks_dict[card[0]], suits_dict[card[1]]
+                            if card_suit_index == suit_index:
+                                if card in my_cards:
+                                    self.my_flush.add(rank)
+                                else:
+                                    self.board_flush.add(rank)
+                        self.my_num_in_suit = 5 - len(self.board_flush) # number of cards in suit we have necessary for flush
+                        self.flush_high = max(self.my_flush)
+                                
+                        
+                    elif len(cards_in) == 4: # four in a suit
+                        self.flush_draw = True
+                        self.flush_suit = suit_index
+                        self.my_flush, self.board_flush = set(), set()
+                        for card in our_total_cards:
+                            rank, card_suit_index = ranks_dict[card[0]], suits_dict[card[1]]
+                            if card_suit_index == suit_index:
+                                if card in my_cards:
+                                    self.my_flush.add(rank)
+                                else:
+                                    self.board_flush.add(rank)
+                        self.my_num_in_suit = len(self.my_flush) # number in our hand for suit
+                        self.flush_high = max(self.my_flush)
+                        
+                    else: # three in a suit
+                        self.double_flush_draw = True
+                        if len(our_flush) == 2: # three in a suit for two suits
+                            self.flush_suit = []
+                            for suit_index in our_flush:
+                                self.flush_suit.append(suit_index)
+                            first_suit_index = self.flush_suit[0]
+                            self.my_flush = [set(), set()]
+                            self.board_flush = [set(), set()]
+                            self.my_num_in_suit = [0, 0]
+                            for card in our_total_cards:
+                                rank, card_suit_index = ranks_dict[card[0]], suits_dict[card[1]]
+                                if card_suit_index == first_suit_index:
+                                    if card in my_cards:
+                                        self.my_flush[0].add(rank)
+                                    else:
+                                        self.board_flush[0].add(rank)
+                                else:
+                                    if card in my_cards:
+                                        self.my_flush[1].add(rank)
+                                    else:
+                                        self.board_flush[1].add(rank)
+                            self.my_num_in_suit[0] = len(self.my_flush[0]) # number in our hand for first suit
+                            self.my_num_in_suit[1] = len(self.my_flush[1]) # number in our hand for second suit
+                            self.flush_high = max(self.my_flush[0]), max(self.my_flush[1])
+                        else: # three in a suit for one suit
+                            self.flush_suit = suit_index
+                            self.my_flush, self.board_flush = set(), set()
+                            for card in our_total_cards:
+                                rank, card_suit_index = ranks_dict[card[0]], suits_dict[card[1]]
+                                if card_suit_index == suit_index:
+                                    if card in my_cards:
+                                        self.my_flush.add(rank)
+                                    else:
+                                        self.board_flush.add(rank)
+                            self.my_num_in_suit = len(self.my_flush) # number in our hand for suit
+                            self.flush_high = max(self.my_flush)
+                        
+                        
+            our_straight = check_for_straight(our_total_cards, street)
+            if our_straight:
+                for high_card, (cards_in, cards_out) in our_straight.items():
+                    if len(cards_in) == 5: # full straight
+                        self.straight = True
+                        if high_card > self.straight_high:
+                            self.straight_high = high_card
+                            self.my_straight, self.board_straight = set(), set()
+                            for card in our_total_cards:
+                                rank = ranks_dict[card[0]]
+                                if rank in cards_in:
+                                    if card in my_cards:
+                                        self.my_straight.add(rank)
+                                    else:
+                                        self.board_straight.add(rank)
+                            self.my_num_in_straight = len(self.my_straight)
+                                        
+                    elif len(cards_in) == 4 and not self.straight: # four in straight with no full straight
+                        if not self.straight_draw: # clear extra cards from double straight draw
+                            self.my_straight, self.board_straight = set(), set()
+                        self.straight_draw = True
+                        self.draw_needed.add(cards_out.pop())
+                        for card in our_total_cards:
+                            rank = ranks_dict[card[0]]
+                            if rank in cards_in:
+                                if card in my_cards:
+                                    self.my_straight.add(rank)
+                                else:
+                                    self.board_straight.add(rank)
+                        self.my_num_in_straight = len(self.my_straight)
+                        
+                        
+                        
+                    elif not self.straight and not self.straight_draw: # three in a straight with no straight draw or full straight
+                        self.double_straight_draw = True
+                        self.double_draw_needed.add(cards_out)
+                        num_in = 0
+                        for card in our_total_cards:
+                            rank = ranks_dict[card[0]]
+                            if rank in cards_in:
+                                if card in my_cards:
+                                    self.my_straight.add(rank)
+                                    num_in += 1
+                                else:
+                                    self.board_straight.add(rank)
+                        self.my_num_in_straight = len(self.my_straight)
+            
+            # analyzing their hand
+                
         
         if street == 3: # flop post-auction
             if continue_cost == 0 and big_blind:
