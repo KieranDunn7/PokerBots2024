@@ -535,6 +535,33 @@ class Player(Bot):
             if post_river_pct > 0.25:
                 return 7/(7+25)
             return 0
+        
+        def check_for_pair_on_board(board_cards):
+            # suits_on_board = [card[1] for card in board_cards]
+            ranks_on_board = [card[0] for card in board_cards]
+
+            pair_on_board = False
+            two_pair_on_board = False
+            trips_on_board = False
+
+            # Dictionary to store the count of each number
+            count = {}
+            # Counting the frequency of each number
+            for number in ranks_on_board:
+                if number in count:
+                    if count[number] == 1:
+                        if pair_on_board:
+                            two_pair_on_board = True
+                        else:
+                            pair_on_board = True
+                    if count[number] == 2:
+                        trips_on_board = True
+                    count[number] += 1
+                else:
+                    count[number] = 1
+
+            return pair_on_board, two_pair_on_board, trips_on_board, count
+
             
 
         # May be useful, but you may choose to not use.
