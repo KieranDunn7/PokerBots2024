@@ -658,7 +658,10 @@ class Player(Bot):
                 return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.6/(1 - 0.6)))))
             if CheckAction in legal_actions:
                 return CheckAction()
-            return RaiseAction(min_raise)
+            if RaiseAction not in legal_actions: ##### Initially had Return CaLLACTION()
+                return CallAction()
+            else:
+                return RaiseAction(min_raise)
 
             
         
@@ -718,7 +721,10 @@ class Player(Bot):
                     return RaiseAction(max_raise)
                 if self.actual_win_pct > 0.85:
                     return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.85/(1 - 0.85))))) # using 0.7 as a baseline for the opp percent chance of winning
-            return RaiseAction(min_raise)
+            if RaiseAction not in legal_actions: ##### Initially had Return CaLLACTION()
+                return CallAction()
+            else:
+                return RaiseAction(min_raise)
             
                 
 
@@ -732,7 +738,10 @@ class Player(Bot):
                     return RaiseAction(max_raise)
                 if self.actual_win_pct > 0.9:
                     return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.9/(1 - 0.9))))) # using 0.7 as a baseline for the opp percent chance of winning
-            return RaiseAction(min_raise)
+            if RaiseAction not in legal_actions: ##### Initially had Return CaLLACTION()
+                return CallAction()
+            else:
+                return RaiseAction(min_raise)
             
         if CheckAction in legal_actions:
             return CheckAction()

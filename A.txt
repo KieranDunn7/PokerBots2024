@@ -1,26 +1,17 @@
-Forfeit in Round #74
+Forfeit in Round #75
 
 
 opp_bids = []
 my_bids = []
 opp_bid_avg = 0
 opp_bid_cv = 1
-final_time = 29.261
-post_auction_pcts: []
-post_turn_pcts: []
-post_river_pcts: []
-win-loss-tie history: []
-0
-0
-0
-0
-Traceback (most recent call last):
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 743, in <module>
-    run_bot(Player(), parse_args())
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
-    runner.run()
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/skeleton/runner.py", line 109, in run
-    self.pokerbot.handle_round_over(game_state, round_state, active)
-  File "/mnt/c/Users/miamibeach/Downloads/PokerBots2024/python_skeleton/player.py", line 297, in handle_round_over
-    print(sum(self.win_loss_tie)/len(self.win_loss_tie))
-ZeroDivisionError: division by zero
+final_time = 29.568
+post_auction_pcts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+post_turn_pcts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+post_river_pcts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+win-loss-tie history: [1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1]
+16
+16
+16
+16
+0.625
