@@ -8,6 +8,7 @@ from skeleton.bot import Bot
 from skeleton.runner import parse_args, run_bot
 import random
 import eval7
+from collections import Counter
 
 
 class Player(Bot):
@@ -122,8 +123,7 @@ class Player(Bot):
         self.ranks = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
 
         self.forfeit = False # decides whether the bot can win by folding/checking every future action
-        self.fuck_machine_learning = False
-
+        
         self.pre_flop_folds = [] # preflop folds for opp
         self.pre_flop_folds_sum = 0
         self.pre_flop_folds_num = 0 # amount of preflop folds
@@ -136,7 +136,6 @@ class Player(Bot):
 
         self.opp_bids = [] # For crazy opp auction mean calculation
         self.my_bids = []
-        self.bid_pot_sizes = [] # size of pot during bid
         self.bid_pot_sum = 0
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
@@ -150,6 +149,11 @@ class Player(Bot):
         self.post_turn_pcts = []
         self.post_river_pcts = []
         self.win_loss_tie = []
+
+        self.post_auction_pct = 0
+        self.post_turn_pct = 0
+        self.post_river_pct = 0
+        
 
         self.pre_calc_win_pct = 0.6651
         self.calc_win_pct = 0.5
@@ -183,16 +187,6 @@ class Player(Bot):
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 4 and not self.forfeit:
             self.forfeit = True
             print(f"Forfeit in Round #{round_num}")
-
-        if my_bankroll > 400 and not self.fuck_machine_learning:
-            self.fuck_machine_learning = True
-            print(f"Folding now down to 100 in round {round_num}")
-        
-        if my_bankroll < 100 and self.fuck_machine_learning:
-            self.fuck_machine_learning = False
-            print(f"back in da game in round {round_num}")
-
-
         rank1,rank2 = self.ranks[my_cards[0][0]], self.ranks[my_cards[1][0]]
         suit1,suit2 = my_cards[0][1], my_cards[1][1]
 
@@ -247,6 +241,7 @@ class Player(Bot):
         final_pot_size = my_contribution + opp_contribution # pot size at the end of the round
         my_pip = previous_state.pips[active]  # the number of chips you have contributed to the pot this round of betting
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
+        
         if street >= 3 and not self.all_in:
             opp_bid = previous_state.bids[1-active]
             if opp_bid != 0:
@@ -264,27 +259,25 @@ class Player(Bot):
         if self.folded and not self.forfeit:
             print("Fold")
             """
-        if not self.forfeit:
-            if opp_cards:
-                if my_delta == opp_contribution:
-                    self.win_loss_tie.append(1)
-                elif my_delta == -1*my_contribution:
-                    self.win_loss_tie.append(0)
-                else:
-                    self.win_loss_tie.append(0.5)
-                self.post_auction_pcts.append(self.post_auction_pct)
-                self.post_turn_pcts.append(self.post_turn_pct)
-                self.post_river_pcts.append(self.post_river_pct)
-                
-                if len(self.win_loss_tie) > 10:
-                    self.calc_win_pct = sum(self.win_loss_tie)/len(self.win_loss_tie)
+        if not self.forfeit and opp_cards and final_pot_size > 100:
+            if my_delta == opp_contribution:
+                self.win_loss_tie.append(1)
+            elif my_delta == -1*my_contribution:
+                self.win_loss_tie.append(0)
+            else:
+                self.win_loss_tie.append(0.5)
+            self.post_auction_pcts.append(self.post_auction_pct)
+            self.post_turn_pcts.append(self.post_turn_pct)
+            self.post_river_pcts.append(self.post_river_pct)
+            
+            if len(self.win_loss_tie) > 10:
+                self.calc_win_pct = sum(self.win_loss_tie)/len(self.win_loss_tie)
 
         if game_state.round_num == NUM_ROUNDS:
             print()
             print()
             print("opp_bids =", self.opp_bids)
             print("my_bids =", self.my_bids)
-            #print("bid_pot_sizes =", self.bid_pot_sizes)
             #print("opp_pff =", self.pre_flop_folds)
             #print("opp_pfc =", self.pre_flop_calls)
             #print("opp_pfr =", self.pre_flop_raises)
@@ -317,12 +310,94 @@ class Player(Bot):
         Returns:
         Your action.
         '''
-        # def str_to_ranksuit(card):
-        #     ranks = {"2": 1, "3": 2, "4":3, "5":4, "6": 5, "7":6, "8":7, "9":8, "T":9, "J":10, "Q":11, "K":12, "A":13}
-        #     suits = {"c":1, "d":2, "h":3, "s":4}
-        #     return f"{suits[card[1]]}{ranks[card[0]]}"
+        def cards_needed_for_flush(cards):
+            # Extract the suits from each card
+            suits = [card[-1] for card in cards]
+            
+            # Count the occurrences of each suit
+            suit_counts = Counter(suits)
+            
+            # Find the most common suit and the count
+            most_common_suit, most_common_count = suit_counts.most_common(1)[0]
+            
+            # Calculate the number of cards needed for a flush
+            cards_needed_for_flush = 5 - most_common_count
+            
+            return most_common_suit, cards_needed_for_flush
+        
+        def check_for_straight(board_cards):
+            # Extract the ranks from each card
+            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+            ranks = [card[:-1] for card in board_cards]
+            
+            # Convert face cards to numeric values
+            ranks = [ranks_dict[rank] for rank in ranks]
+            
+            # Sort the ranks in ascending order
+            sorted_ranks = sorted(ranks)
+            not_in_board = []
+            index = 0
+            for number in range(13):
+                if sorted_ranks[index] == number:
+                    if index != len(sorted_ranks)-1:
+                        index += 1
+                else:
+                    not_in_board.append(number)
+            max_num_in = 0
+            max_start = [-1]
+            starting_card = 12
+            num_in = 0
+            ace_low_straight = {12, 0, 1, 2, 3}
+            for card in ace_low_straight:
+                if card in sorted_ranks:
+                    num_in += 1
+                if num_in == max_num_in:
+                    max_start.append(starting_card)
+                if num_in > max_num_in:
+                    max_num_in = num_in
+                    max_start = [starting_card]
+            for starting_card in range(9):
+                num_in = 0
+                for card in range(starting_card, starting_card + 5):
+                    if card in sorted_ranks:
+                        num_in += 1
+                if num_in == max_num_in:
+                    max_start.append(starting_card)
+                if num_in > max_num_in:
+                    max_num_in = num_in
+                    max_start = [starting_card]
+            
+            return max_start, max_num_in
+        
+
+        def check_for_pair_on_board(board_cards):
+            # suits_on_board = [card[1] for card in board_cards]
+            ranks_on_board = [card[0] for card in board_cards]
+
+            pair_on_board = False
+            two_pair_on_board = False
+            trips_on_board = False
+
+            # Dictionary to store the count of each number
+            count = {}
+            # Counting the frequency of each number
+            for number in ranks_on_board:
+                if number in count:
+                    if count[number] == 1:
+                        if pair_on_board:
+                            two_pair_on_board = True
+                        else:
+                            pair_on_board = True
+                    if count[number] == 2:
+                        trips_on_board = True
+                    count[number] += 1
+                else:
+                    count[number] = 1
+
+            return pair_on_board, two_pair_on_board, trips_on_board, count
 
 
+        
         def simulate_auction(my_cards, board_cards, num_sims):
             hole_cards = [eval7.Card(card) for card in my_cards]
             flop_cards = [eval7.Card(card) for card in board_cards]
@@ -490,32 +565,6 @@ class Player(Bot):
                 return 7/(7+25)
             return 0
         
-        def check_for_pair_on_board(board_cards):
-            # suits_on_board = [card[1] for card in board_cards]
-            ranks_on_board = [card[0] for card in board_cards]
-
-            pair_on_board = False
-            two_pair_on_board = False
-            trips_on_board = False
-
-            # Dictionary to store the count of each number
-            count = {}
-            # Counting the frequency of each number
-            for number in ranks_on_board:
-                if number in count:
-                    if count[number] == 1:
-                        if pair_on_board:
-                            two_pair_on_board = True
-                        else:
-                            pair_on_board = True
-                    if count[number] == 2:
-                        trips_on_board = True
-                    count[number] += 1
-                else:
-                    count[number] = 1
-
-            return pair_on_board, two_pair_on_board, trips_on_board, count
-
             
 
         # May be useful, but you may choose to not use.
@@ -535,7 +584,7 @@ class Player(Bot):
         big_blind = bool(active)  # True if you are the big blind
         pot_size = my_contribution + opp_contribution
         
-        if self.forfeit or self.fuck_machine_learning:
+        if self.forfeit:
             if BidAction in legal_actions:
                 return BidAction(0)
             if CheckAction in legal_actions:
@@ -602,7 +651,9 @@ class Player(Bot):
         if street == 0:
             percentage, percentage_plus = self.percentage, self.percentage_plus
             total_percentage = (percentage + percentage_plus)/2
-            if continue_cost/(continue_cost + pot_size) > total_percentage:
+            if (my_pip + continue_cost)/(continue_cost + pot_size) > total_percentage:
+                if CheckAction in legal_actions:
+                    return CheckAction()
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions and total_percentage > 0.6:
@@ -610,39 +661,36 @@ class Player(Bot):
             if CheckAction in legal_actions:
                 return CheckAction()
             return CallAction()
+
             
         
         if street == 3 and self.street3:
             self.opp_auction = opp_bid >= my_bid
-            #print("Opp bid:", opp_bid)
-            #print("pot_size:", pot_size)
             if opp_bid != 0:
                 self.opp_bids.append(opp_bid)
                 self.my_bids.append(my_bid)
                 self.opp_bids_sum += opp_bid
                 self.opp_bids_num += 1
-                self.bid_pot_sizes.append(pot_size)
-                self.bid_pot_sum += pot_size
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
+            self.prob_win = round(simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100), 3)
             self.post_auction_pct = self.prob_win
             self.street3 = False
-            self.actual_win_pct = 1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
+            self.actual_win_pct = round(1-(1-get_actual_post_auction_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
             #print("Post-auction pct:", self.prob_win)
     
         if street == 4 and self.street4:
             #print("pot_size:", pot_size)
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
+            self.prob_win = round(simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100), 3)
             self.street4 = False
             self.post_turn_pct = self.prob_win
-            self.actual_win_pct = 1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
+            self.actual_win_pct = round(1-(1-get_actual_post_turn_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
             #print("Post-turn pct:", self.prob_win)
                 
         if street == 5 and self.street5:
             #print("pot_size:", pot_size)
-            self.prob_win = simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100)
+            self.prob_win = round(simulate_rest_of_game(my_cards, board_cards, self.opp_auction, 100), 3)
             self.street5 = False
             self.post_river_pct = self.prob_win
-            self.actual_win_pct = 1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct
+            self.actual_win_pct = round(1-(1-get_actual_post_river_pct(self.prob_win))*self.pre_calc_win_pct/self.calc_win_pct, 3)
             #print("Post-river pct:", self.prob_win)
         
         if continue_cost == 0 and not big_blind:
@@ -664,7 +712,7 @@ class Player(Bot):
         if continue_cost != 0 and not big_blind:
             # opponent raised and started betting, but we may have also raised this round
             # and they raised again in response
-            if continue_cost/(continue_cost + pot_size) > self.actual_win_pct:
+            if (my_pip + continue_cost)/(continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions:
@@ -672,13 +720,16 @@ class Player(Bot):
                     return RaiseAction(max_raise)
                 if self.actual_win_pct > 0.85:
                     return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.85/(1 - 0.85))))) # using 0.7 as a baseline for the opp percent chance of winning
-            return CallAction()
+            if RaiseAction not in legal_actions: ##### Initially had Return CaLLACTION()
+                return CallAction()
+            else:
+                return RaiseAction(min_raise)
             
                 
 
         if continue_cost != 0 and big_blind:
             # we raised as big blind at least once, and opponent raised again in response
-            if continue_cost/(continue_cost + pot_size) > self.actual_win_pct:
+            if (my_pip + continue_cost)/(continue_cost + pot_size) > self.actual_win_pct:
                 self.folded = True
                 return FoldAction()
             if RaiseAction in legal_actions: 
@@ -686,7 +737,10 @@ class Player(Bot):
                     return RaiseAction(max_raise)
                 if self.actual_win_pct > 0.9:
                     return RaiseAction(int(max(min_raise, min(max_raise, pot_size*0.9/(1 - 0.9))))) # using 0.7 as a baseline for the opp percent chance of winning
-            return CallAction()
+            if RaiseAction not in legal_actions: ##### Initially had Return CaLLACTION()
+                return CallAction()
+            else:
+                return RaiseAction(min_raise)
             
         if CheckAction in legal_actions:
             return CheckAction()
