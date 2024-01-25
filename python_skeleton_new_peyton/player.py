@@ -30,7 +30,6 @@ class Player(Bot):
 
         self.opp_bids = []
         self.my_bids = []
-        self.bid_pot_sum = 0
         self.opp_bids_sum = 0
         self.opp_bids_num = 0
         self.opp_bid_avg = 0
@@ -94,7 +93,9 @@ class Player(Bot):
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 4 and not self.forfeit:
             self.forfeit = True
             print(f"Forfeit in Round #{round_num}")
-            
+        if not self.forfeit:
+             print()
+             print("Round Num:", round_num)
             
         rank1,rank2 = ranks_dict[my_cards[0][0]], ranks_dict[my_cards[1][0]]
         suit1,suit2 = my_cards[0][1], my_cards[1][1]
@@ -125,7 +126,7 @@ class Player(Bot):
         self.my_flush = set() # cards in our hand for a flush
         self.board_flush = set() # cards on the board for a flush
         self.my_num_in_suit = 0 # number we have in the suit
-        self.flush_high = -1 # high in the flush for tie-break
+        self.my_flush_high = -1 # high in the flush for tie-break
         
         self.double_straight_draw = False
         self.straight_draw = False
@@ -136,6 +137,7 @@ class Player(Bot):
         self.draw_needed = set() # cards needed for a draw
         self.double_draw_needed = set() # pairs of cards needed for a double draw
         self.my_num_in_straight = 0 # number we have making up the straight
+        self.my_straight_high = -1
         
         self.trips = False
         self.trips_rank = -1
@@ -155,6 +157,9 @@ class Player(Bot):
         self.my_high_card = -1
         
         self.high_hand = "High Card" # string representing the best hand we have
+        self.high_hand_numbers = -1
+        
+        self.straight_flush = False
         
         self.street_num = 0 # used for checking if hand strength has already been calculated
         
@@ -392,20 +397,15 @@ class Player(Bot):
             self.folded = True
             return FoldAction()
 
-        all_in = my_stack == 0
+        self.all_in = my_stack == 0
     
         if BidAction in legal_actions:
-            if all_in:
+            if self.all_in:
                 # all in pre-flop, need to bid 0
                 return BidAction(0)
             
             prob_win_w_auction, prob_win_wo_auction = simulate_auction(my_cards, board_cards,200)
             diff = round(prob_win_w_auction - prob_win_wo_auction, 4)
-            """
-            print("prob_win_w_auction:", prob_win_w_auction)
-            print("prob_win_wo_auction:", prob_win_wo_auction)
-            print("diff:", diff)
-                """
                 # self.diffs.append(diff)
             if self.opp_bids_num < 3:
                 opp_bid_avg = 100
@@ -414,12 +414,9 @@ class Player(Bot):
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
             bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 1
-            """
-            print("My bid:", bid)
-                """
             return BidAction(min(my_stack, max(bid, 25)))
         
-        if all_in:
+        if self.all_in:
             return CheckAction()
 
         if RaiseAction in legal_actions:
@@ -435,20 +432,21 @@ class Player(Bot):
                 if self.total_percentage > 0.58 and RaiseAction in legal_actions:
                     return RaiseAction(max(min_raise, min(1.38 * pot_size, max_raise)))
                 return CheckAction()
-            self.high_cards_likely = continue_cost == BIG_BLIND - SMALL_BLIND
+            self.high_cards_likely = not(continue_cost == BIG_BLIND - SMALL_BLIND)
             if self.total_percentage * pot_size - (1-self.total_percentage) * continue_cost < 0:
                 return FoldAction()
             if continue_cost == BIG_BLIND - SMALL_BLIND:
                 # small blind
                 if self.total_percentage > 0.56 and RaiseAction in legal_actions:
                     return RaiseAction(max(min_raise, min(1.27 * pot_size, max_raise)))
-                return CheckAction()
+                return CallAction()
             # opp raised
             necessary_pct = 0.54 + pot_size/100
             if self.total_percentage > necessary_pct and RaiseAction in legal_actions:
                 return RaiseAction(max(min_raise, min(necessary_pct/(1-necessary_pct) * pot_size, max_raise)))
             return CallAction()
         
+        high_hand_dict = {8: "Straight Flush", 7: "Quads", 6: "Full House", 5: "Flush", 4: "Straight", 3: "Trips", 2: "Two Pair", 1: "Pair"}
         
         if self.street_num < street: # new card dealt
             
@@ -477,6 +475,7 @@ class Player(Bot):
             if quads: # quads
                 self.quads = True
                 self.quads_rank = max(quads)
+                print(self.quads_rank, "quads on street", street)
                 
             elif len(trips) > 1 or trips and pairs: # full house
                 self.full_house = True
@@ -486,26 +485,32 @@ class Player(Bot):
                     self.full_house_ranks = max(trips), max(pairs)
                 else:
                     self.full_house_ranks = max(trips), min(trips)
+                print(self.full_house_ranks, "full house on street", street)
                     
             elif trips: # trips
                 self.trips = True
                 self.trips_rank = max(trips)
+                print(self.trips_rank, "trips on street", street)
                 
             elif len(pairs) > 1: # two pair
                 self.two_pair = True
-                high_pair = pairs.pop(max(pairs))
+                high_pair = max(pairs)
+                pairs.remove(max(pairs))
                 low_pair = max(pairs)
                 self.two_pair_ranks = high_pair, low_pair
+                print(self.two_pair_ranks, "two pair on street", street)
                 
             elif pairs: # pair
                 self.pair = True
                 self.pair_rank = max(pairs)
+                print(self.pair_rank, "pair on street", street)
              
                     
             our_flush = check_for_flush(our_total_cards, street)
             if our_flush:
                 for suit_index, cards_in in our_flush.items():
                     if len(cards_in) >= 5: # full flush
+                        print("Flush on street", street)
                         self.flush = True
                         self.flush_suit = suit_index
                         self.my_flush, self.board_flush = set(), set()
@@ -517,10 +522,12 @@ class Player(Bot):
                                 else:
                                     self.board_flush.add(rank)
                         self.my_num_in_suit = 5 - len(self.board_flush) # number of cards in suit we have necessary for flush
-                        self.flush_high = max(self.my_flush)
+                        if self.my_flush:
+                            self.my_flush_high = max(self.my_flush)
                                 
                         
                     elif len(cards_in) == 4: # four in a suit
+                        print("Flush draw on street", street)
                         self.flush_draw = True
                         self.flush_suit = suit_index
                         self.my_flush, self.board_flush = set(), set()
@@ -531,11 +538,13 @@ class Player(Bot):
                                     self.my_flush.add(rank)
                                 else:
                                     self.board_flush.add(rank)
-                        self.my_num_in_suit = len(self.my_flush) # number in our hand for suit
-                        self.flush_high = max(self.my_flush)
+                        if self.my_flush:
+                            self.my_num_in_suit = len(self.my_flush) # number in our hand for suit
+                            self.my_flush_high = max(self.my_flush)
                         
                     else: # three in a suit
                         self.double_flush_draw = True
+                        print("Flush double draw on street", street)
                         if len(our_flush) == 2: # three in a suit for two suits
                             self.flush_suit = []
                             for suit_index in our_flush:
@@ -556,9 +565,14 @@ class Player(Bot):
                                         self.my_flush[1].add(rank)
                                     else:
                                         self.board_flush[1].add(rank)
-                            self.my_num_in_suit[0] = len(self.my_flush[0]) # number in our hand for first suit
-                            self.my_num_in_suit[1] = len(self.my_flush[1]) # number in our hand for second suit
-                            self.flush_high = max(self.my_flush[0]), max(self.my_flush[1])
+                            self.flush_high = [-1, -1]
+                            if self.my_flush[0]:
+                                self.my_flush_high[0] = max(self.my_flush[0])
+                                self.my_num_in_suit[0] = len(self.my_flush[0]) # number in our hand for first suit
+                            if self.my_flush[1]:
+                                self.my_flush_high[1] = max(self.my_flush[1])
+                                self.my_num_in_suit[1] = len(self.my_flush[1]) # number in our hand for second suit
+                             
                         else: # three in a suit for one suit
                             self.flush_suit = suit_index
                             self.my_flush, self.board_flush = set(), set()
@@ -569,28 +583,39 @@ class Player(Bot):
                                         self.my_flush.add(rank)
                                     else:
                                         self.board_flush.add(rank)
-                            self.my_num_in_suit = len(self.my_flush) # number in our hand for suit
-                            self.flush_high = max(self.my_flush)
+                            if self.my_flush:
+                                self.my_num_in_suit = len(self.my_flush) # number in our hand for suit
+                                self.my_flush_high = max(self.my_flush)
                         
                         
             our_straight = check_for_straight(our_total_cards, street)
             if our_straight:
                 for high_card, (cards_in, cards_out) in our_straight.items():
                     if len(cards_in) == 5: # full straight
-                        self.straight = True
-                        if high_card > self.straight_high:
-                            self.straight_high = high_card
-                            self.my_straight, self.board_straight = set(), set()
-                            for card in our_total_cards:
-                                rank = ranks_dict[card[0]]
-                                if rank in cards_in:
-                                    if card in my_cards:
-                                        self.my_straight.add(rank)
-                                    else:
-                                        self.board_straight.add(rank)
-                            self.my_num_in_straight = len(self.my_straight)
+                        if self.flush:
+                            if cards_in.issubset(self.my_flush + self.board_flush):
+                                self.straight_flush = True
+                                self.straight_flush_high = high_card
+                                print(high_card, "high straight flush on street", street)
+                        else:
+                            print(high_card, "high straight on street", street)
+                            self.straight = True
+                            if high_card > self.straight_high:
+                                self.straight_high = high_card
+                                self.my_straight, self.board_straight = set(), set()
+                                for card in our_total_cards:
+                                    rank = ranks_dict[card[0]]
+                                    if rank in cards_in:
+                                        if card in my_cards:
+                                            self.my_straight.add(rank)
+                                        else:
+                                            self.board_straight.add(rank)
+                                if self.my_straight:
+                                    self.my_num_in_straight = len(self.my_straight)
+                                    self.my_straight_high = max(self.my_straight)
                                         
                     elif len(cards_in) == 4 and not self.straight: # four in straight with no full straight
+                        print(high_card, "high straight draw on street", street)
                         if not self.straight_draw: # clear extra cards from double straight draw
                             self.my_straight, self.board_straight = set(), set()
                         self.straight_draw = True
@@ -602,13 +627,16 @@ class Player(Bot):
                                     self.my_straight.add(rank)
                                 else:
                                     self.board_straight.add(rank)
-                        self.my_num_in_straight = len(self.my_straight)
+                        if self.my_straight:
+                            self.my_num_in_straight = len(self.my_straight)
+                            self.my_straight_high = max(self.my_straight)
                         
                         
                         
                     elif not self.straight and not self.straight_draw: # three in a straight with no straight draw or full straight
+                        print(high_card, "high straight double draw on street", street)
                         self.double_straight_draw = True
-                        self.double_draw_needed.add(cards_out)
+                        self.double_draw_needed.add(tuple(cards_out))
                         num_in = 0
                         for card in our_total_cards:
                             rank = ranks_dict[card[0]]
@@ -618,12 +646,44 @@ class Player(Bot):
                                     num_in += 1
                                 else:
                                     self.board_straight.add(rank)
-                        self.my_num_in_straight = len(self.my_straight)
+                        if self.my_straight:
+                            self.my_num_in_straight = len(self.my_straight)
+                            self.my_straight_high = max(self.my_straight)
+                            
+            if self.straight_flush:
+                self.high_hand = 8
+            elif self.quads:
+                self.high_hand = 7
+            elif self.full_house:
+                self.high_hand = 6
+            elif self.flush:
+                self.high_hand = 5
+            elif self.straight:
+                self.high_hand = 4
+            elif self.trips:
+                self.high_hand = 3
+            elif self.two_pair:
+                self.high_hand = 2
+            elif self.pair:
+                self.high_hand = 1
+                
+            if street == 5:
+                print("Final Hand:", high_hand_dict[self.high_hand])
+                
+            
+                
             
             # analyzing their hand
                 
         
         if street == 3: # flop post-auction
+        
+            if opp_bid != 0:
+                self.opp_bids.append(opp_bid)
+                self.opp_bids_num += 1
+                self.opp_bids_sum += opp_bid
+                self.my_bids.append(my_bid)
+                
             if continue_cost == 0 and big_blind:
                 # starting betting
                 pass
