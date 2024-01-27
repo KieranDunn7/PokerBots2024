@@ -930,22 +930,25 @@ class Player(Bot):
         if street == 5: # river
         
         
-            if continue_cost >= 5 and continue_cost >= pot_size/4: # check whether opponent is bluffing after showdown
+            if continue_cost >= 5 and continue_cost >= pot_size/8: # check whether opponent is bluffing after showdown
                 self.opp_river_bet = True
                 
             if continue_cost == 0 and big_blind:
                 
-                if not can_raise:
-                    return CheckAction()
-                
                 if pot_size > 200:
-                    high_raise = max_raise
-                    medium_raise = max(min_raise,min(100, max_raise))
-                    small_raise = max(min_raise,min(50, max_raise))
+                    if can_raise:
+                        high_raise = max_raise
+                        medium_raise = max(min_raise,min(100, max_raise))
+                        small_raise = max(min_raise,min(50, max_raise))
+                    else:
+                        high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 else:
-                    high_raise = max(min_raise,min(100, max_raise))
-                    medium_raise = max(min_raise,min(50, max_raise))
-                    small_raise = max(min_raise,min(20, max_raise))
+                    if can_raise:
+                        high_raise = max(min_raise,min(100, max_raise))
+                        medium_raise = max(min_raise,min(50, max_raise))
+                        small_raise = max(min_raise,min(20, max_raise))
+                    else:
+                        high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 
                 if self.high_hand == 8:
                     if self.opp_all_in: ####

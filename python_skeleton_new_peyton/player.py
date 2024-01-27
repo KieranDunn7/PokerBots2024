@@ -466,7 +466,7 @@ class Player(Bot):
         my_contribution = STARTING_STACK - my_stack  # the number of chips you have contributed to the pot
         opp_contribution = STARTING_STACK - opp_stack  # the number of chips your opponent has contributed to the pot
         big_blind = bool(active)  # True if you are the big blind
-        pot_size = my_contribution + opp_contribution # total pot size including new opp betting
+        pot_size = my_contribution + opp_contribution - continue_cost # total pot size excluding new opponent betting
         
         
         if self.forfeit:
