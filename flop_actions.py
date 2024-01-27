@@ -1171,7 +1171,7 @@ class Player(Bot):
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank and not high_bet:
                             return CallAction()
-                        if not medium_bet and self.two_pair_ranks[1] >= self.sorted_board_ranks[2]:
+                        if medium_bet and self.two_pair_ranks[1] >= self.sorted_board_ranks[2]:
                             return CallAction()
                         return action
                     
