@@ -930,20 +930,26 @@ class Player(Bot):
         
         if street == 4: # turn
         
-            if continue_cost >= 5 and continue_cost >= pot_size/2: # check whether opponent is bluffing after showdown
+            if continue_cost >= 5 and continue_cost >= pot_size/4: # check whether opponent is bluffing after showdown
                 self.opp_turn_bet = True
             
             if continue_cost == 0 and big_blind:
                 # starting betting
                 
                 if pot_size > 160:
-                    high_raise = max(min_raise, min(50, max_raise))
-                    medium_raise = max(min_raise,min(25, max_raise))
-                    small_raise = max(min_raise,min(15, max_raise))
+                    if can_raise:
+                        high_raise = RaiseAction(max(min_raise,min(50, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(25, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
+                    else:
+                        high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 else:
-                    high_raise = max(min_raise,min(20, max_raise))
-                    medium_raise = max(min_raise,min(12, max_raise))
-                    small_raise = max(min_raise,min(7, max_raise))
+                    if can_raise:
+                        high_raise = RaiseAction(max(min_raise,min(20, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(12, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(7, max_raise)))
+                    else:
+                        high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 
                 if self.high_hand == 8:
                     if self.opp_all_in: ####
