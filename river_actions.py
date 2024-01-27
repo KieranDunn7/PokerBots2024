@@ -1215,7 +1215,14 @@ class Player(Bot):
             else:
                 action = FoldAction()
                 
-            medium_bet = continue_cost < pot_size/2
+            if continue_cost > pot_size/3:
+                high_bet, medium_bet, small_bet, tiny_bet = True, True, True, True
+            elif continue_cost > pot_size/5:
+                high_bet, medium_bet, small_bet, tiny_bet = False, True, True, True
+            elif continue_cost > pot_size/8:
+                high_bet, medium_bet, small_bet, tiny_bet = False, False, True, True
+            else:
+                high_bet, medium_bet, small_bet, tiny_bet = False, False, False, True
                 
             if big_blind and my_pip == 0:
                 

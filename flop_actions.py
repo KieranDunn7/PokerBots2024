@@ -1110,11 +1110,13 @@ class Player(Bot):
                 return action
             
             if continue_cost > pot_size/3:
-                high_bet = True
+                high_bet, medium_bet, small_bet, tiny_bet = True, True, True, True
             elif continue_cost > pot_size/5:
-                medium_bet = True
+                high_bet, medium_bet, small_bet, tiny_bet = False, True, True, True
             elif continue_cost > pot_size/8:
-                small_bet = True
+                high_bet, medium_bet, small_bet, tiny_bet = False, False, True, True
+            else:
+                high_bet, medium_bet, small_bet, tiny_bet = False, False, False, True
             
             if continue_cost < pot_size/8:
                 action = CallAction()
