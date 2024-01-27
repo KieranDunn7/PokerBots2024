@@ -1444,9 +1444,9 @@ class Player(Bot):
                         high_raise, medium_raise, small_raise = action, action, action
                 else:
                     if can_raise:
-                        high_raise = max(min_raise,min(20, max_raise))
-                        medium_raise = max(min_raise,min(12, max_raise))
-                        small_raise = max(min_raise,min(7, max_raise))
+                        high_raise = RaiseAction(max(min_raise,min(20, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(12, max_raise)))
+                        small_raise = RaiseAction(max(min_raise,min(7, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
@@ -2222,16 +2222,12 @@ class Player(Bot):
                 if self.high_hand == 2:
                     if self.board_two_pair:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
-                            if self.opp_all_in: ####
-                                return CallAction()
                             return small_raise
                         return CheckAction()
                 
                 if self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1:
                         return CheckAction()
-                    if self.opp_all_in: ####
-                            return CallAction()
                     if self.board_pair >= self.sorted_board_ranks[1]:
                         return small_raise
                     return CheckAction()
@@ -2395,6 +2391,21 @@ class Player(Bot):
                 
                 # we checked and opponent bet
                 
+                if pot_size > 200:
+                    if can_raise:
+                        high_raise = RaiseAction(max_raise)
+                        medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
+                    else:
+                        high_raise, medium_raise, small_raise = action, action, action
+                else:
+                    if can_raise:
+                        high_raise = RaiseAction(max(min_raise,min(60, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(35, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
+                    else:
+                        high_raise, medium_raise, small_raise = action, action, action
+                
                     
                 if self.high_hand >= 4:
                     return CallAction()
@@ -2451,8 +2462,6 @@ class Player(Bot):
                     return high_raise
                 
                 if self.high_hand == 6:
-                    if self.opp_all_in: ####
-                        return CallAction()
                     if self.board_full_house:
                         if self.full_house_ranks == self.board_full_house_ranks:
                             if self.full_house_ranks[0] > self.full_house_ranks[1] and pot_size > 200: # no danger from opponent having three of a kind on the pair
@@ -2461,7 +2470,7 @@ class Player(Bot):
                     if self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             if can_raise:
-                                return RaiseAction(high_raise)
+                                return high_raise
                             return CallAction()
                         return CallAction()
                         
@@ -2486,9 +2495,6 @@ class Player(Bot):
                         if medium_bet:
                             return CallAction()
                         return action
-                    
-                    if self.opp_all_in: ####
-                        return CallAction()
                     if self.board_two_pair:
                         if medium_bet:
                             return CallAction()
