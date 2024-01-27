@@ -1,17 +1,17 @@
-Forfeit in Round #899
+Forfeit in Round #795
 
 
-opp_bids = [106, 98, 25]
-my_bids = [115, 126, 113]
-opp_bid_avg = 76.33333333333333
-opp_bid_cv = 0.47744257462346235
-final_time = 27.203
-post_auction_pcts: [0.48]
-post_turn_pcts: [0.645]
-post_river_pcts: [0.497]
-win-loss-tie history: [0]
-1
-1
-1
-1
-0.0
+opp_bids = [133, 129, 107, 146, 85, 202, 202, 211]
+my_bids = [136, 141, 38, 138, 157, 155, 148, 105]
+opp_bid_avg = 151.875
+opp_bid_cv = 0.2937326218789013
+final_time = 27.557
+post_auction_pcts: [0.701, 0.702, 0.662]
+post_turn_pcts: [0.643, 0.689, 0.632]
+post_river_pcts: [0.635, 0.718, 0.621]
+win-loss-tie history: [1, 0, 0]
+3
+3
+3
+3
+0.3333333333333333
