@@ -1297,12 +1297,12 @@ class Player(Bot):
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank and medium_bet:
                             return CallAction()
-                        if self.small_bet:
+                        if small_bet:
                             return CallAction()
                         return action
                     if self.board_flush_need_2 or self.board_flush_need_2 and medium_bet:
                         return CallAction()
-                    if self.medium_bet:
+                    if medium_bet:
                         return CallAction()
                 
                 
