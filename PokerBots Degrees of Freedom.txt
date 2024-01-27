@@ -1,0 +1,8 @@
+PokerBots Degrees of Freedom
+
+Min raise: 6
+Max raise: 150
+
+
+
+
