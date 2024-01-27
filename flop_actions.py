@@ -1033,7 +1033,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost < 5 or continue_cost < pot_size/4:
+            if continue_cost <= 5 or continue_cost < pot_size/10:
                 # opponent checks (or makes small bet)
                 if continue_cost == 0:
                     action = CheckAction()
