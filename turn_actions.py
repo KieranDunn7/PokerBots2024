@@ -1181,36 +1181,28 @@ class Player(Bot):
                         if self.board_straight_need_2 or self.board_two_pair:
                             return small_raise
                         return medium_raise
-                    return RaiseAction(small_raise)
+                    return small_raise
                 
                 if self.high_hand == 2:
                     if self.board_two_pair:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
-                            if self.opp_all_in: ####
-                                return CallAction()
-                            return RaiseAction(medium_raise)
+                            return medium_raise
                         return action
                     if self.board_flush_need_1 or self.board_straight_need_1:
                         return action
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank:
-                            if self.opp_all_in: ####
-                                return CallAction()
-                            return RaiseAction(small_raise)
+                            return small_raise
                         return action
-                    if self.opp_all_in: ####
-                        return CallAction()
                     if self.board_flush_need_2 or self.board_flush_need_2:
-                        return RaiseAction(small_raise)
-                    return RaiseAction(medium_raise)
+                        return small_raise
+                    return medium_raise
                     
                 if self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1 or self.board_flush_need_2 or self.board_straight_need_2:
                         return action
                     if self.board_pair == max(self.board_ranks):
-                        if self.opp_all_in: ####
-                            return CallAction()
-                        return RaiseAction(small_raise)
+                        return small_raise
                     return action
                     
                 return action
@@ -1226,16 +1218,17 @@ class Player(Bot):
                 # we checked and opponent bet
                 
                 if pot_size > 160:
-                    high_raise = min(75, max_raise)
-                    medium_raise = min(50, max_raise)
-                    small_raise = min(25, max_raise)
+                    high_raise = RaiseAction(min(75, max_raise))
+                    medium_raise = RaiseAction(min(50, max_raise))
+                    small_raise = RaiseAction(min(25, max_raise))
                 else:
-                    high_raise = min(40, max_raise)
-                    medium_raise = min(30, max_raise)
-                    small_raise = min(15, max_raise)
+                    high_raise = RaiseAction(min(40, max_raise))
+                    medium_raise = RaiseAction(min(30, max_raise))
+                    small_raise = RaiseAction(min(15, max_raise))
+            
                 
                 if self.high_hand >= 4:
-                    return RaiseAction(high_raise)
+                    return high_raise
                 
                 if self.high_hand == 3:
                     if self.board_trips:
