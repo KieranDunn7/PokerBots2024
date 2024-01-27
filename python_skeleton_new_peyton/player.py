@@ -1729,14 +1729,14 @@ class Player(Bot):
                         medium_raise = RaiseAction(max(min_raise, min(50, max_raise)))
                         small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
                     else:
-                        high_raise, medium_raise, small_raise = action, action, action
+                        high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
                         high_raise = RaiseAction(max(min_raise, min(40, max_raise)))
                         medium_raise = RaiseAction(max(min_raise, min(30, max_raise)))
                         small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
                     else:
-                        high_raise, medium_raise, small_raise = action, action, action
+                        high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
                 if self.high_hand >= 4:
                     return high_raise
@@ -1805,14 +1805,14 @@ class Player(Bot):
                         medium_raise = RaiseAction(max(min_raise, min(65, max_raise)))
                         small_raise = RaiseAction(max(min_raise, min(30, max_raise)))
                     else:
-                        high_raise, medium_raise, small_raise = action, action, action
+                        high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
                         high_raise = RaiseAction(max(min_raise, min(80, max_raise)))
                         medium_raise = RaiseAction(max(min_raise, min(40, max_raise)))
                         small_raise = RaiseAction(max(min_raise, min(20, max_raise)))
                     else:
-                        high_raise, medium_raise, small_raise = action, action, action
+                        high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
                 if self.high_hand == 8:
                     return high_raise
@@ -1959,14 +1959,14 @@ class Player(Bot):
                     medium_raise = RaiseAction(max(min_raise, min(85, max_raise)))
                     small_raise = RaiseAction(max(min_raise, min(45, max_raise)))
                 else:
-                    high_raise, medium_raise, small_raise = action, action, action
+                    high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             else:
                 if can_raise:
                     high_raise = RaiseAction(max(min_raise, min(100, max_raise)))
                     medium_raise = RaiseAction(max(min_raise, min(55, max_raise)))
                     small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
                 else:
-                    high_raise, medium_raise, small_raise = action, action, action
+                    high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             
             if self.high_hand == 8:
                 return high_raise
@@ -2397,14 +2397,14 @@ class Player(Bot):
                         medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
                         small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
                     else:
-                        high_raise, medium_raise, small_raise = action, action, action
+                        high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
                         high_raise = RaiseAction(max(min_raise,min(60, max_raise)))
                         medium_raise = RaiseAction(max(min_raise,min(35, max_raise)))
                         small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
                     else:
-                        high_raise, medium_raise, small_raise = action, action, action
+                        high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
                     
                 if self.high_hand >= 4:
@@ -2570,14 +2570,14 @@ class Player(Bot):
                     medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
                     small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
                 else:
-                    high_raise, medium_raise, small_raise = action, action, action
+                    high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             else:
                 if can_raise:
                     high_raise = RaiseAction(max(min_raise,min(60, max_raise)))
                     medium_raise = RaiseAction(max(min_raise,min(35, max_raise)))
                     small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
                 else:
-                    high_raise, medium_raise, small_raise = action, action, action
+                    high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
 
             if self.high_hand == 8:
                 return high_raise
