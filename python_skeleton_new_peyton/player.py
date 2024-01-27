@@ -943,13 +943,13 @@ class Player(Bot):
                     if self.high_hand == 1:
                         if self.pair_rank >= self.sorted_board_ranks[1] or self.pair_rank > 8 and not self.high_cards_or_pair_likely:
                             if pot_size > 20:
-                                return RaiseAction(min(10, max_raise))
+                                return RaiseAction(max(min_raise, min(10, max_raise)))
                             else:
-                                return RaiseAction(min(5, max_raise))
+                                return RaiseAction(max(min_raise, min(5, max_raise)))
                     else:
                         if pot_size > 20:
-                            return RaiseAction(min(10, max_raise))
-                        return RaiseAction(min(5, max_raise))
+                            return RaiseAction(max(min_raise, min(10, max_raise)))
+                        return RaiseAction(max(min_raise, min(5, max_raise)))
                 return action
             
             if big_blind and my_pip == 0:
@@ -971,13 +971,13 @@ class Player(Bot):
                 # starting betting
                 
                 if pot_size > 160:
-                    high_raise = min(50, max_raise)
-                    medium_raise = min(25, max_raise)
-                    small_raise = min(15, max_raise)
+                    high_raise = max(min_raise, min(50, max_raise))
+                    medium_raise = max(min_raise,min(25, max_raise))
+                    small_raise = max(min_raise,min(15, max_raise))
                 else:
-                    high_raise = min(20, max_raise)
-                    medium_raise = min(12, max_raise)
-                    small_raise = min(7, max_raise)
+                    high_raise = max(min_raise,min(20, max_raise))
+                    medium_raise = max(min_raise,min(12, max_raise))
+                    small_raise = max(min_raise,min(7, max_raise))
                 
                 if self.high_hand == 8:
                     return RaiseAction(small_raise)
@@ -1097,13 +1097,13 @@ class Player(Bot):
                     action = CallAction()
                     
                 if pot_size > 160:
-                    high_raise = min(40, max_raise)
-                    medium_raise = min(20, max_raise)
-                    small_raise = min(10, max_raise)
+                    high_raise = max(min_raise,min(40, max_raise))
+                    medium_raise = max(min_raise,min(20, max_raise))
+                    small_raise = max(min_raise,min(10, max_raise))
                 else:
-                    high_raise = min(16, max_raise)
-                    medium_raise = min(10, max_raise)
-                    small_raise = min(5, max_raise)
+                    high_raise = max(min_raise,min(16, max_raise))
+                    medium_raise = max(min_raise,min(10, max_raise))
+                    small_raise = max(min_raise,min(5, max_raise))
                 
                 if self.high_hand == 8:
                     return RaiseAction(small_raise)
@@ -1239,12 +1239,12 @@ class Player(Bot):
                 
                 if pot_size > 200:
                     high_raise = max_raise
-                    medium_raise = min(100, max_raise)
-                    small_raise = min(50, max_raise)
+                    medium_raise = max(min_raise,min(100, max_raise))
+                    small_raise = max(min_raise,min(50, max_raise))
                 else:
-                    high_raise = min(100, max_raise)
-                    medium_raise = min(50, max_raise)
-                    small_raise = min(20, max_raise)
+                    high_raise = max(min_raise,min(100, max_raise))
+                    medium_raise = max(min_raise,min(50, max_raise))
+                    small_raise = max(min_raise,min(20, max_raise))
                 
                 if self.high_hand == 8:
                     return RaiseAction(high_raise)
@@ -1361,11 +1361,11 @@ class Player(Bot):
                 
                 if pot_size > 200:
                     high_raise = max_raise
-                    medium_raise = min(50, max_raise)
+                    medium_raise = max(min_raise,min(50, max_raise))
                     small_raise = max(min_raise, min(25, max_raise))
                 else:
-                    high_raise = min(60, max_raise)
-                    medium_raise = min(35, max_raise)
+                    high_raise = max(min_raise,min(60, max_raise))
+                    medium_raise = max(min_raise,min(35, max_raise))
                     small_raise = max(min_raise, min(15, max_raise))
                 
                 if self.high_hand == 8:
@@ -1534,7 +1534,7 @@ class Player(Bot):
                     medium_raise = max(min_raise, min(80, max_raise))
                     small_raise = max(min_raise, min(40, max_raise))
                 else:
-                    high_raise = min(100, max_raise)
+                    high_raise = max(min_raise,min(100, max_raise))
                     medium_raise = max(min_raise, min(60, max_raise))
                     small_raise = max(min_raise, min(25, max_raise))
                 
@@ -1658,7 +1658,7 @@ class Player(Bot):
                 medium_raise = max(min_raise, min(80, max_raise))
                 small_raise = max(min_raise, min(40, max_raise))
             else:
-                high_raise = min(100, max_raise)
+                high_raise = max(min_raise,min(100, max_raise))
                 medium_raise = max(min_raise, min(60, max_raise))
                 small_raise = max(min_raise, min(25, max_raise))
             
