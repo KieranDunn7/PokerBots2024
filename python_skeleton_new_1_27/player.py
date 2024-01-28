@@ -935,6 +935,8 @@ class Player(Bot):
         
             if opp_bid != 0:
                 self.opp_bids.append(opp_bid)
+                if len(self.opp_bids) > 20:
+                    self.opp_bids.pop(0)
                 self.opp_bids_num += 1
                 self.opp_bids_sum += opp_bid
                 self.my_bids.append(my_bid)
