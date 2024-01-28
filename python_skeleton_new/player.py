@@ -937,6 +937,15 @@ class Player(Bot):
             print()
             print("Opp outs on street", street, self.opp_outs)
             print()
+
+
+
+
+
+################# FLOP #########################
+
+
+
                 
         
         if street == 3: # flop post-auction
@@ -1046,7 +1055,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= 5 or continue_cost < pot_size/10:
+            if continue_cost <= max(5, pot_size/10):
                 
                 # opponent checks (or makes small bet)
                 
@@ -1130,6 +1139,95 @@ class Player(Bot):
                     
                 return action
             
+            
+            
+            if not big_blind and continue_cost >= max(5,pot_size/10):
+                ### Opponent bets
+                  
+                if continue_cost == 0:
+                    action = CheckAction()
+                else:
+                    action = CallAction()
+                    
+                if pot_size > 120:
+                    if can_raise:
+                        high_raise = RaiseAction(max(min_raise,min(28, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(15, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(10, max_raise)))
+                    else:
+                        high_raise, medium_raise, small_raise = action, action, action
+                else:
+                    if can_raise:
+                        high_raise = RaiseAction(max(min_raise,min(18, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(11, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(6, max_raise)))
+                    else:
+                        high_raise, medium_raise, small_raise = action, action, action
+                
+                if self.high_hand == 8:
+                    return small_raise
+                
+                if self.high_hand == 7:
+                    return small_raise
+                
+                if self.high_hand == 6:
+                    if self.board_trips:
+                        if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
+                            return small_raise
+                        return high_raise
+                    return small_raise
+                       
+                if self.high_hand == 5:
+                    return small_raise
+                
+                if self.high_hand == 4:
+                    if self.board_flush_need_2:
+                        return high_raise
+                    
+                    if self.board_straight_need_2:
+                        return small_raise
+                    
+                    return medium_raise
+                
+                if self.high_hand == 3:
+                    if self.board_trips:
+                        if self.my_high_card >= 9 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
+                            return medium_raise
+                    if self.board_flush_need_2 or self.board_straight_need_2:
+                        return medium_raise
+                    if self.board_pair:
+                        return medium_raise
+                    return small_raise
+                
+                if self.flush_draw and self.straight_draw:
+                    return medium_raise
+                
+                if self.flush_draw:
+                    if self.board_flush_need_2:
+                        return action
+                    return small_raise
+                    
+                if self.straight_draw:
+                    if self.board_straight_need_2 or self.board_flush_need_2:
+                        return action
+                    return small_raise
+                
+                if self.high_hand == 2:
+                    if self.board_pair:
+                        if self.high_hand_ranks[0] > self.board_pair_rank:
+                            return small_raise
+                        return action
+                    return small_raise
+                    
+                if self.high_hand == 1:
+                    return small_raise
+                    
+                return action
+
+
+
+
+
             
             
             if tiny_bet:
@@ -1459,6 +1557,17 @@ class Player(Bot):
                 return action
                 
             return action
+        
+
+
+
+
+
+
+###################### TURN ##########################
+
+
+
         
         if street == 4: # turn
         
@@ -2149,6 +2258,17 @@ class Player(Bot):
                 return action
                 
             return action
+        
+
+
+
+
+###################### RIVER ############################
+
+
+
+
+
         
         if street == 5: # river
         
