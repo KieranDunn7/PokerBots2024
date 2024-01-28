@@ -1092,7 +1092,7 @@ class Player(Bot):
                 
                 if self.high_hand == 2:
                     if self.board_pair:
-                        if self.high_hand_ranks[0] > self.board_pair_rank:
+                        if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
                         return action
                     return small_raise
