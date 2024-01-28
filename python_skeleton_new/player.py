@@ -413,43 +413,6 @@ class Player(Bot):
     
             return my_wins_w_auction/(num_sims*9), my_wins_wo_auction/(num_sims*9)
 
-        def simulate_rest_of_game(my_cards, board_cards, opp_auction, num_sims):
-            """
-            Takes my_cards and board_cards as lists of strings, opp_auction as
-            a bool representing whether the opponent won the auction, and
-            num_sims as an int and uses montecarlo to return the probability
-            of winning
-            """
-            hole_cards = [eval7.Card(card) for card in my_cards]
-            comm_cards = [eval7.Card(card) for card in board_cards]
-            revealed_cards = hole_cards + comm_cards
-            deck = eval7.Deck()
-            for card in revealed_cards:
-                deck.cards.remove(card)
-            my_wins = 0
-            peek_max = 7 - len(board_cards)
-            if opp_auction:
-                peek_max += 1
-                opp_hand_size = 3
-            else:
-                opp_hand_size = 2
-            drawings_per_shuffle = (52 - (len(my_cards)+len(board_cards)))//peek_max
-            for trial in range(num_sims):
-                deck.shuffle()
-                for drawing in range(drawings_per_shuffle):
-                    draw = deck[peek_max*drawing:peek_max*(drawing+1)]
-                    opp_hole = draw[0:opp_hand_size]
-                    new_comm_cards = draw[opp_hand_size:]
-                    my_hand = revealed_cards + new_comm_cards
-                    opp_hand = opp_hole + comm_cards + new_comm_cards
-                    my_score = eval7.evaluate(my_hand)
-                    opp_score = eval7.evaluate(opp_hand)
-                    if my_score > opp_score:
-                        my_wins += 1
-                    elif my_score == opp_score:
-                        my_wins += 0.5
-            return my_wins/(num_sims*drawings_per_shuffle)
-
 
         # May be useful, but you may choose to not use.
         legal_actions = round_state.legal_actions()  # the actions you are allowed to take
@@ -1129,7 +1092,7 @@ class Player(Bot):
                 
                 if self.high_hand == 2:
                     if self.board_pair:
-                        if self.two_pair_ranks[0] > self.board_pair_rank:
+                        if self.high_hand_ranks[0] > self.board_pair_rank:
                             return small_raise
                         return action
                     return small_raise
@@ -2094,7 +2057,7 @@ class Player(Bot):
                     
                 return action
             
-            # opponent bet
+            # opponent bet, we raised, opponent re-raised
             
             if pot_size > 160:
                 if can_raise:
@@ -2588,7 +2551,7 @@ class Player(Bot):
                 
                 return action
             
-            if my_pip != 0:
+            if big_blind:
                 
                 # we bet and opponent raised
                 
@@ -2718,7 +2681,7 @@ class Player(Bot):
                         return CallAction()
                     return action
                 
-            # opponent bet
+            # opponent bet, we raised, opponent re-raised
         
             if pot_size > 200:
                 if can_raise:
@@ -2770,10 +2733,8 @@ class Player(Bot):
             if self.high_hand == 5:
                 
                 if self.board_flush:
-                    if self.my_flush_high == 12 or self.my_flush_high == 11 and not self.high_cards_or_pair_likely:
+                    if self.my_flush_high > self.board_flush_min and self.my_flush_high > 6:
                         return high_raise
-                    if self.my_flush_high > self.board_flush_min and (self.my_flush_high >= 9 or self.my_flush_high >= 7 and not self.high_cards_or_pair_likely):
-                        return medium_raise
                     if medium_bet:
                         return CallAction()
                     return action
@@ -2783,23 +2744,13 @@ class Player(Bot):
                         return CallAction()
                     
                 if self.board_trips:
-                    if small_bet:
-                        return CallAction()
                     return action
                 
                 if self.board_two_pair:
-                    if small_bet:
-                        return CallAction()
                     return action
                 
-                if self.board_flush_need_2:
-                    if self.my_flush_high == 12 or self.my_flush_high == 11 and not self.high_cards_or_pair_likely:
-                        return high_raise
-                    if self.my_flush_high > self.board_flush_min and (self.my_flush_high >= 9 or self.my_flush_high >= 7 and not self.high_cards_or_pair_likely):
-                        return medium_raise
-                    if self.my_flush_high >= 6:
-                        return CallAction()
-                    return action
+                if self.board_flush_need_2 and self.my_flush_high > 5:
+                    return CallAction()
                 
                 return small_raise
             
@@ -2815,64 +2766,45 @@ class Player(Bot):
                     return action
                 
                 if self.board_flush_need_1:
-                    if small_bet:
-                        return CallAction()
                     return action
                 
                 if self.board_straight_need_1:
                     if self.my_straight_high > self.board_straight_high:
                         return high_raise
-                    if high_bet:
-                        return CallAction()
-                    return action
+                    return CallAction()
                     
                 if self.board_trips:
-                    if small_bet:
-                        return CallAction()
                     return action
                 
                 if self.board_two_pair:
-                    if small_bet:
-                        return CallAction()
                     return action
                 
-                if self.board_straight_need_2:
-                    if self.board_flush_need_2:
-                        if self.my_straight_high > self.board_straight_high and high_bet or small_bet:
-                            return CallAction()
-                        return action
-                    if self.my_straight_high > self.board_straight_high:
-                        return high_raise
+                if self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
+                    return high_raise
+                
+                if self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
+                    return high_raise
                 
                 return CallAction()
             
             if self.high_hand == 3:
                 
                 if self.board_trips:
-                    if (self.my_high_card >= 10 or (self.my_high_card >= 8 and not self.high_cards_or_pair_likely)) and medium_bet:
+                    if self.my_high_card >= 10 and medium_bet:
                         return CallAction()
                     return action
                 if self.board_flush_need_1 or self.board_straight_need_1:
                     return action
                 if self.board_pair:
-                    if self.board_flush_need_2 or self.board_straight_need_2:
-                        return CallAction()
                     return small_raise
                 return CallAction()
             
             if self.high_hand == 2:
                 
                 if self.board_two_pair:
-                    if (self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely) and small_bet:
+                    if (self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely) and medium_bet:
                         return CallAction()
                     return action
-                
-                if self.board_pair:
-                    return action
-                
-                if small_bet:
-                    return CallAction()
-                return action
                 
             return action
                 
