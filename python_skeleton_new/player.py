@@ -1765,15 +1765,15 @@ class Player(Bot):
                 if self.high_hand == 1:
                     if self.board_pair:
                         return CheckAction() if CheckAction in legal_actions else FoldAction()
-                    if self.pair_rank >= self.sorted_board_ranks[0]:
-                        return high_raise
-                    if medium_bet and self.pair_rank >= self.sorted_board_ranks[2] or small_bet: 
-                        return CallAction()
                     if pot_size > 100:
                         if CallAction() in legal_actions:
                             return CallAction()
                         elif CheckAction() in legal_actions:
                             return CheckAction()
+                    if self.pair_rank >= self.sorted_board_ranks[0]:
+                        return high_raise
+                    if medium_bet and self.pair_rank >= self.sorted_board_ranks[2] or small_bet: 
+                        return CallAction()
                     return action
                     
                 return action
