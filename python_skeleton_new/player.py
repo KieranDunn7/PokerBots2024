@@ -44,10 +44,20 @@ class Player(Bot):
         self.opp_turn_actions = []
         self.opp_river_actions = []
         
+        self.opp_pre_flop_bets = []
+        self.opp_flop_bets = []
+        self.opp_turn_bets = []
+        self.opp_river_bets = []
+        
         self.total_opp_pre_flop_actions = []
         self.total_opp_flop_actions = []
         self.total_opp_turn_actions = []
         self.total_opp_river_actions = []
+        
+        self.pre_flop_aggression = 0
+        self.flop_aggression = 0
+        self.turn_aggression = 0
+        self.river_aggression = 0
 
 
 
@@ -259,23 +269,40 @@ class Player(Bot):
         
         if not self.forfeit:
             self.opp_pre_flop_actions.append(self.opp_pre_flop_bet)
+            if self.opp_pre_flop_bet > 0:
+                self.opp_pre_flop_bets.append(self.opp_pre_flop_bet)
             self.total_opp_pre_flop_actions.append(round(self.opp_pre_flop_bet, 3))
             if len(self.opp_pre_flop_actions) > 30:
+                if self.opp_pre_flop_actions[0] != 0:
+                    self.opp_pre_flop_bets.pop(0)
                 self.opp_pre_flop_actions.pop(0)
             if street >= 3:
                 self.opp_flop_actions.append(self.opp_flop_bet)
+                if self.opp_flop_bet > 0:
+                    self.opp_flop_bets.append(self.opp_flop_bet)
                 self.total_opp_flop_actions.append(round(self.opp_flop_bet, 3))
                 if len(self.opp_flop_actions) > 20:
+                    if self.opp_flop_actions[0] != 0:
+                        self.opp_flop_bets.pop(0)
                     self.opp_flop_actions.pop(0)
             if street >= 4:
                 self.opp_turn_actions.append(self.opp_turn_bet)
+                if self.opp_turn_bet > 0:
+                    self.opp_turn_bets.append(self.opp_turn_bet)
                 self.total_opp_turn_actions.append(round(self.opp_turn_bet, 3))
                 if len(self.opp_turn_actions) > 15:
+                    if self.opp_turn_actions[0] != 0:
+                        self.opp_turn_bets.pop(0)
                     self.opp_turn_actions.pop(0)
+                    
             if street >= 5:
                 self.opp_river_actions.append(self.opp_river_bet)
+                if self.opp_river_bet > 0:
+                    self.opp_river_bets.append(self.opp_river_bet)
                 self.total_opp_river_actions.append(round(self.opp_river_bet, 3))
                 if len(self.opp_river_actions) > 10:
+                    if self.opp_river_actions[0] != 0:
+                        self.opp_river_bets.pop(0)
                     self.opp_river_actions.pop(0)
         
         
@@ -1684,11 +1711,17 @@ class Player(Bot):
                 
                 if self.flush_draw:
                     if self.board_flush_need_2:
+                        if self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely:
+                            return CallAction()
                         return action
                     return small_raise
                     
                 if self.straight_draw:
-                    if self.board_straight_need_2 or self.board_flush_need_2:
+                    if self.board_flush_need_2 and not medium_bet:
+                        return action
+                    if self.board_straight_need_2:
+                        if self.my_straight_high > self.board_straight_high or medium_bet:
+                            return CallAction()
                         return action
                     return small_raise
                 
@@ -1696,6 +1729,8 @@ class Player(Bot):
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
+                        if medium_bet and self.two_pair_ranks[1] >= self.sorted_board_ranks[2]:
+                            return CallAction()
                         return action
                     return small_raise
                     
@@ -1704,7 +1739,8 @@ class Player(Bot):
                         return CheckAction() if CheckAction in legal_actions else FoldAction()
                     if self.pair_rank >= self.sorted_board_ranks[0]:
                         return high_raise
-                    if medium_bet: return CallAction()
+                    if medium_bet and self.pair_rank >= self.sorted_board_ranks[2] or small_bet: 
+                        return CallAction()
                     if pot_size > 100:
                         if CallAction() in legal_actions:
                             return CallAction()
@@ -1777,9 +1813,7 @@ class Player(Bot):
                             return CallAction()
                         return action
                     
-                    if self.board_flush_need_2 or self.board_flush_need_2 and small_bet:
-                        return CallAction()
-                    if medium_bet:
+                    if self.board_flush_need_2 or self.board_flush_need_2 and medium_bet or small_bet:
                         return CallAction()
                     return action
                     
