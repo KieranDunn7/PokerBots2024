@@ -1,457 +1,515 @@
 
 Round Num: 1
 
-(1, 0) two pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 4: {(0, 2, 3)}}
-
-(1, 0) two pair on street 4
-
-Opp outs on street 4 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 1, 4: {(0, 2, 3), (2, 3, 4)}}
-
-(12, 1) two pair on street 5
-Final Hand: (12, 1) Two Pair
-
-Opp outs on street 5 {6: (12, 1), 7: (12, 1), 5: 1}
-
 
 Round Num: 2
-
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(9, 10)}}
 
 
 Round Num: 3
 
-6 pair on street 3
+11 pair on street 3
+5 high straight double draw on street 3
+6 high straight double draw on street 3
 
-Opp outs on street 3 {5: 1, 4: {(4, 5, 7), (0, 2, 12), (2, 4, 5), (0, 2, 4)}}
+Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11}
 
-6 pair on street 4
-
-Opp outs on street 4 {5: 1, 4: {(2, 4, 5), (0, 2, 4), (4, 5, 7), (0, 2, 12), (8, 10, 7), (8, 5, 7)}}
-
-6 pair on street 5
-Final Hand: 6 Pair
-
-Opp outs on street 5 {5: 1, 4: {(0, 2)}}
-
+Opponent checks on flop
 
 Round Num: 4
 
-
-Round Num: 5
-
+Flush double draw on street 3
 3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(0, 1, 3)}}
+Opp outs on street 3 {4: {(8, 6, 7), (8, 10, 11)}}
 
+Start betting on flop
 11 pair on street 4
 
-Opp outs on street 4 {5: 0, 4: {(0, 1, 3), (8, 9, 10)}}
+Opp outs on street 4 {4: {(8, 10)}}
 
+Start betting on turn
 11 pair on street 5
 Final Hand: 11 Pair
 
-Opp outs on street 5 {4: {(8, 9)}}
+Opp outs on street 5 {4: {(8, 10), (8, 6)}}
 
+Start betting on river
+
+Round Num: 5
+
+7 pair on street 3
+Flush double draw on street 3
+
+Opp outs on street 3 {5: 2, 4: {(8, 9, 6), (8, 4, 6), (3, 4, 6)}}
+
+Opponent checks on flop
+7 pair on street 4
+
+Opp outs on street 4 {5: 2, 4: {(4, 6)}}
+
+Opponent checks on turn
+7 pair on street 5
+Final Hand: 7 Pair
+
+Opp outs on street 5 {5: 2, 4: {(4, 6)}}
+
+Opponent bet on river
 
 Round Num: 6
 
 
 Round Num: 7
 
-2 pair on street 3
-4 high straight double draw on street 3
+6 pair on street 3
+8 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(1, 3)}}
+Opp outs on street 3 {5: 0, 4: {(5, 7)}}
 
-2 pair on street 4
+Opponent bet on flop
+(8, 6) two pair on street 4
 
-Opp outs on street 4 {4: {(1, 3), (3, 5)}}
+Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(5, 7)}}
 
-(4, 2) two pair on street 5
-Final Hand: (4, 2) Two Pair
+Opponent checks on turn
+(8, 6) two pair on street 5
+Final Hand: (8, 6) Two Pair
 
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 4: {(1, 3), (3, 5)}}
+Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 0, 4: {(3, 5), (5, 7)}}
 
+Opponent checks on river
 
 Round Num: 8
 
 
 Round Num: 9
 
-3 high straight double draw on street 3
-6 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
-
-3 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(0, 2, 3), (8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
-
-6 pair on street 5
-Final Hand: 6 Pair
-
-Opp outs on street 5 {2: (6, None), 3: 6, 6: (6, None), 7: 6}
-
 
 Round Num: 10
-
-3 pair on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(5, 6, 7), (1, 2, 3)}}
-
-3 pair on street 4
-
-Opp outs on street 4 {5: 3, 4: {(5, 6, 7), (9, 10, 11), (1, 2, 3)}}
-
-3 pair on street 5
-Final Hand: 3 Pair
-
-Opp outs on street 5 {5: 3, 4: {(5, 7)}}
 
 
 Round Num: 11
 
-Flush double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 10, 12), (8, 10, 7), (8, 5, 7)}}
-
-
-Opp outs on street 4 {5: 2, 4: {(8, 10), (8, 5)}}
-
-7 pair on street 5
-Final Hand: 7 Pair
-
-Opp outs on street 5 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 2, 4: {(8, 10), (8, 5)}}
-
 
 Round Num: 12
 
-6 pair on street 3
-Flush draw on street 3
+4 pair on street 3
 
-Opp outs on street 3 {5: -1, 4: {(0, 1, 3), (9, 10, 11)}}
+Opp outs on street 3 {5: 1, 4: {(3, 5, 6), (8, 5, 6), (8, 9, 10)}}
 
+Start betting on flop
+(4, 2) two pair on street 4
+
+Opp outs on street 4 {5: 1, 4: {(1, 3, 5), (3, 5, 6), (0, 1, 3), (8, 9, 10), (8, 5, 6)}}
+
+Start betting on turn
+(4, 2) two pair on street 5
+Final Hand: (4, 2) Two Pair
+
+Opp outs on street 5 {5: 1, 4: {(0, 1), (5, 6), (1, 5)}}
+
+Start betting on river
 
 Round Num: 13
 
-Flush draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight draw on street 3
+0 pair on street 3
+Flush double draw on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
+5 high straight double draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
+Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(2, 3, 12), (2, 3, 4)}}
 
-11 pair on street 4
-Flush draw on street 4
-11 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(10, 12), (10, 7)}}
-
-(11, 7) two pair on street 5
-Flush on street 5
-Final Hand: 11 Flush
-
-Opp outs on street 5 {5: 2, 4: {10}}
-
+Opponent checks on flop
 
 Round Num: 14
 
+Flush double draw on street 3
+10 high straight double draw on street 3
+11 high straight double draw on street 3
+12 high straight draw on street 3
+
+Opp outs on street 3 {5: 2, 4: {(10, 11)}}
+
+Start betting on flop
+10 high straight draw on street 4
+11 high straight draw on street 4
+12 high straight draw on street 4
+
+Opp outs on street 4 {5: 2, 4: {(10, 11), (10, 6), (5, 6)}}
+
+Start betting on turn
+12 pair on street 5
+Final Hand: 12 Pair
+
+Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 4: {(10, 11), (10, 6), (5, 6)}}
+
+Start betting on river
+Opponent checks on river after we checked
 
 Round Num: 15
 
-5 high straight double draw on street 3
-8 high straight double draw on street 3
+9 pair on street 3
 9 high straight double draw on street 3
-12 high straight double draw on street 3
+10 high straight double draw on street 3
+11 high straight double draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
+Opp outs on street 3 {4: {(8, 6)}}
 
+Opponent checks on flop
+9 pair on street 4
 
-Opp outs on street 4 {5: 2, 4: {(2, 3, 12), (10, 11, 12), (5, 6, 7), (2, 3, 4), (10, 11, 7), (10, 6, 7)}}
+Opp outs on street 4 {5: 1, 4: {(8, 6)}}
 
-8 pair on street 5
-Final Hand: 8 Pair
+Opponent checks on turn
+9 pair on street 5
+Final Hand: 9 Pair
 
-Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8}
+Opp outs on street 5 {5: 3, 4: {(4, 6), (8, 6)}}
 
+Opponent checks on river
 
 Round Num: 16
-
-5 pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {4: {(9, 6, 7), (4, 6, 7), (9, 10, 12), (9, 10, 7)}}
-
-(11, 5) two pair on street 4
-
-Opp outs on street 4 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 0, 4: {(9, 6, 7), (4, 6, 7), (9, 10, 12), (9, 10, 7)}}
-
-(11, 5) two pair on street 5
-Final Hand: (11, 5) Two Pair
-
-Opp outs on street 5 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 4: {(6, 7)}}
 
 
 Round Num: 17
 
-(3, 4) full house on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
+12 pair on street 3
+Flush double draw on street 3
+9 high straight double draw on street 3
+10 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 2, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
+Opp outs on street 3 {5: 0, 4: {(0, 1, 2), (2, 4, 5), (4, 5, 7)}}
 
-(3, 4) full house on street 4
-4 high straight draw on street 4
+Opponent checks on flop
+12 pair on street 4
+10 high straight draw on street 4
+12 high straight draw on street 4
 
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 2, 4: {(1, 2)}}
+Opp outs on street 4 {5: 0, 4: {(2, 4, 5), (4, 5, 7), (8, 9, 11), (8, 9, 7), (0, 1, 2)}}
 
+Opponent checks on turn
 
 Round Num: 18
 
-
-Round Num: 19
-
-7 pair on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-
-Round Num: 20
-
+4 high straight double draw on street 3
 5 high straight double draw on street 3
 6 high straight double draw on street 3
 7 high straight double draw on street 3
 8 high straight double draw on street 3
-9 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(3, 5, 6), (8, 10, 11), (8, 10, 6), (8, 5, 6)}}
+Opp outs on street 3 {4: {(3, 5)}}
 
+Start betting on flop
 8 high straight draw on street 4
-9 high straight draw on street 4
 
-Opp outs on street 4 {4: {(10, 11), (10, 6), (5, 6)}}
+Opp outs on street 4 {5: 3, 4: {(5, 7), (3, 5)}}
 
+Start betting on turn
+11 pair on street 5
+Final Hand: 11 Pair
+
+Opp outs on street 5 {4: {(5, 7), (3, 5)}}
+
+Start betting on river
+
+Round Num: 19
+
+
+Round Num: 20
+
+11 pair on street 3
+7 high straight double draw on street 3
+8 high straight draw on street 3
+
+Opp outs on street 3 {4: {(5, 6)}}
+
+Start betting on flop
+11 pair on street 4
+8 high straight draw on street 4
+
+Opp outs on street 4 {5: 3, 4: {(5, 6)}}
+
+Start betting on turn
+11 pair on street 5
+Final Hand: 11 Pair
+
+Opp outs on street 5 {4: {(5, 6)}}
+
+Start betting on river
 
 Round Num: 21
 
-4 pair on street 3
-8 high straight double draw on street 3
-10 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 3, 4: {(3, 5, 7), (2, 3, 5), (8, 5, 7)}}
-
-4 pair on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 3, 4: {(3, 5, 7), (2, 3, 5), (8, 5, 7)}}
-
-(11, 4) two pair on street 5
-Final Hand: (11, 4) Two Pair
-
-Opp outs on street 5 {6: (11, 4), 7: (11, 4), 5: 3}
-
-
-Round Num: 22
-
-7 pair on street 3
-
-Opp outs on street 3 {4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-7 pair on street 4
-
-Opp outs on street 4 {5: 0, 4: {(9, 6), (4, 6)}}
-
-
-Round Num: 23
-
-10 high straight double draw on street 3
+0 pair on street 3
 11 high straight double draw on street 3
 12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(11, 7), (6, 7), (11, 12)}}
+Opp outs on street 3 {5: 2, 4: {(1, 2, 12), (1, 2, 4)}}
 
+Opponent checks on flop
+0 pair on street 4
 12 high straight draw on street 4
 
-Opp outs on street 4 {5: 3, 4: {11}}
+Opp outs on street 4 {5: 2, 4: {(1, 2)}}
 
+Opponent checks on turn
+0 pair on street 5
+Final Hand: 0 Pair
+
+Opp outs on street 5 {4: {1}}
+
+Opponent bet on river
+
+Round Num: 22
+
+Flush double draw on street 3
+Flush double draw on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
+
+Opp outs on street 3 {5: -1, 4: {(8, 9, 11), (0, 2, 3)}}
+
+Start betting on flop
+4 pair on street 4
+
+Opp outs on street 4 {5: -1, 4: {(8, 9, 11), (0, 2, 3), (2, 3, 5)}}
+
+Start betting on turn
+(6, 4) two pair on street 5
+Final Hand: (6, 4) Two Pair
+
+Opp outs on street 5 {5: -1}
+
+Start betting on river
+
+Round Num: 23
+
+Flush draw on street 3
+5 high straight double draw on street 3
+
+Opp outs on street 3 {5: 1, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
+
+Opponent checks on flop
+8 pair on street 4
+Flush draw on street 4
+
+Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
+
+Opponent checks on turn
+8 pair on street 5
+Flush on street 5
+Final Hand: 5 Flush
+
+Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1, 4: {(9, 11), (9, 6)}}
+
+Opponent bet on river
 
 Round Num: 24
 
 
 Round Num: 25
 
-5 pair on street 3
-5 high straight double draw on street 3
+8 pair on street 3
+Flush double draw on street 3
+8 high straight double draw on street 3
+9 high straight double draw on street 3
+10 high straight draw on street 3
+11 high straight draw on street 3
 
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 4: {(4, 6, 7), (2, 4, 6), (1, 2, 4)}}
+Opp outs on street 3 {5: 3, 4: {(8, 11), (8, 6)}}
 
-5 pair on street 4
+Opponent checks on flop
+(8, 7) two pair on street 4
+Flush draw on street 4
+10 high straight draw on street 4
+11 high straight draw on street 4
 
-Opp outs on street 4 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 1, 4: {(4, 6, 7), (2, 4, 6), (1, 2, 4)}}
+Opp outs on street 4 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 3, 4: {(8, 11), (8, 6)}}
 
-(5, 1) two pair on street 5
-Final Hand: (5, 1) Two Pair
-
-Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {(2, 4)}}
-
+Opponent checks on turn
 
 Round Num: 26
 
 Flush draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-10 high straight double draw on street 3
+9 high straight double draw on street 3
 11 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(1, 2, 12), (1, 2, 4)}}
+Opp outs on street 3 {5: 2, 4: {(8, 6, 7), (8, 10, 12), (8, 10, 7)}}
 
-3 pair on street 4
+Start betting on flop
 Flush draw on street 4
+11 high straight draw on street 4
+12 high straight draw on street 4
 
-Opp outs on street 4 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 2, 4: {(1, 2, 12), (1, 2, 4)}}
+Opp outs on street 4 {5: 2, 4: {(8, 7), (8, 12)}}
 
-3 pair on street 5
+Start betting on turn
+0 pair on street 5
 Flush on street 5
-Final Hand: 10 Flush
+Final Hand: 8 Flush
 
-Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 2}
+Opp outs on street 5 {5: 2, 4: {(8, 7), (8, 12)}}
 
+Start betting on river
 
 Round Num: 27
 
-1 pair on street 3
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
+10 high straight double draw on street 3
+11 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(9, 7), (4, 7)}}
+Opp outs on street 3 {4: {(8, 10, 12), (8, 10, 7), (8, 5, 7)}}
 
-(8, 1) two pair on street 4
+Opponent checks on flop
 
-Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(9, 7), (4, 7)}}
+Opp outs on street 4 {5: 0, 4: {(2, 4, 5), (8, 10, 12), (4, 5, 7), (8, 10, 7), (8, 5, 7)}}
 
-(12, 8) two pair on street 5
-Final Hand: (12, 8) Two Pair
+Opponent checks on turn
+1 pair on street 5
+Final Hand: 1 Pair
 
-Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(9, 7), (4, 7)}}
+Opp outs on street 5 {5: 0}
 
+Opponent checks on river
 
 Round Num: 28
 
+Flush double draw on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
+
+Opp outs on street 3 {5: 0, 4: {(5, 6, 7), (1, 2, 3)}}
+
+Start betting on flop
+
+Opp outs on street 4 {5: 0, 4: {(9, 6, 7), (1, 2, 3), (9, 11, 7), (5, 6, 7), (9, 11, 12)}}
+
+Start betting on turn
+Final Hand: 12 High Card
+
+Opp outs on street 5 {5: 1, 4: {(9, 7), (5, 7)}}
+
+Start betting on river
 
 Round Num: 29
 
-Flush double draw on street 3
+9 pair on street 3
+
+Opp outs on street 3 {5: 1, 4: {(8, 10, 12), (8, 10, 7)}}
+
+Opponent checks on flop
+9 pair on street 4
+
+Opp outs on street 4 {5: 1, 4: {(8, 10)}}
+
+Opponent checks on turn
+(9, 0) two pair on street 5
+Final Hand: (9, 0) Two Pair
+
+Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 1, 4: {(8, 10)}}
+
+Opponent bet on river
+
+Round Num: 30
+
+6 pair on street 3
 4 high straight double draw on street 3
 5 high straight double draw on street 3
 6 high straight draw on street 3
 
-Opp outs on street 3 {5: 0, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
+Opp outs on street 3 {4: {(4, 5)}}
 
-4 pair on street 4
-6 high straight draw on street 4
+Start betting on flop
+6 pair on street 4
+5 high straight draw on street 4
+6 high straight on street 4
 
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 0, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
+Opp outs on street 4 {5: 1, 4: {4}}
 
-4 pair on street 5
-Final Hand: 4 Pair
-
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 3, 4: {(2, 3)}}
-
-
-Round Num: 30
-
+Start betting on turn
 
 Round Num: 31
 
-7 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
+6 pair on street 3
+7 high straight double draw on street 3
+8 high straight double draw on street 3
+9 high straight double draw on street 3
 
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 3}
+Opp outs on street 3 {5: 2, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
 
-7 pair on street 4
-Flush draw on street 4
+Opponent checks on flop
+(6, 0) two pair on street 4
 
-Opp outs on street 4 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 3, 4: {(8, 9, 6), (8, 4, 6), (3, 4, 6), (2, 3, 4)}}
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 2, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
 
-(7, 6) two pair on street 5
-Final Hand: (7, 6) Two Pair
-
-Opp outs on street 5 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(8, 9), (8, 4), (3, 4)}}
-
+Opponent bet on turn
 
 Round Num: 32
 
+Flush double draw on street 3
+3 high straight double draw on street 3
+5 high straight double draw on street 3
+6 high straight double draw on street 3
+7 high straight draw on street 3
+
+Opp outs on street 3 {5: 3, 4: {(0, 1, 2), (4, 5, 6)}}
+
+Start betting on flop
+7 high straight draw on street 4
+9 high straight draw on street 4
+
+Opp outs on street 4 {5: 3, 4: {(8, 10, 11), (4, 5, 6), (0, 1, 2), (8, 10, 6), (8, 5, 6)}}
+
+Start betting on turn
+Final Hand: 6 High Card
+
+Opp outs on street 5 {5: 3, 4: {(0, 1)}}
+
+Start betting on river
+Opponent checks on river after we checked
 
 Round Num: 33
 
-7 pair on street 3
+8 quads on street 3
 
-Opp outs on street 3 {4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
+Opp outs on street 3 {8: 8, 6: (8, None)}
 
-7 pair on street 4
+Opponent checks on flop
+8 quads on street 4
 
-Opp outs on street 4 {4: {(8, 9), (8, 4), (3, 4)}}
+Opp outs on street 4 {8: 8, 6: (8, None), 5: 2, 4: {(9, 10, 12), (9, 10, 7)}}
 
-7 pair on street 5
-Final Hand: 7 Pair
+Opponent checks on turn
+8 quads on street 5
+Final Hand: 8 Quads
 
-Opp outs on street 5 {5: 3, 4: {(8, 9), (8, 4), (3, 4)}}
+Opp outs on street 5 {8: 8, 6: (8, None), 5: 3, 4: {(9, 10, 12), (9, 10, 7)}}
 
+Opponent checks on river
 
 Round Num: 34
 
+(11, 1) two pair on street 3
 Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-6 high straight double draw on street 3
 
-Opp outs on street 3 {5: -1, 4: {(1, 2, 12), (2, 4, 5), (4, 5, 7), (1, 2, 4)}}
+Opp outs on street 3 {5: 0, 4: {(8, 9, 12), (8, 9, 7)}}
 
-10 pair on street 4
+Start betting on flop
+(11, 1) two pair on street 4
 
-Opp outs on street 4 {5: -1, 4: {(2, 4, 5), (4, 5, 7), (1, 2, 12), (8, 9, 7), (1, 2, 4)}}
+Opp outs on street 4 {5: 2, 4: {(8, 9)}}
 
-10 pair on street 5
-Final Hand: 10 Pair
+Start betting on turn
+(11, 1) two pair on street 5
+Final Hand: (11, 1) Two Pair
 
-Opp outs on street 5 {5: -1, 4: {(2, 4, 5), (8, 9, 12), (4, 5, 7), (1, 2, 12), (8, 9, 7), (1, 2, 4)}}
+Opp outs on street 5 {5: 2, 4: {9}}
 
+Start betting on river
 
 Round Num: 35
-
-12 pair on street 3
-3 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 3)}}
-
-12 pair on street 4
-3 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(0, 3), (3, 4)}}
-
-12 pair on street 5
-Final Hand: 12 Pair
-
-Opp outs on street 5 {5: 1, 4: {(0, 3), (3, 4)}}
 
 
 Round Num: 36
@@ -459,135 +517,80 @@ Round Num: 36
 
 Round Num: 37
 
-7 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(3, 5, 6), (0, 1, 3), (8, 5, 6), (1, 3, 5)}}
-
-7 pair on street 4
-4 high straight draw on street 4
-5 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(0, 1), (5, 6), (1, 5)}}
-
-(7, 1) two pair on street 5
-Final Hand: (7, 1) Two Pair
-
-Opp outs on street 5 {5: 3, 4: {0, 5}}
-
 
 Round Num: 38
-
-9 high straight double draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-10 high straight draw on street 4
-11 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(9, 6, 7), (9, 11, 7), (1, 2, 12), (9, 11, 12), (1, 2, 4)}}
-
-0 pair on street 5
-Final Hand: 0 Pair
-
-Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0}
 
 
 Round Num: 39
 
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
-
-7 high straight draw on street 4
-8 high straight draw on street 4
-9 high straight on street 4
-
-Opp outs on street 4 {5: 1, 4: {(6, 7)}}
-
-8 pair on street 5
-9 high straight on street 5
-Final Hand: 9 Straight
-
-Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(6, 7)}}
-
 
 Round Num: 40
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
-5 high straight draw on street 4
-8 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(0, 3)}}
-
-Final Hand: 8 High Card
-
-Opp outs on street 5 {4: {(0, 3)}}
 
 
 Round Num: 41
 
-12 pair on street 3
-Flush double draw on street 3
-12 high straight double draw on street 3
+Flush draw on street 3
+6 high straight double draw on street 3
+7 high straight double draw on street 3
+8 high straight double draw on street 3
+9 high straight double draw on street 3
+10 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(8, 9)}}
+Opp outs on street 3 {5: -1, 4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
 
-12 pair on street 4
+Opponent checks on flop
 Flush draw on street 4
+8 high straight draw on street 4
+9 high straight draw on street 4
+10 high straight draw on street 4
 
-Opp outs on street 4 {5: 3, 4: {(8, 9)}}
+Opp outs on street 4 {5: -1, 4: {(9, 11), (9, 6), (4, 6)}}
 
-12 pair on street 5
+Opponent checks on turn
+8 pair on street 5
 Flush on street 5
-Final Hand: 3 Flush
+Final Hand: 6 Flush
 
-Opp outs on street 5 {5: 3, 4: {(8, 9)}}
+Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(9, 11), (9, 6), (4, 6)}}
 
+Opponent checks on river
 
 Round Num: 42
 
-6 high straight double draw on street 3
-10 high straight double draw on street 3
+Flush double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
+Opp outs on street 3 {5: 3, 4: {(9, 11)}}
 
-10 high straight draw on street 4
+Start betting on flop
+0 pair on street 4
 
-Opp outs on street 4 {5: 2, 4: {(1, 3, 5), (3, 5, 6), (8, 9, 11), (0, 1, 3), (8, 9, 6), (8, 5, 6)}}
+Opp outs on street 4 {5: 3, 4: {(9, 11)}}
 
+Start betting on turn
+0 pair on street 5
+Final Hand: 0 Pair
+
+Opp outs on street 5 {5: 3, 4: {(2, 3), (9, 11)}}
+
+Start betting on river
 
 Round Num: 43
 
-10 pair on street 3
+9 pair on street 3
 9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
+10 high straight draw on street 3
 
-Opp outs on street 3 {4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
+Opp outs on street 3 {5: 2, 4: {(8, 11), (8, 6)}}
 
-10 pair on street 4
+Opponent checks on flop
+9 pair on street 4
+9 high straight draw on street 4
+10 high straight on street 4
 
-Opp outs on street 4 {4: {(4, 6)}}
+Opp outs on street 4 {5: 2, 4: {11, 6}}
 
-(10, 5) two pair on street 5
-Final Hand: (10, 5) Two Pair
-
-Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {(4, 6)}}
-
+Opponent checks on turn
 
 Round Num: 44
 
@@ -595,326 +598,342 @@ Round Num: 44
 Round Num: 45
 
 Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-12 high straight draw on street 3
+3 high straight double draw on street 3
+4 high straight draw on street 3
 
-Opp outs on street 3 {5: 1, 4: {(8, 10, 12), (8, 10, 7), (8, 5, 7)}}
+Opp outs on street 3 {4: {(1, 3)}}
 
-6 pair on street 4
-Flush draw on street 4
-9 high straight draw on street 4
-10 high straight draw on street 4
-11 high straight draw on street 4
-12 high straight draw on street 4
+Opponent checks on flop
+0 pair on street 4
+4 high straight draw on street 4
 
-Opp outs on street 4 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 1, 4: {(8, 10, 12), (8, 10, 7), (8, 5, 7)}}
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(1, 3)}}
 
+Opponent checks on turn
+0 pair on street 5
+Final Hand: 0 Pair
+
+Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(1, 3), (3, 5)}}
+
+Opponent checks on river
 
 Round Num: 46
 
+6 trips on street 3
+Flush double draw on street 3
+7 high straight double draw on street 3
+8 high straight double draw on street 3
+9 high straight double draw on street 3
+
+Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
+
+Start betting on flop
 
 Round Num: 47
 
-11 pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
+5 pair on street 3
+7 high straight double draw on street 3
+8 high straight double draw on street 3
+9 high straight double draw on street 3
 
-Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11}
+Opp outs on street 3 {5: 0, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
 
-11 pair on street 4
+Opponent bet on flop
+5 pair on street 4
 
-Opp outs on street 4 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 4: {(8, 10, 12), (8, 10, 7)}}
+Opp outs on street 4 {5: 1, 4: {(3, 6, 7), (8, 10, 12), (2, 3, 6), (1, 2, 3), (8, 10, 7), (8, 6, 7)}}
 
-(11, 2) two pair on street 5
-Final Hand: (11, 2) Two Pair
+Opponent checks on turn
+5 pair on street 5
+Final Hand: 5 Pair
 
-Opp outs on street 5 {2: (11, None), 3: 11, 6: (11, None), 7: 11}
+Opp outs on street 5 {5: 1, 4: {(8, 7), (8, 12)}}
 
+Opponent checks on river
 
 Round Num: 48
 
+3 pair on street 3
+3 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(9, 10, 11), (1, 2, 3)}}
+
+Start betting on flop
+3 pair on street 4
+
+Opp outs on street 4 {5: 1, 4: {(5, 6, 7), (9, 10, 11), (1, 2, 3)}}
+
+Start betting on turn
+Opponent bet on turn after we checked
 
 Round Num: 49
 
-3 pair on street 3
 4 high straight double draw on street 3
-5 high straight double draw on street 3
+6 high straight double draw on street 3
+8 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
+Opp outs on street 3 {4: {(5, 7)}}
 
-3 pair on street 4
+Opponent checks on flop
+8 high straight draw on street 4
 
-Opp outs on street 4 {5: 1, 4: {(2, 4, 5), (0, 2, 4), (8, 9, 11), (0, 2, 12), (4, 5, 6), (8, 9, 6)}}
+Opp outs on street 4 {5: 1, 4: {5}}
 
-3 pair on street 5
-Final Hand: 3 Pair
-
-Opp outs on street 5 {5: 1, 4: {(4, 5), (8, 9)}}
-
+Opponent bet on turn
 
 Round Num: 50
 
 
 Round Num: 51
 
-10 pair on street 3
+Flush double draw on street 3
+4 high straight double draw on street 3
+5 high straight draw on street 3
+6 high straight draw on street 3
+7 high straight draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
+Opp outs on street 3 {5: 2, 4: {(8, 6), (3, 6)}}
 
-10 pair on street 4
+Opponent checks on flop
+4 high straight draw on street 4
+5 high straight on street 4
 
-Opp outs on street 4 {5: 3, 4: {(8, 9, 12), (0, 3, 4), (8, 9, 7), (3, 4, 5), (0, 3, 12)}}
+Opp outs on street 4 {5: 2, 4: {(2, 3), (8, 6), (3, 6)}}
 
-10 trips on street 5
-Final Hand: 10 Trips
-
-Opp outs on street 5 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 3, 4: {(8, 9, 12), (0, 3, 4), (8, 9, 7), (3, 4, 5), (0, 3, 12)}}
-
+Opponent checks on turn
 
 Round Num: 52
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
 
 
 Round Num: 53
 
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
+5 pair on street 3
 
-Opp outs on street 3 {5: 2, 4: {(5, 7)}}
+Opp outs on street 3 {4: {(2, 3, 4)}}
 
-8 high straight draw on street 4
-9 high straight draw on street 4
-10 high straight draw on street 4
-11 high straight draw on street 4
+Opponent checks on flop
+5 pair on street 4
 
-Opp outs on street 4 {5: 2, 4: {(5, 7)}}
+Opp outs on street 4 {5: 3, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
 
-8 pair on street 5
-Final Hand: 8 Pair
+Opponent checks on turn
+(12, 5) two pair on street 5
+Final Hand: (12, 5) Two Pair
 
-Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 4: {(5, 7)}}
+Opp outs on street 5 {5: 3, 4: {(0, 2, 3), (8, 9, 7), (8, 4, 7), (2, 3, 4), (8, 9, 10), (3, 4, 7)}}
 
+Opponent checks on river
 
 Round Num: 54
-
-10 pair on street 3
-
-Opp outs on street 3 {}
 
 
 Round Num: 55
 
-5 pair on street 3
 Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
+3 high straight draw on street 3
 
-Opp outs on street 3 {5: -1, 4: {(9, 6, 7), (4, 6, 7), (2, 3, 4)}}
+Opp outs on street 3 {5: 0, 4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
 
-5 pair on street 4
+Opponent checks on flop
 3 high straight draw on street 4
+5 high straight draw on street 4
 
-Opp outs on street 4 {5: -1, 4: {(9, 6, 7), (0, 2, 3), (9, 10, 11), (2, 3, 4), (4, 6, 7)}}
+Opp outs on street 4 {5: 1, 4: {(4, 6), (1, 4)}}
 
-(5, 2) two pair on street 5
-Final Hand: (5, 2) Two Pair
+Opponent checks on turn
+3 high straight on street 5
+Final Hand: 3 Straight
 
-Opp outs on street 5 {5: 1, 4: {(0, 3), (3, 4)}}
+Opp outs on street 5 {5: 1, 4: {(1, 12), (4, 6), (1, 4)}}
 
+Opponent checks on river
 
 Round Num: 56
 
+6 pair on street 3
 10 high straight double draw on street 3
 
-Opp outs on street 3 {5: 0, 4: {(8, 7)}}
+Opp outs on street 3 {5: 2, 4: {(3, 5, 7), (8, 9, 7), (2, 3, 5), (8, 5, 7)}}
 
+Start betting on flop
+(10, 6) two pair on street 4
+
+Opp outs on street 4 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 3, 4: {(3, 5, 7), (8, 9, 7), (2, 3, 5), (8, 5, 7)}}
+
+Start betting on turn
+(10, 6) full house on street 5
+Final Hand: (10, 6) Full House
+
+Opp outs on street 5 {8: 10, 6: (10, None)}
+
+Start betting on river
 
 Round Num: 57
 
-4 high straight double draw on street 3
-5 high straight double draw on street 3
+5 pair on street 3
 6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(3, 5, 6), (1, 2, 3), (8, 5, 6)}}
+Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 4: {(3, 4, 6), (1, 3, 4)}}
 
+Opponent checks on flop
+5 pair on street 4
 
-Opp outs on street 4 {5: 3, 4: {(3, 5, 6), (1, 2, 3), (8, 10, 11), (8, 10, 6), (8, 5, 6)}}
+Opp outs on street 4 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 1, 4: {(3, 4, 6), (1, 3, 4)}}
 
+Opponent checks on turn
+5 trips on street 5
+Final Hand: 5 Trips
+
+Opp outs on street 5 {8: 5, 6: (5, None), 5: 3, 4: {(3, 4, 6), (1, 3, 4)}}
+
+Opponent checks on river
 
 Round Num: 58
 
 
 Round Num: 59
 
-1 pair on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
+8 pair on street 3
+Flush double draw on street 3
+7 high straight double draw on street 3
+8 high straight draw on street 3
 
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1}
+Opp outs on street 3 {5: 0, 4: {(5, 6)}}
 
-1 pair on street 4
+Opponent checks on flop
+8 pair on street 4
+Flush draw on street 4
+8 high straight draw on street 4
 
-Opp outs on street 4 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
+Opp outs on street 4 {5: 0, 4: {(5, 6)}}
 
-(11, 1) two pair on street 5
-Final Hand: (11, 1) Two Pair
-
-Opp outs on street 5 {6: (11, 1), 7: (11, 1), 5: 3, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
+Opponent bet on turn
 
 Round Num: 60
 
 
 Round Num: 61
 
-Flush double draw on street 3
-8 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
+1 trips on street 3
 
-Opp outs on street 3 {4: {(6, 7)}}
+Opp outs on street 3 {5: 2, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
 
+Opponent checks on flop
+1 trips on street 4
 
-Opp outs on street 4 {5: 0, 4: {(6, 7), (1, 3), (3, 6)}}
+Opp outs on street 4 {5: 2, 4: {(0, 12), (4, 5), (0, 4)}}
 
-Final Hand: 11 High Card
-
-Opp outs on street 5 {4: {3, 7}}
-
+Opponent bet on turn
 
 Round Num: 62
 
+3 pair on street 3
 Flush double draw on street 3
-3 high straight double draw on street 3
-6 high straight double draw on street 3
-9 high straight double draw on street 3
+7 high straight double draw on street 3
+10 high straight double draw on street 3
+11 high straight double draw on street 3
 
-Opp outs on street 3 {5: -1, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4)}}
+Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {(4, 5, 7), (2, 4, 5)}}
 
-Flush draw on street 4
+Start betting on flop
+(11, 3) two pair on street 4
 
-Opp outs on street 4 {5: 3, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4)}}
+Opp outs on street 4 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 2, 4: {(4, 5, 7), (2, 4, 5)}}
 
-12 pair on street 5
-Final Hand: 12 Pair
-
-Opp outs on street 5 {5: 3, 4: {(1, 3)}}
-
+Start betting on turn
 
 Round Num: 63
 
-2 pair on street 3
+7 high straight double draw on street 3
+8 high straight double draw on street 3
+10 high straight double draw on street 3
 
-Opp outs on street 3 {5: 1, 4: {(1, 3, 12), (1, 3, 4)}}
+Opp outs on street 3 {5: 3, 4: {(3, 5, 7), (1, 2, 3), (2, 3, 5), (8, 5, 7)}}
 
-2 pair on street 4
+Opponent checks on flop
+7 high straight draw on street 4
 
-Opp outs on street 4 {5: 2, 4: {(1, 3, 12), (8, 10, 11), (1, 3, 4), (8, 10, 6), (8, 5, 6)}}
+Opp outs on street 4 {5: 3, 4: {(1, 2), (2, 5), (5, 7)}}
 
-2 pair on street 5
-Final Hand: 2 Pair
+Opponent checks on turn
+7 high straight on street 5
+Final Hand: 7 Straight
 
-Opp outs on street 5 {5: 1, 4: {(8, 6)}}
+Opp outs on street 5 {4: {2, 7}}
 
+Opponent checks on river
 
 Round Num: 64
 
-6 pair on street 3
+3 pair on street 3
 Flush double draw on street 3
-
-Opp outs on street 3 {4: {(8, 10, 12), (8, 10, 7)}}
-
-(6, 4) two pair on street 4
-
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 2, 4: {(8, 10, 12), (8, 10, 7)}}
-
-(6, 4) two pair on street 5
-Final Hand: (6, 4) Two Pair
-
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4}
-
-
-Round Num: 65
-
-1 trips on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 3}
-
-1 trips on street 4
-
-Opp outs on street 4 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 3, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
-1 trips on street 5
-Final Hand: 1 Trips
-
-Opp outs on street 5 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 3, 4: {(0, 3, 4), (8, 9, 7), (3, 4, 5), (0, 3, 12)}}
-
-
-Round Num: 66
-
-
-Round Num: 67
-
-5 high straight double draw on street 3
-6 high straight draw on street 3
-
-Opp outs on street 3 {4: {(4, 5, 7), (2, 4, 5), (8, 10, 7), (8, 5, 7)}}
-
-6 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(2, 4, 5), (4, 5, 7), (1, 2, 12), (8, 10, 7), (8, 5, 7), (1, 2, 4)}}
-
-Final Hand: 5 High Card
-
-Opp outs on street 5 {5: 1, 4: {(4, 5), (8, 10), (8, 5)}}
-
-
-Round Num: 68
-
-9 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 7)}}
-
-
-Round Num: 69
-
-Flush draw on street 3
 3 high straight double draw on street 3
 4 high straight double draw on street 3
 5 high straight double draw on street 3
 6 high straight double draw on street 3
-7 high straight double draw on street 3
 
-Opp outs on street 3 {5: -1, 4: {(0, 1, 2), (4, 5, 6)}}
+Opp outs on street 3 {5: 2, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
 
+Start betting on flop
 3 pair on street 4
-Flush draw on street 4
+6 high straight draw on street 4
 
-Opp outs on street 4 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: -1, 4: {(0, 1, 2), (4, 5, 6)}}
+Opp outs on street 4 {5: 2, 4: {(2, 5), (5, 7)}}
 
+Start betting on turn
 3 pair on street 5
 Final Hand: 3 Pair
 
-Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: -1, 4: {(0, 2)}}
+Opp outs on street 5 {4: {(1, 2), (2, 5), (5, 7)}}
+
+Start betting on river
+
+Round Num: 65
+
+12 pair on street 3
+Flush double draw on street 3
+12 high straight double draw on street 3
+
+Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 4: {(8, 9, 11)}}
+
+Opponent checks on flop
+
+Round Num: 66
+
+0 pair on street 3
+Flush double draw on street 3
+
+Opp outs on street 3 {5: 2, 4: {(1, 3, 12), (1, 3, 4)}}
+
+Start betting on flop
+0 pair on street 4
+Flush draw on street 4
+
+Opp outs on street 4 {5: 2, 4: {(1, 3, 12), (9, 10, 6), (9, 5, 6), (1, 3, 4), (9, 10, 11), (4, 5, 6)}}
+
+Start betting on turn
+0 pair on street 5
+Final Hand: 0 Pair
+
+Opp outs on street 5 {5: 2, 4: {(3, 12), (3, 4)}}
+
+Start betting on river
+
+Round Num: 67
+
+
+Round Num: 68
+
+Flush draw on street 3
+8 high straight double draw on street 3
+9 high straight draw on street 3
+10 high straight on street 3
+
+Opp outs on street 3 {5: 2, 4: {(10, 11), (10, 6), (5, 6)}}
+
+Start betting on flop
+
+Round Num: 69
 
 
 Round Num: 70
@@ -922,412 +941,562 @@ Round Num: 70
 
 Round Num: 71
 
-7 pair on street 3
-Flush double draw on street 3
+9 pair on street 3
 
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 3, 4: {(8, 9, 11), (8, 9, 6)}}
+Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9}
 
-7 pair on street 4
-
-Opp outs on street 4 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 3, 4: {(8, 9, 11), (8, 9, 6)}}
-
-(10, 7) two pair on street 5
-Final Hand: (10, 7) Two Pair
-
-Opp outs on street 5 {6: (10, 7), 7: (10, 7), 5: 3, 4: {(8, 9, 11), (8, 9, 6)}}
-
+Opponent checks on flop
 
 Round Num: 72
 
 
 Round Num: 73
 
+1 pair on street 3
+Flush double draw on street 3
 3 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(0, 1, 2), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
+Opp outs on street 3 {5: 2, 4: {(0, 2, 3), (8, 9, 10)}}
 
-5 pair on street 4
+Opponent checks on flop
+1 pair on street 4
 
-Opp outs on street 4 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {(0, 1, 2), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
+Opp outs on street 4 {5: 2, 4: {(8, 10)}}
 
-5 pair on street 5
-Final Hand: 5 Pair
+Opponent checks on turn
+1 pair on street 5
+Final Hand: 1 Pair
 
-Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {(0, 2), (2, 4)}}
+Opp outs on street 5 {5: 2, 4: {(8, 10)}}
 
+Opponent checks on river
 
 Round Num: 74
 
+2 pair on street 3
+Flush double draw on street 3
+9 high straight double draw on street 3
 10 high straight double draw on street 3
-12 high straight double draw on street 3
+11 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(0, 1, 3), (3, 4, 5)}}
+Opp outs on street 3 {5: 1, 4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
 
+Start betting on flop
+2 pair on street 4
+
+Opp outs on street 4 {5: 2, 4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
+
+Start betting on turn
+2 pair on street 5
+Final Hand: 2 Pair
+
+Opp outs on street 5 {5: 2, 4: {(9, 11), (9, 6), (4, 6)}}
+
+Start betting on river
 
 Round Num: 75
 
-5 trips on street 3
+11 trips on street 3
 
-Opp outs on street 3 {5: 3, 4: {(8, 9, 10)}}
+Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 1, 4: {(8, 9, 10)}}
 
+Opponent bet on flop
+11 trips on street 4
+
+Opp outs on street 4 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 1, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
+
+Opponent bet on turn
+11 trips on street 5
+Final Hand: 11 Trips
+
+Opp outs on street 5 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 3, 4: {(8, 9), (8, 4), (3, 4)}}
+
+Opponent checks on river
 
 Round Num: 76
 
-(12, 6) two pair on street 3
 Flush double draw on street 3
-7 high straight double draw on street 3
+10 high straight double draw on street 3
+11 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (4, 5, 6)}}
+Opp outs on street 3 {5: 3, 4: {(8, 9, 12), (8, 9, 7)}}
 
-(12, 6) two pair on street 4
-
-Opp outs on street 4 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 1, 4: {(0, 1, 2), (4, 5, 6)}}
-
-(12, 6) two pair on street 5
-Final Hand: (12, 6) Two Pair
-
-Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {(0, 2)}}
-
+Start betting on flop
+Opponent bets on flop after we check
 
 Round Num: 77
 
-4 pair on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(3, 5, 6), (0, 1, 3), (8, 5, 6), (1, 3, 5)}}
-
-4 pair on street 4
-8 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(8, 5), (3, 5)}}
-
-(8, 4) two pair on street 5
-Final Hand: (8, 4) Two Pair
-
-Opp outs on street 5 {5: 3, 4: {5}}
-
-
-Round Num: 78
-
 Flush double draw on street 3
+7 high straight double draw on street 3
 8 high straight double draw on street 3
 9 high straight double draw on street 3
 10 high straight double draw on street 3
+11 high straight double draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
+Opp outs on street 3 {4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
 
+Opponent checks on flop
+6 pair on street 4
 Flush draw on street 4
 
-Opp outs on street 4 {5: 2, 4: {(0, 3, 4), (9, 10, 6), (9, 5, 6), (9, 10, 11), (0, 3, 12), (3, 4, 5), (4, 5, 6)}}
+Opp outs on street 4 {5: 0, 4: {(8, 9), (8, 4), (3, 4)}}
 
-Final Hand: 6 High Card
+Opponent checks on turn
+6 pair on street 5
+Final Hand: 6 Pair
 
-Opp outs on street 5 {5: 1, 4: {(9, 6), (4, 6), (3, 4)}}
+Opp outs on street 5 {4: {8, 3}}
 
+Opponent checks on river
+
+Round Num: 78
+
+2 pair on street 3
+
+Opp outs on street 3 {5: 3, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4)}}
+
+Start betting on flop
+(2, 0) two pair on street 4
+
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4)}}
+
+Start betting on turn
+(2, 0) two pair on street 5
+Final Hand: (2, 0) Two Pair
+
+Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4), (8, 9, 6), (8, 4, 6)}}
+
+Start betting on river
 
 Round Num: 79
 
-4 pair on street 3
-Flush draw on street 3
-8 high straight double draw on street 3
+Flush double draw on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
 
-Opp outs on street 3 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 4: {(5, 6, 7)}}
+Opp outs on street 3 {5: 1, 4: {(2, 3)}}
 
-4 pair on street 4
-Flush draw on street 4
+Opponent checks on flop
+6 pair on street 4
 
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 0, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
+Opp outs on street 4 {5: 1, 4: {(2, 3)}}
 
-4 pair on street 5
-Final Hand: 4 Pair
+Opponent checks on turn
+6 pair on street 5
+Final Hand: 6 Pair
 
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 0, 4: {(10, 11)}}
+Opp outs on street 5 {5: 2, 4: {(2, 3)}}
 
+Opponent checks on river
 
 Round Num: 80
-
-(12, 5) two pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(0, 1, 2), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-(12, 5) two pair on street 4
-Flush draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(8, 9, 11), (0, 1, 2), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
 
 
 Round Num: 81
 
-(1, 0) two pair on street 3
+11 high straight double draw on street 3
 
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(2, 3, 12), (2, 3, 4)}}
+Opp outs on street 3 {4: {(0, 2, 12), (2, 4, 5), (0, 2, 4), (4, 5, 6)}}
 
-(10, 1) two pair on street 4
+Opponent bet on flop
 
-Opp outs on street 4 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 3, 4: {(2, 3, 12), (2, 3, 4)}}
+Opp outs on street 4 {5: 2, 4: {(2, 4), (4, 6)}}
 
+Opponent checks on turn
+Final Hand: 11 High Card
+
+Opp outs on street 5 {5: 2, 4: {4}}
+
+Opponent checks on river
 
 Round Num: 82
 
 
 Round Num: 83
 
-10 pair on street 3
 3 high straight double draw on street 3
-4 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(1, 2, 12), (1, 2, 4)}}
+Opp outs on street 3 {5: 0, 4: {(0, 1, 2), (8, 9, 10)}}
 
-10 pair on street 4
+Opponent checks on flop
 3 high straight draw on street 4
 
-Opp outs on street 4 {5: 0, 4: {(1, 2)}}
+Opp outs on street 4 {5: 0, 4: {(0, 1)}}
 
-(12, 10) two pair on street 5
-Final Hand: (12, 10) Two Pair
+Opponent checks on turn
+Final Hand: 6 High Card
 
-Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 0, 4: {(1, 2)}}
+Opp outs on street 5 {5: 2, 4: {(0, 1), (8, 10)}}
 
+Opponent checks on river
 
 Round Num: 84
 
-7 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
 11 high straight double draw on street 3
 12 high straight double draw on street 3
 
-Opp outs on street 3 {5: -1, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
+Opp outs on street 3 {5: 3, 4: {(10, 12), (10, 7)}}
 
-7 pair on street 4
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(9, 10)}}
-
-7 pair on street 5
-Final Hand: 7 Pair
-
-Opp outs on street 5 {5: 1, 4: {(9, 10), (9, 5), (4, 5)}}
-
+Start betting on flop
+Opponent bets on flop after we check
 
 Round Num: 85
 
+1 pair on street 3
+Flush double draw on street 3
+3 high straight double draw on street 3
+
+Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(2, 3, 4)}}
+
+Opponent checks on flop
+(1, 0) two pair on street 4
+
+Opp outs on street 4 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(2, 3, 12), (2, 3, 4)}}
+
+Opponent checks on turn
+(1, 0) two pair on street 5
+Final Hand: (1, 0) Two Pair
+
+Opp outs on street 5 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(3, 12), (3, 4)}}
+
+Opponent checks on river
 
 Round Num: 86
-
-2 pair on street 3
-Flush double draw on street 3
-3 high straight draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 3, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
-2 trips on street 4
-3 high straight draw on street 4
-
-Opp outs on street 4 {8: 2, 6: (2, None), 5: 3, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
-(2, 8) full house on street 5
-Final Hand: (2, 8) Full House
-
-Opp outs on street 5 {8: 2, 6: (2, None)}
 
 
 Round Num: 87
 
-3 pair on street 3
-Flush draw on street 3
-4 high straight double draw on street 3
+1 pair on street 3
+Flush double draw on street 3
+11 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(5, 6, 7), (9, 10, 12), (9, 10, 7)}}
+Opp outs on street 3 {5: 3, 4: {(8, 9, 12), (8, 9, 7)}}
 
-3 pair on street 4
-Flush draw on street 4
+Opponent checks on flop
+1 pair on street 4
 
-Opp outs on street 4 {5: 3, 4: {(6, 7)}}
+Opp outs on street 4 {5: 3, 4: {(8, 9, 12), (0, 3, 4), (8, 9, 7), (0, 3, 12), (3, 4, 5)}}
 
-3 pair on street 5
-Final Hand: 3 Pair
+Opponent checks on turn
+(10, 1) two pair on street 5
+Final Hand: (10, 1) Two Pair
 
-Opp outs on street 5 {4: {7}}
+Opp outs on street 5 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 3, 4: {(8, 9, 12), (0, 3, 4), (8, 9, 7), (0, 3, 12), (3, 4, 5)}}
 
+Opponent bet on river
 
 Round Num: 88
 
-7 pair on street 3
+5 high straight double draw on street 3
+6 high straight double draw on street 3
+8 high straight double draw on street 3
+12 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(3, 5, 6), (8, 9, 11), (8, 9, 6), (8, 5, 6)}}
+Opp outs on street 3 {5: 1, 4: {(3, 5, 6), (0, 1, 3), (5, 6, 7), (1, 3, 5)}}
 
-7 pair on street 4
+Start betting on flop
+8 pair on street 4
 
-Opp outs on street 4 {5: 0, 4: {(8, 9), (8, 5), (3, 5)}}
+Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1, 4: {(3, 5, 6), (0, 1, 3), (5, 6, 7), (1, 3, 5)}}
 
+Start betting on turn
+8 pair on street 5
+Final Hand: 8 Pair
+
+Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 4: {(0, 1), (5, 6), (1, 5)}}
+
+Start betting on river
 
 Round Num: 89
 
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
+2 trips on street 3
 
-Opp outs on street 3 {5: 2, 4: {(0, 2, 3), (2, 3, 5)}}
+Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 1, 4: {(1, 3, 12), (1, 3, 4)}}
 
-10 pair on street 4
+Opponent checks on flop
+2 trips on street 4
 
-Opp outs on street 4 {5: 2, 4: {(8, 9, 11), (0, 2, 3), (2, 3, 5)}}
+Opp outs on street 4 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 1, 4: {(1, 3, 12), (1, 3, 4)}}
 
+Opponent checks on turn
+2 trips on street 5
+Final Hand: 2 Trips
+
+Opp outs on street 5 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 1, 4: {(1, 12), (1, 4)}}
+
+Opponent checks on river
 
 Round Num: 90
 
+Flush double draw on street 3
+9 high straight double draw on street 3
+10 high straight draw on street 3
+11 high straight draw on street 3
+
+Opp outs on street 3 {5: 1, 4: {(8, 10, 7), (8, 5, 7)}}
+
+Start betting on flop
+10 pair on street 4
+10 high straight draw on street 4
+11 high straight draw on street 4
+
+Opp outs on street 4 {5: 1, 4: {(8, 7)}}
+
+Start betting on turn
+10 pair on street 5
+Final Hand: 10 Pair
+
+Opp outs on street 5 {4: {(8, 7)}}
+
+Start betting on river
 
 Round Num: 91
 
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
+0 pair on street 3
+6 high straight double draw on street 3
+7 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
+Opp outs on street 3 {5: 3, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
 
-1 pair on street 4
+Opponent checks on flop
+(3, 0) two pair on street 4
 
-Opp outs on street 4 {4: {(2, 3)}}
+Opp outs on street 4 {5: 3, 4: {(2, 4), (4, 7)}}
 
-(12, 1) two pair on street 5
-Final Hand: (12, 1) Two Pair
+Opponent checks on turn
+(5, 3) two pair on street 5
+Final Hand: (5, 3) Two Pair
 
-Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 4: {(2, 3)}}
+Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {(2, 4), (4, 7)}}
 
+Opponent bet on river
 
 Round Num: 92
 
 
 Round Num: 93
 
-3 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
+4 high straight double draw on street 3
+5 high straight double draw on street 3
+6 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(0, 1, 3), (8, 9, 10)}}
+Opp outs on street 3 {5: 0, 4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
 
+Opponent bet on flop
+
+Opp outs on street 4 {5: 3, 4: {(0, 1, 4), (8, 10, 12), (0, 1, 12), (8, 10, 7), (4, 5, 6), (1, 4, 5)}}
+
+Opponent checks on turn
+3 pair on street 5
+Final Hand: 3 Pair
+
+Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 3, 4: {(0, 1, 4), (8, 10, 12), (0, 1, 12), (8, 10, 7), (4, 5, 6), (1, 4, 5)}}
+
+Opponent checks on river
 
 Round Num: 94
 
+5 high straight double draw on street 3
+6 high straight draw on street 3
+
+Opp outs on street 3 {4: {(4, 6, 7), (8, 6, 7), (2, 4, 6), (1, 2, 4)}}
+
+Start betting on flop
+5 high straight draw on street 4
+6 high straight on street 4
+
+Opp outs on street 4 {5: 2, 4: {(6, 7), (1, 2), (2, 6)}}
+
+Start betting on turn
+5 pair on street 5
+6 high straight on street 5
+Final Hand: 6 Straight
+
+Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 2, 4: {(6, 7), (1, 2), (2, 6)}}
+
+Start betting on river
+Opponent raised on river
 
 Round Num: 95
 
+5 high straight double draw on street 3
+6 high straight draw on street 3
+7 high straight draw on street 3
+
+Opp outs on street 3 {5: 0, 4: {(3, 5, 7), (8, 10, 7), (2, 3, 5), (8, 5, 7)}}
+
+Opponent checks on flop
+5 high straight draw on street 4
+6 high straight on street 4
+
+Opp outs on street 4 {5: 2, 4: {(3, 5)}}
+
+Opponent checks on turn
+5 high straight on street 5
+6 high straight on street 5
+Final Hand: 6 Straight
+
+Opp outs on street 5 {5: 2, 4: {(0, 3), (3, 5)}}
+
+Opponent checks on river
 
 Round Num: 96
 
+9 pair on street 3
+12 high straight double draw on street 3
+
+Opp outs on street 3 {5: 1, 4: {(8, 6, 7), (8, 10, 11)}}
+
+Start betting on flop
+9 pair on street 4
+12 high straight draw on street 4
+
+Opp outs on street 4 {5: 1, 4: {(6, 7), (10, 11)}}
+
+Start betting on turn
+9 pair on street 5
+12 high straight on street 5
+Final Hand: 12 Straight
+
+Opp outs on street 5 {5: 1, 4: {10}}
+
+Start betting on river
 
 Round Num: 97
 
-Flush double draw on street 3
+6 high straight double draw on street 3
 8 high straight double draw on street 3
 9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
 
-Opp outs on street 3 {5: -1, 4: {(0, 2, 3)}}
+Opp outs on street 3 {4: {(4, 5, 7), (3, 4, 5), (9, 10, 7), (9, 5, 7)}}
 
-8 pair on street 4
-Flush draw on street 4
+Opponent bet on flop
 
-Opp outs on street 4 {5: 2, 4: {(9, 10, 6), (0, 2, 3), (9, 5, 6), (9, 10, 11), (4, 5, 6)}}
+Opp outs on street 4 {4: {(4, 5, 7), (0, 1, 3), (3, 4, 5), (9, 10, 11), (9, 10, 7), (9, 5, 7)}}
 
-8 pair on street 5
-Final Hand: 8 Pair
+Opponent checks on turn
+12 pair on street 5
+Final Hand: 12 Pair
 
-Opp outs on street 5 {5: 2, 4: {(5, 6)}}
+Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 1, 4: {(4, 5, 7), (0, 1, 3), (3, 4, 5), (9, 10, 11), (9, 10, 7), (9, 5, 7)}}
 
+Opponent checks on river
 
 Round Num: 98
 
 
 Round Num: 99
 
-8 pair on street 3
-Flush double draw on street 3
+9 high straight double draw on street 3
 10 high straight double draw on street 3
+11 high straight double draw on street 3
 
-Opp outs on street 3 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 4: {(4, 5, 7), (9, 10, 7), (9, 5, 7)}}
+Opp outs on street 3 {}
 
+Opponent checks on flop
+7 pair on street 4
+
+Opp outs on street 4 {5: 0, 4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
+
+Opponent checks on turn
+7 pair on street 5
+Final Hand: 7 Pair
+
+Opp outs on street 5 {5: 0, 4: {(8, 6), (3, 6)}}
+
+Opponent checks on river
 
 Round Num: 100
 
 
 Round Num: 101
 
-5 pair on street 3
 5 high straight double draw on street 3
 6 high straight draw on street 3
+7 high straight draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(3, 4)}}
+Opp outs on street 3 {5: 0, 4: {(0, 1, 2), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
 
-5 pair on street 4
-5 high straight draw on street 4
+Opponent checks on flop
 6 high straight draw on street 4
+7 high straight draw on street 4
 
-Opp outs on street 4 {5: 3, 4: {(3, 4)}}
+Opp outs on street 4 {5: 0, 4: {(8, 9, 10), (0, 1, 2), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
 
-5 pair on street 5
-5 high straight on street 5
-6 high straight on street 5
-Final Hand: 6 Straight
+Opponent checks on turn
+Final Hand: 6 High Card
 
-Opp outs on street 5 {5: 3, 4: {3}}
+Opp outs on street 5 {5: 0, 4: {(1, 2)}}
 
+Opponent checks on river
 
 Round Num: 102
 
+Flush double draw on street 3
+9 high straight double draw on street 3
+10 high straight double draw on street 3
+11 high straight double draw on street 3
+12 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
+
+Start betting on flop
+Opponent bets on flop after we check
 
 Round Num: 103
-
-Flush double draw on street 3
-7 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(1, 2, 12), (1, 2, 4), (4, 5, 6)}}
-
-
-Opp outs on street 4 {5: 0, 4: {(2, 4), (2, 12)}}
-
-1 pair on street 5
-Final Hand: 1 Pair
-
-Opp outs on street 5 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 0, 4: {(2, 4), (2, 12)}}
 
 
 Round Num: 104
 
+0 pair on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(2, 3, 12), (2, 3, 4)}}
+
+Start betting on flop
+0 pair on street 4
+
+Opp outs on street 4 {5: 3, 4: {(2, 3, 12), (2, 3, 4), (8, 9, 10)}}
+
+Start betting on turn
+(9, 0) two pair on street 5
+Final Hand: (9, 0) Two Pair
+
+Opp outs on street 5 {5: 3, 4: {(8, 10)}}
+
+Start betting on river
 
 Round Num: 105
 
-6 pair on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
+5 pair on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
+5 high straight draw on street 3
 
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 4: {(8, 10, 7), (8, 5, 7)}}
+Opp outs on street 3 {4: {(0, 3)}}
 
+Opponent checks on flop
+(12, 5) two pair on street 4
+5 high straight draw on street 4
+
+Opp outs on street 4 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 1, 4: {(0, 3)}}
+
+Opponent checks on turn
+(12, 5) two pair on street 5
+5 high straight on street 5
+Final Hand: 5 Straight
+
+Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 4: {0}}
+
+Opponent checks on river
 
 Round Num: 106
 
 
 Round Num: 107
-
-2 trips on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {8: 2, 6: (2, None)}
 
 
 Round Num: 108
@@ -1336,5926 +1505,1018 @@ Round Num: 108
 Round Num: 109
 
 Flush double draw on street 3
-3 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 1, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
+Opp outs on street 3 {5: 0, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
 
+Opponent checks on flop
 
-Opp outs on street 4 {5: 2, 4: {(5, 6)}}
+Opp outs on street 4 {5: 3, 4: {(8, 6), (3, 6)}}
 
-Final Hand: 12 High Card
+Opponent checks on turn
+Final Hand: 11 High Card
 
-Opp outs on street 5 {4: {(0, 1), (5, 6), (1, 5)}}
+Opp outs on street 5 {5: 0, 4: {8, 3}}
 
+Opponent checks on river
 
 Round Num: 110
 
 
 Round Num: 111
 
+Flush double draw on street 3
+4 high straight double draw on street 3
+5 high straight double draw on street 3
+6 high straight double draw on street 3
+7 high straight double draw on street 3
+11 high straight double draw on street 3
+
+Opp outs on street 3 {5: -1, 4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
+
+Opponent checks on flop
+3 pair on street 4
+Flush draw on street 4
+
+Opp outs on street 4 {5: 3, 4: {(0, 1), (5, 6), (1, 5)}}
+
+Opponent bet on turn
 
 Round Num: 112
 
-
-Round Num: 113
-
-(12, 4) two pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(2, 3), (3, 7), (8, 7)}}
-
-
-Round Num: 114
-
-
-Round Num: 115
-
-
-Round Num: 116
-
-
-Round Num: 117
-
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(0, 2, 3), (2, 3, 5)}}
-
-7 high straight draw on street 4
-8 high straight draw on street 4
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(3, 5, 7), (0, 2, 3), (2, 3, 5), (8, 10, 7), (8, 5, 7)}}
-
-
-Round Num: 118
-
-
-Round Num: 119
-
-Flush double draw on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(9, 7)}}
-
-6 pair on street 4
-Flush draw on street 4
-10 high straight draw on street 4
-
-Opp outs on street 4 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 3, 4: {(9, 7)}}
-
-(6, 1) two pair on street 5
-Flush on street 5
-Final Hand: 9 Flush
-
-Opp outs on street 5 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 3, 4: {(9, 7)}}
-
-
-Round Num: 120
-
-
-Round Num: 121
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 6), (8, 4, 6), (3, 4, 6), (2, 3, 4)}}
-
-
-Round Num: 122
-
-
-Round Num: 123
-
-3 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {(0, 1, 2)}}
-
-
-Round Num: 124
-
-
-Round Num: 125
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(3, 5)}}
-
-3 high straight draw on street 4
-4 high straight on street 4
-
-Opp outs on street 4 {5: 1, 4: {5}}
-
-
-Round Num: 126
-
-
-Round Num: 127
-
-12 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 4: {(8, 9, 10)}}
-
-
-Round Num: 128
-
-
-Round Num: 129
-
-
-Round Num: 130
-
-
-Round Num: 131
-
-0 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 2)}}
-
-0 pair on street 4
-Flush draw on street 4
-4 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(1, 2)}}
-
-0 pair on street 5
-Flush on street 5
-Final Hand: 7 Flush
-
-Opp outs on street 5 {5: 1, 4: {(1, 2), (2, 5), (5, 7)}}
-
-
-Round Num: 132
-
-
-Round Num: 133
-
-8 trips on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(9, 10, 11), (0, 2, 3)}}
-
-
-Round Num: 134
-
-
-Round Num: 135
-
-(6, 3) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 2}
-
-
-Round Num: 136
-
-
-Round Num: 137
-
-7 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
-
-
-Round Num: 138
-
-
-Round Num: 139
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 9, 6), (8, 4, 6), (3, 4, 6), (2, 3, 4)}}
-
-4 high straight draw on street 4
-5 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(3, 4)}}
-
-Final Hand: 9 High Card
-
-Opp outs on street 5 {4: {(8, 9), (8, 4), (3, 4)}}
-
-
-Round Num: 140
-
-
-Round Num: 141
-
-8 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
-
-
-Round Num: 142
-
-
-Round Num: 143
-
-6 pair on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 2, 4: {(8, 9, 7)}}
-
-
-Round Num: 144
-
-
-Round Num: 145
-
-
-Round Num: 146
-
-
-Round Num: 147
-
-3 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(1, 3)}}
-
-3 pair on street 4
-3 high straight draw on street 4
-4 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(1, 3)}}
-
-(4, 3) two pair on street 5
-Final Hand: (4, 3) Two Pair
-
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 4: {(1, 3)}}
-
-
-Round Num: 148
-
-
-Round Num: 149
-
-11 pair on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 3, 12), (1, 3, 4)}}
-
-
-Round Num: 150
-
-
-Round Num: 151
-
-11 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 4: {(8, 9, 10)}}
-
-
-Round Num: 152
-
-
-Round Num: 153
-
-5 trips on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 1, 4: {(8, 6, 7)}}
-
-
-Round Num: 154
-
-
-Round Num: 155
-
-9 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 3), (8, 10, 11)}}
-
-
-Round Num: 156
-
-
-Round Num: 157
-
-10 pair on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(3, 5, 7), (8, 9, 7), (2, 3, 5), (8, 5, 7)}}
-
-
-Round Num: 158
-
-
-Round Num: 159
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 11), (0, 2, 3)}}
-
-
-Round Num: 160
-
-
-Round Num: 161
-
-6 pair on street 3
-Flush draw on street 3
-3 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(0, 1, 3), (3, 4, 5)}}
-
-
-Round Num: 162
-
-
-Round Num: 163
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
-
-
-Round Num: 164
-
-
-Round Num: 165
-
-Flush draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(5, 6)}}
-
-
-Round Num: 166
-
-
-Round Num: 167
-
-
-Round Num: 168
-
-
-Round Num: 169
-
-6 quads on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
-
-
-Round Num: 170
-
-
-Round Num: 171
-
-(3, 1) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
-
-
-Round Num: 172
-
-
-Round Num: 173
-
-
-Round Num: 174
-
-
-Round Num: 175
-
-5 pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 3), (3, 6)}}
-
-
-Round Num: 176
-
-
-Round Num: 177
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 3)}}
-
-6 pair on street 4
-Flush draw on street 4
-
-Opp outs on street 4 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 1, 4: {(0, 2, 3)}}
-
-6 pair on street 5
-Final Hand: 6 Pair
-
-Opp outs on street 5 {2: (6, None), 3: 6, 6: (6, None), 7: 6}
-
-
-Round Num: 178
-
-
-Round Num: 179
-
-
-Round Num: 180
-
-
-Round Num: 181
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(2, 3, 12), (2, 3, 4)}}
-
-
-Opp outs on street 4 {5: 2, 4: {(2, 3, 12), (2, 3, 4), (8, 9, 10)}}
-
-Final Hand: 10 High Card
-
-Opp outs on street 5 {5: 2, 4: {(3, 12), (3, 4)}}
-
-
-Round Num: 182
-
-
-Round Num: 183
-
-
-Round Num: 184
-
-
-Round Num: 185
-
-3 pair on street 3
-Flush double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 10)}}
-
-
-Round Num: 186
-
-
-Round Num: 187
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(3, 12), (3, 4)}}
-
-
-Opp outs on street 4 {4: {(3, 12), (3, 4)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {4: {3}}
-
-
-Round Num: 188
-
-
-Round Num: 189
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 2, 3), (2, 3, 5)}}
-
-
-Opp outs on street 4 {5: 3, 4: {(3, 5, 7), (0, 2, 3), (2, 3, 5), (8, 9, 7), (8, 5, 7)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {5: 3, 4: {(2, 3)}}
-
-
-Round Num: 190
-
-
-Round Num: 191
-
-9 high straight double draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 9, 11), (8, 9, 6)}}
-
-
-Round Num: 192
-
-
-Round Num: 193
-
-Flush double draw on street 3
-3 high straight draw on street 3
-4 high straight on street 3
-
-Opp outs on street 3 {4: {(1, 3, 12), (3, 4, 5), (1, 3, 4)}}
-
-
-Round Num: 194
-
-
-Round Num: 195
-
-6 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 3}
-
-
-Round Num: 196
-
-
-Round Num: 197
-
-10 pair on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 198
-
-
-Round Num: 199
-
-
-Round Num: 200
-
-
-Round Num: 201
-
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(9, 6, 7), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(6, 7)}}
-
-
-Round Num: 202
-
-
-Round Num: 203
-
-
-Round Num: 204
-
-
-Round Num: 205
-
-5 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 6), (8, 4, 6), (3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 206
-
-
-Round Num: 207
-
-
-Round Num: 208
-
-
-Round Num: 209
-
-
-Round Num: 210
-
-
-Round Num: 211
-
-4 pair on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(3, 5, 7), (0, 2, 3), (2, 3, 5), (8, 5, 7)}}
-
-
-Round Num: 212
-
-
-Round Num: 213
-
-
-Round Num: 214
-
-
-Round Num: 215
-
-(3, 0) two pair on street 3
-
-Opp outs on street 3 {5: 0, 4: {(1, 2, 12), (1, 2, 4)}}
-
-
-Round Num: 216
-
-
-Round Num: 217
-
-10 pair on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(11, 7), (6, 7), (11, 12)}}
-
-10 pair on street 4
-9 high straight draw on street 4
-10 high straight draw on street 4
-11 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(11, 7), (6, 7), (11, 12)}}
-
-
-Round Num: 218
-
-
-Round Num: 219
-
-7 pair on street 3
-Flush double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-
-Round Num: 220
-
-
-Round Num: 221
-
-
-Round Num: 222
-
-
-Round Num: 223
-
-12 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 3}
-
-
-Round Num: 224
-
-
-Round Num: 225
-
-3 pair on street 3
-Flush draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 0, 4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-
-Round Num: 226
-
-
-Round Num: 227
-
-(4, 1) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(5, 6, 7), (0, 2, 3), (2, 3, 5)}}
-
-
-Round Num: 228
-
-
-Round Num: 229
-
-12 pair on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 3), (2, 3, 4)}}
-
-
-Round Num: 230
-
-
-Round Num: 231
-
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-5 high straight draw on street 4
-6 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(4, 6), (1, 4)}}
-
-
-Round Num: 232
-
-
-Round Num: 233
-
-5 pair on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {}
-
-
-Round Num: 234
-
-
-Round Num: 235
-
-11 pair on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 7)}}
-
-
-Round Num: 236
-
-
-Round Num: 237
-
-Flush double draw on street 3
-6 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(3, 4, 5)}}
-
-6 high straight draw on street 4
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(4, 5)}}
-
-
-Round Num: 238
-
-
-Round Num: 239
-
-0 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(1, 3, 12), (1, 3, 4)}}
-
-
-Round Num: 240
-
-
-Round Num: 241
-
-2 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
-
-
-Round Num: 242
-
-
-Round Num: 243
-
-
-Round Num: 244
-
-
-Round Num: 245
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 11), (8, 9, 6)}}
-
-
-Opp outs on street 4 {5: 3, 4: {(8, 9)}}
-
-2 pair on street 5
-Final Hand: 2 Pair
-
-Opp outs on street 5 {4: {(8, 9)}}
-
-
-Round Num: 246
-
-
-Round Num: 247
-
-4 pair on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-
-Opp outs on street 3 {4: {(2, 5), (5, 7)}}
-
-4 pair on street 4
-6 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(2, 5), (5, 7)}}
-
-4 pair on street 5
-6 high straight on street 5
-Final Hand: 6 Straight
-
-Opp outs on street 5 {4: {2, 7}}
-
-
-Round Num: 248
-
-
-Round Num: 249
-
-3 high straight double draw on street 3
-6 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4)}}
-
-6 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(1, 3), (3, 6)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {5: 3, 4: {(1, 3), (3, 6)}}
-
-
-Round Num: 250
-
-
-Round Num: 251
-
-0 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 2, 3), (8, 9, 10)}}
-
-
-Round Num: 252
-
-
-Round Num: 253
-
-
-Round Num: 254
-
-
-Round Num: 255
-
-10 pair on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 4: {(8, 9, 7)}}
-
-
-Round Num: 256
-
-
-Round Num: 257
-
-
-Round Num: 258
-
-
-Round Num: 259
-
-3 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
-
-
-Opp outs on street 4 {5: 1, 4: {(8, 7)}}
-
-5 pair on street 5
-Final Hand: 5 Pair
-
-Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 4: {(8, 7)}}
-
-
-Round Num: 260
-
-
-Round Num: 261
-
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(10, 11), (10, 6), (5, 6)}}
-
-8 pair on street 4
-Flush draw on street 4
-10 high straight draw on street 4
-11 high straight draw on street 4
-
-Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1, 4: {(10, 11), (10, 6), (5, 6)}}
-
-
-Round Num: 262
-
-
-Round Num: 263
-
-
-Round Num: 264
-
-
-Round Num: 265
-
-12 pair on street 3
-Flush double draw on street 3
-3 high straight draw on street 3
-
-Opp outs on street 3 {4: {(1, 2, 12), (1, 2, 4)}}
-
-
-Round Num: 266
-
-
-Round Num: 267
-
-11 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9)}}
-
-
-Round Num: 268
-
-
-Round Num: 269
-
-(7, 3) two pair on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {(4, 5, 6)}}
-
-
-Round Num: 270
-
-
-Round Num: 271
-
-(9, 5) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 5: 2}
-
-(9, 5) two pair on street 4
-
-Opp outs on street 4 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 5: 2, 4: {(2, 3, 12), (2, 3, 4)}}
-
-(10, 9) two pair on street 5
-Final Hand: (10, 9) Two Pair
-
-Opp outs on street 5 {2: (9, None), 3: 9, 6: (9, None), 7: 9}
-
-
-Round Num: 272
-
-
-Round Num: 273
-
-5 pair on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(3, 4)}}
-
-
-Round Num: 274
-
-
-Round Num: 275
-
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
-
-
-Round Num: 276
-
-
-Round Num: 277
-
-(9, 5) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 5: 2, 4: {(8, 6, 7)}}
-
-(9, 5) two pair on street 4
-
-Opp outs on street 4 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 5: 2, 4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-(9, 5) two pair on street 5
-Final Hand: (9, 5) Two Pair
-
-Opp outs on street 5 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 4: {(8, 11), (8, 6)}}
-
-
-Round Num: 278
-
-
-Round Num: 279
-
-5 pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 1, 2), (8, 10, 11)}}
-
-
-Round Num: 280
-
-
-Round Num: 281
-
 Flush draw on street 3
 3 high straight double draw on street 3
 4 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(1, 3)}}
-
-Flush draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(1, 3)}}
-
-4 pair on street 5
-Final Hand: 4 Pair
-
-Opp outs on street 5 {5: -1, 4: {(1, 3), (3, 6)}}
-
-
-Round Num: 282
-
-
-Round Num: 283
-
-
-Round Num: 284
-
-
-Round Num: 285
-
-1 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
-
-
-Round Num: 286
-
-
-Round Num: 287
-
-6 pair on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 0}
-
-
-Round Num: 288
-
-
-Round Num: 289
-
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {4: {(5, 6, 7), (9, 10, 12), (9, 10, 7)}}
-
-
-Round Num: 290
-
-
-Round Num: 291
-
-
-Round Num: 292
-
-
-Round Num: 293
-
-
-Round Num: 294
-
-
-Round Num: 295
-
-4 high straight double draw on street 3
-5 high straight draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 3), (2, 3, 5)}}
-
-
-Round Num: 296
-
-
-Round Num: 297
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(3, 5, 6), (0, 1, 3), (8, 5, 6), (1, 3, 5)}}
-
-Flush draw on street 4
-8 high straight draw on street 4
-9 high straight draw on street 4
-10 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(5, 6)}}
-
-
-Round Num: 298
-
-
-Round Num: 299
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
-
-
-Round Num: 300
-
-
-Round Num: 301
-
-
-Round Num: 302
-
-
-Round Num: 303
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(9, 10, 12), (9, 10, 7)}}
-
-
-Round Num: 304
-
-
-Round Num: 305
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 306
-
-
-Round Num: 307
-
-9 pair on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-
-Round Num: 308
-
-
-Round Num: 309
-
-(8, 2) two pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
-
-Round Num: 310
-
-
-Round Num: 311
-
-9 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9}
-
-
-Round Num: 312
-
-
-Round Num: 313
-
-8 pair on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 10, 12), (9, 10, 7)}}
-
-
-Round Num: 314
-
-
-Round Num: 315
-
-
-Round Num: 316
-
-
-Round Num: 317
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 3)}}
-
-9 pair on street 4
-
-Opp outs on street 4 {5: 1, 4: {(0, 1, 3), (8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-9 pair on street 5
-Final Hand: 9 Pair
-
-Opp outs on street 5 {4: {(8, 11), (8, 6)}}
-
-
-Round Num: 318
-
-
-Round Num: 319
-
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 11), (8, 9, 6)}}
-
-
-Opp outs on street 4 {5: 2, 4: {(8, 11), (8, 6)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {5: 2, 4: {11, 6}}
-
-
-Round Num: 320
-
-
-Round Num: 321
-
-6 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 1, 4: {(8, 10, 7), (8, 5, 7)}}
-
-
-Round Num: 322
-
-
-Round Num: 323
-
-9 high straight double draw on street 3
-10 high straight draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(4, 5, 7), (9, 10, 11), (9, 10, 7), (9, 5, 7)}}
-
-
-Round Num: 324
-
-
-Round Num: 325
-
-10 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(1, 3, 12), (1, 3, 4)}}
-
-
-Round Num: 326
-
-
-Round Num: 327
-
-
-Round Num: 328
-
-
-Round Num: 329
-
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0}
-
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(0, 2, 3), (8, 9, 10)}}
-
-12 pair on street 5
-Final Hand: 12 Pair
-
-Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12}
-
-
-Round Num: 330
-
-
-Round Num: 331
-
-
-Round Num: 332
-
-
-Round Num: 333
-
-(4, 2) two pair on street 3
-Flush draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 3, 4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-
-Round Num: 334
-
-
-Round Num: 335
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(4, 5)}}
-
-7 high straight draw on street 4
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(4, 5), (8, 10), (8, 5)}}
-
-
-Round Num: 336
-
-
-Round Num: 337
-
-9 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9}
-
-
-Round Num: 338
-
-
-Round Num: 339
-
-(7, 5) two pair on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(8, 9, 6), (8, 4, 6), (3, 4, 6)}}
-
-(7, 5) two pair on street 4
-7 high straight draw on street 4
-8 high straight draw on street 4
-
-Opp outs on street 4 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(8, 6), (3, 6)}}
-
-(7, 5) two pair on street 5
-7 high straight on street 5
-8 high straight on street 5
-Final Hand: 8 Straight
-
-Opp outs on street 5 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {8, 3}}
-
-
-Round Num: 340
-
-
-Round Num: 341
-
-Flush draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-
-Round Num: 342
-
-
-Round Num: 343
-
-2 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 0, 4: {(0, 1, 3)}}
-
-
-Round Num: 344
-
-
-Round Num: 345
-
-
-Round Num: 346
-
-
-Round Num: 347
-
-(7, 2) two pair on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 0}
-
-
-Round Num: 348
-
-
-Round Num: 349
-
-7 pair on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-
-Round Num: 350
-
-
-Round Num: 351
-
-7 trips on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(4, 5, 6)}}
-
-
-Round Num: 352
-
-
-Round Num: 353
-
-11 pair on street 3
-Flush draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 354
-
-
-Round Num: 355
-
-9 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(10, 11)}}
-
-
-Round Num: 356
-
-
-Round Num: 357
-
-2 pair on street 3
-Flush draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 1}
-
-
-Round Num: 358
-
-
-Round Num: 359
-
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 7), (4, 7)}}
-
-
-Opp outs on street 4 {5: 1, 4: {(9, 7), (4, 7)}}
-
-Final Hand: 10 High Card
-
-Opp outs on street 5 {4: {(9, 7), (4, 7), (3, 4)}}
-
-
-Round Num: 360
-
-
-Round Num: 361
-
-0 pair on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 6, 7), (4, 6, 7)}}
-
-
-Round Num: 362
-
-
-Round Num: 363
-
-(6, 8) full house on street 3
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 10), (9, 5), (4, 5)}}
-
-
-Round Num: 364
-
-
-Round Num: 365
-
-(10, 5) full house on street 3
-
-Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 1}
-
-
-Round Num: 366
-
-
-Round Num: 367
-
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {4: {(5, 6, 7), (9, 10, 11)}}
-
-
-Round Num: 368
-
-
-Round Num: 369
-
-6 pair on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(4, 5, 7), (9, 10, 11), (9, 10, 7), (9, 5, 7)}}
-
-
-Round Num: 370
-
-
-Round Num: 371
-
-
-Round Num: 372
-
-
-Round Num: 373
-
-
-Round Num: 374
-
-
-Round Num: 375
-
-4 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 6), (3, 6)}}
-
-4 pair on street 4
-7 high straight draw on street 4
-8 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(2, 3), (8, 6), (3, 6)}}
-
-
-Round Num: 376
-
-
-Round Num: 377
-
-Flush draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(2, 3, 12), (2, 3, 4)}}
-
-
-Round Num: 378
-
-
-Round Num: 379
-
-10 pair on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 380
-
-
-Round Num: 381
-
-7 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-7 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(6, 7), (1, 2), (2, 6)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {4: {(6, 7), (1, 2), (2, 6)}}
-
-
-Round Num: 382
-
-
-Round Num: 383
-
-7 pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 10)}}
-
-
-Round Num: 384
-
-
-Round Num: 385
-
-8 pair on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 3, 4: {(9, 6, 7), (4, 6, 7)}}
-
-
-Round Num: 386
-
-
-Round Num: 387
-
-
-Round Num: 388
-
-
-Round Num: 389
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {}
-
-3 pair on street 4
-
-Opp outs on street 4 {5: 2, 4: {(1, 2, 12), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-(9, 3) two pair on street 5
-Final Hand: (9, 3) Two Pair
-
-Opp outs on street 5 {5: 2}
-
-
-Round Num: 390
-
-
-Round Num: 391
-
-8 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 392
-
-
-Round Num: 393
-
-1 trips on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1}
-
-
-Round Num: 394
-
-
-Round Num: 395
-
-(5, 2) two pair on street 3
-
-Opp outs on street 3 {4: {(3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 396
-
-
-Round Num: 397
-
-9 pair on street 3
-Flush draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 10, 11)}}
-
-
-Round Num: 398
-
-
-Round Num: 399
-
-1 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
-
-
-Round Num: 400
-
-
-Round Num: 401
-
-5 pair on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5}
-
-
-Round Num: 402
-
-
-Round Num: 403
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 10)}}
-
-3 pair on street 4
-
-Opp outs on street 4 {5: 3, 4: {(0, 1, 4), (0, 1, 12), (4, 5, 6), (8, 9, 10), (1, 4, 5)}}
-
-3 pair on street 5
-Final Hand: 3 Pair
-
-Opp outs on street 5 {4: {(8, 10)}}
-
-
-Round Num: 404
-
-
-Round Num: 405
-
-
-Round Num: 406
-
-
-Round Num: 407
-
-9 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 6)}}
-
-9 pair on street 4
-
-Opp outs on street 4 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 5: 2, 4: {(8, 6)}}
-
-9 pair on street 5
-Final Hand: 9 Pair
-
-Opp outs on street 5 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 4: {(4, 6), (8, 6)}}
-
-
-Round Num: 408
-
-
-Round Num: 409
-
-3 pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 1, 4: {(4, 5, 6)}}
-
-
-Round Num: 410
-
-
-Round Num: 411
-
-11 pair on street 3
-Flush draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 0, 4: {(8, 9, 10)}}
-
-
-Round Num: 412
-
-
-Round Num: 413
-
-8 pair on street 3
-Flush draw on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
-
-
-Round Num: 414
-
-
-Round Num: 415
-
-
-Round Num: 416
-
-
-Round Num: 417
-
-(12, 1) full house on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(0, 2)}}
-
-
-Round Num: 418
-
-
-Round Num: 419
-
-9 pair on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 10, 12), (8, 10, 7)}}
-
-
-Round Num: 420
-
-
-Round Num: 421
-
-
-Round Num: 422
-
-
-Round Num: 423
-
-10 pair on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0}
-
-
-Round Num: 424
-
-
-Round Num: 425
-
-2 pair on street 3
-Flush double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 426
-
-
-Round Num: 427
-
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(2, 3, 12), (2, 3, 4)}}
-
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(2, 3, 12), (8, 6, 7), (2, 3, 4)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {}
-
-
-Round Num: 428
-
-
-Round Num: 429
-
-Flush double draw on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
-
-6 pair on street 4
-
-Opp outs on street 4 {5: 0, 4: {(3, 5)}}
-
-6 pair on street 5
-Final Hand: 6 Pair
-
-Opp outs on street 5 {4: {5}}
-
-
-Round Num: 430
-
-
-Round Num: 431
-
-(9, 1) two pair on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 7), (8, 12)}}
-
-
-Round Num: 432
-
-
-Round Num: 433
-
-4 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(1, 2)}}
-
-
-Round Num: 434
-
-
-Round Num: 435
-
-
-Round Num: 436
-
-
-Round Num: 437
-
-
-Round Num: 438
-
-
-Round Num: 439
-
-(11, 0) two pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 1}
-
-(11, 0) two pair on street 4
-
-Opp outs on street 4 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 1, 4: {(8, 10, 12), (8, 10, 7)}}
-
-(11, 5) two pair on street 5
-Final Hand: (11, 5) Two Pair
-
-Opp outs on street 5 {2: (11, None), 3: 11, 6: (11, None), 7: 11}
-
-
-Round Num: 440
-
-
-Round Num: 441
-
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 7), (3, 4, 5)}}
-
-
-Round Num: 442
-
-
-Round Num: 443
-
-(8, 4) two pair on street 3
-Flush double draw on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
-
-
-Round Num: 444
-
-
-Round Num: 445
-
-5 pair on street 3
-5 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(6, 7)}}
-
-
-Round Num: 446
-
-
-Round Num: 447
-
-
-Round Num: 448
-
-
-Round Num: 449
-
-11 pair on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 12), (9, 7)}}
-
-
-Round Num: 450
-
-
-Round Num: 451
-
-12 pair on street 3
-Flush draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(1, 2, 3), (8, 9, 10)}}
-
-(12, 6) two pair on street 4
-Flush draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(1, 2, 3), (8, 9, 10)}}
-
-
-Round Num: 452
-
-
-Round Num: 453
-
-(7, 1) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-
-Round Num: 454
-
-
-Round Num: 455
-
-
-Round Num: 456
-
-
-Round Num: 457
-
-(8, 1) full house on street 3
-
-Opp outs on street 3 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1}
-
-
-Round Num: 458
-
-
-Round Num: 459
-
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(11, 7), (6, 7), (11, 12)}}
-
-10 high straight draw on street 4
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {11}}
-
-11 high straight on street 5
-12 high straight on street 5
-Final Hand: 12 Straight
-
-Opp outs on street 5 {5: 3, 4: {11, 7}, 8: 3}
-
-
-Round Num: 460
-
-
-Round Num: 461
-
-5 pair on street 3
-Flush double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 6, 7), (8, 10, 11)}}
-
-
-Round Num: 462
-
-
-Round Num: 463
-
-
-Round Num: 464
-
-
-Round Num: 465
-
-3 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(9, 10, 11), (0, 2, 3)}}
-
-
-Round Num: 466
-
-
-Round Num: 467
-
-(8, 6) two pair on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {4: {(9, 10), (9, 5), (4, 5)}}
-
-(8, 6) two pair on street 4
-8 high straight draw on street 4
-9 high straight draw on street 4
-10 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {10, 5}}
-
-(8, 7) two pair on street 5
-Final Hand: (8, 7) Two Pair
-
-Opp outs on street 5 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 0, 4: {10, 5}}
-
-
-Round Num: 468
-
-
-Round Num: 469
-
-10 high straight double draw on street 3
-11 high straight draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 470
-
-
-Round Num: 471
-
-8 pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(9, 6, 7), (4, 6, 7), (2, 3, 4)}}
-
-
-Round Num: 472
-
-
-Round Num: 473
-
-7 pair on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 10, 11), (0, 2, 3)}}
-
-
-Round Num: 474
-
-
-Round Num: 475
-
-(9, 5) two pair on street 3
-Flush draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(6, 7)}}
-
-
-Round Num: 476
-
-
-Round Num: 477
-
-3 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(1, 3, 12), (1, 3, 4)}}
-
-
-Round Num: 478
-
-
-Round Num: 479
-
-(12, 5) two pair on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 2}
-
-
-Round Num: 480
-
-
-Round Num: 481
-
-(10, 0) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 482
-
-
-Round Num: 483
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 484
-
-
-Round Num: 485
-
-
-Round Num: 486
-
-
-Round Num: 487
-
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(4, 5, 7), (2, 4, 5)}}
-
-7 high straight draw on street 4
-8 high straight draw on street 4
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(2, 4), (4, 7)}}
-
-
-Round Num: 488
-
-
-Round Num: 489
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(3, 5, 6), (0, 1, 3), (8, 5, 6), (1, 3, 5)}}
-
-4 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(1, 3)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {4: {(1, 3)}}
-
-
-Round Num: 490
-
-
-Round Num: 491
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
-
-
-Round Num: 492
-
-
-Round Num: 493
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-7 pair on street 4
-Flush draw on street 4
-
-Opp outs on street 4 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 0, 4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-7 pair on street 5
-Final Hand: 7 Pair
-
-Opp outs on street 5 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(10, 11), (10, 6), (5, 6)}}
-
-
-Round Num: 494
-
-
-Round Num: 495
-
-11 pair on street 3
-Flush double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 496
-
-
-Round Num: 497
-
-
-Round Num: 498
-
-
-Round Num: 499
-
-0 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(1, 2, 3)}}
-
-
-Round Num: 500
-
-
-Round Num: 501
-
-9 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (9, 10, 11)}}
-
-
-Round Num: 502
-
-
-Round Num: 503
-
-
-Round Num: 504
-
-
-Round Num: 505
-
-0 pair on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 10)}}
-
-
-Round Num: 506
-
-
-Round Num: 507
-
-8 pair on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(9, 6), (4, 6)}}
-
-8 pair on street 4
-8 high straight draw on street 4
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(9, 6), (4, 6)}}
-
-
-Round Num: 508
-
-
-Round Num: 509
-
-
-Round Num: 510
-
-
-Round Num: 511
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
-
-3 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {4: {(10, 11)}}
-
-
-Round Num: 512
-
-
-Round Num: 513
-
-(5, 3) two pair on street 3
-
-Opp outs on street 3 {4: {(4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-
-Round Num: 514
-
-
-Round Num: 515
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
-
-1 pair on street 4
-
-Opp outs on street 4 {5: -1, 4: {(2, 3, 12), (10, 11, 12), (5, 6, 7), (2, 3, 4), (10, 11, 7), (10, 6, 7)}}
-
-1 pair on street 5
-Final Hand: 1 Pair
-
-Opp outs on street 5 {5: -1, 4: {(2, 3)}}
-
-
-Round Num: 516
-
-
-Round Num: 517
-
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(8, 9, 11), (5, 6, 7), (1, 2, 5), (0, 1, 2), (2, 5, 6)}}
-
-12 pair on street 5
-Final Hand: 12 Pair
-
-Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12}
-
-
-Round Num: 518
-
-
-Round Num: 519
-
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {4: {(2, 3, 12), (2, 3, 4)}}
-
-
-Round Num: 520
-
-
-Round Num: 521
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Opp outs on street 4 {5: 1, 4: {(5, 6, 7), (1, 2, 5), (8, 9, 10), (0, 1, 2), (2, 5, 6)}}
-
-9 pair on street 5
-Final Hand: 9 Pair
-
-Opp outs on street 5 {4: {(8, 10)}}
-
-
-Round Num: 522
-
-
-Round Num: 523
-
-
-Round Num: 524
-
-
-Round Num: 525
-
-Flush double draw on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 526
-
-
-Round Num: 527
-
-4 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-4 pair on street 4
-
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 1, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-(8, 4) two pair on street 5
-Final Hand: (8, 4) Two Pair
-
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4}
-
-
-Round Num: 528
-
-
-Round Num: 529
-
-
-Round Num: 530
-
-
-Round Num: 531
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-5 high straight draw on street 3
-6 high straight on street 3
-
-Opp outs on street 3 {4: {(1, 3)}}
-
-
-Round Num: 532
-
-
-Round Num: 533
-
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 10, 12), (8, 10, 7)}}
-
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(10, 12), (10, 7)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {4: {(10, 12), (10, 7)}}
-
-
-Round Num: 534
-
-
-Round Num: 535
-
-Flush double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {4: {(9, 10, 11), (0, 2, 3)}}
-
-
-Round Num: 536
-
-
-Round Num: 537
-
-(5, 4) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
-
-(5, 4) two pair on street 4
-
-Opp outs on street 4 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 1, 4: {(2, 3), (3, 7), (8, 7)}}
-
-(6, 5) two pair on street 5
-Final Hand: (6, 5) Two Pair
-
-Opp outs on street 5 {6: (6, 5), 7: (6, 5), 4: {(2, 3), (3, 7), (8, 7)}}
-
-
-Round Num: 538
-
-
-Round Num: 539
-
-
-Round Num: 540
-
-
-Round Num: 541
-
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(3, 5, 7), (2, 3, 5), (8, 5, 7)}}
-
-
-Round Num: 542
-
-
-Round Num: 543
-
-5 trips on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
-
-
-Round Num: 544
-
-
-Round Num: 545
-
-11 pair on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 546
-
-
-Round Num: 547
-
-10 pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 548
-
-
-Round Num: 549
-
-
-Round Num: 550
-
-
-Round Num: 551
-
-3 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 3)}}
-
-3 high straight draw on street 4
-4 high straight draw on street 4
-5 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(0, 3), (3, 5)}}
-
-Final Hand: 8 High Card
-
-Opp outs on street 5 {5: 3, 4: {(0, 3), (3, 5)}}
-
-
-Round Num: 552
-
-
-Round Num: 553
-
-
-Round Num: 554
-
-
-Round Num: 555
-
-5 pair on street 3
-Flush double draw on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(4, 5, 7), (9, 10, 11), (9, 10, 7), (9, 5, 7)}}
-
-
-Round Num: 556
-
-
-Round Num: 557
-
-5 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 10)}}
-
-
-Round Num: 558
-
-
-Round Num: 559
-
-(10, 3) two pair on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 560
-
-
-Round Num: 561
-
-(3, 2) two pair on street 3
-
-Opp outs on street 3 {4: {(9, 10, 12), (9, 10, 7)}}
-
-
-Round Num: 562
-
-
-Round Num: 563
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 6, 7), (2, 3, 4)}}
-
-
-Round Num: 564
-
-
-Round Num: 565
-
-6 pair on street 3
-Flush draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
-
-
-Round Num: 566
-
-
-Round Num: 567
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 1, 2), (8, 9, 10)}}
-
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(8, 10)}}
-
-3 pair on street 5
-Final Hand: 3 Pair
-
-Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {(8, 10)}}
-
-
-Round Num: 568
-
-
-Round Num: 569
-
-3 trips on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3}
-
-
-Round Num: 570
-
-
-Round Num: 571
-
-2 pair on street 3
-
-Opp outs on street 3 {4: {(1, 3, 12), (1, 3, 4)}}
-
-
-Round Num: 572
-
-
-Round Num: 573
-
-
-Round Num: 574
-
-
-Round Num: 575
-
-6 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(2, 3, 12), (2, 3, 4)}}
-
-
-Round Num: 576
-
-
-Round Num: 577
-
-
-Round Num: 578
-
-
-Round Num: 579
-
-5 high straight double draw on street 3
-6 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-
-Round Num: 580
-
-
-Round Num: 581
-
-8 pair on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 0}
-
-
-Round Num: 582
-
-
-Round Num: 583
-
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-Flush draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(5, 6, 7), (1, 2, 5), (8, 9, 10), (0, 1, 2), (2, 5, 6)}}
-
-
-Round Num: 584
-
-
-Round Num: 585
-
-(11, 8) two pair on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 6, 7), (4, 6, 7), (9, 10, 12), (9, 10, 7)}}
-
-
-Round Num: 586
-
-
-Round Num: 587
-
-
-Round Num: 588
-
-
-Round Num: 589
-
-10 pair on street 3
-Flush draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 590
-
-
-Round Num: 591
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-
-Round Num: 592
-
-
-Round Num: 593
-
-1 pair on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(6, 7)}}
-
-1 pair on street 4
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(6, 7)}}
-
-1 pair on street 5
-Final Hand: 1 Pair
-
-Opp outs on street 5 {4: {(6, 7)}}
-
-
-Round Num: 594
-
-
-Round Num: 595
-
-0 pair on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 10)}}
-
-
-Round Num: 596
-
-
-Round Num: 597
-
-4 pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(1, 2, 3)}}
-
-
-Round Num: 598
-
-
-Round Num: 599
-
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 10)}}
-
-3 high straight draw on street 4
-
-Opp outs on street 4 {4: {(9, 10)}}
-
-Final Hand: 6 High Card
-
-Opp outs on street 5 {4: {(9, 10)}}
-
-
-Round Num: 600
-
-
-Round Num: 601
-
-(10, 9) full house on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(11, 7), (6, 7), (11, 12)}}
-
-
-Round Num: 602
-
-
-Round Num: 603
-
-Flush on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(3, 5, 6), (1, 2, 3), (8, 5, 6)}}
-
-
-Round Num: 604
-
-
-Round Num: 605
-
-0 trips on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-
-Round Num: 606
-
-
-Round Num: 607
-
-10 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 4: {(8, 9, 7)}}
-
-
-Round Num: 608
-
-
-Round Num: 609
-
-7 pair on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 6)}}
-
-
-Round Num: 610
-
-
-Round Num: 611
-
-6 high straight double draw on street 3
-10 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 1, 3), (8, 10, 11)}}
-
-10 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {(0, 1, 3), (8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-Final Hand: 10 High Card
-
-Opp outs on street 5 {4: {(0, 1)}}
-
-
-Round Num: 612
-
-
-Round Num: 613
-
-Flush double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(0, 1, 2), (9, 10, 11)}}
-
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(9, 10, 6), (9, 5, 6), (9, 10, 11), (4, 5, 6), (0, 1, 2)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {5: -1, 4: {(9, 10), (9, 5), (4, 5)}}
-
-
-Round Num: 614
-
-
-Round Num: 615
-
-7 pair on street 3
-Flush draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
-
-
-Round Num: 616
-
-
-Round Num: 617
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-Flush draw on street 4
-5 high straight draw on street 4
-6 high straight draw on street 4
-7 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(6, 7), (1, 2), (2, 6)}}
-
-
-Round Num: 618
-
-
-Round Num: 619
-
-
-Round Num: 620
-
-
-Round Num: 621
-
-7 trips on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(3, 5, 6), (8, 9, 11), (8, 9, 6), (8, 5, 6)}}
-
-
-Round Num: 622
-
-
-Round Num: 623
-
-(10, 9) two pair on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9}
-
-
-Round Num: 624
-
-
-Round Num: 625
-
-
-Round Num: 626
-
-
-Round Num: 627
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 6), (8, 4, 6), (3, 4, 6), (2, 3, 4)}}
-
-3 high straight draw on street 4
-5 high straight draw on street 4
-
-Opp outs on street 4 {4: {(2, 4), (4, 6)}}
-
-
-Round Num: 628
-
-
-Round Num: 629
-
-10 pair on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(2, 3, 12), (2, 3, 4)}}
-
-
-Round Num: 630
-
-
-Round Num: 631
-
-2 pair on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 3, 4: {(1, 3, 12), (1, 3, 4)}}
-
-
-Round Num: 632
-
-
-Round Num: 633
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 6), (8, 4, 6), (3, 4, 6)}}
-
-
-Round Num: 634
-
-
-Round Num: 635
-
-4 high straight double draw on street 3
-5 high straight draw on street 3
-6 high straight on street 3
-
-Opp outs on street 3 {4: {(3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 636
-
-
-Round Num: 637
-
-(10, 6) two pair on street 3
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(9, 7), (4, 7)}}
-
-
-Round Num: 638
-
-
-Round Num: 639
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-9 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (8, 10, 11)}}
-
-Flush draw on street 4
-3 high straight draw on street 4
-5 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(0, 1)}}
-
-
-Round Num: 640
-
-
-Round Num: 641
-
-2 pair on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 6, 7), (3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 642
-
-
-Round Num: 643
-
-(11, 5) two pair on street 3
-
-Opp outs on street 3 {5: 3, 4: {(3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 644
-
-
-Round Num: 645
-
-0 pair on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(10, 11), (10, 6), (5, 6)}}
-
-0 pair on street 4
-10 high straight draw on street 4
-11 high straight on street 4
-
-Opp outs on street 4 {5: 2, 4: {11, 6}}
-
-
-Round Num: 646
-
-
-Round Num: 647
-
-11 pair on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 648
-
-
-Round Num: 649
-
-(3, 0) two pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(2, 3)}}
-
-(3, 0) two pair on street 4
-3 high straight draw on street 4
-4 high straight on street 4
-
-Opp outs on street 4 {5: 0, 4: {3}}
-
-
-Round Num: 650
-
-
-Round Num: 651
-
-
-Round Num: 652
-
-
-Round Num: 653
-
-Flush draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(5, 6, 7), (9, 10, 12), (9, 10, 7)}}
-
-
-Round Num: 654
-
-
-Round Num: 655
-
-(9, 0) two pair on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 10, 12), (8, 10, 7)}}
-
-
-Round Num: 656
-
-
-Round Num: 657
-
-
-Round Num: 658
-
-
-Round Num: 659
-
-6 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(8, 10, 7), (8, 5, 7)}}
-
-
-Round Num: 660
-
-
-Round Num: 661
-
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
-
-9 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(6, 7)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {4: {(6, 7), (10, 11)}}
-
-
-Round Num: 662
-
-
-Round Num: 663
-
-(11, 2) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: 0}
-
-
-Round Num: 664
-
-
-Round Num: 665
-
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 10), (8, 5)}}
-
-8 high straight draw on street 4
-9 high straight draw on street 4
-10 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(8, 10), (8, 5)}}
-
-
-Round Num: 666
-
-
-Round Num: 667
-
-(7, 3) two pair on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {(4, 5, 7), (2, 4, 5)}}
-
-
-Round Num: 668
-
-
-Round Num: 669
-
-9 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(1, 2, 3), (8, 10, 11)}}
-
-
-Round Num: 670
-
-
-Round Num: 671
-
-
-Round Num: 672
-
-
-Round Num: 673
-
-0 pair on street 3
-Flush draw on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(1, 3, 12), (1, 3, 4)}}
-
-0 pair on street 4
-Flush draw on street 4
-3 high straight draw on street 4
-
-Opp outs on street 4 {5: -1, 4: {(1, 12), (1, 4)}}
-
-
-Round Num: 674
-
-
-Round Num: 675
-
-3 pair on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (8, 9, 10)}}
-
-
-Round Num: 676
-
-
-Round Num: 677
-
-(4, 0) two pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 0, 4: {(1, 2, 3)}}
-
-(4, 1) two pair on street 4
-
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 0, 4: {(2, 3)}}
-
-(4, 1) two pair on street 5
-Final Hand: (4, 1) Two Pair
-
-Opp outs on street 5 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 4: {(2, 3)}}
-
-
-Round Num: 678
-
-
-Round Num: 679
-
-0 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 10, 11), (8, 10, 7), (8, 5, 7)}}
-
-
-Round Num: 680
-
-
-Round Num: 681
-
-
-Round Num: 682
-
-
-Round Num: 683
-
-10 pair on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 11), (8, 9, 6), (8, 4, 6), (3, 4, 6)}}
-
-
-Round Num: 684
-
-
-Round Num: 685
-
-1 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(9, 6, 7), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-
-Round Num: 686
-
-
-Round Num: 687
-
-5 pair on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 4: {(8, 6, 7)}}
-
-
-Round Num: 688
-
-
-Round Num: 689
-
-4 pair on street 3
-Flush double draw on street 3
-3 high straight draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 3), (2, 3, 5)}}
-
-
-Round Num: 690
-
-
-Round Num: 691
-
-3 pair on street 3
-Flush on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 3, 4: {(0, 1, 2)}}
-
-
-Round Num: 692
-
-
-Round Num: 693
-
-Flush double draw on street 3
-6 high straight double draw on street 3
 10 high straight double draw on street 3
 11 high straight double draw on street 3
 12 high straight double draw on street 3
 
 Opp outs on street 3 {5: -1, 4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
 
-12 high straight draw on street 4
+Start betting on flop
+Flush on street 4
+10 high straight draw on street 4
+11 high straight draw on street 4
 
-Opp outs on street 4 {5: -1, 4: {(8, 11)}}
+Opp outs on street 4 {5: 2, 4: {(8, 11), (8, 6)}}
 
-4 pair on street 5
-Final Hand: 4 Pair
+Start betting on turn
 
-Opp outs on street 5 {5: -1, 4: {(8, 11)}}
+Round Num: 113
 
+12 pair on street 3
 
-Round Num: 694
+Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 3}
 
+Opponent checks on flop
+12 pair on street 4
 
-Round Num: 695
+Opp outs on street 4 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 3, 4: {(8, 9, 11), (8, 9, 7)}}
 
-2 pair on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
+Opponent checks on turn
+12 pair on street 5
+Final Hand: 12 Pair
 
-Opp outs on street 3 {5: 0, 4: {(0, 1)}}
+Opp outs on street 5 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 3, 4: {(3, 4, 5), (8, 9, 11), (0, 1, 3), (8, 9, 7)}}
 
+Opponent checks on river
 
-Round Num: 696
+Round Num: 114
 
 
-Round Num: 697
-
-
-Round Num: 698
-
-
-Round Num: 699
-
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 6, 7), (2, 3, 4)}}
-
-
-Opp outs on street 4 {5: 1, 4: {(8, 6)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {4: {6}}
-
-
-Round Num: 700
-
-
-Round Num: 701
-
-6 trips on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 3, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
-
-
-Round Num: 702
-
-
-Round Num: 703
-
-(10, 1) two pair on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 4: {(8, 9, 11)}}
-
-(10, 1) two pair on street 4
-
-Opp outs on street 4 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 0, 4: {(8, 9, 11), (8, 9, 7)}}
-
-(10, 6) two pair on street 5
-Final Hand: (10, 6) Two Pair
-
-Opp outs on street 5 {6: (10, 6), 7: (10, 6)}
-
-
-Round Num: 704
-
-
-Round Num: 705
-
-10 pair on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 11), (0, 1, 3)}}
-
-
-Round Num: 706
-
-
-Round Num: 707
-
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 7), (3, 4, 5)}}
-
-
-Opp outs on street 4 {5: 3, 4: {(8, 9)}}
-
-10 pair on street 5
-Final Hand: 10 Pair
-
-Opp outs on street 5 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 4: {(8, 9)}}
-
-
-Round Num: 708
-
-
-Round Num: 709
-
-(8, 7) two pair on street 3
-
-Opp outs on street 3 {4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-
-Round Num: 710
-
-
-Round Num: 711
-
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-
-Round Num: 712
-
-
-Round Num: 713
-
-10 pair on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 11), (8, 9, 6), (4, 5, 6)}}
-
-
-Round Num: 714
-
-
-Round Num: 715
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-5 high straight draw on street 4
-
-Opp outs on street 4 {4: {(9, 6, 7), (0, 1, 4), (9, 11, 7), (0, 1, 12), (4, 5, 6), (1, 4, 5), (9, 11, 12)}}
-
-10 pair on street 5
-Final Hand: 10 Pair
-
-Opp outs on street 5 {2: (10, None), 3: 10, 6: (10, None), 7: 10}
-
-
-Round Num: 716
-
-
-Round Num: 717
-
-
-Round Num: 718
-
-
-Round Num: 719
-
-4 pair on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
-
-
-Round Num: 720
-
-
-Round Num: 721
-
-
-Round Num: 722
-
-
-Round Num: 723
-
-
-Round Num: 724
-
-
-Round Num: 725
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
-
-
-Round Num: 726
-
-
-Round Num: 727
-
-Flush draw on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-
-Round Num: 728
-
-
-Round Num: 729
-
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 7), (8, 12)}}
-
-6 pair on street 4
-
-Opp outs on street 4 {5: 2, 4: {(8, 7), (8, 12)}}
-
-(6, 5) two pair on street 5
-Final Hand: (6, 5) Two Pair
-
-Opp outs on street 5 {5: 2, 4: {(8, 7), (8, 12)}}
-
-
-Round Num: 730
-
-
-Round Num: 731
-
-2 pair on street 3
-10 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 11), (0, 1, 3)}}
-
-
-Round Num: 732
-
-
-Round Num: 733
-
-1 pair on street 3
-
-Opp outs on street 3 {5: 3, 4: {(2, 3, 4)}}
-
-
-Round Num: 734
-
-
-Round Num: 735
-
-9 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
-
-
-Round Num: 736
-
-
-Round Num: 737
-
-
-Round Num: 738
-
-
-Round Num: 739
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 740
-
-
-Round Num: 741
-
-2 pair on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2}
-
-
-Round Num: 742
-
-
-Round Num: 743
-
-(9, 1) two pair on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 6, 7), (2, 3, 4)}}
-
-
-Round Num: 744
-
-
-Round Num: 745
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 4), (1, 4, 5), (4, 5, 6), (0, 1, 12)}}
-
-3 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(0, 1)}}
-
-Final Hand: 7 High Card
-
-Opp outs on street 5 {5: 0, 4: {(0, 1), (8, 11)}}
-
-
-Round Num: 746
-
-
-Round Num: 747
-
-Flush draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
-
-
-Round Num: 748
-
-
-Round Num: 749
-
-
-Round Num: 750
-
-
-Round Num: 751
-
-10 pair on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(5, 6, 7), (1, 2, 3)}}
-
-
-Round Num: 752
-
-
-Round Num: 753
-
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
-
-5 pair on street 4
-
-Opp outs on street 4 {5: 2, 4: {(2, 4)}}
-
-5 pair on street 5
-Final Hand: 5 Pair
-
-Opp outs on street 5 {5: 2, 4: {(2, 4), (4, 6)}}
-
-
-Round Num: 754
-
-
-Round Num: 755
-
-(7, 3) full house on street 3
-
-Opp outs on street 3 {2: (7, None), 3: 7, 6: (7, None), 7: 7, 5: 0}
-
-
-Round Num: 756
-
-
-Round Num: 757
-
-11 pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 1, 4: {(8, 10, 12), (8, 10, 7)}}
-
-
-Round Num: 758
-
-
-Round Num: 759
+Round Num: 115
 
 8 pair on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(4, 5, 7), (9, 10, 7), (9, 5, 7)}}
-
-
-Round Num: 760
-
-
-Round Num: 761
-
-(4, 3) two pair on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1), (5, 6), (1, 5)}}
-
-
-Round Num: 762
-
-
-Round Num: 763
-
-0 pair on street 3
 Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-
-Round Num: 764
-
-
-Round Num: 765
-
-2 pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {4: {(1, 3), (3, 6)}}
-
-2 pair on street 4
-5 high straight draw on street 4
-6 high straight draw on street 4
-7 high straight draw on street 4
-8 high straight draw on street 4
-
-Opp outs on street 4 {5: 3, 4: {3}}
-
-(5, 2) two pair on street 5
-Final Hand: (5, 2) Two Pair
-
-Opp outs on street 5 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {3}}
-
-
-Round Num: 766
-
-
-Round Num: 767
-
-0 pair on street 3
-3 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(1, 2)}}
-
-
-Round Num: 768
-
-
-Round Num: 769
-
-
-Round Num: 770
-
-
-Round Num: 771
-
-
-Round Num: 772
-
-
-Round Num: 773
-
-Flush draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(9, 6, 7), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-
-Round Num: 774
-
-
-Round Num: 775
-
-0 pair on street 3
-4 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0}
-
-
-Round Num: 776
-
-
-Round Num: 777
-
-10 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2)}}
-
-
-Round Num: 778
-
-
-Round Num: 779
-
-3 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
-
-
-Round Num: 780
-
-
-Round Num: 781
-
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 11), (8, 9, 6)}}
-
-
-Round Num: 782
-
-
-Round Num: 783
-
-10 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(3, 5, 6), (8, 9, 11), (8, 9, 6), (8, 5, 6)}}
-
-
-Round Num: 784
-
-
-Round Num: 785
-
-(8, 6) two pair on street 3
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
 11 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6}
-
-
-Round Num: 786
-
-
-Round Num: 787
-
-1 pair on street 3
-Flush draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 3}
-
-
-Round Num: 788
-
-
-Round Num: 789
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(2, 3, 12), (2, 3, 4)}}
-
-0 pair on street 4
-
-Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(2, 3, 12), (2, 3, 4)}}
-
-0 pair on street 5
-Final Hand: 0 Pair
-
-Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(3, 12), (3, 4)}}
-
-
-Round Num: 790
-
-
-Round Num: 791
-
-0 pair on street 3
-Flush double draw on street 3
 12 high straight double draw on street 3
 
-Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 2, 4: {(1, 2, 3)}}
+Opp outs on street 3 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
 
+Opponent checks on flop
+8 pair on street 4
+Flush draw on street 4
+11 high straight draw on street 4
+12 high straight draw on street 4
 
-Round Num: 792
+Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 2, 4: {(11, 7), (6, 7), (11, 12)}}
 
+Opponent checks on turn
+8 pair on street 5
+Final Hand: 8 Pair
 
-Round Num: 793
+Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1, 4: {(11, 7), (6, 7), (11, 12)}}
 
+Opponent checks on river
 
-Round Num: 794
+Round Num: 116
 
+10 pair on street 3
+Flush draw on street 3
+10 high straight double draw on street 3
 
-Round Num: 795
+Opp outs on street 3 {5: -1, 4: {(8, 9)}}
 
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
-
-3 pair on street 4
+Start betting on flop
+(10, 6) two pair on street 4
 Flush draw on street 4
 
-Opp outs on street 4 {5: 2, 4: {(0, 1), (5, 6), (1, 5)}}
+Opp outs on street 4 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: -1, 4: {(8, 9)}}
 
+Start betting on turn
+(10, 6) two pair on street 5
+Flush on street 5
+Final Hand: 12 Flush
 
-Round Num: 796
+Opp outs on street 5 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 0, 4: {(8, 9)}}
 
+Start betting on river
 
-Round Num: 797
+Round Num: 117
 
-Flush draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
+4 pair on street 3
 10 high straight double draw on street 3
 11 high straight double draw on street 3
 12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
+Opp outs on street 3 {5: 2, 4: {(5, 6, 7), (1, 2, 3)}}
+
+Opponent checks on flop
+4 pair on street 4
+10 high straight draw on street 4
+11 high straight draw on street 4
+
+Opp outs on street 4 {5: 3, 4: {(5, 6)}}
+
+Opponent checks on turn
+(4, 0) two pair on street 5
+Final Hand: (4, 0) Two Pair
+
+Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(5, 6)}}
+
+Opponent checks on river
+
+Round Num: 118
 
 
-Round Num: 798
+Round Num: 119
 
-
-Round Num: 799
-
-(8, 1) two pair on street 3
-
-Opp outs on street 3 {4: {(4, 5, 7), (9, 10, 7), (9, 5, 7)}}
-
-
-Round Num: 800
-
-
-Round Num: 801
-
-(5, 0) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3}
-
-(5, 0) two pair on street 4
-
-Opp outs on street 4 {2: (5, None), 3: 5, 6: (5, None), 7: 5, 5: 3, 4: {(1, 2, 3)}}
-
-(5, 0) full house on street 5
-Final Hand: (5, 0) Full House
-
-Opp outs on street 5 {8: 5, 6: (5, None)}
-
-
-Round Num: 802
-
-
-Round Num: 803
-
-3 pair on street 3
-Flush double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 804
-
-
-Round Num: 805
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-9 high straight double draw on street 3
 10 high straight double draw on street 3
 11 high straight double draw on street 3
-12 high straight double draw on street 3
+12 high straight draw on street 3
 
-Opp outs on street 3 {5: 1, 4: {(9, 6, 7), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
+Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (8, 9, 11)}}
 
+Opponent checks on flop
+12 high straight draw on street 4
 
-Opp outs on street 4 {5: 3, 4: {(9, 6, 7), (1, 2, 12), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
+Opp outs on street 4 {5: 1, 4: {(0, 2)}}
 
-Final Hand: 10 High Card
+Opponent checks on turn
+Final Hand: 9 High Card
 
-Opp outs on street 5 {4: {(1, 2)}}
+Opp outs on street 5 {5: 3, 4: {(0, 2), (2, 4)}}
 
+Opponent bet on river
 
-Round Num: 806
-
-
-Round Num: 807
-
-11 pair on street 3
-Flush draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
+Round Num: 120
 
 
-Round Num: 808
+Round Num: 121
 
+7 pair on street 3
 
-Round Num: 809
+Opp outs on street 3 {5: 0, 4: {(8, 9, 10)}}
 
-
-Round Num: 810
-
-
-Round Num: 811
-
-
-Round Num: 812
-
-
-Round Num: 813
-
-Flush double draw on street 3
-3 high straight draw on street 3
-
-Opp outs on street 3 {4: {(4, 5)}}
-
+Opponent checks on flop
 7 pair on street 4
-3 high straight draw on street 4
 
-Opp outs on street 4 {5: 0, 4: {(4, 5)}}
+Opp outs on street 4 {5: 0, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12), (8, 9, 10)}}
 
+Opponent checks on turn
 7 pair on street 5
 Final Hand: 7 Pair
 
-Opp outs on street 5 {4: {(4, 5), (8, 10), (8, 5)}}
+Opp outs on street 5 {5: 3, 4: {(8, 10)}}
 
+Opponent checks on river
 
-Round Num: 814
+Round Num: 122
 
+3 pair on street 3
+Flush double draw on street 3
 
-Round Num: 815
+Opp outs on street 3 {5: 2, 4: {(4, 5, 7), (2, 4, 5)}}
 
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-9 high straight double draw on street 3
+Start betting on flop
+3 pair on street 4
+
+Opp outs on street 4 {5: 2, 4: {(4, 5, 7), (2, 4, 5), (0, 1, 2), (8, 9, 10)}}
+
+Start betting on turn
+Opponent bet on turn after we checked
+3 trips on street 5
+Final Hand: 3 Trips
+
+Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 2, 4: {(4, 5, 7), (2, 4, 5), (0, 1, 2), (8, 9, 10)}}
+
+Start betting on river
+
+Round Num: 123
+
+Flush draw on street 3
+8 high straight double draw on street 3
 10 high straight double draw on street 3
 11 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
+Opp outs on street 3 {5: -1, 4: {(3, 5, 6), (8, 9, 11), (8, 9, 6), (8, 5, 6)}}
 
-9 high straight draw on street 4
+Opponent checks on flop
+Flush draw on street 4
 
-Opp outs on street 4 {4: {(8, 6)}}
+Opp outs on street 4 {5: -1, 4: {(3, 5, 6), (8, 9, 11), (0, 2, 3), (2, 3, 5), (8, 9, 6), (8, 5, 6)}}
 
+Opponent checks on turn
 Final Hand: 8 High Card
 
-Opp outs on street 5 {4: {(3, 4), (8, 6)}}
+Opp outs on street 5 {5: -1, 4: {(0, 2), (2, 5), (5, 6)}}
 
+Opponent checks on river
 
-Round Num: 816
+Round Num: 124
 
 
-Round Num: 817
-
-0 pair on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 818
-
-
-Round Num: 819
-
-0 pair on street 3
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 11), (8, 9, 6)}}
-
-
-Round Num: 820
-
-
-Round Num: 821
-
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 9, 7), (3, 4, 5)}}
-
-
-Round Num: 822
-
-
-Round Num: 823
-
-10 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 824
-
-
-Round Num: 825
-
-3 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
-
-
-Round Num: 826
-
-
-Round Num: 827
-
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-5 high straight draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {4: {(1, 2, 12), (4, 6, 7), (2, 4, 6), (1, 2, 4)}}
-
-
-Round Num: 828
-
-
-Round Num: 829
-
-3 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {(8, 7), (8, 12)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {4: {(8, 7), (8, 12)}}
-
-
-Round Num: 830
-
-
-Round Num: 831
-
-6 pair on street 3
-Flush draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 2}
-
-
-Round Num: 832
-
-
-Round Num: 833
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 12), (2, 4, 5), (0, 2, 4)}}
-
-6 pair on street 4
-
-Opp outs on street 4 {4: {(2, 4, 5), (0, 2, 4), (4, 5, 7), (0, 2, 12), (9, 10, 7), (9, 5, 7)}}
-
-6 trips on street 5
-Final Hand: 6 Trips
-
-Opp outs on street 5 {2: (6, None), 3: 6, 6: (6, None), 7: 6}
-
-
-Round Num: 834
-
-
-Round Num: 835
-
-Flush draw on street 3
-3 high straight double draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {4: {(0, 2, 3), (2, 3, 5)}}
-
-
-Round Num: 836
-
-
-Round Num: 837
-
-8 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 838
-
-
-Round Num: 839
-
-3 high straight double draw on street 3
-4 high straight draw on street 3
-5 high straight on street 3
-
-Opp outs on street 3 {5: 0, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 840
-
-
-Round Num: 841
-
-12 pair on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 11)}}
-
-
-Round Num: 842
-
-
-Round Num: 843
-
-0 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 3)}}
-
-
-Round Num: 844
-
-
-Round Num: 845
-
-10 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 3, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 846
-
-
-Round Num: 847
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(1, 3, 12), (1, 3, 4)}}
-
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(1, 3, 12), (8, 10, 7), (8, 10, 12), (1, 3, 4)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {4: {(8, 10)}}
-
-
-Round Num: 848
-
-
-Round Num: 849
-
-(4, 3) two pair on street 3
-
-Opp outs on street 3 {4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 850
-
-
-Round Num: 851
-
-Flush double draw on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(3, 5, 7), (8, 10, 7), (2, 3, 5), (8, 5, 7)}}
-
-9 pair on street 4
-
-Opp outs on street 4 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 5: 2, 4: {(3, 5, 7), (8, 10, 7), (2, 3, 5), (8, 5, 7)}}
-
-9 pair on street 5
-Final Hand: 9 Pair
-
-Opp outs on street 5 {2: (9, None), 3: 9, 6: (9, None), 7: 9}
-
-
-Round Num: 852
-
-
-Round Num: 853
-
-4 pair on street 3
-Flush double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(0, 2, 3), (2, 3, 5)}}
-
-
-Round Num: 854
-
-
-Round Num: 855
-
-
-Round Num: 856
-
-
-Round Num: 857
-
-9 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 10, 11)}}
-
-
-Round Num: 858
-
-
-Round Num: 859
-
-Flush draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 860
-
-
-Round Num: 861
-
-3 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(0, 2)}}
-
-
-Round Num: 862
-
-
-Round Num: 863
-
-
-Round Num: 864
-
-
-Round Num: 865
-
-5 pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9, 6), (8, 4, 6), (3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 866
-
-
-Round Num: 867
-
-9 pair on street 3
-Flush draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(6, 7), (1, 2), (2, 6)}}
-
-
-Round Num: 868
-
-
-Round Num: 869
-
-(10, 8) two pair on street 3
-
-Opp outs on street 3 {5: 0, 4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Round Num: 870
-
-
-Round Num: 871
-
-6 pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 2}
-
-
-Round Num: 872
-
-
-Round Num: 873
-
-3 high straight draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 2, 12), (1, 2, 4), (4, 5, 6)}}
-
-
-Round Num: 874
-
-
-Round Num: 875
-
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-8 high straight on street 3
-
-Opp outs on street 3 {5: 0, 4: {(9, 10), (9, 5), (4, 5)}}
-
-
-Round Num: 876
-
-
-Round Num: 877
-
-1 pair on street 3
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 10, 11), (8, 10, 6), (8, 5, 6)}}
-
-
-Round Num: 878
-
-
-Round Num: 879
-
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 11)}}
-
-Flush draw on street 4
-10 high straight draw on street 4
-11 high straight draw on street 4
-12 high straight draw on street 4
-
-Opp outs on street 4 {5: 0, 4: {(8, 11)}}
-
-
-Round Num: 880
-
-
-Round Num: 881
-
-4 pair on street 3
-Flush double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(0, 1, 2), (2, 5, 6), (5, 6, 7), (1, 2, 5)}}
-
-
-Round Num: 882
-
-
-Round Num: 883
-
-7 high straight double draw on street 3
-8 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1}
-
-0 pair on street 4
-
-Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 1}
-
-0 pair on street 5
-Final Hand: 0 Pair
-
-Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0}
-
-
-Round Num: 884
-
-
-Round Num: 885
-
-
-Round Num: 886
-
-
-Round Num: 887
-
-
-Round Num: 888
-
-
-Round Num: 889
-
-Flush draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(8, 10), (8, 5)}}
-
-
-Round Num: 890
-
-
-Round Num: 891
-
-
-Round Num: 892
-
-
-Round Num: 893
-
-
-Round Num: 894
-
-
-Round Num: 895
-
-0 pair on street 3
-Flush double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-
-Round Num: 896
-
-
-Round Num: 897
-
-3 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(9, 6, 7), (9, 11, 12), (9, 11, 7)}}
-
-
-Opp outs on street 4 {5: 0, 4: {(9, 6, 7), (0, 2, 3), (9, 11, 7), (2, 3, 5), (5, 6, 7), (9, 11, 12)}}
-
-Final Hand: 12 High Card
-
-Opp outs on street 5 {5: 0, 4: {(9, 7), (5, 7)}}
-
-
-Round Num: 898
-
-
-Round Num: 899
-
-8 pair on street 3
-8 high straight double draw on street 3
-9 high straight draw on street 3
-10 high straight draw on street 3
-
-Opp outs on street 3 {4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-
-Round Num: 900
-
-
-Round Num: 901
-
-
-Round Num: 902
-
-
-Round Num: 903
-
-0 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(1, 2, 3), (8, 9, 10)}}
-
-
-Round Num: 904
-
-
-Round Num: 905
-
-12 pair on street 3
-Flush double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9, 11), (8, 9, 7)}}
-
-
-Round Num: 906
-
-
-Round Num: 907
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(8, 6), (3, 6)}}
-
-4 high straight draw on street 4
-5 high straight on street 4
-
-Opp outs on street 4 {5: -1, 4: {(2, 3), (8, 6), (3, 6)}}
-
-
-Round Num: 908
-
-
-Round Num: 909
-
-11 pair on street 3
-10 high straight double draw on street 3
-11 high straight draw on street 3
-12 high straight draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(8, 9)}}
-
-11 pair on street 4
-10 high straight draw on street 4
-11 high straight on street 4
-12 high straight on street 4
-
-Opp outs on street 4 {5: 3, 4: {9}}
-
-
-Round Num: 910
-
-
-Round Num: 911
-
-9 pair on street 3
-
-Opp outs on street 3 {4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-
-Round Num: 912
-
-
-Round Num: 913
-
-Flush double draw on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(2, 3, 12), (2, 3, 4)}}
-
-Flush draw on street 4
-
-Opp outs on street 4 {5: 1, 4: {(2, 3, 12), (9, 10, 6), (9, 5, 6), (9, 10, 11), (2, 3, 4), (4, 5, 6)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {5: 1, 4: {(2, 4), (2, 12)}}
-
-
-Round Num: 914
-
-
-Round Num: 915
+Round Num: 125
 
 (12, 0) two pair on street 3
 
-Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(1, 2, 3)}}
+Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 4: {(1, 2, 3)}}
 
+Opponent checks on flop
+(12, 0) two pair on street 4
 
-Round Num: 916
+Opp outs on street 4 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 2, 4: {(9, 10, 11), (1, 2, 3)}}
 
+Opponent bet on turn
 
-Round Num: 917
+Round Num: 126
 
-Flush double draw on street 3
-Flush double draw on street 3
-7 high straight double draw on street 3
-8 high straight draw on street 3
-9 high straight draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(3, 5, 6), (1, 2, 3), (8, 5, 6)}}
-
-
-Round Num: 918
-
-
-Round Num: 919
-
-5 pair on street 3
-Flush draw on street 3
-5 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(6, 7)}}
-
-
-Round Num: 920
-
-
-Round Num: 921
-
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-5 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(3, 5, 6), (8, 5, 6)}}
-
-
-Opp outs on street 4 {5: 2, 4: {(3, 5, 6), (8, 9, 11), (8, 9, 6), (8, 5, 6)}}
-
-Final Hand: 11 High Card
-
-Opp outs on street 5 {4: {(8, 9), (8, 5), (3, 5)}}
-
-
-Round Num: 922
-
-
-Round Num: 923
-
-1 pair on street 3
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 4: {(2, 3, 12), (2, 3, 4)}}
-
-
-Round Num: 924
-
-
-Round Num: 925
-
+9 pair on street 3
 8 high straight double draw on street 3
 9 high straight draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
+10 high straight on street 3
 
-Opp outs on street 3 {4: {(4, 5, 7), (9, 10, 12), (9, 10, 7), (9, 5, 7)}}
+Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 4: {(5, 6, 7), (10, 11, 12), (10, 11, 7), (10, 6, 7)}}
 
+Start betting on flop
+9 pair on street 4
+10 high straight on street 4
 
-Round Num: 926
+Opp outs on street 4 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 4: {(10, 11)}}
 
+Start betting on turn
+9 pair on street 5
+10 high straight on street 5
+Final Hand: 10 Straight
 
-Round Num: 927
+Opp outs on street 5 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 4: {(10, 11)}}
 
+Start betting on river
 
-Round Num: 928
-
-
-Round Num: 929
-
-7 pair on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight draw on street 3
-
-Opp outs on street 3 {4: {(8, 9, 6), (8, 4, 6), (3, 4, 6)}}
-
-
-Round Num: 930
-
-
-Round Num: 931
-
-Flush double draw on street 3
-4 high straight double draw on street 3
-5 high straight draw on street 3
-6 high straight draw on street 3
-7 high straight draw on street 3
-8 high straight draw on street 3
-
-Opp outs on street 3 {4: {(6, 7)}}
-
-4 pair on street 4
-5 high straight draw on street 4
-6 high straight draw on street 4
-7 high straight draw on street 4
-8 high straight draw on street 4
-
-Opp outs on street 4 {2: (4, None), 3: 4, 6: (4, None), 7: 4, 5: 1, 4: {(6, 7)}}
-
-
-Round Num: 932
-
-
-Round Num: 933
-
-
-Round Num: 934
-
-
-Round Num: 935
-
-5 trips on street 3
-
-Opp outs on street 3 {5: 3, 4: {(1, 3, 12), (3, 4, 6), (1, 3, 4)}}
-
-
-Round Num: 936
-
-
-Round Num: 937
-
-
-Round Num: 938
-
-
-Round Num: 939
-
-Flush double draw on street 3
-8 high straight double draw on street 3
-9 high straight double draw on street 3
-10 high straight double draw on street 3
-11 high straight double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(9, 10, 11), (9, 10, 6), (9, 5, 6), (4, 5, 6)}}
-
-
-Opp outs on street 4 {5: -1, 4: {(9, 10, 6), (0, 2, 3), (9, 5, 6), (9, 10, 11), (4, 5, 6)}}
-
-0 pair on street 5
-Final Hand: 0 Pair
-
-Opp outs on street 5 {5: -1, 4: {(2, 3)}}
-
-
-Round Num: 940
-
-
-Round Num: 941
-
-Flush draw on street 3
-5 high straight double draw on street 3
-11 high straight double draw on street 3
-12 high straight double draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 9, 12), (8, 9, 7)}}
-
-
-Round Num: 942
-
-
-Round Num: 943
-
-
-Round Num: 944
-
-
-Round Num: 945
-
-10 high straight double draw on street 3
-11 high straight draw on street 3
-
-Opp outs on street 3 {5: 1, 4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
-
-
-Round Num: 946
-
-
-Round Num: 947
-
-(9, 6) two pair on street 3
-Flush double draw on street 3
-
-Opp outs on street 3 {5: -1, 4: {(3, 4, 5), (8, 10, 7), (8, 5, 7)}}
-
-
-Round Num: 948
-
-
-Round Num: 949
-
-3 high straight double draw on street 3
-6 high straight double draw on street 3
-7 high straight double draw on street 3
-10 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(4, 5)}}
-
-3 pair on street 4
-
-Opp outs on street 4 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 3, 4: {(4, 5)}}
-
-3 pair on street 5
-Final Hand: 3 Pair
-
-Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 4: {4}}
-
-
-Round Num: 950
-
-
-Round Num: 951
-
-(12, 8) two pair on street 3
-Flush double draw on street 3
-3 high straight double draw on street 3
-
-Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 1, 4: {(0, 2, 3)}}
-
-(12, 8) two pair on street 4
-
-Opp outs on street 4 {6: (12, 1), 7: (12, 1), 5: 1, 4: {(0, 2, 3)}}
-
-
-Round Num: 952
-
-
-Round Num: 953
-
-
-Round Num: 954
-
-
-Round Num: 955
-
-0 pair on street 3
-Flush double draw on street 3
-3 high straight draw on street 3
-4 high straight draw on street 3
-
-Opp outs on street 3 {5: 0, 4: {(2, 3)}}
-
-(2, 0) two pair on street 4
-3 high straight draw on street 4
-4 high straight draw on street 4
-
-Opp outs on street 4 {5: 2, 4: {3}}
-
-(2, 0) two pair on street 5
-Final Hand: (2, 0) Two Pair
-
-Opp outs on street 5 {4: {3}}
-
-
-Round Num: 956
-
-
-Round Num: 957
+Round Num: 127
 
 2 pair on street 3
 Flush double draw on street 3
 5 high straight double draw on street 3
+6 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(2, 3, 4)}}
+Opp outs on street 3 {5: 0, 4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
 
+Opponent checks on flop
+2 trips on street 4
 
-Round Num: 958
+Opp outs on street 4 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 0, 4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
 
+Opponent checks on turn
+2 trips on street 5
+Final Hand: 2 Trips
 
-Round Num: 959
+Opp outs on street 5 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 0, 4: {(0, 1), (5, 6), (1, 5)}}
 
+Opponent checks on river
 
-Round Num: 960
+Round Num: 128
 
-
-Round Num: 961
-
-9 pair on street 3
 Flush double draw on street 3
-11 high straight double draw on street 3
-12 high straight draw on street 3
+5 high straight double draw on street 3
+6 high straight draw on street 3
+8 high straight draw on street 3
 
-Opp outs on street 3 {2: (9, None), 3: 9, 6: (9, None), 7: 9, 4: {(8, 10, 11)}}
+Opp outs on street 3 {4: {(8, 6, 7), (1, 2, 3), (3, 6, 7), (2, 3, 6)}}
 
+Start betting on flop
+8 pair on street 4
+6 high straight draw on street 4
+8 high straight draw on street 4
 
-Round Num: 962
+Opp outs on street 4 {5: 2, 4: {(6, 7)}}
 
+Start betting on turn
+8 pair on street 5
+Final Hand: 8 Pair
 
-Round Num: 963
+Opp outs on street 5 {4: {(2, 3), (6, 7)}}
 
+Start betting on river
 
-Round Num: 964
+Round Num: 129
 
+11 pair on street 3
 
-Round Num: 965
+Opp outs on street 3 {4: {(8, 9, 10)}}
+
+Opponent checks on flop
+11 pair on street 4
+
+Opp outs on street 4 {4: {(1, 3, 12), (1, 3, 4), (8, 9, 10)}}
+
+Opponent bet on turn
+
+Round Num: 130
 
 10 high straight double draw on street 3
 11 high straight double draw on street 3
-12 high straight double draw on street 3
+12 high straight draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(0, 2, 3), (2, 3, 5)}}
+Opp outs on street 3 {4: {(9, 7)}}
 
+Start betting on flop
+1 pair on street 4
+12 high straight draw on street 4
 
-Opp outs on street 4 {5: 2, 4: {(0, 3), (3, 5)}}
+Opp outs on street 4 {5: 1, 4: {(9, 7)}}
 
-10 pair on street 5
-Final Hand: 10 Pair
+Start betting on turn
+1 pair on street 5
+Final Hand: 1 Pair
 
-Opp outs on street 5 {5: 2, 4: {(0, 3), (3, 5)}}
+Opp outs on street 5 {4: {(9, 7), (5, 7)}}
 
+Start betting on river
 
-Round Num: 966
+Round Num: 131
 
-
-Round Num: 967
-
+6 pair on street 3
+Flush draw on street 3
 3 high straight double draw on street 3
-4 high straight draw on street 3
 
-Opp outs on street 3 {4: {(8, 10, 12), (8, 10, 7)}}
+Opp outs on street 3 {5: 1, 4: {(8, 9, 11), (1, 2, 3)}}
+
+Opponent checks on flop
+6 trips on street 4
+Flush draw on street 4
+
+Opp outs on street 4 {5: 1, 4: {(8, 9, 7), (8, 9, 11), (1, 2, 3)}}
+
+Opponent checks on turn
+6 trips on street 5
+Final Hand: 6 Trips
+
+Opp outs on street 5 {4: {(8, 7), (8, 11)}}
+
+Opponent checks on river
+
+Round Num: 132
 
 
-Round Num: 968
+Round Num: 133
+
+Flush double draw on street 3
+5 high straight double draw on street 3
+6 high straight double draw on street 3
+7 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(2, 4), (4, 7)}}
+
+Opponent checks on flop
+5 high straight draw on street 4
+6 high straight draw on street 4
+
+Opp outs on street 4 {4: {4}}
+
+Opponent checks on turn
+Final Hand: 10 High Card
+
+Opp outs on street 5 {5: 3, 4: {4}}
+
+Opponent checks on river
+
+Round Num: 134
+
+Flush double draw on street 3
+4 high straight double draw on street 3
+8 high straight double draw on street 3
+
+Opp outs on street 3 {5: 0, 4: {(1, 3, 12), (1, 3, 4)}}
+
+Start betting on flop
+Flush draw on street 4
+
+Opp outs on street 4 {5: 0, 4: {(9, 6, 7), (1, 3, 12), (9, 11, 7), (1, 3, 4), (9, 11, 12)}}
+
+Start betting on turn
+Opponent bet on turn after we checked
+
+Round Num: 135
+
+(1, 0) two pair on street 3
+Flush double draw on street 3
+
+Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(2, 3, 12), (2, 3, 4)}}
+
+Opponent checks on flop
+(1, 0) two pair on street 4
+
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 4: {(2, 3, 12), (2, 3, 4)}}
+
+Opponent checks on turn
+(1, 0) two pair on street 5
+Final Hand: (1, 0) Two Pair
+
+Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 0, 4: {(2, 4), (2, 12)}}
+
+Opponent checks on river
+
+Round Num: 136
+
+5 high straight double draw on street 3
+6 high straight double draw on street 3
+9 high straight double draw on street 3
+
+Opp outs on street 3 {5: 0, 4: {(4, 6, 7), (8, 6, 7), (2, 4, 6), (1, 2, 4)}}
+
+Start betting on flop
+8 pair on street 4
+
+Opp outs on street 4 {5: 0, 4: {(6, 7)}}
+
+Start betting on turn
+8 pair on street 5
+Final Hand: 8 Pair
+
+Opp outs on street 5 {5: 0, 4: {(11, 7), (6, 7), (11, 12)}}
+
+Start betting on river
+Opponent checks on river after we checked
+
+Round Num: 137
+
+4 pair on street 3
+6 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(3, 5)}}
+
+Opponent checks on flop
+4 pair on street 4
+
+Opp outs on street 4 {5: 0, 4: {(5, 7), (3, 5)}}
+
+Opponent checks on turn
+4 pair on street 5
+Final Hand: 4 Pair
+
+Opp outs on street 5 {5: 0, 4: {(5, 7), (10, 7), (3, 5)}}
+
+Opponent bet on river
+
+Round Num: 138
+
+11 pair on street 3
+
+Opp outs on street 3 {}
+
+Start betting on flop
+11 pair on street 4
+
+Opp outs on street 4 {5: 2, 4: {(4, 5, 7), (9, 10, 12), (9, 10, 7), (9, 5, 7)}}
+
+Start betting on turn
+11 pair on street 5
+Final Hand: 11 Pair
+
+Opp outs on street 5 {5: 2, 4: {(9, 7), (4, 7)}}
+
+Start betting on river
+Opponent checks on river after we checked
+
+Round Num: 139
+
+0 pair on street 3
+
+Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 1}
+
+Opponent checks on flop
+0 pair on street 4
+
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 1, 4: {(1, 3, 12), (1, 3, 4)}}
+
+Opponent bet on turn
+
+Round Num: 140
+
+(9, 2) two pair on street 3
+
+Opp outs on street 3 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 3}
+
+Start betting on flop
+(9, 2) full house on street 4
+
+Opp outs on street 4 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 3, 4: {(8, 10, 12), (8, 10, 7)}}
+
+Start betting on turn
+(9, 2) full house on street 5
+Final Hand: (9, 2) Full House
+
+Opp outs on street 5 {2: (2, None), 3: 2, 6: (2, None), 7: 2, 5: 3}
+
+Start betting on river
+
+Round Num: 141
+
+0 trips on street 3
+Flush double draw on street 3
+
+Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 2}
+
+Opponent checks on flop
+0 trips on street 4
+
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(8, 10, 7), (8, 5, 7)}}
+
+Opponent checks on turn
+0 trips on street 5
+Final Hand: 0 Trips
+
+Opp outs on street 5 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(2, 4, 5), (4, 5, 7), (1, 2, 12), (8, 10, 7), (8, 5, 7), (1, 2, 4)}}
+
+Opponent checks on river
+
+Round Num: 142
+
+9 high straight double draw on street 3
+10 high straight draw on street 3
+
+Opp outs on street 3 {4: {(8, 7)}}
+
+Start betting on flop
+9 high straight draw on street 4
+10 high straight on street 4
+
+Opp outs on street 4 {5: 0, 4: {8}}
+
+Start betting on turn
+
+Round Num: 143
+
+4 pair on street 3
+Flush draw on street 3
+
+Opp outs on street 3 {5: -1, 4: {(1, 2, 3)}}
+
+Opponent checks on flop
+4 pair on street 4
+Flush draw on street 4
+
+Opp outs on street 4 {5: -1, 4: {(3, 5, 6), (1, 2, 3), (8, 10, 11), (8, 10, 6), (8, 5, 6)}}
+
+Opponent checks on turn
+(11, 4) two pair on street 5
+Final Hand: (11, 4) Two Pair
+
+Opp outs on street 5 {5: 1, 4: {(8, 10)}}
+
+Opponent checks on river
+
+Round Num: 144
 
 
-Round Num: 969
+Round Num: 145
+
+6 high straight double draw on street 3
+7 high straight draw on street 3
+
+Opp outs on street 3 {4: {(4, 5)}}
+
+Opponent checks on flop
+3 pair on street 4
+7 high straight draw on street 4
+
+Opp outs on street 4 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 3, 4: {(4, 5)}}
+
+Opponent checks on turn
+3 pair on street 5
+Final Hand: 3 Pair
+
+Opp outs on street 5 {2: (3, None), 3: 3, 6: (3, None), 7: 3, 5: 3, 4: {(4, 5)}}
+
+Opponent checks on river
+
+Round Num: 146
 
 1 pair on street 3
 4 high straight double draw on street 3
 5 high straight double draw on street 3
-
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 4: {(0, 2, 3), (2, 3, 5)}}
-
-
-Round Num: 970
-
-
-Round Num: 971
-
-(11, 4) two pair on street 3
-
-Opp outs on street 3 {4: {(3, 5, 6), (0, 1, 3), (1, 3, 5)}}
-
-
-Round Num: 972
-
-
-Round Num: 973
-
-6 pair on street 3
-Flush double draw on street 3
 6 high straight double draw on street 3
 7 high straight double draw on street 3
 8 high straight double draw on street 3
+
+Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 4: {(2, 3, 4)}}
+
+Start betting on flop
+1 pair on street 4
+4 high straight draw on street 4
+5 high straight draw on street 4
+6 high straight draw on street 4
+
+Opp outs on street 4 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 4: {(3, 4)}}
+
+Start betting on turn
+1 pair on street 5
+Final Hand: 1 Pair
+
+Opp outs on street 5 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 4: {(3, 4)}}
+
+Start betting on river
+
+Round Num: 147
+
 9 high straight double draw on street 3
-
-Opp outs on street 3 {5: 2, 4: {(8, 9, 5), (8, 4, 5), (3, 4, 5), (8, 9, 10)}}
-
-
-Round Num: 974
-
-
-Round Num: 975
-
-8 pair on street 3
-Flush double draw on street 3
 10 high straight double draw on street 3
 11 high straight double draw on street 3
 12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 0, 4: {(9, 12), (9, 7)}}
+Opp outs on street 3 {4: {(11, 7), (6, 7), (11, 12)}}
 
+Opponent checks on flop
+12 high straight draw on street 4
 
-Round Num: 976
+Opp outs on street 4 {5: 2, 4: {11}}
 
+Opponent checks on turn
+Final Hand: 5 High Card
 
-Round Num: 977
+Opp outs on street 5 {5: 2, 4: {11}}
 
-Flush double draw on street 3
+Opponent checks on river
+
+Round Num: 148
+
+10 pair on street 3
 9 high straight double draw on street 3
-10 high straight draw on street 3
-11 high straight draw on street 3
+10 high straight double draw on street 3
 
-Opp outs on street 3 {4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
+Opp outs on street 3 {5: 1, 4: {(8, 7)}}
 
+Start betting on flop
+Opponent bets on flop after we check
 
-Round Num: 978
+Round Num: 149
 
-
-Round Num: 979
-
-4 high straight double draw on street 3
+8 pair on street 3
+9 high straight double draw on street 3
+10 high straight double draw on street 3
 11 high straight double draw on street 3
 12 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(10, 11), (10, 6), (5, 6)}}
+
+Opponent checks on flop
+8 pair on street 4
+
+Opp outs on street 4 {5: 1, 4: {(10, 11), (10, 6), (5, 6)}}
+
+Opponent checks on turn
+8 pair on street 5
+Final Hand: 8 Pair
+
+Opp outs on street 5 {5: 2, 4: {(10, 11), (10, 6), (5, 6)}}
+
+Opponent bet on river
+
+Round Num: 150
+
+
+Round Num: 151
+
+2 pair on street 3
+Flush double draw on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
+5 high straight double draw on street 3
+
+Opp outs on street 3 {5: 2, 4: {(0, 3)}}
+
+Opponent checks on flop
+2 pair on street 4
+
+Opp outs on street 4 {5: 3, 4: {(0, 3)}}
+
+Opponent checks on turn
+(2, 1) two pair on street 5
+Final Hand: (2, 1) Two Pair
+
+Opp outs on street 5 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 2, 4: {(0, 3)}}
+
+Opponent checks on river
+
+Round Num: 152
+
+1 pair on street 3
+Flush double draw on street 3
+3 high straight double draw on street 3
+12 high straight double draw on street 3
+
+Opp outs on street 3 {5: 3, 4: {(8, 10, 11), (0, 2, 3)}}
+
+Start betting on flop
+1 pair on street 4
+
+Opp outs on street 4 {5: 3, 4: {(8, 6, 7), (8, 10, 11), (0, 2, 3), (2, 3, 4)}}
+
+Start betting on turn
+Opponent bet on turn after we checked
+(1, 0) two pair on street 5
+Final Hand: (1, 0) Two Pair
+
+Opp outs on street 5 {5: 3, 4: {(2, 3)}}
+
+Start betting on river
+Opponent checks on river after we checked
+
+Round Num: 153
+
+Flush double draw on street 3
+3 high straight double draw on street 3
+
+Opp outs on street 3 {5: 1, 4: {(2, 3, 12), (2, 3, 4)}}
+
+Opponent checks on flop
+10 pair on street 4
+
+Opp outs on street 4 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 1, 4: {(2, 3, 12), (2, 3, 4)}}
+
+Opponent checks on turn
+10 pair on street 5
+Final Hand: 10 Pair
+
+Opp outs on street 5 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 5: 1, 4: {(2, 3, 12), (8, 11, 7), (2, 3, 4), (8, 11, 12), (8, 6, 7)}}
+
+Opponent bet on river
+
+Round Num: 154
+
+0 pair on street 3
+3 high straight double draw on street 3
+4 high straight double draw on street 3
 
 Opp outs on street 3 {4: {(1, 3, 12), (1, 3, 4)}}
 
+Start betting on flop
+(8, 0) two pair on street 4
 
-Opp outs on street 4 {5: 2, 4: {(1, 3, 12), (3, 4, 5), (1, 3, 4)}}
+Opp outs on street 4 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1, 4: {(1, 3, 12), (1, 3, 4)}}
 
-11 pair on street 5
-Final Hand: 11 Pair
+Start betting on turn
+(8, 0) two pair on street 5
+Final Hand: (8, 0) Two Pair
 
-Opp outs on street 5 {2: (11, None), 3: 11, 6: (11, None), 7: 11}
+Opp outs on street 5 {2: (8, None), 3: 8, 6: (8, None), 7: 8, 5: 1}
 
+Start betting on river
 
-Round Num: 980
+Round Num: 155
 
-
-Round Num: 981
-
-3 high straight double draw on street 3
-5 high straight double draw on street 3
-6 high straight double draw on street 3
+0 pair on street 3
 7 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
+Opp outs on street 3 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3}
 
-3 high straight draw on street 4
+Opponent checks on flop
+0 pair on street 4
 
-Opp outs on street 4 {5: 3, 4: {(8, 9, 7), (8, 4, 7), (2, 3, 4), (3, 4, 7)}}
+Opp outs on street 4 {2: (0, None), 3: 0, 6: (0, None), 7: 0, 5: 3, 4: {(1, 2, 3)}}
 
-Final Hand: 12 High Card
+Opponent bet on turn
 
-Opp outs on street 5 {4: {(9, 7), (4, 7)}}
+Round Num: 156
 
-
-Round Num: 982
-
-
-Round Num: 983
-
-Flush draw on street 3
+5 pair on street 3
+7 high straight double draw on street 3
 8 high straight double draw on street 3
-9 high straight draw on street 3
+9 high straight double draw on street 3
 
-Opp outs on street 3 {5: 2, 4: {(9, 7), (4, 7)}}
+Opp outs on street 3 {4: {(9, 6), (4, 6)}}
 
+Start betting on flop
+5 pair on street 4
 
-Round Num: 984
+Opp outs on street 4 {5: 1, 4: {(9, 10), (9, 6), (4, 6)}}
 
+Start betting on turn
+5 pair on street 5
+Final Hand: 5 Pair
 
-Round Num: 985
+Opp outs on street 5 {5: 1, 4: {(9, 10), (9, 6), (4, 6)}}
 
-11 pair on street 3
+Start betting on river
+
+Round Num: 157
+
 Flush double draw on street 3
-
-Opp outs on street 3 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 3, 4: {(8, 9, 10)}}
-
-
-Round Num: 986
-
-
-Round Num: 987
-
+8 high straight double draw on street 3
 10 high straight double draw on street 3
 11 high straight draw on street 3
 
-Opp outs on street 3 {4: {(8, 9, 10)}}
+Opp outs on street 3 {4: {(8, 9, 12), (8, 9, 7)}}
 
+Opponent checks on flop
+11 pair on street 4
+Flush draw on street 4
+11 high straight draw on street 4
 
-Round Num: 988
+Opp outs on street 4 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 0, 4: {(8, 9, 12), (8, 9, 7)}}
 
+Opponent checks on turn
+11 pair on street 5
+Final Hand: 11 Pair
 
-Round Num: 989
+Opp outs on street 5 {2: (11, None), 3: 11, 6: (11, None), 7: 11, 5: 1, 4: {(8, 9)}}
 
-(2, 1) two pair on street 3
-Flush double draw on street 3
-5 high straight double draw on street 3
+Opponent bet on river
 
-Opp outs on street 3 {2: (1, None), 3: 1, 6: (1, None), 7: 1, 5: 1, 4: {(0, 3, 4), (3, 4, 5), (0, 3, 12)}}
+Round Num: 158
 
+(4, 1) two pair on street 3
 
-Round Num: 990
+Opp outs on street 3 {4: {(3, 5, 7), (0, 2, 3), (2, 3, 5), (8, 5, 7)}}
 
+Start betting on flop
+(4, 1) two pair on street 4
 
-Round Num: 991
+Opp outs on street 4 {5: 0, 4: {(2, 3)}}
 
-9 pair on street 3
-Flush draw on street 3
-6 high straight double draw on street 3
-10 high straight double draw on street 3
+Start betting on turn
+(4, 1) two pair on street 5
+Final Hand: (4, 1) Two Pair
 
-Opp outs on street 3 {5: 3, 4: {(8, 11, 12), (8, 6, 7), (8, 11, 7)}}
+Opp outs on street 5 {4: {(2, 3), (8, 5), (3, 5)}}
 
+Start betting on river
 
-Round Num: 992
-
-
-Round Num: 993
+Round Num: 159
 
 0 pair on street 3
 Flush double draw on street 3
-Flush double draw on street 3
 3 high straight double draw on street 3
-
-Opp outs on street 3 {5: 3, 4: {(2, 3)}}
-
-
-Round Num: 994
-
-
-Round Num: 995
-
-3 pair on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
-6 high straight double draw on street 3
-
-Opp outs on street 3 {4: {(4, 5, 7), (3, 4, 5), (9, 10, 7), (9, 5, 7)}}
-
-
-Round Num: 996
-
-
-Round Num: 997
-
-6 pair on street 3
-Flush double draw on street 3
 12 high straight double draw on street 3
 
-Opp outs on street 3 {5: 3, 4: {(9, 10, 12), (9, 10, 7)}}
+Opp outs on street 3 {4: {(1, 3)}}
+
+Opponent bet on flop
+0 pair on street 4
+
+Opp outs on street 4 {4: {(1, 3)}}
+
+Opponent bet on turn
+
+Round Num: 160
 
 
-Round Num: 998
+Round Num: 161
 
-
-Round Num: 999
-
-6 pair on street 3
-Flush draw on street 3
-3 high straight double draw on street 3
-4 high straight double draw on street 3
+Flush double draw on street 3
+6 high straight double draw on street 3
 7 high straight double draw on street 3
+8 high straight double draw on street 3
 
-Opp outs on street 3 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 3}
+Opp outs on street 3 {5: 3, 4: {(3, 5, 6), (0, 1, 3), (8, 5, 6), (1, 3, 5)}}
+
+Opponent checks on flop
+6 high straight draw on street 4
+7 high straight draw on street 4
+8 high straight draw on street 4
+
+Opp outs on street 4 {5: 3, 4: {(1, 3), (8, 6), (3, 6)}}
+
+Opponent checks on turn
+12 pair on street 5
+Final Hand: 12 Pair
+
+Opp outs on street 5 {5: 3, 4: {(1, 3), (8, 6), (3, 6)}}
+
+Opponent checks on river
+
+Round Num: 162
 
 
-Round Num: 1000
+Round Num: 163
 
-Final Time: 26.507
+11 high straight double draw on street 3
+12 high straight draw on street 3
+
+Opp outs on street 3 {5: 1, 4: {(8, 9)}}
+
+Opponent checks on flop
+12 high straight draw on street 4
+
+Opp outs on street 4 {5: 1, 4: {(8, 9)}}
+
+Opponent checks on turn
+Final Hand: 9 High Card
+
+Opp outs on street 5 {5: 3, 4: {(8, 9)}}
+
+Opponent bet on river
+
+Round Num: 164
+
+
+Round Num: 165
+
+12 trips on street 3
+
+Opp outs on street 3 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 0, 4: {(8, 9, 10)}}
+
+Opponent bet on flop
+12 trips on street 4
+
+Opp outs on street 4 {2: (12, None), 3: 12, 6: (12, None), 7: 12, 5: 3, 4: {(8, 9, 10)}}
+
+Opponent checks on turn
+(12, 6) full house on street 5
+Final Hand: (12, 6) Full House
+
+Opp outs on street 5 {6: (12, 6), 7: (12, 6), 5: 3, 4: {(8, 9, 10)}}
+
+Opponent checks on river
+
+Round Num: 166
+
+
+Round Num: 167
+
+10 pair on street 3
+Flush double draw on street 3
+
+Opp outs on street 3 {5: 2, 4: {(8, 9, 11)}}
+
+Opponent bet on flop
+10 pair on street 4
+
+Opp outs on street 4 {5: 2, 4: {(8, 9, 11), (0, 2, 3), (2, 3, 4)}}
+
+Opponent checks on turn
+(10, 7) two pair on street 5
+Final Hand: (10, 7) Two Pair
+
+Opp outs on street 5 {5: 2, 4: {(3, 4, 6), (8, 9, 11), (0, 2, 3), (2, 3, 4), (8, 9, 6), (8, 4, 6)}}
+
+Opponent checks on river
+
+Round Num: 168
+
+
+Round Num: 169
+
+6 high straight double draw on street 3
+10 high straight double draw on street 3
+
+Opp outs on street 3 {4: {(8, 9, 7), (3, 4, 5)}}
+
+Opponent checks on flop
+6 pair on street 4
+
+Opp outs on street 4 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 1, 4: {(8, 9, 7), (3, 4, 5)}}
+
+Opponent checks on turn
+6 pair on street 5
+Final Hand: 6 Pair
+
+Opp outs on street 5 {2: (6, None), 3: 6, 6: (6, None), 7: 6, 5: 2, 4: {(0, 3, 4), (8, 9, 7), (3, 4, 5), (0, 3, 12)}}
+
+Opponent checks on river
+
+Round Num: 170
+
+
+Round Num: 171
+
+Flush draw on street 3
+9 high straight double draw on street 3
+10 high straight double draw on street 3
+11 high straight draw on street 3
+
+Opp outs on street 3 {5: -1, 4: {(8, 10, 12), (8, 10, 7)}}
+
+Opponent checks on flop
+Forfeit in Round #172
+Final Time: 28.874

@@ -200,9 +200,10 @@ class Player(Bot):
         
         self.board_straight_flush = False
         
-        self.opp_river_bet = False
-        self.opp_turn_bet = False
-        self.opp_flop_bet = False
+        self.opp_pre_flop_bet = 0
+        self.opp_river_bet = 0
+        self.opp_turn_bet = 0
+        self.opp_flop_bet = 0
         
         self.on_board_hands = set()
         
@@ -986,6 +987,15 @@ class Player(Bot):
         
         if self.street_num < street: # new card dealt
         
+            if street == 3:
+                if opp_bid != 0:
+                    self.opp_bids.append(opp_bid)
+                    if len(self.opp_bids) > 15:
+                        self.opp_bids.pop(0)
+                    self.opp_bids_num += 1
+                    self.opp_bids_sum += opp_bid
+                    self.my_bids.append(my_bid)
+        
             self.board_ranks = []
             self.board_suits = []
             
@@ -1382,16 +1392,10 @@ class Player(Bot):
         
             self.flop_cards = board_cards
         
-            if continue_cost >= 5 and continue_cost >= pot_size/10: # check whether opponent is bluffing after showdown
-                self.opp_flop_bet = True
+            if continue_cost >= max(5, pot_size/10): # check whether opponent is bluffing after showdown
+                self.opp_flop_bet = continue_cost
         
-            if opp_bid != 0:
-                self.opp_bids.append(opp_bid)
-                if len(self.opp_bids) > 20:
-                    self.opp_bids.pop(0)
-                self.opp_bids_num += 1
-                self.opp_bids_sum += opp_bid
-                self.my_bids.append(my_bid)
+            
             
             if continue_cost == 0 and big_blind:
                 
@@ -2018,7 +2022,7 @@ class Player(Bot):
             self.turn_cards = board_cards
         
             if continue_cost >= 5 and continue_cost >= pot_size/2: # check whether opponent is bluffing after showdown
-                self.opp_turn_bet = True
+                self.opp_turn_bet = continue_cost
             
             if continue_cost == 0 and big_blind:
                 # starting betting
@@ -2145,7 +2149,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost < 5 or continue_cost < pot_size/10:
+            if continue_cost <= max(5, pot_size/10):
                 
                 print("Opponent checks on turn")
                 
@@ -2734,7 +2738,7 @@ class Player(Bot):
         
         
             if continue_cost >= 5 and continue_cost >= pot_size/8: # check whether opponent is bluffing after showdown
-                self.opp_river_bet = True
+                self.opp_river_bet = continue_cost
                 
             if continue_cost == 0 and big_blind:
                 
