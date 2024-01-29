@@ -958,6 +958,8 @@ class Player(Bot):
             can_raise = False
 
         if street == 0:
+            if continue_cost > BIG_BLIND - SMALL_BLIND:
+                self.opp_pre_flop_bet = continue_cost
             if CheckAction in legal_actions:
                 # opponent calls as small bind
                 if self.total_percentage > 0.58 and can_raise:
