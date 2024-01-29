@@ -167,27 +167,6 @@ class Player(Bot):
         
         self.street_num = 0 # used for checking if hand strength has already been calculated
         
-        
-        self.double_flush_draw = False
-        self.flush_draw = False
-        self.flush = False
-        self.flush_suit = -1
-        self.my_flush = set() # cards in our hand for a flush
-        self.board_flush = set() # cards on the board for a flush
-        self.my_num_in_suit = 0 # number we have in the suit
-        self.my_flush_high = -1 # high in the flush for tie-break
-        
-        self.double_straight_draw = False
-        self.straight_draw = False
-        self.straight = False
-        self.my_straight = set() # cards in our hand for a straight
-        self.board_straight = set() # cards on the board for a straight
-        self.straight_high = -1
-        self.draw_needed = set() # cards needed for a draw
-        self.double_draw_needed = set() # pairs of cards needed for a double draw
-        self.my_num_in_straight = 0 # number we have making up the straight
-        self.my_straight_high = -1
-        
         self.board_trips = False
         self.board_trips_rank = -1
         
@@ -360,6 +339,34 @@ class Player(Bot):
                     
         if opp_cards:
             
+            opp_river_flush = False
+            opp_river_flush_suit = -1
+            opp_river_flush_high = -1 # high in the flush for tie-break
+            
+            opp_river_straight = False
+            opp_river_straight_high = -1
+            
+            opp_river_trips = False
+            opp_river_trips_rank = -1
+            
+            opp_river_pair = False
+            opp_river_pair_rank = -1
+            
+            opp_river_two_pair = False
+            opp_river_two_pair_ranks = -1, -1 # higher rank first
+            
+            opp_river_full_house = False
+            opp_river_full_house_ranks = -1, -1 # three of a kind first
+            
+            opp_river_quads = False
+            opp_river_quads_rank = -1
+            
+            opp_river_high_hand = 0 # string representing the best hand we have
+            opp_river_high_hand_numbers = -1
+            
+            opp_river_straight_flush = False
+        
+            
             total_river_cards = opp_cards + self.river_cards
             
             opp_pairs = check_for_pair(total_river_cards)
@@ -410,6 +417,7 @@ class Player(Bot):
                     opp_river_flush = True
                     opp_river_flush_suit = suit_index
                     opp_river_flush_cards.update(cards_in)
+                    opp_river_flush_high = max(cards_in)
                         
             opp_straight = check_for_straight(total_river_cards, 5)
             opp_river_straight_high = 0
@@ -452,6 +460,38 @@ class Player(Bot):
                 opp_river_high_hand_numbers = opp_river_pair_rank
             else:
                 opp_river_high_hand = 0
+                
+                
+            opp_turn_flush_draw = False
+            opp_turn_flush = False
+            opp_turn_flush_suit = -1
+            opp_turn_flush_high = -1 # high in the flush for tie-break
+            
+            opp_turn_straight_draw = False
+            opp_turn_straight = False
+            opp_turn_straight_high = -1
+            opp_turn_draw_needed = set() # cards needed for a draw
+            opp_turn_my_straight_high = -1
+            
+            opp_turn_trips = False
+            opp_turn_trips_rank = -1
+            
+            opp_turn_pair = False
+            opp_turn_pair_rank = -1
+            
+            opp_turn_two_pair = False
+            opp_turn_two_pair_ranks = -1, -1 # higher rank first
+            
+            opp_turn_full_house = False
+            opp_turn_full_house_ranks = -1, -1 # three of a kind first
+            
+            opp_turn_quads = False
+            opp_turn_quads_rank = -1
+            
+            opp_turn_high_hand = 0 # string representing the best hand we have
+            opp_turn_high_hand_numbers = -1
+            
+            opp_turn_straight_flush = False
                 
                 
                 
@@ -506,10 +546,12 @@ class Player(Bot):
                         opp_turn_flush = True
                         opp_turn_flush_suit = suit_index
                         opp_turn_flush_cards.update(cards_in)
+                        opp_turn_flush_high = max(cards_in)
                     if len(cards_in) == 4:
                         opp_turn_flush_draw = True
                         opp_turn_flush_draw_suit = suit_index
                         opp_turn_flush_cards.update(cards_in)
+                        opp_turn_flush_high = max(cards_in)
                         
             opp_straight = check_for_straight(total_turn_cards, 4)
             opp_turn_straight_high = 0
@@ -559,6 +601,38 @@ class Player(Bot):
                 opp_turn_high_hand = 0
                 
                 
+            opp_flop_double_flush_draw = False
+            opp_flop_flush_draw = False
+            opp_flop_flush = False
+            opp_flop_flush_suit = -1
+            opp_flop_flush_high = -1 # high in the flush for tie-break
+            
+            opp_flop_double_straight_draw = False
+            opp_flop_straight_draw = False
+            opp_flop_straight = False
+            opp_flop_straight_high = -1
+            opp_flop_draw_needed = set() # cards needed for a draw
+            opp_flop_double_draw_needed = set() # pairs of cards needed for a double draw
+            
+            opp_flop_trips = False
+            opp_flop_trips_rank = -1
+            
+            opp_flop_pair = False
+            opp_flop_pair_rank = -1
+            
+            opp_flop_two_pair = False
+            opp_flop_two_pair_ranks = -1, -1 # higher rank first
+            
+            opp_flop_full_house = False
+            opp_flop_full_house_ranks = -1, -1 # three of a kind first
+            
+            opp_flop_quads = False
+            opp_flop_quads_rank = -1
+            
+            opp_flop_high_hand = 0 # string representing the best hand we have
+            opp_flop_high_hand_numbers = -1
+                
+                
             total_flop_cards = opp_cards + self.flop_cards
             
             opp_pairs = check_for_pair(total_flop_cards)
@@ -606,6 +680,7 @@ class Player(Bot):
             opp_flop_flush_cards = set()
             if opp_flush:
                 for suit_index, cards_in in opp_flush.items():
+                    opp_flop_flush_high = max(cards_in)
                     if len(cards_in) == 5:
                         opp_flop_flush = True
                         opp_flop_flush_suit = suit_index
