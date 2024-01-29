@@ -1432,13 +1432,7 @@ class Player(Bot):
             self.flop_cards = board_cards
         
             if continue_cost >= max(5, pot_size/10): # check whether opponent is bluffing after showdown
-<<<<<<< HEAD
                 self.opp_flop_bet = continue_cost
-=======
-                self.opp_flop_bet = continue_cost / pot_size
-        
-            
->>>>>>> f55df43b35287bd1e3d2a13afe5a6de890a06baa
             
             if continue_cost == 0 and big_blind:
                 
