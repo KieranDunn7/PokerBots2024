@@ -38,6 +38,16 @@ class Player(Bot):
         
         self.opp_bluffs = 0 # times opponent reveals cards and bluffs
         self.opp_sandbags = 0 # times opponent reveals cards and doesn't bluff
+        
+        self.opp_pre_flop_actions = []
+        self.opp_flop_actions = []
+        self.opp_turn_actions = []
+        self.opp_river_actions = []
+        
+        self.total_opp_pre_flop_actions = []
+        self.total_opp_flop_actions = []
+        self.total_opp_turn_actions = []
+        self.total_opp_river_actions = []
 
 
 
@@ -246,6 +256,29 @@ class Player(Bot):
         opp_pip = previous_state.pips[1-active]  # the number of chips your opponent has contributed to the pot this round of betting
         round_num = game_state.round_num
         game_clock = game_state.game_clock  # the total number of seconds your bot has left to play this game
+        
+        if not self.forfeit:
+            self.opp_pre_flop_actions.append(self.opp_pre_flop_bet)
+            self.total_opp_pre_flop_actions.append(round(self.opp_pre_flop_bet, 3))
+            if len(self.opp_pre_flop_actions) > 30:
+                self.opp_pre_flop_actions.pop(0)
+            if street >= 3:
+                self.opp_flop_actions.append(self.opp_flop_bet)
+                self.total_opp_flop_actions.append(round(self.opp_flop_bet, 3))
+                if len(self.opp_flop_actions) > 20:
+                    self.opp_flop_actions.pop(0)
+            if street >= 4:
+                self.opp_turn_actions.append(self.opp_turn_bet)
+                self.total_opp_turn_actions.append(round(self.opp_turn_bet, 3))
+                if len(self.opp_turn_actions) > 15:
+                    self.opp_turn_actions.pop(0)
+            if street >= 5:
+                self.opp_river_actions.append(self.opp_river_bet)
+                self.total_opp_river_actions.append(round(self.opp_river_bet, 3))
+                if len(self.opp_river_actions) > 10:
+                    self.opp_river_actions.pop(0)
+        
+        
         
         if street >= 3 and not self.all_in:
             opp_bid = previous_state.bids[1-active]
@@ -752,6 +785,10 @@ class Player(Bot):
                     
         if round_num == NUM_ROUNDS:
             print("Final Time:", game_clock)
+            print("Opp pre-flop actions: ", self.total_opp_pre_flop_actions)
+            print("Opp flop actions: ", self.total_opp_flop_actions)
+            print("Opp turn actions: ", self.total_opp_turn_actions)
+            print("Opp river actions: ", self.total_opp_river_actions)
         
 
     def get_action(self, game_state, round_state, active):
@@ -942,7 +979,7 @@ class Player(Bot):
             else:
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
-            bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 1
+            bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 10
             return BidAction(min(150, my_stack, max(bid, 2*pot_size)))
         
         if self.all_in:
@@ -959,14 +996,14 @@ class Player(Bot):
 
         if street == 0:
             if continue_cost > BIG_BLIND - SMALL_BLIND:
-                self.opp_pre_flop_bet = continue_cost
+                self.opp_pre_flop_bet = continue_cost / pot_size
             if CheckAction in legal_actions:
                 # opponent calls as small bind
                 if self.total_percentage > 0.58 and can_raise:
                     return RaiseAction(int(max(min_raise, min(1.38 * pot_size, max_raise))))
                 return CheckAction()
             self.high_cards_or_pair_likely = not(continue_cost == BIG_BLIND - SMALL_BLIND)
-            if self.total_percentage * pot_size - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.62:
+            if self.total_percentage * (continue_cost + pot_size) - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.62:
                 return FoldAction()
             if continue_cost == BIG_BLIND - SMALL_BLIND:
                 # small blind
@@ -1395,7 +1432,7 @@ class Player(Bot):
             self.flop_cards = board_cards
         
             if continue_cost >= max(5, pot_size/10): # check whether opponent is bluffing after showdown
-                self.opp_flop_bet = continue_cost
+                self.opp_flop_bet = continue_cost / pot_size
         
             
             
@@ -2024,7 +2061,7 @@ class Player(Bot):
             self.turn_cards = board_cards
         
             if continue_cost >= 5 and continue_cost >= pot_size/2: # check whether opponent is bluffing after showdown
-                self.opp_turn_bet = continue_cost
+                self.opp_turn_bet = continue_cost / pot_size
             
             if continue_cost == 0 and big_blind:
                 # starting betting
@@ -2740,7 +2777,7 @@ class Player(Bot):
         
         
             if continue_cost >= 5 and continue_cost >= pot_size/8: # check whether opponent is bluffing after showdown
-                self.opp_river_bet = continue_cost
+                self.opp_river_bet = continue_cost / pot_size
                 
             if continue_cost == 0 and big_blind:
                 
