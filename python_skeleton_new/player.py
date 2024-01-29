@@ -502,14 +502,21 @@ class Player(Bot):
             opp_turn_flush_cards = set()
             if opp_flush:
                 for suit_index, cards_in in opp_flush.items():
-                    opp_turn_flush = True
-                    opp_turn_flush_suit = suit_index
-                    opp_turn_flush_cards.update(cards_in)
+                    if len(cards_in) == 5:
+                        opp_turn_flush = True
+                        opp_turn_flush_suit = suit_index
+                        opp_turn_flush_cards.update(cards_in)
+                    if len(cards_in) == 4:
+                        opp_turn_flush_draw = True
+                        opp_turn_flush_draw_suit = suit_index
+                        opp_turn_flush_cards.update(cards_in)
                         
             opp_straight = check_for_straight(total_turn_cards, 4)
             opp_turn_straight_high = 0
+            opp_turn_draw_needed = set()
             if opp_straight:
                 for high_card, (cards_in, cards_out) in opp_straight.items():
+                    if len(cards_in) == 5:
                         if opp_turn_flush:
                             if cards_in.issubset(opp_turn_flush_cards):
                                 opp_turn_straight_flush = True
@@ -519,6 +526,9 @@ class Player(Bot):
                             if high_card > opp_turn_straight_high:
                                 opp_turn_straight_high = high_card
                                 opp_turn_straight_cards = cards_in
+                    elif len(cards_in) == 4 and not opp_turn_straight: # four in straight with no full straight
+                        opp_turn_straight_draw = True
+                        opp_turn_draw_needed.add(*cards_out)
                             
                             
             if opp_turn_straight_flush:
@@ -546,7 +556,119 @@ class Player(Bot):
                 opp_turn_high_hand = 1
                 opp_turn_high_hand_numbers = opp_turn_pair_rank
             else:
-                opp_v_high_hand = 0
+                opp_turn_high_hand = 0
+                
+                
+            total_flop_cards = opp_cards + self.flop_cards
+            
+            opp_pairs = check_for_pair(total_flop_cards)
+            pairs = set()
+            trips = set()
+            quads = set()
+            for rank, num in opp_pairs.items():
+                if num == 4:
+                    quads.add(rank)
+                if num == 3:
+                    trips.add(rank)
+                if num == 2:
+                    pairs.add(rank)
+                    
+            if quads: # quads
+                opp_flop_quads = True
+                opp_flop_quads_rank = max(quads)
+                
+            elif len(trips) > 1 or trips and pairs: # full house
+                opp_flop_full_house = True
+                if len(trips) > 1 and pairs:
+                    opp_flop_full_house_ranks = max(trips), max(min(trips), max(pairs))
+                elif pairs:
+                    opp_flop_full_house_ranks = max(trips), max(pairs)
+                else:
+                    opp_flop_full_house_ranks = max(trips), min(trips)
+                    
+            elif trips: # trips
+                opp_flop_trips = True
+                opp_flop_trips_rank = max(trips)
+                
+            elif len(pairs) > 1: # two pair
+                opp_flop_two_pair = True
+                high_pair = max(pairs)
+                pairs.remove(max(pairs))
+                low_pair = max(pairs)
+                opp_flop_two_pair_ranks = high_pair, low_pair
+                
+            elif pairs: # pair
+                opp_flop_pair = True
+                opp_flop_pair_rank = max(pairs)
+             
+                    
+            opp_flush = check_for_flush(total_flop_cards, 3)
+            opp_flop_flush_cards = set()
+            if opp_flush:
+                for suit_index, cards_in in opp_flush.items():
+                    if len(cards_in) == 5:
+                        opp_flop_flush = True
+                        opp_flop_flush_suit = suit_index
+                        opp_flop_flush_cards.update(cards_in)
+                    if len(cards_in) == 4:
+                        opp_flop_flush_draw = True
+                        opp_flop_flush_draw_suit = suit_index
+                        opp_flop_flush_cards.update(cards_in)
+                    if len(cards_in) == 3:
+                        opp_flop_flush_double_draw = True
+                        opp_flop_flush_draw_suit = suit_index
+                        opp_flop_flush_cards.update(cards_in)
+                        
+            opp_straight = check_for_straight(total_flop_cards, 3)
+            opp_flop_straight_high = 0
+            opp_flop_draw_needed = set()
+            opp_flop_double_draw_needed = set()
+            if opp_straight:
+                for high_card, (cards_in, cards_out) in opp_straight.items():
+                    if len(cards_in) == 5:
+                        if opp_flop_flush:
+                            if cards_in.issubset(opp_flop_flush_cards):
+                                opp_flop_straight_flush = True
+                                opp_flop_straight_flush_high = high_card
+                        else:
+                            opp_flop_straight = True
+                            if high_card > opp_flop_straight_high:
+                                opp_flop_straight_high = high_card
+                                opp_flop_straight_cards = cards_in
+                    elif len(cards_in) == 4 and not opp_flop_straight: # four in straight with no full straight
+                        opp_flop_straight_draw = True
+                        opp_flop_draw_needed.add(*cards_out)
+                    elif len(cards_in) == 3 and not opp_flop_straight and not opp_flop_straight_draw: # four in straight with no full straight
+                        opp_flop_straight_double_draw = True
+                        opp_flop_double_draw_needed.add(*cards_out)
+                            
+                            
+            if opp_flop_straight_flush:
+                opp_flop_high_hand = 8
+                opp_flop_high_hand_numbers = opp_flop_straight_flush_high
+            elif opp_flop_quads:
+                opp_flop_high_hand = 7
+                opp_flop_high_hand_numbers = opp_flop_quads_rank
+            elif opp_flop_full_house:
+                opp_flop_high_hand = 6
+                opp_flop_high_hand_numbers = opp_flop_full_house_ranks
+            elif opp_flop_flush:
+                opp_flop_high_hand = 5
+                opp_flop_high_hand_numbers = max(opp_flop_flush_cards)
+            elif opp_flop_straight:
+                opp_flop_high_hand = 4
+                opp_flop_high_hand_numbers = opp_flop_straight_high
+            elif opp_flop_trips:
+                opp_flop_high_hand = 3
+                opp_flop_high_hand_numbers = opp_flop_trips_rank
+            elif opp_flop_two_pair:
+                opp_flop_high_hand = 2
+                opp_flop_high_hand_numbers = opp_flop_two_pair_ranks
+            elif opp_flop_pair:
+                opp_flop_high_hand = 1
+                opp_flop_high_hand_numbers = opp_flop_pair_rank
+            else:
+                opp_flop_high_hand = 0
             
             
                     
