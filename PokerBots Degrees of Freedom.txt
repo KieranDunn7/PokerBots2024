@@ -13,5 +13,18 @@ For changing raise strategy:
 
 
 
+Preflop:
+    Big Blind:
+        Win % reqd for raising after opponent calls: 0.58
+            Raise amount: 1.38*pot_size (or min/max_raise)
+
+    Small Blind:
+        Win % reqd for raising on small blind: 0.56
+            Raise amount: 1.27*pot_size (or min/max_raise)
+
+    Win % for reraise: 0.54 + pot_size/100
+        Raise amount: (0.54 + pot_size/100)/(1 - (0.54 + pot_size/100)) * pot_size (or min/max_raise)
+
+    Win % for fold: < 0.62 AND pct*pot_size < (1-pct) * continue_cost
 
 
