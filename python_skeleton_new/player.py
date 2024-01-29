@@ -470,83 +470,83 @@ class Player(Bot):
                     pairs.add(rank)
                     
             if quads: # quads
-                opp_river_quads = True
-                opp_river_quads_rank = max(quads)
+                opp_turn_quads = True
+                opp_turn_quads_rank = max(quads)
                 
             elif len(trips) > 1 or trips and pairs: # full house
-                opp_river_full_house = True
+                opp_turn_full_house = True
                 if len(trips) > 1 and pairs:
-                    opp_river_full_house_ranks = max(trips), max(min(trips), max(pairs))
+                    opp_turn_full_house_ranks = max(trips), max(min(trips), max(pairs))
                 elif pairs:
-                    opp_river_full_house_ranks = max(trips), max(pairs)
+                    opp_turn_full_house_ranks = max(trips), max(pairs)
                 else:
-                    opp_river_full_house_ranks = max(trips), min(trips)
+                    opp_turn_full_house_ranks = max(trips), min(trips)
                     
             elif trips: # trips
-                opp_river_trips = True
-                opp_river_trips_rank = max(trips)
+                opp_turn_trips = True
+                opp_turn_trips_rank = max(trips)
                 
             elif len(pairs) > 1: # two pair
-                opp_river_two_pair = True
+                opp_turn_two_pair = True
                 high_pair = max(pairs)
                 pairs.remove(max(pairs))
                 low_pair = max(pairs)
-                opp_river_two_pair_ranks = high_pair, low_pair
+                opp_turn_two_pair_ranks = high_pair, low_pair
                 
             elif pairs: # pair
-                opp_river_pair = True
-                opp_river_pair_rank = max(pairs)
+                opp_turn_pair = True
+                opp_turn_pair_rank = max(pairs)
              
                     
             opp_flush = check_for_flush(total_turn_cards, 4)
-            opp_river_flush_cards = set()
+            opp_turn_flush_cards = set()
             if opp_flush:
                 for suit_index, cards_in in opp_flush.items():
-                    opp_river_flush = True
-                    opp_river_flush_suit = suit_index
-                    opp_river_flush_cards.update(cards_in)
+                    opp_turn_flush = True
+                    opp_turn_flush_suit = suit_index
+                    opp_turn_flush_cards.update(cards_in)
                         
             opp_straight = check_for_straight(total_turn_cards, 4)
-            opp_river_straight_high = 0
+            opp_turn_straight_high = 0
             if opp_straight:
                 for high_card, (cards_in, cards_out) in opp_straight.items():
-                        if opp_river_flush:
-                            if cards_in.issubset(opp_river_flush_cards):
-                                opp_river_straight_flush = True
-                                opp_river_straight_flush_high = high_card
+                        if opp_turn_flush:
+                            if cards_in.issubset(opp_turn_flush_cards):
+                                opp_turn_straight_flush = True
+                                opp_turn_straight_flush_high = high_card
                         else:
-                            opp_river_straight = True
-                            if high_card > opp_river_straight_high:
-                                opp_river_straight_high = high_card
-                                opp_river_straight_cards = cards_in
+                            opp_turn_straight = True
+                            if high_card > opp_turn_straight_high:
+                                opp_turn_straight_high = high_card
+                                opp_turn_straight_cards = cards_in
                             
                             
-            if opp_river_straight_flush:
-                opp_river_high_hand = 8
-                opp_river_high_hand_numbers = opp_river_straight_flush_high
-            elif opp_river_quads:
-                opp_river_high_hand = 7
-                opp_river_high_hand_numbers = opp_river_quads_rank
-            elif opp_river_full_house:
-                opp_river_high_hand = 6
-                opp_river_high_hand_numbers = opp_river_full_house_ranks
-            elif opp_river_flush:
-                opp_river_high_hand = 5
-                opp_river_high_hand_numbers = max(opp_river_flush_cards)
-            elif opp_river_straight:
-                opp_river_high_hand = 4
-                opp_river_high_hand_numbers = opp_river_straight_high
-            elif opp_river_trips:
-                opp_river_high_hand = 3
-                opp_river_high_hand_numbers = opp_river_trips_rank
-            elif opp_river_two_pair:
-                opp_river_high_hand = 2
-                opp_river_high_hand_numbers = opp_river_two_pair_ranks
-            elif opp_river_pair:
-                opp_river_high_hand = 1
-                opp_river_high_hand_numbers = opp_river_pair_rank
+            if opp_turn_straight_flush:
+                opp_turn_high_hand = 8
+                opp_turn_high_hand_numbers = opp_turn_straight_flush_high
+            elif opp_turn_quads:
+                opp_turn_high_hand = 7
+                opp_turn_high_hand_numbers = opp_turn_quads_rank
+            elif opp_turn_full_house:
+                opp_turn_high_hand = 6
+                opp_turn_high_hand_numbers = opp_turn_full_house_ranks
+            elif opp_turn_flush:
+                opp_turn_high_hand = 5
+                opp_turn_high_hand_numbers = max(opp_turn_flush_cards)
+            elif opp_turn_straight:
+                opp_turn_high_hand = 4
+                opp_turn_high_hand_numbers = opp_turn_straight_high
+            elif opp_turn_trips:
+                opp_turn_high_hand = 3
+                opp_turn_high_hand_numbers = opp_turn_trips_rank
+            elif opp_turn_two_pair:
+                opp_turn_high_hand = 2
+                opp_turn_high_hand_numbers = opp_turn_two_pair_ranks
+            elif opp_turn_pair:
+                opp_turn_high_hand = 1
+                opp_turn_high_hand_numbers = opp_turn_pair_rank
             else:
-                opp_river_high_hand = 0
+                opp_v_high_hand = 0
             
             
                     
