@@ -486,26 +486,20 @@ class Player(Bot):
         if street == 0:
             if CheckAction in legal_actions:
                 # opponent calls as small bind
-                if self.total_percentage > 0.58 and RaiseAction in legal_actions:
-                    if self.opp_all_in: ####
-                        return CallAction()
+                if self.total_percentage > 0.58 and can_raise:
                     return RaiseAction(int(max(min_raise, min(1.38 * pot_size, max_raise))))
                 return CheckAction()
             self.high_cards_or_pair_likely = not(continue_cost == BIG_BLIND - SMALL_BLIND)
-            if self.total_percentage * pot_size - (1-self.total_percentage) * continue_cost < 0:
+            if self.total_percentage * pot_size - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.62:
                 return FoldAction()
             if continue_cost == BIG_BLIND - SMALL_BLIND:
                 # small blind
-                if self.total_percentage > 0.56 and RaiseAction in legal_actions:
-                    if self.opp_all_in: ####
-                        return CallAction()
+                if self.total_percentage > 0.56 and can_raise:
                     return RaiseAction(int(max(min_raise, min(1.27 * pot_size, max_raise))))
                 return CallAction()
             # opp raised
             necessary_pct = 0.54 + pot_size/100
-            if self.total_percentage > necessary_pct and RaiseAction in legal_actions:
-                if self.opp_all_in: ####
-                    return CallAction()
+            if self.total_percentage > necessary_pct and can_raise:
                 return RaiseAction(int(max(min_raise, min(necessary_pct/(1-necessary_pct) * pot_size, max_raise))))
             return CallAction()
         
