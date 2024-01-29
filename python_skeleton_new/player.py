@@ -277,8 +277,182 @@ class Player(Bot):
                 except ZeroDivisionError:
                     self.opp_bid_cv = 100
                     
-        if opp_cards and self.opp_river_bet:
-            pass
+        ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+        suits_dict = {"s": 3, "h": 2, "c": 1, "d": 0}
+        
+        
+        def check_for_straight(board_cards, num_needed):
+            """
+            Takes the board cards as a list of strings and the number in a straight
+            needed and returns a dictionary with straight high rank indexes as keys
+            and a tuple with sets of cards in and cards out as values if there are more
+            than num_needed in that straight
+            """
+            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+            ranks = set()
+            for card in board_cards:
+                ranks.add(ranks_dict[card[0]])
+            starts_in = {}
+            
+            num_in = 0
+            ace_low_straight = (12, 0, 1, 2, 3)
+            cards_in = set()
+            cards_needed = set()
+            for card in ace_low_straight:
+                if card in ranks:
+                    num_in += 1
+                    cards_in.add(card)
+                else:
+                    cards_needed.add(card)
+            if num_in >= num_needed:
+                starts_in[3] = cards_in, cards_needed
+            for starting_card in range(9):
+                num_in = 0
+                cards_in = set()
+                cards_needed = set()
+                for card in range(starting_card, starting_card + 5):
+                    if card in ranks:
+                        num_in += 1
+                        cards_in.add(card)
+                    else:
+                        cards_needed.add(card)
+                if num_in >= num_needed:
+                    starts_in[starting_card+4] = cards_in, cards_needed
+
+            return starts_in
+
+
+        def check_for_flush(board_cards, num_needed):
+            """
+            Takes the board cards as a list of strings and the number in one suit
+            needed and returns a dictionary with suit indexes as keys and a set of ranks
+            in that suit as values if there are at least num_needed of that suit
+            """
+            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+            suits_dict = {"s": 3, "h": 2, "c": 1, "d": 0}
+            suits = [set(), set(), set(), set()]
+            for card in board_cards:
+                rank, suit = ranks_dict[card[0]], suits_dict[card[1]]
+                suits[suit].add(rank)
+            suits_in = {}
+            for suit_index, suit in enumerate(suits):
+                if len(suit) >= num_needed:
+                    suits_in[suit_index] = suit
+            return suits_in
+
+
+        def check_for_pair(board_cards):
+            """
+            Takes the board cards as a list of strings returns a dictionary with rank
+            indexes as keys and number of that rank as values if there is more than
+            one card with that rank
+            """
+            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
+            ranks = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0}
+            for card in board_cards:
+                ranks[ranks_dict[card[0]]] += 1
+            ranks_in = {}
+            for rank, num in ranks.items():
+                if num >= 2:
+                    ranks_in[rank] = num
+            return ranks_in            
+        
+                    
+        if opp_cards:
+            
+            total_river_cards = opp_cards + self.river_cards
+            
+            opp_pairs = check_for_pair(total_river_cards)
+            pairs = set()
+            trips = set()
+            quads = set()
+            for rank, num in opp_pairs.items():
+                if num == 4:
+                    quads.add(rank)
+                if num == 3:
+                    trips.add(rank)
+                if num == 2:
+                    pairs.add(rank)
+                    
+            if quads: # quads
+                opp_river_quads = True
+                opp_river_quads_rank = max(quads)
+                
+            elif len(trips) > 1 or trips and pairs: # full house
+                opp_river_full_house = True
+                if len(trips) > 1 and pairs:
+                    opp_river_full_house_ranks = max(trips), max(min(trips), max(pairs))
+                elif pairs:
+                    opp_river_full_house_ranks = max(trips), max(pairs)
+                else:
+                    opp_river_full_house_ranks = max(trips), min(trips)
+                    
+            elif trips: # trips
+                opp_river_trips = True
+                opp_river_trips_rank = max(trips)
+                
+            elif len(pairs) > 1: # two pair
+                opp_river_two_pair = True
+                high_pair = max(pairs)
+                pairs.remove(max(pairs))
+                low_pair = max(pairs)
+                opp_river_two_pair_ranks = high_pair, low_pair
+                
+            elif pairs: # pair
+                opp_river_pair = True
+                opp_river_pair_rank = max(pairs)
+             
+                    
+            opp_flush = check_for_flush(total_river_cards, 5)
+            opp_river_flush_cards = set()
+            if opp_flush:
+                for suit_index, cards_in in opp_flush.items():
+                    opp_river_flush = True
+                    opp_river_flush_suit = suit_index
+                    opp_river_flush_cards.update(cards_in)
+                        
+            opp_straight = check_for_straight(total_river_cards, 5)
+            opp_river_straight_high = 0
+            if opp_straight:
+                for high_card, (cards_in, cards_out) in opp_straight.items():
+                        if opp_river_flush:
+                            if cards_in.issubset(opp_river_flush_cards):
+                                opp_river_straight_flush = True
+                                opp_river_straight_flush_high = high_card
+                        else:
+                            opp_river_straight = True
+                            if high_card > opp_river_straight_high:
+                                opp_river_straight_high = high_card
+                                opp_river_straight_cards = cards_in
+                            
+                            
+            if opp_river_straight_flush:
+                opp_river_high_hand = 8
+                opp_river_high_hand_numbers = opp_river_straight_flush_high
+            elif opp_river_quads:
+                opp_river_high_hand = 7
+                opp_river_high_hand_numbers = opp_river_quads_rank
+            elif opp_river_full_house:
+                opp_river_high_hand = 6
+                opp_river_high_hand_numbers = opp_river_full_house_ranks
+            elif opp_river_flush:
+                opp_river_high_hand = 5
+                opp_river_high_hand_numbers = max(opp_river_flush_cards)
+            elif opp_river_straight:
+                opp_river_high_hand = 4
+                opp_river_high_hand_numbers = opp_river_straight_high
+            elif opp_river_trips:
+                opp_river_high_hand = 3
+                opp_river_high_hand_numbers = opp_river_trips_rank
+            elif opp_river_two_pair:
+                opp_river_high_hand = 2
+                opp_river_high_hand_numbers = opp_river_two_pair_ranks
+            elif opp_river_pair:
+                opp_river_high_hand = 1
+                opp_river_high_hand_numbers = opp_river_pair_rank
+            else:
+                opp_river_high_hand = 0
+            
             
                     
         if round_num == NUM_ROUNDS:
