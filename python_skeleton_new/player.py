@@ -233,6 +233,10 @@ class Player(Bot):
         self.street3_straight_warning = False
         self.street4_straight_warning = False
         
+        self.flop_cards = []
+        self.turn_cards = []
+        self.river_cards = []
+        
         
     def handle_round_over(self, game_state, terminal_state, active):
         '''

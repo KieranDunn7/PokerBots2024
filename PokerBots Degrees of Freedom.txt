@@ -4,5 +4,13 @@ Min raise: 6
 Max raise: 150
 
 
+Raises on flop, turn, river
+ - Make sure they aren't just high raising so we fold
+
+Cards after each hand and opponent hand strengths
+
+Whether opponent wins based on rounds they bet on and whether they had the hand we were afraid of
+
+
 
 
