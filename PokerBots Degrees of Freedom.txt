@@ -28,3 +28,98 @@ Preflop:
     Win % for fold: < 0.62 AND pct*pot_size < (1-pct) * continue_cost
 
 
+Auction:
+    Min bid:
+    Max bid:
+
+
+Flop:
+    Big Blind:
+        Pot > 120:
+            Raises:
+                high 35
+                medium 20
+                small 12
+
+        Pot < 120:
+            Raises:
+                high 20
+                medium 12
+                small 8
+
+        Actions:
+            Straight Flush: medium SHOULD CHANGE THIS BASED ON HOW MANY SUITED/ORDERED CARDS ON BOARD
+            Quads: medium (small if trips on board)
+            Full House: medium
+                small if trips on board and have high pair
+                small if two-pair on board and have high trips
+            Flush: medium
+                small if FOUR SUITED cards on board AND (high card >= 9 or (high card >= 7 and high cards or pair unlikely))
+                small if THREE SUITED cards on board
+            Straight: medium
+                small if THREE SUITED cards on board
+            Trips: medium
+                check if trips on board
+                high if THREE SUITED cards on board
+                high if THREE ORDERED cards on board
+                small if pair on board
+            Two-pair: medium
+                small if pair on board AND pocket pair better than board pair
+                check if pair on board
+                small if THREE SUITED or THREE ORDERED cards on board
+            Pair: small
+                check if pair on board OR THREE SUITED or THREE ORDERED cards on board
+                medium if ???
+            Flush-draw: small
+                check if THREE SUITED cards on board
+            Straight-draw: check
+                medium if ???
+
+                 if self.high_hand == 1:
+                    if self.board_pair or self.board_flush_need_2 or self.board_straight_need_2:
+                        return CheckAction()
+                    if self.board_pair == self.sorted_board_ranks[0]:
+                        return medium_raise
+                    return small_raise
+                    
+                if self.straight_draw:
+                    if self.board_straight_need_2:
+                        return CheckAction()
+                    if len(self.draw_needed) == 2:
+                        return medium_raise
+                    return CheckAction()
+                return CheckAction()
+
+
+
+    Small Blind:            
+        Opp checks:
+            if pot > 120: else
+                high 28 18
+                medium 15 11 
+                small 10 6
+        Actions:
+            Straight Flush: small
+            Quads: small
+            Full House: small
+                small if trips on board and have high pair
+                high if trips on board and dont have high pair
+            Flush: small
+            Straight: medium
+                high if THREE SUITED cards on board
+                small if THREE ORDERED cards on board
+            Trips: small
+                medium if trips on board AND high card >= 9 or (high card >= 8 and high cards or pair unlikely)
+                medium if THREE SUITED cards on board
+                medium if THREE ORDERED cards on board
+                medium if pair on board
+            Two-pair: small
+                small if pair on board AND pocket pair better than board pair
+                check or call if pair on board
+            Pair: small
+            Flush-draw: small
+                check or call if THREE SUITED cards on board
+                medium if FLUSH DRAW and STRAIGHT DRAW
+            Straight-draw: small
+                check or call if THREE SUITED or THREE ORDERED cards on board
+

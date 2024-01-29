@@ -1394,8 +1394,6 @@ class Player(Bot):
         
             if continue_cost >= max(5, pot_size/10): # check whether opponent is bluffing after showdown
                 self.opp_flop_bet = continue_cost
-        
-            
             
             if continue_cost == 0 and big_blind:
                 
@@ -1480,7 +1478,7 @@ class Player(Bot):
                         if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
                         return CheckAction()
-                    if self.board_flush_need_2 or self.board_flush_need_2:
+                    if self.board_flush_need_2 or self.board_straight_need_2:
                         return small_raise
                     return medium_raise
                     
@@ -1589,8 +1587,8 @@ class Player(Bot):
                 if continue_cost == 0:
                     action = CheckAction()
                 else:
-                    action = CallAction()
-                    
+                    action = FoldAction()
+
                 if pot_size > 120:
                     if can_raise:
                         high_raise = RaiseAction(max(min_raise,min(28, max_raise)))
@@ -1662,7 +1660,17 @@ class Player(Bot):
                     return small_raise
                     
                 if self.high_hand == 1:
-                    return small_raise
+                    if self.board_pair:
+                        return CheckAction() if CheckAction in legal_actions else FoldAction()
+                    if self.pair_rank >= self.sorted_board_ranks[0]:
+                        return high_raise
+                    if medium_bet: return CallAction()
+                    if pot_size > 100:
+                        if CallAction() in legal_actions:
+                            return CallAction()
+                        elif CheckAction() in legal_actions:
+                            return CheckAction()
+                    return action
                     
                 return action
 
