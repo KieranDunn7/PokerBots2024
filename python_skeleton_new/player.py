@@ -631,6 +631,8 @@ class Player(Bot):
             
             opp_flop_high_hand = 0 # string representing the best hand we have
             opp_flop_high_hand_numbers = -1
+            
+            opp_flop_straight_flush = False
                 
                 
             total_flop_cards = opp_cards + self.flop_cards
@@ -715,7 +717,7 @@ class Player(Bot):
                         opp_flop_draw_needed.add(*cards_out)
                     elif len(cards_in) == 3 and not opp_flop_straight and not opp_flop_straight_draw: # four in straight with no full straight
                         opp_flop_straight_double_draw = True
-                        opp_flop_double_draw_needed.add(*cards_out)
+                        opp_flop_double_draw_needed.update(cards_out)
                             
                             
             if opp_flop_straight_flush:
