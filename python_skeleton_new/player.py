@@ -236,6 +236,7 @@ class Player(Bot):
         self.flop_cards = []
         self.turn_cards = []
         self.river_cards = []
+        self.opp_cards = []
         
         
     def handle_round_over(self, game_state, terminal_state, active):
@@ -911,6 +912,8 @@ class Player(Bot):
         
         if street == 3: # flop post-auction
         
+            self.flop_cards = board_cards
+        
             if continue_cost >= 5 and continue_cost >= pot_size/10: # check whether opponent is bluffing after showdown
                 self.opp_flop_bet = True
         
@@ -1531,6 +1534,8 @@ class Player(Bot):
 
         
         if street == 4: # turn
+        
+            self.turn_cards = board_cards
         
             if continue_cost >= 5 and continue_cost >= pot_size/2: # check whether opponent is bluffing after showdown
                 self.opp_turn_bet = True
@@ -2232,6 +2237,8 @@ class Player(Bot):
 
         
         if street == 5: # river
+        
+            self.river_cards = board_cards
         
         
             if continue_cost >= 5 and continue_cost >= pot_size/8: # check whether opponent is bluffing after showdown
