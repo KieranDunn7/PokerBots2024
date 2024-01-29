@@ -999,15 +999,15 @@ class Player(Bot):
                 self.opp_pre_flop_bet = continue_cost / pot_size
             if CheckAction in legal_actions:
                 # opponent calls as small bind
-                if self.total_percentage > 0.58 and can_raise:
+                if self.total_percentage > 0.54 and can_raise:
                     return RaiseAction(int(max(min_raise, min(1.38 * pot_size, max_raise))))
                 return CheckAction()
             self.high_cards_or_pair_likely = not(continue_cost == BIG_BLIND - SMALL_BLIND)
-            if self.total_percentage * (continue_cost + pot_size) - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.62:
+            if self.total_percentage * (continue_cost + pot_size) - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.52:
                 return FoldAction()
             if continue_cost == BIG_BLIND - SMALL_BLIND:
                 # small blind
-                if self.total_percentage > 0.56 and can_raise:
+                if self.total_percentage > 0.52 and can_raise:
                     return RaiseAction(int(max(min_raise, min(1.27 * pot_size, max_raise))))
                 return CallAction()
             # opp raised

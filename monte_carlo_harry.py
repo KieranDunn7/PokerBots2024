@@ -26,38 +26,21 @@ import eval7
 
 
 
-def simulate_rest_of_game_preflop(my_hole):
-    # hole_cards = [eval7.Card(card) for card in my_hole]
-    hole_cards = my_hole
-    my_wins_w_auction = 0
-    my_wins_wo_auction = 0
-    num_sims = 10000
+def simulate_game(num_sims):
     for _ in range(num_sims):
         deck = eval7.Deck()
-        for card in hole_cards:
-            deck.cards.remove(card)
-
         deck.shuffle()
-        draw = deck.deal(9)
+        draw = deck.deal(11)
 
-        opp_hole = draw[0:2]
-        comm = draw[2:7]
-        auction1,auction2 = [draw[7]],[draw[8]]
+        my_hole = draw[0:2]
+        opp_hole = draw[2:4]
+        comm = draw[4:9]
 
-        # print(draw)
-
-        my_hand_auction = hole_cards + comm + auction1
+        my_hand = my_hole + comm
         opp_hand = opp_hole + comm
-        if eval7.evaluate(my_hand_auction) >= eval7.evaluate(opp_hand):
-            my_wins_w_auction += 1
-
-        my_hand = hole_cards + comm
-        opp_hand_auction = opp_hole + comm + auction1
-        if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand_auction):
-            my_wins_wo_auction += 1
-
-
-    return my_wins_w_auction/num_sims, my_wins_wo_auction/num_sims
+        if eval7.evaluate(my_hand) >= eval7.evaluate(opp_hand):
+            my_wins += 1
+    return my_wins/num_sims
 
 
 hello = eval7.Deck()
