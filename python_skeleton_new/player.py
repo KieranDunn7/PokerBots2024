@@ -1395,6 +1395,8 @@ class Player(Bot):
             
             if continue_cost == 0 and big_blind:
                 
+                print("Start betting on flop")
+                
                 # starting betting
                 
                 if pot_size > 120:
@@ -1487,9 +1489,11 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= max(5, pot_size/10):
+            if continue_cost <= min(5, pot_size/10):
                 
                 # opponent checks (or makes small bet)
+                
+                print("Opponent checks on flop")
                 
                 if continue_cost == 0:
                     action = CheckAction()
@@ -1573,8 +1577,10 @@ class Player(Bot):
             
             
             
-            if not big_blind and continue_cost >= max(5,pot_size/10):
+            if not big_blind and continue_cost >= min(5,pot_size/10):
                 ### Opponent bets
+                
+                print("Opponent bet on flop")
                   
                 if continue_cost == 0:
                     action = CheckAction()
@@ -1671,6 +1677,8 @@ class Player(Bot):
                 
                 # we checked and opponent bet
                 
+                print("Opponent bets on flop after we check")
+                
                 if pot_size > 120:
                     if can_raise:
                         high_raise = RaiseAction(max(min_raise,min(50, max_raise)))
@@ -1732,7 +1740,9 @@ class Player(Bot):
                     
                 return action
                 
-            if big_blind:
+            if my_pip != 0:
+                
+                print("Opponent raises on flop")
                 
                 # we bet and opponent raised
                 
@@ -1859,7 +1869,9 @@ class Player(Bot):
                     
                 return action
             
-            # opponent bet, we raised, opponent re-raised
+            # opponent bet
+            
+            print("Opponent bet on flop")
             
             if pot_size > 120:
                 if can_raise:
@@ -2010,6 +2022,8 @@ class Player(Bot):
             
             if continue_cost == 0 and big_blind:
                 # starting betting
+                print("Start betting on turn")
+                
                 action = CheckAction()
                 if pot_size > 160:
                     if can_raise:
@@ -2132,6 +2146,9 @@ class Player(Bot):
                 return CheckAction()
                 
             if continue_cost < 5 or continue_cost < pot_size/10:
+                
+                print("Opponent checks on turn")
+                
                 # opponent checks (or makes small bet)
                 if continue_cost == 0:
                     action = CheckAction()
@@ -2276,6 +2293,9 @@ class Player(Bot):
                 action = FoldAction()
             
             if big_blind and my_pip == 0:
+                
+                print("Opponent bet on turn after we checked")
+                
                 # we checked and opponent bet
                 
                 if pot_size > 160:
@@ -2361,9 +2381,11 @@ class Player(Bot):
                     
                 return action
                 
-            if big_blind:
+            if my_pip != 0:
                 
                 # we bet and opponent raised
+                
+                print("Opponent raised on turn")
                 
                 if pot_size > 160:
                     if can_raise:
@@ -2528,7 +2550,9 @@ class Player(Bot):
                     
                 return action
             
-            # opponent bet, we raised, opponent re-raised
+            # opponent bet
+            
+            print("Opponent bet on turn")
             
             if pot_size > 160:
                 if can_raise:
@@ -2714,6 +2738,8 @@ class Player(Bot):
                 
             if continue_cost == 0 and big_blind:
                 
+                print("Start betting on river")
+                
                 if pot_size > 200:
                     if can_raise:
                         high_raise = RaiseAction(max_raise)
@@ -2840,6 +2866,8 @@ class Player(Bot):
                     action = CheckAction()
                 else:
                     action = CallAction()
+                    
+                print("Opponent checks on river")
                 # opponent checks (or makes small bet)
                 
                 if pot_size > 200:
@@ -2980,6 +3008,7 @@ class Player(Bot):
                 
             if big_blind and my_pip == 0:
                 
+                print("Opponent checks on river after we checked")
                 
                 # we checked and opponent bet
                 
@@ -3024,9 +3053,11 @@ class Player(Bot):
                 
                 return action
             
-            if big_blind:
+            if my_pip != 0:
                 
                 # we bet and opponent raised
+                
+                print("Opponent raised on river")
                 
                 if pot_size > 200:
                     if can_raise:
@@ -3154,7 +3185,9 @@ class Player(Bot):
                         return CallAction()
                     return action
                 
-            # opponent bet, we raised, opponent re-raised
+            # opponent bet
+            
+            print("Opponent bet on river")
         
             if pot_size > 200:
                 if can_raise:
