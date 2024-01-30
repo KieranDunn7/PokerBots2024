@@ -1637,7 +1637,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= max(5, pot_size/25):
+            if my_pip == 0 and continue_cost <= max(5, pot_size/25):
                 
                 # opponent checks (or makes small bet)
                 
@@ -2324,7 +2324,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= max(5, pot_size/25):
+            if my_pip == 0 and continue_cost <= max(5, pot_size/25):
                 
                 print("Opponent checks on turn")
                 
@@ -3046,7 +3046,7 @@ class Player(Bot):
                     
                 return CheckAction()
                     
-            if continue_cost < max(5, pot_size/25):
+            if my_pip == 0 and continue_cost <= max(5, pot_size/25):
                 if continue_cost == 0:
                     action = CheckAction()
                 else:
