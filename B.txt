@@ -1,16 +1,26 @@
+Forfeit in Round #741
 
 
-opp_bids = [95, 48, 86, 134, 104, 137, 131, 103, 35, 150, 150, 150, 16, 150, 16, 150, 149, 150, 102, 137, 143, 118, 150, 150, 150, 150, 150, 150, 150, 150, 150, 61, 120, 114, 71, 107, 150, 110, 150]
-my_bids = [151, 141, 118, 89, 48, 134, 25, 84, 157, 158, 174, 91, 169, 179, 141, 208, 169, 123, 177, 155, 89, 25, 155, 190, 189, 200, 144, 25, 112, 66, 25, 217, 173, 172, 206, 174, 153, 114, 194]
-opp_bid_avg = 120.17948717948718
-opp_bid_cv = 0.3275821374048218
-final_time = 25.895
-post_auction_pcts: [0.523, 0.553, 0.831, 0.506, 0.864, 0.464, 0.681, 0.577, 0.587, 0.682, 0.59, 0.492, 0.811, 0.686, 0.72, 0.656, 0.585]
-post_turn_pcts: [0.443, 0.624, 0.787, 0.607, 0.876, 0.293, 0.631, 0.768, 0.446, 0.695, 0.584, 0.48, 0.714, 0.62, 0.723, 0.543, 0.514]
-post_river_pcts: [0.453, 0.503, 0.704, 0.52, 0.52, 0.166, 0.617, 0.71, 0.488, 0.587, 0.535, 0.55, 0.798, 0.451, 0.79, 0.787, 0.418]
-win-loss-tie history: [1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0]
-17
-17
-17
-17
-0.4117647058823529
+opp_bids = []
+my_bids = []
+opp_bid_avg = 0
+opp_bid_cv = 1
+final_time = 27.9
+post_auction_pcts: []
+post_turn_pcts: []
+post_river_pcts: []
+win-loss-tie history: []
+0
+0
+0
+0
+Traceback (most recent call last):
+  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton/player.py", line 744, in <module>
+    run_bot(Player(), parse_args())
+  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton/skeleton/runner.py", line 143, in run_bot
+    runner.run()
+  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton/skeleton/runner.py", line 109, in run
+    self.pokerbot.handle_round_over(game_state, round_state, active)
+  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton/player.py", line 297, in handle_round_over
+    print(sum(self.win_loss_tie)/len(self.win_loss_tie))
+ZeroDivisionError: division by zero

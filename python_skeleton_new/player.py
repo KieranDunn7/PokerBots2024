@@ -304,6 +304,19 @@ class Player(Bot):
                     if self.opp_river_actions[0] != 0:
                         self.opp_river_bets.pop(0)
                     self.opp_river_actions.pop(0)
+                    
+                    
+        def calculate_std_dev(numbers):
+            n = len(numbers)
+            if n < 2:
+                return None  # Standard deviation is not defined for less than two elements
+            
+            mean = sum(numbers) / n
+            squared_diff = [(x - mean) ** 2 for x in numbers]
+            variance = sum(squared_diff) / n
+            std_dev = variance ** (1/2)
+            
+            return std_dev
         
         
         
@@ -317,25 +330,43 @@ class Player(Bot):
                 except ZeroDivisionError:
                     self.opp_bid_cv = 100
                     
-        self.opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
-        self.opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
-        self.opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
-        self.opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
                     
-        self.opp_pre_flop_actions = []
-        self.opp_flop_actions = []
-        self.opp_turn_actions = []
-        self.opp_river_actions = []
+        if len(self.opp_pre_flop_bets) != 0:
+            self.opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
+            self.average_opp_pre_flop_bet = sum(self.opp_pre_flop_bets) / len(self.opp_pre_flop_bets)
+            self.opp_pre_flop_bet_stdv = calculate_std_dev(self.opp_pre_flop_bets)
+        else:
+            self.opp_pre_flop_bet_rate = 0
+            self.average_opp_pre_flop_bet = 0.66
+            self.opp_pre_flop_bet_stdv = 0
+            
+        if len(self.opp_flop_bets) != 0:
+            self.opp_flop_bet_rate = len(self.opp_flop_bets) / len(self.opp_flop_actions)
+            self.average_opp_flop_bet = sum(self.opp_flop_bets) / len(self.opp_flop_bets)
+            self.opp_flop_bet_stdv = calculate_std_dev(self.opp_flop_bets)
+        else:
+            self.opp_flop_bet_rate = 0
+            self.average_opp_flop_bet = 0.66
+            self.opp_flop_bet_stdv = 0
+            
+        if len(self.opp_turn_bets) != 0:
+            self.opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
+            self.average_opp_turn_bet = sum(self.opp_turn_bets) / len(self.opp_turn_bets)
+            self.opp_turn_bet_stdv = calculate_std_dev(self.opp_turn_bets)
+        else:
+            self.opp_turn_bet_rate = 0
+            self.average_opp_turn_bet = 0.66
+            self.opp_turn_bet_stdv = 0
+            
+        if len(self.opp_river_bets) != 0:
+            self.opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
+            self.average_opp_river_bet = sum(self.opp_river_bets) / len(self.opp_river_bets)
+            self.opp_river_bet_stdv = calculate_std_dev(self.opp_river_bets)
+        else:
+            self.opp_river_bet_rate = 0
+            self.average_opp_river_bet = 0.66
+            self.opp_river_bet_stdv = 0
         
-        self.opp_pre_flop_bets = []
-        self.opp_flop_bets = []
-        self.opp_turn_bets = []
-        self.opp_river_bets = []
-        
-        self.total_opp_pre_flop_actions = []
-        self.total_opp_flop_actions = []
-        self.total_opp_turn_actions = []
-        self.total_opp_river_actions = []
         
         self.pre_flop_aggression = 0
         self.flop_aggression = 0
