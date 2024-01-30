@@ -632,6 +632,16 @@ class Player(Bot):
         if street == 0:
             if continue_cost > BIG_BLIND - SMALL_BLIND:
                 self.opp_pre_flop_bet = continue_cost / pot_size
+                
+            if continue_cost == BIG_BLIND - SMALL_BLIND:
+                print("small blind")
+                # small blind
+                if self.total_percentage < 0.45:
+                    return FoldAction()
+                if self.total_percentage > 0.6 or self.total_percentage < 0.55:
+                    return CallAction()
+                return RaiseAction(random.choice([4, 5, 6]))
+            
             if CheckAction in legal_actions:
                 # opponent calls as small bind
                 if self.total_percentage > 0.54 and can_raise:
@@ -640,11 +650,7 @@ class Player(Bot):
             self.high_cards_or_pair_likely = not(continue_cost == BIG_BLIND - SMALL_BLIND)
             if self.total_percentage * (continue_cost + pot_size) - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.52:
                 return FoldAction()
-            if continue_cost == BIG_BLIND - SMALL_BLIND:
-                # small blind
-                if self.total_percentage > 0.52 and can_raise:
-                    return RaiseAction(int(max(min_raise, min(1.27 * pot_size, max_raise))))
-                return CallAction()
+            
             # opp raised
             necessary_pct = 0.54 + pot_size/100
             if self.total_percentage > necessary_pct and can_raise:
@@ -661,10 +667,47 @@ class Player(Bot):
         
         if self.street_num < street: # new card dealt
         
+            self.double_flush_draw = False
+            self.flush_draw = False
+            self.flush = False
+            self.flush_suit = -1
+            self.my_flush = set() # cards in our hand for a flush
+            self.board_flush = set() # cards on the board for a flush
+            self.my_num_in_suit = 0 # number we have in the suit
+            self.my_flush_high = -1 # high in the flush for tie-break
+            
+            self.double_straight_draw = False
+            self.straight_draw = False
+            self.straight = False
+            self.my_straight = set() # cards in our hand for a straight
+            self.board_straight = set() # cards on the board for a straight
+            self.straight_high = -1
+            self.draw_needed = set() # cards needed for a draw
+            self.double_draw_needed = set() # pairs of cards needed for a double draw
+            self.my_num_in_straight = 0 # number we have making up the straight
+            self.my_straight_high = -1
+            
+            self.trips = False
+            self.trips_rank = -1
+            
+            self.pair = False
+            self.pair_rank = -1
+            
+            self.two_pair = False
+            self.two_pair_ranks = -1, -1 # higher rank first
+            
+            self.full_house = False
+            self.full_house_ranks = -1, -1 # three of a kind first
+            
+            self.quads = False
+            self.quads_rank = -1
+            
+            self.straight_flush = False
+        
             if street == 3:
                 if opp_bid != 0:
                     self.opp_bids.append(opp_bid)
-                    if len(self.opp_bids) > 15:
+                    if self.opp_bids_num > 15:
                         self.opp_bids.pop(0)
                     self.opp_bids_num += 1
                     self.opp_bids_sum += opp_bid
@@ -749,6 +792,8 @@ class Player(Bot):
                     if len(cards_in) >= 5: # full flush
                         print("Flush on street", street)
                         self.flush = True
+                        self.flush_draw = False
+                        self.flush_double_draw = False
                         self.flush_suit = suit_index
                         self.my_flush, self.board_flush = set(), set()
                         for card in our_total_cards:
@@ -766,6 +811,7 @@ class Player(Bot):
                     elif len(cards_in) == 4: # four in a suit
                         print("Flush draw on street", street)
                         self.flush_draw = True
+                        self.double_flush_draw = False
                         self.flush_suit = suit_index
                         self.my_flush, self.board_flush = set(), set()
                         for card in our_total_cards:
@@ -832,11 +878,17 @@ class Player(Bot):
                         if self.flush:
                             if cards_in.issubset(self.my_flush.union(self.board_flush)):
                                 self.straight_flush = True
+                                self.straight = False
+                                self.flush = False
+                                self.straight_draw = False
+                                self.double_straight_draw = False
                                 self.straight_flush_high = high_card
                                 print(high_card, "high straight flush on street", street)
-                        else:
+                        elif not self.straight_flush:
                             print(high_card, "high straight on street", street)
                             self.straight = True
+                            self.straight_draw = False
+                            self.double_straight_draw = False
                             if high_card > self.straight_high:
                                 self.straight_high = high_card
                                 self.my_straight, self.board_straight = set(), set()
@@ -851,11 +903,12 @@ class Player(Bot):
                                     self.my_num_in_straight = len(self.my_straight)
                                     self.my_straight_high = max(self.my_straight)
                                         
-                    elif len(cards_in) == 4 and not self.straight: # four in straight with no full straight
+                    elif len(cards_in) == 4 and not self.straight and not self.straight_flush: # four in straight with no full straight
                         print(high_card, "high straight draw on street", street)
                         if not self.straight_draw: # clear extra cards from double straight draw
                             self.my_straight, self.board_straight = set(), set()
                         self.straight_draw = True
+                        self.double_straight_draw = False
                         self.draw_needed.add(*cards_out)
                         for card in our_total_cards:
                             rank = ranks_dict[card[0]]
@@ -868,7 +921,7 @@ class Player(Bot):
                             self.my_num_in_straight = len(self.my_straight)
                             self.my_straight_high = max(self.my_straight)
                         
-                    elif not self.straight and not self.straight_draw: # three in a straight with no straight draw or full straight
+                    elif not self.straight and not self.straight_draw and not self.straight_flush: # three in a straight with no straight draw or full straight
                         print(high_card, "high straight double draw on street", street)
                         self.double_straight_draw = True
                         self.double_draw_needed.add(tuple(cards_out))
@@ -979,72 +1032,67 @@ class Player(Bot):
                 self.opp_outs[7] = self.board_pair_rank
                 self.on_board_hands.add(1)
                 
-            if street == 5:
-                need = 5 - opp_hand_size
-            else:
-                need = 2
-                
-            board_flush = check_for_flush(board_cards, need)
+            board_flush = check_for_flush(board_cards, 3)
             if board_flush:
                 for suit_index, cards_in in board_flush.items():
                     if len(cards_in) == 5: # full flush on board
-                        self.board_flush_need_0 = True
+                        self.board_flush = True
+                        self.board_flush_need_1 = False
+                        self.board_flush_need_2 = False
                         self.on_board_hands.add(5)
                         self.board_flush_suit = suit_index
                         self.board_flush_max = max(cards_in)
                         self.board_flush_min= min(cards_in)
                         
-                    elif len(cards_in) == 4: # four in a suit on board
+                    elif len(cards_in) == 4 and not self.board_flush: # four in a suit on board
                         self.board_flush_need_1 = True
+                        self.board_flush_need_2 = False
                         self.board_flush_suit = suit_index
                         self.board_flush_max = max(cards_in)
                         self.board_flush_min= min(cards_in)
                         
-                    elif len(cards_in) == 3: # three in a suit on board
+                    elif len(cards_in) == 3 and not self.board_flush_need_1 and not self.board_flush: # three in a suit on board
                         self.board_flush_need_2 = True
                         self.flush_suit = suit_index
                         self.board_flush_max = max(cards_in)
                         self.board_flush_min= min(cards_in)
-                            
-                    else: # two in a suit on board
-                        self.board_flush_need_3 = True
-                        self.board_flush_suit = suit_index
-                        self.board_flush_max = max(cards_in)
-                        self.board_flush_min= min(cards_in)
+                        
                 self.opp_outs[5] = self.board_flush_suit
                         
            
-            board_straight = check_for_straight(board_cards, need)
+            board_straight = check_for_straight(board_cards, 3)
             if board_straight:
                 for high_card, (cards_in, cards_out) in board_straight.items():
                     if len(cards_in) == 5: # full straight on board
                         if self.board_flush:
                             self.board_straight_flush = True
+                            self.board_straight = False
+                            self.board_straight_need_1 = False
+                            self.board_straight_need_2 = False
+                            self.board_flush = False
                             self.on_board_hands.add(9)
                             self.board_straight_flush_max = self.board_flush_max
                             self.opp_outs[8] = self.board_flush_suit
                         else:
                             self.board_straight = True
+                            self.board_straight_need_1 = False
+                            self.board_straight_need_2 = False
                             self.board_straight_high = high_card # easy to win if higher card
                             self.on_board_hands.add(4)
                             self.opp_outs[4] = high_card, high_card + 1, high_card + 2
                                         
-                    elif len(cards_in) == 4 and not self.board_straight_need_0: # four in straight on board
+                    elif len(cards_in) == 4 and not self.board_straight: # four in straight on board
                         if not self.board_straight_need_1: # clear needed from last turn
                             self.board_straight_needed = set()
                         self.board_straight_need_1 = True
                         self.board_straight_needed.add(*cards_out)
                         self.opp_outs[4] = self.board_straight_needed
                         
-                    elif len(cards_in) == 3 and not self.board_straight_need_1 and not self.board_straight_need_0: # three in a straight on board
+                    elif len(cards_in) == 3 and not self.board_straight_need_1 and not self.board_straight: # three in a straight on board
                         if not self.board_straight_need_2: # clear needed from last turn
                             self.board_straight_needed = set()
                         self.board_straight_need_2 = True
-                        self.board_straight_needed.add(tuple(cards_out))
-                        self.opp_outs[4] = self.board_straight_needed
-                            
-                    elif not self.board_straight_need_2 and not self.board_straight_need_1 and not self.board_straight_need_0: # two in a straight on board
-                        self.board_straight_need_3 = True
+                        self.board_straight_need_2 = False
                         self.board_straight_needed.add(tuple(cards_out))
                         self.opp_outs[4] = self.board_straight_needed
                         
@@ -1091,15 +1139,15 @@ class Player(Bot):
                     else:
                         high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 
-                if self.high_hand == 8:
+                if self.straight_flush:
                     return medium_raise
                 
-                if self.high_hand == 7:
+                if self.quads:
                     if self.board_trips:
                         return small_raise # sand bag
                     return medium_raise
                 
-                if self.high_hand == 6:
+                if self.full_house:
                     if self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             return small_raise # sand bag
@@ -1111,7 +1159,7 @@ class Player(Bot):
                         
                     return medium_raise
                        
-                if self.high_hand == 5:
+                if self.flush:
                     if self.board_flush_need_1:
                         if self.my_flush_high >= 9 or self.my_flush_high >= 7 and not self.high_cards_or_pair_likely:
                             return small_raise # sand bag
@@ -1122,12 +1170,12 @@ class Player(Bot):
                     
                     return medium_raise
                 
-                if self.high_hand == 4:
+                if self.straight:
                     if self.board_flush_need_2 and self.flush_draw:
                         return small_raise # sand bag
                     return medium_raise
                 
-                if self.high_hand == 3:
+                if self.trips:
                     if self.board_trips:
                         return CheckAction()
                     if self.board_flush_need_2 or self.board_straight_need_2:
@@ -1148,7 +1196,7 @@ class Player(Bot):
                         return medium_raise
                     return CheckAction()
                 
-                if self.high_hand == 2:
+                if self.two_pair:
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
@@ -1157,7 +1205,7 @@ class Player(Bot):
                         return small_raise
                     return medium_raise
                     
-                if self.high_hand == 1:
+                if self.pair:
                     if self.board_pair or self.board_flush_need_2 or self.board_straight_need_2:
                         return CheckAction()
                     if self.board_pair == self.sorted_board_ranks[0]:
@@ -1192,23 +1240,23 @@ class Player(Bot):
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
-                if self.high_hand == 8:
+                if self.straight_flush:
                     return small_raise
                 
-                if self.high_hand == 7:
+                if self.quads:
                     return small_raise
                 
-                if self.high_hand == 6:
+                if self.full_house:
                     if self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             return small_raise
                         return high_raise
                     return small_raise
                        
-                if self.high_hand == 5:
+                if self.flush:
                     return small_raise
                 
-                if self.high_hand == 4:
+                if self.straight:
                     if self.board_flush_need_2:
                         return high_raise
                     
@@ -1217,7 +1265,7 @@ class Player(Bot):
                     
                     return medium_raise
                 
-                if self.high_hand == 3:
+                if self.trips:
                     if self.board_trips:
                         if self.my_high_card >= 9 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return medium_raise
@@ -1240,14 +1288,14 @@ class Player(Bot):
                         return action
                     return small_raise
                 
-                if self.high_hand == 2:
+                if self.two_pair:
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
                         return action
                     return small_raise
                     
-                if self.high_hand == 1:
+                if self.pair:
                     return small_raise
                     
                 return action
@@ -1282,40 +1330,42 @@ class Player(Bot):
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
-                if self.high_hand == 8:
+                if self.straight_flush:
                     return small_raise
                 
-                if self.high_hand == 7:
+                if self.quads:
                     return small_raise
                 
-                if self.high_hand == 6:
+                if self.full_house:
                     if self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             return small_raise
                         return high_raise
-                    return small_raise
+                    else:
+                        return small_raise
                        
-                if self.high_hand == 5:
+                if self.flush:
                     return small_raise
                 
-                if self.high_hand == 4:
+                if self.straight:
                     if self.board_flush_need_2:
                         return high_raise
                     
-                    if self.board_straight_need_2:
+                    elif self.board_straight_need_2:
                         return small_raise
-                    
-                    return medium_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 3:
+                if self.trips:
                     if self.board_trips:
                         if self.my_high_card >= 9 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return medium_raise
-                    if self.board_flush_need_2 or self.board_straight_need_2:
+                    elif self.board_flush_need_2 or self.board_straight_need_2:
                         return medium_raise
-                    if self.board_pair:
+                    elif self.board_pair:
                         return medium_raise
-                    return small_raise
+                    else:
+                        return small_raise
                 
                 if self.flush_draw and self.straight_draw:
                     return medium_raise
@@ -1324,19 +1374,19 @@ class Player(Bot):
                     if self.board_flush_need_2:
                         if self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely:
                             return CallAction()
-                        return action
-                    return small_raise
+                    else:
+                        return small_raise
                     
                 if self.straight_draw:
                     if self.board_flush_need_2 and not medium_flop_bet:
                         return action
-                    if self.board_straight_need_2:
+                    elif self.board_straight_need_2:
                         if self.my_straight_high > self.board_straight_high or medium_flop_bet:
                             return CallAction()
-                        return action
-                    return small_raise
+                    else:
+                        return small_raise
                 
-                if self.high_hand == 2:
+                if self.two_pair:
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
@@ -1345,14 +1395,9 @@ class Player(Bot):
                         return action
                     return small_raise
                     
-                if self.high_hand == 1:
+                if self.pair:
                     if self.board_pair:
                         return CheckAction() if CheckAction in legal_actions else FoldAction()
-                    if pot_size > 100:
-                        if CallAction() in legal_actions:
-                            return CallAction()
-                        elif CheckAction() in legal_actions:
-                            return CheckAction()
                     if self.pair_rank >= self.sorted_board_ranks[0]:
                         return high_raise
                     if medium_flop_bet and self.pair_rank >= self.sorted_board_ranks[2] or small_flop_bet: 
@@ -1382,13 +1427,13 @@ class Player(Bot):
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
-                if self.high_hand == 8:
+                if self.straight_flush:
                     return high_raise
                 
-                if self.high_hand == 7:
+                if self.quads:
                     high_raise
                 
-                if self.high_hand == 6:
+                if self.full_house:
                     if self.board_trips:
                         if self.full_house_ranks[0] > self.board_trips_rank:
                             return high_raise
@@ -1402,7 +1447,7 @@ class Player(Bot):
                         return CallAction()
                     return medium_raise
                        
-                if self.high_hand == 5:
+                if self.flush:
                     
                     if self.board_flush_need_2 and (self.my_flush_high >= 8 or self.my_flush_high >= 6 and not self.high_cards_or_pair_likely):
                         return medium_raise
@@ -1412,7 +1457,7 @@ class Player(Bot):
                     
                     return small_raise
                 
-                if self.high_hand == 4:
+                if self.straight:
                     
                     if self.board_flush_need_2:
                         if medium_flop_bet:
@@ -1432,7 +1477,7 @@ class Player(Bot):
                     
                     return small_raise
                 
-                if self.high_hand == 3:
+                if self.trips:
                     if self.flush_draw or self.straight_draw:
                         return small_raise
                     if self.board_trips:
@@ -1467,7 +1512,7 @@ class Player(Bot):
                         return CallAction()
                     return action
                 
-                if self.high_hand == 2:
+                if self.two_pair:
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank and medium_flop_bet:
                             return CallAction()
@@ -1480,7 +1525,7 @@ class Player(Bot):
                 
                 
                     
-                if self.high_hand == 1:
+                if self.pair:
                     if self.board_pair or self.board_flush_need_2 or self.board_straight_need_2:
                         return action
                     if self.pair_rank == self.sorted_board_ranks[0]:
@@ -1510,121 +1555,111 @@ class Player(Bot):
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             
-            if self.high_hand == 8:
+            if self.straight_flush:
                 return high_raise
             
-            if self.high_hand == 7:
+            if self.quads:
                 return high_raise
             
-            if self.high_hand == 6:
+            if self.full_house:
                 if self.board_trips:
                     if self.full_house_ranks[0] > self.board_trips_rank:
                         return high_raise
                     if self.full_house_ranks[1] > self.sorted_board_ranks[3] and self.board_trips_rank == self.sorted_board_ranks[3] or self.full_house_ranks[1] > self.sorted_board_ranks[0]:
                         return medium_raise
                     return CallAction()
-                return medium_raise
+                else:
+                    return medium_raise
                    
-            if self.high_hand == 5:
+            if self.flush:
         
                 if self.board_flush_need_2 and (self.my_flush_high >= 7 or self.my_flush_high >= 5 and not self.high_cards_or_pair_likely):
                     return medium_raise
                 
-                if self.board_flush_need_2:
+                elif self.board_flush_need_2:
                     return CallAction()
-                
-                return small_raise
+                else:
+                    return small_raise
             
-            if self.high_hand == 4:
+            if self.straight:
                 
                 if self.board_flush_need_2:
                     if medium_flop_bet:
                         return CallAction()
-                    return action
                     
-                if self.board_trips: # need auction
+                elif self.board_trips: # need auction
                     return medium_raise
                 
-                if self.board_two_pair: # need auction
+                elif self.board_two_pair: # need auction
                     return medium_raise
                 
-                if self.board_straight_need_2:
+                elif self.board_straight_need_2:
                     if self.my_straight_high > self.board_straight_high:
                         return medium_raise
                     return small_raise
                 
-                if self.board_pair:
+                elif self.board_pair:
                     return medium_raise
-                
-                return small_raise
+                else:
+                    return small_raise
             
-            if self.high_hand == 3:
+            if self.trips:
                 if self.flush_draw or self.straight_draw:
                     return small_raise
-                if self.board_trips:
-                    return action
-                if self.board_flush_need_2 or self.board_straight_need_2:
+                elif self.board_trips:
+                    pass
+                elif self.board_flush_need_2 or self.board_straight_need_2:
                     if medium_flop_bet:
                         return CallAction()
-                    return action
-                if self.board_pair:
+                elif self.board_pair:
                     return CallAction()
                 
             if self.flush_draw:
                 if self.board_flush_need_2:
                     if self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely:
                         return CallAction()
-                    return action
-                if self.board_pair and high_flop_bet:
-                    return action
-                return CallAction()
+                elif self.board_pair and high_flop_bet:
+                    pass
+                else:
+                    return CallAction()
                 
             if self.straight_draw:
                 if self.board_flush_need_2:
-                    if medium_flop_bet:
+                    if small_flop_bet:
                         return CallAction()
-                    return action
-                if self.board_straight_need_2:
+                elif self.board_straight_need_2:
                     if self.my_straight_high > self.board_straight_high or medium_flop_bet:
                         return CallAction()
-                    if len(self.draw_needed) == 2:
+                    if len(self.draw_needed) == 2 and small_flop_bet:
                         return CallAction()
-                    return action
-                if self.board_pair:
-                    if len(self.draw_needed) == 2:
+                elif self.board_pair:
+                    if len(self.draw_needed) == 2 and small_flop_bet:
                         return CallAction()
-                    if medium_flop_bet:
-                        return CallAction()
-                    return action
-                if high_flop_bet:
                     return CallAction()
-                return action
+                elif medium_flop_bet:
+                    return CallAction()
             
-            if self.high_hand == 2:
+            if self.two_pair:
                 if self.board_two_pair:
                     if self.my_high_card == 12 and medium_flop_bet:
                         return CallAction()
-                    return action
-                if self.board_flush_need_1 or self.board_straight_need_1:
-                    return action
-                if self.board_pair:
+                elif self.board_flush_need_1 or self.board_straight_need_1:
+                    pass
+                elif self.board_pair:
                     if self.two_pair_ranks[0] > self.board_pair_rank and medium_flop_bet:
                         return CallAction()
-                    return action
-                if self.board_flush_need_2 or self.board_flush_need_2 and medium_flop_bet:
+                elif self.board_flush_need_2 or self.board_flush_need_2 and medium_flop_bet:
                     return CallAction()
-                if self.two_pair_ranks[0] >= self.sorted_board_ranks[0] or self.two_pair_ranks[0] >= self.sorted_board_ranks[2] and medium_flop_bet:
+                elif self.two_pair_ranks[0] >= self.sorted_board_ranks[0] or self.two_pair_ranks[0] >= self.sorted_board_ranks[2] and medium_flop_bet:
                     return CallAction()
-                if small_flop_bet:
+                elif small_flop_bet:
                     return CallAction()
-                return action
                 
-            if self.high_hand == 1:
+            if self.pair:
                 if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1 or self.board_flush_need_2 or self.board_straight_need_2:
-                    return action
-                if self.pair_rank == self.sorted_board_ranks[0]:
+                    pass
+                elif self.pair_rank == self.sorted_board_ranks[0]:
                     return CallAction()
-                return action
                 
             return action
         
@@ -1666,84 +1701,84 @@ class Player(Bot):
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
-                if self.high_hand == 8:
+                if self.straight_flush:
                     return small_raise
                 
-                if self.high_hand == 7:
+                if self.quads:
                     if self.board_quads:
                         return small_raise
                     return medium_raise
                 
-                if self.high_hand == 6:
+                if self.full_house:
                     if self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             return small_raise
                         return medium_raise
                         
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]: # we have three of a kind on the high card
                             return small_raise
                        
-                if self.high_hand == 5:
+                if self.flush:
                     if self.board_flush_need_1:
                         if self.my_flush_high >= 9 or self.my_flush_high >= 7 and not self.high_cards_or_pair_likely:
                             return high_raise
                         
-                    if self.board_trips: # need auction
+                    elif self.board_trips: # need auction
                         return small_raise
                     
-                    if self.board_two_pair: # need auction
+                    elif self.board_two_pair: # need auction
                         return small_raise
-                    
-                    return medium_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 4:
+                if self.straight:
                     if self.board_flush_need_1:
                         return small_raise
                     
-                    if self.board_flush_need_2:
+                    elif self.board_flush_need_2:
                         return medium_raise
                     
-                    if self.board_straight_need_1:
+                    elif self.board_straight_need_1:
                         if self.my_straight_high > self.board_straight_high and pot_size > 200:
                             return high_raise
                         return medium_raise
                         
-                    if self.board_trips: # need auction
+                    elif self.board_trips: # need auction
                         return high_raise
                     
-                    if self.board_two_pair: # need auction
+                    elif self.board_two_pair: # need auction
                         return high_raise
                     
-                    if self.board_straight_need_2:
+                    elif self.board_straight_need_2:
                         return small_raise
-                    
-                    return medium_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 3:
+                if self.trips:
                     if self.board_trips:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return medium_raise
-                    if self.board_flush_need_1 or self.board_straight_need_1:
-                        return CheckAction()
-                    if self.board_flush_need_2 or self.board_straight_need_2:
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
+                        pass
+                    elif self.board_flush_need_2 or self.board_straight_need_2:
                         return small_raise
-                    if self.board_pair:
+                    elif self.board_pair:
                         return small_raise
-                    return medium_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 2:
+                if self.two_pair:
                     if self.board_two_pair:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return medium_raise
                         return CheckAction()
-                    if self.board_flush_need_1 or self.board_straight_need_1:
-                        return CheckAction()
-                    if self.board_pair:
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
+                        pass
+                    elif self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank:
                             return small_raise
-                        return CheckAction()
-                    if self.board_flush_need_2 or self.board_flush_need_2:
+                    elif self.board_flush_need_2 or self.board_flush_need_2:
                         return small_raise
                     return medium_raise
                 
@@ -1753,21 +1788,18 @@ class Player(Bot):
                 if self.flush_draw:
                     if self.board_flush_need_1:
                         return CheckAction()
-                    if self.my_flush_high >= 10:
+                    elif self.my_flush_high >= 10:
                         return small_raise
-                    return CheckAction()
                     
                 if self.straight_draw:
                     if len(self.draw_needed) == 2 and self.my_straight_high > self.board_straight_high and not self.board_straight_need_1:
                         return small_raise
-                    return CheckAction()
                     
-                if self.high_hand == 1:
+                if self.pair:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1 or self.board_flush_need_2 or self.board_straight_need_2:
-                        return CheckAction()
-                    if self.board_pair == max(self.board_ranks):
+                        pass
+                    elif self.board_pair == self.sorted_board_ranks[0]:
                         return small_raise
-                    return CheckAction()
                     
                 return CheckAction()
                 
@@ -1796,10 +1828,10 @@ class Player(Bot):
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
-                if self.high_hand == 8:
+                if self.straight_flush:
                     return small_raise
                 
-                if self.high_hand == 7:
+                if self.quads:
                     if self.board_quads:
                         return small_raise
                     return medium_raise
@@ -2034,7 +2066,8 @@ class Player(Bot):
                 if self.high_hand == 7:
                     if self.board_quads:
                         return CallAction()
-                    return high_raise
+                    else:
+                        return high_raise
                 
                 if self.high_hand == 6:
                     if self.board_trips:
@@ -2044,11 +2077,12 @@ class Player(Bot):
                             return medium_raise
                         return CallAction()
                         
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]: # we have three of a kind on the high card
                             return small_raise
                         return CallAction()
-                    return medium_raise
+                    else:
+                        return medium_raise
                        
                 if self.high_hand == 5:
                     
@@ -2057,21 +2091,20 @@ class Player(Bot):
                             return small_raise
                         if medium_turn_bet or self.my_flush_high >= 8 or self.my_flush_high >= 6 and not self.high_cards_or_pair_likely:
                             return CallAction()
-                        return action
                         
-                    if self.board_trips: # need auction
+                    elif self.board_trips: # need auction
                         return CallAction()
                     
-                    if self.board_two_pair: # need auction
+                    elif self.board_two_pair: # need auction
                         return CallAction()
                     
-                    if self.board_straight_need_1:
+                    elif self.board_straight_need_1:
                         return medium_raise
                     
-                    if self.board_flush_need_2 and (self.my_flush_high >= 7 or self.my_flush_high >= 5 and not self.high_cards_or_pair_likely):
+                    elif self.board_flush_need_2 and (self.my_flush_high >= 7 or self.my_flush_high >= 5 and not self.high_cards_or_pair_likely):
                         return medium_raise
                     
-                    if self.board_flush_need_2:
+                    elif self.board_flush_need_2:
                         return CallAction()
                     
                     return small_raise
@@ -2079,30 +2112,29 @@ class Player(Bot):
                 if self.high_hand == 4:
                     
                     if self.board_flush_need_1:
-                        return action
+                        pass
                     
-                    if self.board_flush_need_2:
+                    elif self.board_flush_need_2:
                         if medium_turn_bet:
                             return CallAction()
-                        return action
                     
-                    if self.board_straight_need_1:
+                    elif self.board_straight_need_1:
                         if self.my_straight_high > self.board_straight_high:
                             return high_raise
                         return CallAction()
                         
-                    if self.board_trips: # need auction
+                    elif self.board_trips: # need auction
                         return medium_raise
                     
-                    if self.board_two_pair: # need auction
+                    elif self.board_two_pair: # need auction
                         return medium_raise
                     
-                    if self.board_straight_need_2:
+                    elif self.board_straight_need_2:
                         if self.my_straight_high > self.board_straight_high:
                             return medium_raise
                         return small_raise
                     
-                    if self.board_pair:
+                    elif self.board_pair:
                         return medium_raise
                     
                     return small_raise
@@ -2110,71 +2142,62 @@ class Player(Bot):
                 if self.high_hand == 3:
                     if self.flush_draw or self.straight_draw:
                         return small_raise
-                    if self.board_trips:
-                        return action
-                    if self.board_flush_need_1 or self.board_straight_need_1:
-                        return action
-                    if (self.board_flush_need_2 or self.board_straight_need_2):
+                    elif self.board_trips:
+                        pass
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
+                        pass
+                    elif (self.board_flush_need_2 or self.board_straight_need_2):
                         if medium_turn_bet:
                             return CallAction()
-                        return action
-                    if self.board_pair:
+                    elif self.board_pair:
                         return CallAction()
                 
                 if self.high_hand == 2:
                     if self.board_two_pair:
                         if self.my_high_card == 12 and medium_turn_bet:
                             return CallAction()
-                        return action
-                    if self.board_flush_need_1 or self.board_straight_need_1:
-                        return action
-                    if self.board_pair:
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
+                        pass
+                    elif self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank and medium_turn_bet:
                             return CallAction()
-                        return action
-                    if self.board_flush_need_2 or self.board_flush_need_2 and medium_turn_bet:
+                    elif self.board_flush_need_2 or self.board_flush_need_2 and medium_turn_bet:
                         return CallAction()
-                    if small_turn_bet:
+                    elif small_turn_bet:
                         return CallAction()
-                    return action
                 
                 if self.flush_draw and self.straight_draw:
                     if self.board_flush_need_1 or self.board_straight_need_1:
                         if small_turn_bet:
                             return CallAction()
-                        return action
-                    if medium_turn_bet:
+                    elif medium_turn_bet:
                         return CallAction()
-                    return action
                 
                 if self.flush_draw:
                     if self.board_flush_need_1 or self.board_two_pair:
-                        return action
-                    if self.board_straight_need_1:
+                        pass
+                    elif self.board_straight_need_1:
                         if small_turn_bet:
                             return CallAction()
+                        pass
+                    elif self.board_trips: # need auction
                         return action
-                    if self.board_trips: # need auction
-                        return action
-                    if self.board_two_pair:
-                        return action
-                    if medium_turn_bet:
+                    elif self.board_two_pair:
+                        pass
+                    elif small_turn_bet:
                         return CallAction()
-                    return action
                     
                 if self.straight_draw:
                     if self.board_straight_need_1 or self.board_two_pair or self.board_flush_need_1 or self.board_trips:
-                        return action
-                    if len(self.draw_needed) == 2:
-                        return small_raise
-                    return CallAction()
+                        pass
+                    elif len(self.draw_needed) == 2 and self.small_turn_bet:
+                        return CallAction()
                     
                 if self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1 or self.board_flush_need_2 or self.board_straight_need_2:
-                        return action
-                    if self.pair_rank == self.sorted_board_ranks[0]:
+                        pass
+                    elif self.pair_rank == self.sorted_board_ranks[0]:
                         return CallAction()
-                    return action
                     
                 return action
             
@@ -2203,7 +2226,8 @@ class Player(Bot):
             if self.high_hand == 7:
                 if self.board_quads:
                     return CallAction()
-                return high_raise
+                else:
+                    return high_raise
             
             if self.high_hand == 6:
                 if self.board_trips:
@@ -2213,11 +2237,12 @@ class Player(Bot):
                         return medium_raise
                     return CallAction()
                     
-                if self.board_two_pair:
+                elif self.board_two_pair:
                     if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]: # we have three of a kind on the high card
                         return small_raise
                     return CallAction()
-                return medium_raise
+                else:
+                    return medium_raise
                    
             if self.high_hand == 5:
                 
@@ -2226,126 +2251,113 @@ class Player(Bot):
                         return small_raise
                     if medium_turn_bet or self.my_flush_high >= 8 or self.my_flush_high >= 6 and not self.high_cards_or_pair_likely:
                         return CallAction()
-                    return action
                     
-                if self.board_trips: # need auction
+                elif self.board_trips: # need auction
                     return CallAction()
                 
-                if self.board_two_pair: # need auction
+                elif self.board_two_pair: # need auction
                     return CallAction()
                 
-                if self.board_straight_need_1:
+                elif self.board_straight_need_1:
                     return medium_raise
                 
-                if self.board_flush_need_2 and (self.my_flush_high >= 7 or self.my_flush_high >= 5 and not self.high_cards_or_pair_likely):
+                elif self.board_flush_need_2 and (self.my_flush_high >= 7 or self.my_flush_high >= 5 and not self.high_cards_or_pair_likely):
                     return medium_raise
                 
-                if self.board_flush_need_2:
+                elif self.board_flush_need_2:
                     return CallAction()
-                
-                return small_raise
+                else:
+                    return small_raise
             
             if self.high_hand == 4:
                 
                 if self.board_flush_need_1:
-                    return action
+                    pass
                 
-                if self.board_flush_need_2:
+                elif self.board_flush_need_2:
                     if medium_turn_bet:
                         return CallAction()
-                    return action
                 
-                if self.board_straight_need_1:
+                elif self.board_straight_need_1:
                     if self.my_straight_high > self.board_straight_high:
                         return high_raise
                     return CallAction()
                     
-                if self.board_trips: # need auction
+                elif self.board_trips: # need auction
                     return medium_raise
                 
-                if self.board_two_pair: # need auction
+                elif self.board_two_pair: # need auction
                     return medium_raise
                 
-                if self.board_straight_need_2:
+                elif self.board_straight_need_2:
                     if self.my_straight_high > self.board_straight_high:
                         return medium_raise
                     return small_raise
                 
-                if self.board_pair:
+                elif self.board_pair:
                     return medium_raise
                 
-                return small_raise
+                else:
+                    return small_raise
             
             if self.high_hand == 3:
                 if self.flush_draw or self.straight_draw:
                     return small_raise
-                if self.board_trips:
-                    return action
+                elif self.board_trips:
+                    pass
                 if self.board_flush_need_1 or self.board_straight_need_1:
                     return action
-                if (self.board_flush_need_2 or self.board_straight_need_2):
+                elif (self.board_flush_need_2 or self.board_straight_need_2):
                     if medium_turn_bet:
                         return CallAction()
-                    return action
-                if self.board_pair:
+                elif self.board_pair:
                     return CallAction()
             
             if self.high_hand == 2:
                 if self.board_two_pair:
                     if self.my_high_card == 12 and medium_turn_bet:
                         return CallAction()
-                    return action
-                if self.board_flush_need_1 or self.board_straight_need_1:
-                    return action
-                if self.board_pair:
+                elif self.board_flush_need_1 or self.board_straight_need_1:
+                    pass
+                elif self.board_pair:
                     if self.two_pair_ranks[0] > self.board_pair_rank and medium_turn_bet:
                         return CallAction()
-                    return action
-                if self.board_flush_need_2 or self.board_flush_need_2 and medium_turn_bet:
+                elif self.board_flush_need_2 or self.board_flush_need_2 and medium_turn_bet:
                     return CallAction()
-                if self.two_pair_ranks[0] >= self.sorted_board_ranks[0] or self.two_pair_ranks[2] >= self.sorted_board_ranks[0] and medium_turn_bet:
+                elif self.two_pair_ranks[0] >= self.sorted_board_ranks[0] or self.two_pair_ranks[2] >= self.sorted_board_ranks[0] and medium_turn_bet:
                     return CallAction()
-                if small_turn_bet:
+                elif small_turn_bet:
                     return CallAction()
-                return action
             
             if self.flush_draw and self.straight_draw:
                 if self.board_flush_need_1 or self.board_straight_need_1:
                     if medium_turn_bet:
                         return CallAction()
-                    return action
-                if small_turn_bet:
+                elif small_turn_bet:
                     return CallAction()
-                return action
             
             if self.flush_draw:
-                if self.board_flush_need_1 or self.board_two_pair:
-                    return action
-                if self.board_straight_need_1:
-                    if small_turn_bet:
-                        return CallAction()
-                    return action
-                if self.board_trips: # need auction
-                    return action
-                if self.board_two_pair:
-                    return action
-                if medium_turn_bet:
+                if self.board_straight_need_1 and small_turn_bet:
                     return CallAction()
-                return action
+                if medium_turn_bet and not self.board_two_pair and not self.board_trips and not self.board_flush_need_1:
+                    return CallAction()
                 
             if self.straight_draw:
                 if self.board_straight_need_1 or self.board_two_pair or self.board_flush_need_1 or self.board_trips:
                     return action
-                if len(self.draw_needed) == 2:
-                    return small_raise
-                return CallAction()
+                if len(self.draw_needed) == 2 and medium_turn_bet:
+                    return CallAction()
+                if small_turn_bet:
+                    return CallAction()
                 
             if self.high_hand == 1:
                 if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1 or (self.board_flush_need_2 or self.board_straight_need_2) and not small_turn_bet:
-                    return action
-                if self.pair_rank == self.sorted_board_ranks[0]:
+                    pass
+                elif self.pair_rank > self.sorted_board_ranks[0] and high_turn_bet:
                     return CallAction()
-                if self.pair_rank == self.sorted_board_ranks[1] and medium_turn_bet:
+                elif self.pair_rank == self.sorted_board_ranks[0] and medium_turn_bet:
+                    return CallAction()
+                elif self.pair_rank >= self.sorted_board_ranks[1] and small_turn_bet:
                     return CallAction()
                 
                 
@@ -2392,104 +2404,119 @@ class Player(Bot):
                 if self.high_hand == 8:
                     return high_raise
                 
-                if self.high_hand == 7:
+                elif self.high_hand == 7:
                     if self.board_quads:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return high_raise
                         return small_raise
-                    if self.board_full_house or self.board_trips:
+                    elif self.board_full_house or self.board_trips:
                         return high_raise
-                    return medium_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 6:
+                elif self.high_hand == 6:
                     if self.board_full_house:
                         if self.full_house_ranks == self.board_full_house_ranks:
                             if self.full_house_ranks[0] > self.full_house_ranks[1] and pot_size > 200: # no danger from opponent having three of a kind on the pair
                                 return high_raise
                             return medium_raise
-                    if self.board_trips:
+                        return small_raise
+                    elif self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             return high_raise
                         return medium_raise
                         
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]: # we have three of a kind on the high card
                             return high_raise
-                       
-                if self.high_hand == 5:
-                    if self.board_flush:
-                        if self.my_flush_high > self.board_flush_min and self.my_flush_high > 4:
-                            return high_raise
+                        return medium_raise
+                    else:
                         return small_raise
+                       
+                elif self.high_hand == 5:
+                    if self.board_flush:
+                        if self.my_flush_high:
+                            if self.my_flush_high > self.board_flush_min and self.my_flush_high > 4:
+                                return medium_raise
+                        return high_raise
                     
-                    if self.board_flush_need_1:
+                    elif self.board_flush_need_1:
                         if self.my_flush_high > 9:
                             return high_raise
                         
-                    if self.board_trips:
+                    elif self.board_trips:
                         return small_raise
                     
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         return small_raise
                     
-                    if self.board_flush_need_2 and self.my_flush_high > 5 and pot_size > 200:
+                    elif self.board_flush_need_2 and self.my_flush_high > 5 and pot_size > 200:
                         return high_raise
                     
-                    if self.board_flush_need_2:
+                    elif self.board_flush_need_2:
                         return medium_raise
                     
-                    return high_raise
+                    else:
+                        return high_raise
                 
-                if self.high_hand == 4:
+                elif self.high_hand == 4:
                     if self.board_straight:
                         if self.my_straight_high > self.board_straight_high:
                             return high_raise
                         return CheckAction()
-                    if self.board_flush_need_1:
-                        return small_raise
+                    elif self.board_flush_need_1:
+                        return medium_raise
                     
-                    if self.board_straight_need_1:
+                    elif self.board_straight_need_1:
                         if self.my_straight_high > self.board_straight_high and pot_size > 200:
                             return high_raise
                         return medium_raise
                         
-                    if self.board_trips:
+                    elif self.board_trips:
                         return medium_raise
                     
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         return medium_raise
                     
-                    if self.board_straight_need_2 and self.board_straight_high and pot_size > 200:
+                    elif self.board_straight_need_2 and self.board_straight_high and pot_size > 200:
                         return high_raise
                     
-                    if self.board_straight_need_2:
+                    elif self.board_straight_need_2:
                         return medium_raise
-                    
-                    return high_raise
+                    else:
+                        return high_raise
                 
-                if self.high_hand == 3:
+                elif self.high_hand == 3:
                     if self.board_trips:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return small_raise
                         return CheckAction()
-                    if self.board_flush_need_1 or self.board_straight_need_1:
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
                         return CheckAction()
-                    if self.board_pair:
+                    elif self.board_pair:
                         return small_raise
-                    return medium_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 2:
+                elif self.high_hand == 2:
                     if self.board_two_pair:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return small_raise
                         return CheckAction()
+                    elif self.board_pair:
+                        if self.two_pair_ranks[0] > self.board_pair_rank:
+                            return medium_raise
+                        return small_raise
+                    else:
+                        return medium_raise
                 
-                if self.high_hand == 1:
+                elif self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1:
                         return CheckAction()
-                    if self.board_pair >= self.sorted_board_ranks[1]:
+                    elif self.board_pair >= self.sorted_board_ranks[1]:
                         return small_raise
-                    return CheckAction()
+                    else:
+                        return CheckAction()
                     
                 return CheckAction()
                     
@@ -2520,7 +2547,7 @@ class Player(Bot):
                 if self.high_hand == 8:
                     return high_raise
                 
-                if self.high_hand == 7:
+                elif self.high_hand == 7:
                     if self.board_quads:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return high_raise
@@ -2529,7 +2556,7 @@ class Player(Bot):
                         return high_raise
                     return medium_raise
                 
-                if self.high_hand == 6:
+                elif self.high_hand == 6:
                     if self.board_full_house:
                         if self.full_house_ranks == self.board_full_house_ranks:
                             if self.full_house_ranks[0] > self.full_house_ranks[1]: # no danger from opponent having three of a kind on the pair
@@ -2546,12 +2573,13 @@ class Player(Bot):
                         return medium_raise
                     return small_raise
                        
-                if self.high_hand == 5:
+                elif self.high_hand == 5:
                     
                     if self.board_flush:
-                        if self.my_flush_high > self.board_flush_min and self.my_flush_high > 4:
-                            return small_raise
-                        return action
+                        if self.my_flush_high:
+                            if self.my_flush_high > self.board_flush_min and self.my_flush_high > 4:
+                                return medium_raise
+                        return high_raise
                     
                     if self.board_flush_need_1:
                         if self.my_flush_high > 9:
@@ -2569,9 +2597,9 @@ class Player(Bot):
                     if self.board_flush_need_2:
                         return medium_raise
                     
-                    return high_raise
+                    return small_raise
                 
-                if self.high_hand == 4:
+                elif self.high_hand == 4:
                     
                     if self.board_straight:
                         if self.my_straight_high > self.board_straight_high:
@@ -2597,9 +2625,9 @@ class Player(Bot):
                     if self.board_straight_need_2:
                         return medium_raise
                     
-                    return high_raise
+                    return small_raise
                 
-                if self.high_hand == 3:
+                elif self.high_hand == 3:
                     
                     if self.board_trips:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
@@ -2611,7 +2639,7 @@ class Player(Bot):
                         return small_raise
                     return medium_raise
                 
-                if self.high_hand == 2:
+                elif self.high_hand == 2:
                     
                     if self.board_two_pair:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
@@ -2625,7 +2653,7 @@ class Player(Bot):
                         return medium_raise
                     return small_raise
                 
-                if self.high_hand == 1:
+                elif self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1:
                         return action
                     if self.pair_rank == self.sorted_board_ranks[0]:
@@ -2664,25 +2692,23 @@ class Player(Bot):
                 if self.high_hand >= 4:
                     return CallAction()
                 
-                if self.high_hand == 3:
+                elif self.high_hand == 3:
                     if self.board_trips:
                         if continue_cost < 10 or continue_cost < pot_size/8:
                             return CallAction()
-                        return action
-                    if self.board_flush_need_1 or self.board_straight_need_1:
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
                         if continue_cost < 10 or continue_cost < pot_size/8:
                             return CallAction()
-                        return action
+                    elif small_river_bet:
+                        return CallAction()
                 
-                if self.high_hand == 2:
+                elif self.high_hand == 2:
                     if continue_cost < 8 or continue_cost < pot_size/8:
                         return CallAction()
-                    return action
                 
-                if self.high_hand == 1:
+                elif self.high_hand == 1:
                     if continue_cost < 5 or continue_cost < pot_size/8:
                         return CallAction()
-                    return action
                 
                 return action
             
@@ -2710,113 +2736,110 @@ class Player(Bot):
                 if self.high_hand == 8:
                     return high_raise
                 
-                if self.high_hand == 7:
+                elif self.high_hand == 7:
                     if self.board_quads:
                         if self.my_high_card >= 10 or self.my_high_card >= 8 and not self.high_cards_or_pair_likely:
                             return CallAction()
-                        return action
-                    return high_raise
+                    else:
+                        return high_raise
                 
-                if self.high_hand == 6:
+                elif self.high_hand == 6:
                     if self.board_full_house:
                         if self.full_house_ranks == self.board_full_house_ranks:
                             if self.full_house_ranks[0] > self.full_house_ranks[1] and pot_size > 200: # no danger from opponent having three of a kind on the pair
                                 return high_raise
                             return CallAction()
-                    if self.board_trips:
+                    elif self.board_trips:
                         if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                             if can_raise:
                                 return high_raise
                             return CallAction()
                         return CallAction()
                         
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]: # we have three of a kind on the high card
                             return CallAction()
+                    else:
+                        return high_raise
                        
-                if self.high_hand == 5:
+                elif self.high_hand == 5:
                     
                     if self.board_flush:
-                        if self.my_flush_high > self.board_flush_min and self.my_flush_high > 4:
-                            return high_raise
+                        if self.my_flush_high:
+                            if self.my_flush_high > self.board_flush_min and self.my_flush_high > 4:
+                                return high_raise
                         if medium_river_bet:
                             return CallAction()
-                        return action
                     
-                    if self.board_flush_need_1:
+                    elif self.board_flush_need_1:
                         if self.my_flush_high > 9:
                             return high_raise
                         
-                    if self.board_trips:
+                    elif self.board_trips:
                         if medium_river_bet:
                             return CallAction()
-                        return action
-                    if self.board_two_pair:
+                    elif self.board_two_pair:
                         if medium_river_bet:
                             return CallAction()
-                        return action
                     
-                    if self.board_flush_need_2 and self.my_flush_high > 5:
+                    elif self.board_flush_need_2 and self.my_flush_high > 5:
                         return high_raise
                     
-                    return CallAction()
+                    elif medium_river_bet:
+                        return CallAction()
                 
-                if self.high_hand == 4:
+                elif self.high_hand == 4:
                     if self.board_straight:
                         if self.my_straight_high > self.board_straight_high:
                             return high_raise
                         if medium_river_bet:
                             return CallAction()
                         return action
-                    if self.board_flush_need_1:
-                        return small_raise
+                    elif self.board_flush_need_1 or self.board_trips or self.board_two_pair:
+                        pass
+                    elif self.board_pair:
+                        return CallAction()
                     
-                    if self.board_straight_need_1:
+                    elif self.board_straight_need_1:
                         if self.my_straight_high > self.board_straight_high and pot_size > 200:
                             return high_raise
                         return small_raise
-                        
-                    if self.board_trips:
-                        return small_raise
                     
-                    if self.board_two_pair:
-                        return medium_raise
-                    
-                    if self.board_straight_need_2 and self.board_straight_high and pot_size > 200:
+                    elif self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
                         return high_raise
                     
-                    if self.board_straight_need_2:
+                    elif self.board_straight_need_2:
                         return medium_raise
-                    
-                    return high_raise
+                    else:
+                        return CallAction()
                 
-                if self.high_hand == 3:
+                elif self.high_hand == 3:
                     if self.board_trips:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return CallAction()
-                        return action
-                    if self.board_flush_need_1 or self.board_straight_need_1:
-                        return action
-                    if self.board_pair:
-                        return small_raise
-                    return medium_raise
+                    elif self.board_flush_need_1 or self.board_straight_need_1:
+                        pass
+                    elif self.board_pair and medium_river_bet:
+                        return CallAction()
+                    else:
+                        return CallAction()
                 
-                if self.high_hand == 2:
+                elif self.high_hand == 2:
                     if self.board_two_pair:
                         if self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely:
                             return small_raise
                         if medium_river_bet:
                             return CallAction()
-                        return action
                 
-                if self.high_hand == 1:
+                elif self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_1 or self.board_straight_need_1:
-                        return action
-                    if self.pair_rank == self.sorted_board_ranks[0]:
+                        pass
+                    elif self.pair_rank == self.sorted_board_ranks[0]:
                         return small_raise
-                    if self.board_pair == self.sorted_board_ranks[1] and medium_river_bet:
+                    elif self.board_pair == self.sorted_board_ranks[1] and medium_river_bet:
                         return CallAction()
-                    return action
+                    
+                return action
                 
             # opponent bet
             
@@ -2840,15 +2863,15 @@ class Player(Bot):
             if self.high_hand == 8:
                 return high_raise
             
-            if self.high_hand == 7:
+            elif self.high_hand == 7:
                 
                 if self.board_quads:
                     if self.my_high_card >= 11 or self.my_high_card >= 9 and not self.high_cards_or_pair_likely:
                         return CallAction()
-                    return action
-                return high_raise
+                else:
+                    return high_raise
             
-            if self.high_hand == 6:
+            elif self.high_hand == 6:
                 
                 if self.board_full_house:
                     if self.full_house_ranks == self.board_full_house_ranks:
@@ -2856,44 +2879,45 @@ class Player(Bot):
                             return CallAction()
                         return high_raise
                     
-                if self.board_trips:
+                elif self.board_trips:
                     if self.full_house_ranks[0] > self.board_trips_rank:
                         return high_raise
                     if self.full_house_ranks[1] >= self.sorted_board_ranks[1]:
                         return medium_raise
                     return CallAction()
                     
-                if self.board_two_pair:
+                elif self.board_two_pair:
                     if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]:
                         return medium_raise
                 
                 return high_raise
                    
-            if self.high_hand == 5:
+            elif self.high_hand == 5:
                 
                 if self.board_flush:
-                    if self.my_flush_high > self.board_flush_min and self.my_flush_high > 6:
-                        return high_raise
+                    if self.my_flush_high:
+                        if self.my_flush_high > self.board_flush_min and self.my_flush_high > 6:
+                            return high_raise
                     if medium_river_bet:
                         return CallAction()
-                    return action
                 
-                if self.board_flush_need_1:
+                elif self.board_flush_need_1:
                     if self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely:
                         return CallAction()
                     
-                if self.board_trips:
-                    return action
+                elif self.board_trips:
+                    pass
                 
-                if self.board_two_pair:
-                    return action
+                elif self.board_two_pair:
+                    if medium_river_bet:
+                        return CallAction()
                 
-                if self.board_flush_need_2 and self.my_flush_high > 5:
+                elif self.board_flush_need_2 and self.my_flush_high > 5:
                     return CallAction()
-                
-                return small_raise
+                else:
+                    return small_raise
             
-            if self.high_hand == 4:
+            elif self.high_hand == 4:
                 
                 if self.board_straight:
                     if self.board_straight_high == 12:
@@ -2902,48 +2926,47 @@ class Player(Bot):
                         return high_raise
                     if medium_river_bet:
                         return CallAction()
-                    return action
                 
-                if self.board_flush_need_1:
-                    return action
+                elif self.board_flush_need_1:
+                    pass
                 
-                if self.board_straight_need_1:
+                elif self.board_straight_need_1:
                     if self.my_straight_high > self.board_straight_high:
                         return high_raise
                     return CallAction()
                     
-                if self.board_trips:
-                    return action
+                elif self.board_trips:
+                    pass
                 
-                if self.board_two_pair:
-                    return action
+                elif self.board_two_pair:
+                    pass
                 
-                if self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
+                elif self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
                     return high_raise
                 
-                if self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
+                elif self.board_straight_need_2 and self.my_straight_high > self.board_straight_high:
                     return high_raise
-                
-                return CallAction()
+                else:
+                    return CallAction()
             
-            if self.high_hand == 3:
+            elif self.high_hand == 3:
                 
                 if self.board_trips:
                     if self.my_high_card >= 10 and medium_river_bet:
                         return CallAction()
                     return action
-                if self.board_flush_need_1 or self.board_straight_need_1:
+                elif self.board_flush_need_1 or self.board_straight_need_1:
                     return action
-                if self.board_pair:
+                elif self.board_pair:
                     return small_raise
-                return CallAction()
+                elif high_river_bet:
+                    return CallAction()
             
-            if self.high_hand == 2:
+            elif self.high_hand == 2:
                 
                 if self.board_two_pair:
                     if (self.my_high_card >= 10 or self.my_high_card >= 7 and not self.high_cards_or_pair_likely) and medium_river_bet:
                         return CallAction()
-                    return action
                 
             return action
                 
