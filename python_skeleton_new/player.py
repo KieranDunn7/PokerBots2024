@@ -221,17 +221,11 @@ class Player(Bot):
         self.board_straight_flush = False
         
         self.opp_pre_flop_bet = 0
-        self.opp_river_bet = 1, 3, 5, 8
-        self.opp_turn_bet = 1, 3, 5, 8
-        self.opp_flop_bet = 1, 3, 5, 8
+        self.opp_river_bet = 0
+        self.opp_turn_bet = 0
+        self.opp_flop_bet = 0
         
         self.on_board_hands = set()
-        
-        self.street3_flush_warning = False
-        self.street4_flush_warning = False
-        
-        self.street3_straight_warning = False
-        self.street4_straight_warning = False
         
         self.flop_cards = []
         self.turn_cards = []

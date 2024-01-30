@@ -1,11 +1,11 @@
-Forfeit in Round #765
+Forfeit in Round #729
 
 
-opp_bids = [81]
-my_bids = [123]
-opp_bid_avg = 81.0
+opp_bids = [114]
+my_bids = [126]
+opp_bid_avg = 114.0
 opp_bid_cv = 0.0
-final_time = 27.797
+final_time = 27.852
 post_auction_pcts: []
 post_turn_pcts: []
 post_river_pcts: []
