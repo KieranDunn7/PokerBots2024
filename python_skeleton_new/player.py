@@ -280,7 +280,7 @@ class Player(Bot):
                 if self.opp_flop_bet > 0:
                     self.opp_flop_bets.append(self.opp_flop_bet)
                 self.total_opp_flop_actions.append(round(self.opp_flop_bet, 3))
-                if len(self.opp_flop_actions) > 20:
+                if len(self.opp_flop_actions) > 30:
                     if self.opp_flop_actions[0] != 0:
                         self.opp_flop_bets.pop(0)
                     self.opp_flop_actions.pop(0)
@@ -289,7 +289,7 @@ class Player(Bot):
                 if self.opp_turn_bet > 0:
                     self.opp_turn_bets.append(self.opp_turn_bet)
                 self.total_opp_turn_actions.append(round(self.opp_turn_bet, 3))
-                if len(self.opp_turn_actions) > 15:
+                if len(self.opp_turn_actions) > 30:
                     if self.opp_turn_actions[0] != 0:
                         self.opp_turn_bets.pop(0)
                     self.opp_turn_actions.pop(0)
@@ -299,7 +299,7 @@ class Player(Bot):
                 if self.opp_river_bet > 0:
                     self.opp_river_bets.append(self.opp_river_bet)
                 self.total_opp_river_actions.append(round(self.opp_river_bet, 3))
-                if len(self.opp_river_actions) > 10:
+                if len(self.opp_river_actions) > 30:
                     if self.opp_river_actions[0] != 0:
                         self.opp_river_bets.pop(0)
                     self.opp_river_actions.pop(0)
