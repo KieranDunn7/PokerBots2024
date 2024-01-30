@@ -331,7 +331,7 @@ class Player(Bot):
                     self.opp_bid_cv = 100
                     
                     
-        if len(self.opp_pre_flop_bets) != 0:
+        if len(self.opp_pre_flop_bets) != 0 and len(self.opp_pre_flop_actions) != 0:
             opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
             average_opp_pre_flop_bet = min(1, max(0.66, sum(self.opp_pre_flop_bets) / len(self.opp_pre_flop_bets))) + 0.1
             opp_pre_flop_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_pre_flop_bets)), average_opp_pre_flop_bet/2)
@@ -340,7 +340,7 @@ class Player(Bot):
             average_opp_pre_flop_bet = 0.66
             opp_pre_flop_bet_stdv = 0
             
-        if len(self.opp_flop_bets) != 0:
+        if len(self.opp_flop_bets) != 0 and len(self.opp_flop_actions) != 0:
             opp_flop_bet_rate = len(self.opp_flop_bets) / len(self.opp_flop_actions)
             average_opp_flop_bet = min(1, max(0.66, sum(self.opp_flop_bets) / len(self.opp_flop_bets))) + 0.1
             opp_flop_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_flop_bets)), average_opp_flop_bet/2)
@@ -349,7 +349,7 @@ class Player(Bot):
             average_opp_flop_bet = 0.66
             opp_flop_bet_stdv = 0
             
-        if len(self.opp_turn_bets) != 0:
+        if len(self.opp_turn_bets) != 0 and len(self.opp_turn_actions) != 0:
             opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
             average_opp_turn_bet = min(1, max(0.66, sum(self.opp_turn_bets) / len(self.opp_turn_bets))) + 0.1
             opp_turn_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_turn_bets)), average_opp_turn_bet/2)
@@ -358,7 +358,7 @@ class Player(Bot):
             average_opp_turn_bet = 0.66
             opp_turn_bet_stdv = 0
             
-        if len(self.opp_river_bets) != 0:
+        if len(self.opp_river_bets) != 0 and len(self.opp_river_actions) != 0:
             opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
             average_opp_river_bet = min(1, max(0.66, sum(self.opp_river_bets) / len(self.opp_river_bets))) + 0.1
             opp_river_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_river_bets)), average_opp_river_bet/2)

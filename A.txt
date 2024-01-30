@@ -1,13 +1,18 @@
 
 Round Num: 1
 
+10 pair on street 3
+
+Opp outs on street 3 {2: (10, None), 3: 10, 6: (10, None), 7: 10, 4: {(8, 9, 11), (8, 9, 6)}}
+
+Opponent checks on flop
 Traceback (most recent call last):
-  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton_new/player.py", line 3455, in <module>
+  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton_new/player.py", line 3490, in <module>
     run_bot(Player(), parse_args())
   File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton_new/skeleton/runner.py", line 143, in run_bot
     runner.run()
   File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton_new/skeleton/runner.py", line 109, in run
     self.pokerbot.handle_round_over(game_state, round_state, active)
-  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton_new/player.py", line 321, in handle_round_over
-    self.opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
-ZeroDivisionError: division by zero
+  File "/Users/peytonworthington/Downloads/Poker_Bots/PokerBots2024/python_skeleton_new/player.py", line 281, in handle_round_over
+    if self.opp_flop_bet > 0:
+TypeError: '>' not supported between instances of 'tuple' and 'int'
