@@ -1432,13 +1432,8 @@ class Player(Bot):
             self.flop_cards = board_cards
         
             if continue_cost >= max(5, pot_size/10): # check whether opponent is bluffing after showdown
-<<<<<<< HEAD
-                self.opp_flop_bet = continue_cost
-=======
                 self.opp_flop_bet = continue_cost / pot_size
         
-            
->>>>>>> f55df43b35287bd1e3d2a13afe5a6de890a06baa
             
             if continue_cost == 0 and big_blind:
                 
@@ -1536,7 +1531,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= min(5, pot_size/10):
+            if continue_cost <= max(5, pot_size/10):
                 
                 # opponent checks (or makes small bet)
                 
@@ -2790,7 +2785,7 @@ class Player(Bot):
             self.river_cards = board_cards
         
         
-            if continue_cost >= 5 and continue_cost >= pot_size/8: # check whether opponent is bluffing after showdown
+            if continue_cost >= max(5, pot_size/8): # check whether opponent is bluffing after showdown
                 self.opp_river_bet = continue_cost / pot_size
                 
             if continue_cost == 0 and big_blind:
@@ -2825,8 +2820,6 @@ class Player(Bot):
                     return medium_raise
                 
                 if self.high_hand == 6:
-                    if self.opp_all_in: ####
-                            return CallAction()
                     if self.board_full_house:
                         if self.full_house_ranks == self.board_full_house_ranks:
                             if self.full_house_ranks[0] > self.full_house_ranks[1] and pot_size > 200: # no danger from opponent having three of a kind on the pair
@@ -2918,7 +2911,7 @@ class Player(Bot):
                     
                 return CheckAction()
                     
-            if continue_cost < 5 or continue_cost < pot_size/10:
+            if continue_cost < max(5, pot_size/10):
                 if continue_cost == 0:
                     action = CheckAction()
                 else:
