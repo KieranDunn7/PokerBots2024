@@ -332,47 +332,46 @@ class Player(Bot):
                     
                     
         if len(self.opp_pre_flop_bets) != 0:
-            self.opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
-            self.average_opp_pre_flop_bet = sum(self.opp_pre_flop_bets) / len(self.opp_pre_flop_bets)
-            self.opp_pre_flop_bet_stdv = calculate_std_dev(self.opp_pre_flop_bets)
+            opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
+            average_opp_pre_flop_bet = min(1, max(0.66, sum(self.opp_pre_flop_bets) / len(self.opp_pre_flop_bets))) + 0.1
+            opp_pre_flop_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_pre_flop_bets)), average_opp_pre_flop_bet/2)
         else:
-            self.opp_pre_flop_bet_rate = 0
-            self.average_opp_pre_flop_bet = 0.66
-            self.opp_pre_flop_bet_stdv = 0
+            opp_pre_flop_bet_rate = 0
+            average_opp_pre_flop_bet = 0.66
+            opp_pre_flop_bet_stdv = 0
             
         if len(self.opp_flop_bets) != 0:
-            self.opp_flop_bet_rate = len(self.opp_flop_bets) / len(self.opp_flop_actions)
-            self.average_opp_flop_bet = sum(self.opp_flop_bets) / len(self.opp_flop_bets)
-            self.opp_flop_bet_stdv = calculate_std_dev(self.opp_flop_bets)
+            opp_flop_bet_rate = len(self.opp_flop_bets) / len(self.opp_flop_actions)
+            average_opp_flop_bet = min(1, max(0.66, sum(self.opp_flop_bets) / len(self.opp_flop_bets))) + 0.1
+            opp_flop_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_flop_bets)), average_opp_flop_bet/2)
         else:
-            self.opp_flop_bet_rate = 0
-            self.average_opp_flop_bet = 0.66
-            self.opp_flop_bet_stdv = 0
+            opp_flop_bet_rate = 0
+            average_opp_flop_bet = 0.66
+            opp_flop_bet_stdv = 0
             
         if len(self.opp_turn_bets) != 0:
-            self.opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
-            self.average_opp_turn_bet = sum(self.opp_turn_bets) / len(self.opp_turn_bets)
-            self.opp_turn_bet_stdv = calculate_std_dev(self.opp_turn_bets)
+            opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
+            average_opp_turn_bet = min(1, max(0.66, sum(self.opp_turn_bets) / len(self.opp_turn_bets))) + 0.1
+            opp_turn_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_turn_bets)), average_opp_turn_bet/2)
         else:
-            self.opp_turn_bet_rate = 0
-            self.average_opp_turn_bet = 0.66
-            self.opp_turn_bet_stdv = 0
+            opp_turn_bet_rate = 0
+            average_opp_turn_bet = 0.66
+            opp_turn_bet_stdv = 0
             
         if len(self.opp_river_bets) != 0:
-            self.opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
-            self.average_opp_river_bet = sum(self.opp_river_bets) / len(self.opp_river_bets)
-            self.opp_river_bet_stdv = calculate_std_dev(self.opp_river_bets)
+            opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
+            average_opp_river_bet = min(1, max(0.66, sum(self.opp_river_bets) / len(self.opp_river_bets))) + 0.1
+            opp_river_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_river_bets)), average_opp_river_bet/2)
         else:
-            self.opp_river_bet_rate = 0
-            self.average_opp_river_bet = 0.66
-            self.opp_river_bet_stdv = 0
+            opp_river_bet_rate = 0
+            average_opp_river_bet = 0.66
+            opp_river_bet_stdv = 0
         
         
-        self.pre_flop_aggression = 0
-        self.flop_aggression = 0
-        self.turn_aggression = 0
-        self.river_aggression = 0
-        
+        self.pre_flop_aggression = average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, average_opp_pre_flop_bet, average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, average_opp_pre_flop_bet - 2 * opp_pre_flop_bet_stdv
+        self.flop_aggression = average_opp_flop_bet + opp_flop_bet_stdv, average_opp_flop_bet, average_opp_flop_bet - opp_flop_bet_stdv, average_opp_flop_bet - 2 * opp_flop_bet_stdv
+        self.turn_aggression = average_opp_turn_bet + opp_turn_bet_stdv, average_opp_turn_bet, average_opp_turn_bet - opp_turn_bet_stdv, average_opp_turn_bet - 2 * opp_turn_bet_stdv
+        self.river_aggression = average_opp_river_bet + opp_river_bet_stdv, average_opp_river_bet, average_opp_river_bet - opp_river_bet_stdv, average_opp_river_bet - 2 * opp_river_bet_stdv
         
         
                     
@@ -2011,11 +2010,10 @@ class Player(Bot):
                     if self.board_pair:
                         if self.two_pair_ranks[0] > self.board_pair_rank and medium_bet:
                             return CallAction()
+                    if self.board_flush_need_2 or self.board_flush_need_2 :
                         if small_bet:
                             return CallAction()
                         return action
-                    if self.board_flush_need_2 or self.board_flush_need_2 and medium_bet:
-                        return CallAction()
                     if medium_bet:
                         return CallAction()
                 
@@ -2025,6 +2023,8 @@ class Player(Bot):
                     if self.board_pair or self.board_flush_need_2 or self.board_straight_need_2:
                         return action
                     if self.pair_rank == self.sorted_board_ranks[0]:
+                        return CallAction()
+                    if small_bet or self.pair_rank == self.sorted_board_ranks[1] and medium_bet:
                         return CallAction()
                     return action
                     
@@ -2151,6 +2151,10 @@ class Player(Bot):
                         return CallAction()
                     return action
                 if self.board_flush_need_2 or self.board_flush_need_2 and medium_bet:
+                    return CallAction()
+                if self.two_pair_ranks[0] >= self.sorted_board_ranks[0] or self.two_pair_ranks[0] >= self.sorted_board_ranks[2] and medium_bet:
+                    return CallAction()
+                if small_bet:
                     return CallAction()
                 return action
                 
