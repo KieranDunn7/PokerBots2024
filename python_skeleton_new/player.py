@@ -1816,6 +1816,22 @@ class Player(Bot):
                     if self.board_flush_need_2 or self.board_flush_need_2 and medium_bet or small_bet:
                         return CallAction()
                     return action
+                
+                if self.flush_draw:
+                    if self.board_flush_need_2:
+                        if (self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely and medium_bet) or small_bet:
+                            return CallAction()
+                        return action
+                    return CallAction()
+                    
+                if self.straight_draw:
+                    if self.board_flush_need_2 and medium_bet or small_bet:
+                        return CallAction()
+                    if self.board_straight_need_2:
+                        if self.my_straight_high > self.board_straight_high or medium_bet:
+                            return CallAction()
+                        return action
+                    return CallAction()
                     
                 if self.high_hand == 1:
                     if self.board_pair or self.board_flush_need_2 or self.board_straight_need_2:
