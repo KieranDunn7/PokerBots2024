@@ -367,10 +367,10 @@ class Player(Bot):
             opp_river_bet_stdv = 0
         
         
-        self.pre_flop_aggression = average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, average_opp_pre_flop_bet, average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.15)
-        self.flop_aggression = average_opp_flop_bet + opp_flop_bet_stdv, average_opp_flop_bet, average_opp_flop_bet - opp_flop_bet_stdv, min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.15)
-        self.turn_aggression = average_opp_turn_bet + opp_turn_bet_stdv, average_opp_turn_bet, average_opp_turn_bet - opp_turn_bet_stdv, min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.15)
-        self.river_aggression = average_opp_river_bet + opp_river_bet_stdv, average_opp_river_bet, average_opp_river_bet - opp_river_bet_stdv, min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.15)
+        self.pre_flop_aggression = average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, average_opp_pre_flop_bet, average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.05)
+        self.flop_aggression = average_opp_flop_bet + opp_flop_bet_stdv, average_opp_flop_bet, average_opp_flop_bet - opp_flop_bet_stdv, min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.05)
+        self.turn_aggression = average_opp_turn_bet + opp_turn_bet_stdv, average_opp_turn_bet, average_opp_turn_bet - opp_turn_bet_stdv, min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.05)
+        self.river_aggression = average_opp_river_bet + opp_river_bet_stdv, average_opp_river_bet, average_opp_river_bet - opp_river_bet_stdv, min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.05)
         
         
                     
@@ -1537,7 +1537,7 @@ class Player(Bot):
         
             self.flop_cards = board_cards
         
-            if continue_cost >= max(5, pot_size/10): # check whether opponent is bluffing after showdown
+            if continue_cost >= max(5, pot_size/25): # check whether opponent is bluffing after showdown
                 self.opp_flop_bet = continue_cost / pot_size
         
             
@@ -1637,7 +1637,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= max(5, pot_size/10):
+            if continue_cost <= max(5, pot_size/25):
                 
                 # opponent checks (or makes small bet)
                 
@@ -1723,12 +1723,12 @@ class Player(Bot):
                     
                 return action
             
-            if tiny_flop_bet:
+            if continue_cost < 5 or tiny_flop_bet:
                 action = CallAction()
             else:
                 action = FoldAction()
             
-            if not big_blind and continue_cost >= min(5,pot_size/10):
+            if not big_blind and continue_cost >= min(5,pot_size/25):
                 ### Opponent bets
                 
                 print("Opponent bet on flop")
@@ -2324,7 +2324,7 @@ class Player(Bot):
                     
                 return CheckAction()
                 
-            if continue_cost <= max(5, pot_size/10):
+            if continue_cost <= max(5, pot_size/25):
                 
                 print("Opponent checks on turn")
                 
@@ -3046,7 +3046,7 @@ class Player(Bot):
                     
                 return CheckAction()
                     
-            if continue_cost < max(5, pot_size/10):
+            if continue_cost < max(5, pot_size/25):
                 if continue_cost == 0:
                     action = CheckAction()
                 else:
@@ -3186,7 +3186,7 @@ class Player(Bot):
                     
                 return action
             
-            if continue_cost < 4 or tiny_river_bet:
+            if continue_cost < 5 or tiny_river_bet:
                 action = CallAction()
             else:
                 action = FoldAction()
