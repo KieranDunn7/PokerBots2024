@@ -303,7 +303,7 @@ class Player(Bot):
         def calculate_std_dev(numbers):
             n = len(numbers)
             if n < 2:
-                return None  # Standard deviation is not defined for less than two elements
+                return 0  # Standard deviation is not defined for less than two elements
             
             mean = sum(numbers) / n
             squared_diff = [(x - mean) ** 2 for x in numbers]
@@ -328,7 +328,7 @@ class Player(Bot):
         if len(self.opp_pre_flop_bets) != 0 and len(self.opp_pre_flop_actions) != 0:
             opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
             average_opp_pre_flop_bet = min(1, max(0.66, sum(self.opp_pre_flop_bets) / len(self.opp_pre_flop_bets))) + 0.1
-            opp_pre_flop_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_pre_flop_bets)), average_opp_pre_flop_bet/2)
+            opp_pre_flop_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_pre_flop_bets)), average_opp_pre_flop_bet/2)
         else:
             opp_pre_flop_bet_rate = 0
             average_opp_pre_flop_bet = 0.66
@@ -337,7 +337,7 @@ class Player(Bot):
         if len(self.opp_flop_bets) != 0 and len(self.opp_flop_actions) != 0:
             opp_flop_bet_rate = len(self.opp_flop_bets) / len(self.opp_flop_actions)
             average_opp_flop_bet = min(1, max(0.66, sum(self.opp_flop_bets) / len(self.opp_flop_bets))) + 0.1
-            opp_flop_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_flop_bets)), average_opp_flop_bet/2)
+            opp_flop_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_flop_bets)), average_opp_flop_bet/2)
         else:
             opp_flop_bet_rate = 0
             average_opp_flop_bet = 0.66
@@ -346,7 +346,7 @@ class Player(Bot):
         if len(self.opp_turn_bets) != 0 and len(self.opp_turn_actions) != 0:
             opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
             average_opp_turn_bet = min(1, max(0.66, sum(self.opp_turn_bets) / len(self.opp_turn_bets))) + 0.1
-            opp_turn_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_turn_bets)), average_opp_turn_bet/2)
+            opp_turn_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_turn_bets)), average_opp_turn_bet/2)
         else:
             opp_turn_bet_rate = 0
             average_opp_turn_bet = 0.66
@@ -355,7 +355,7 @@ class Player(Bot):
         if len(self.opp_river_bets) != 0 and len(self.opp_river_actions) != 0:
             opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
             average_opp_river_bet = min(1, max(0.66, sum(self.opp_river_bets) / len(self.opp_river_bets))) + 0.1
-            opp_river_bet_stdv = max(min(0.15, calculate_std_dev(self.opp_river_bets)), average_opp_river_bet/2)
+            opp_river_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_river_bets)), average_opp_river_bet/2)
         else:
             opp_river_bet_rate = 0
             average_opp_river_bet = 0.66
