@@ -2805,14 +2805,18 @@ class Player(Bot):
                     return action
                 if self.board_flush_need_2 or self.board_flush_need_2 and medium_bet:
                     return CallAction()
+                if self.two_pair_ranks[0] >= self.sorted_board_ranks[0] or self.two_pair_ranks[2] >= self.sorted_board_ranks[0] and medium_bet:
+                    return CallAction()
+                if small_bet:
+                    return CallAction()
                 return action
             
             if self.flush_draw and self.straight_draw:
                 if self.board_flush_need_1 or self.board_straight_need_1:
-                    if small_bet:
+                    if medium_bet:
                         return CallAction()
                     return action
-                if medium_bet:
+                if small_bet:
                     return CallAction()
                 return action
             
