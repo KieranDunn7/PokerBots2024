@@ -271,38 +271,38 @@ class Player(Bot):
             if self.opp_pre_flop_bet > 0:
                 self.opp_pre_flop_bets.append(self.opp_pre_flop_bet)
             self.total_opp_pre_flop_actions.append(round(self.opp_pre_flop_bet, 3))
-            if len(self.opp_pre_flop_actions) > 30:
-                if self.opp_pre_flop_actions[0] != 0:
-                    self.opp_pre_flop_bets.pop(0)
-                self.opp_pre_flop_actions.pop(0)
+            # if len(self.opp_pre_flop_actions) > 30:
+            #     if self.opp_pre_flop_actions[0] != 0:
+            #         self.opp_pre_flop_bets.pop(0)
+            #     self.opp_pre_flop_actions.pop(0)
             if street >= 3:
                 self.opp_flop_actions.append(self.opp_flop_bet)
                 if self.opp_flop_bet > 0:
                     self.opp_flop_bets.append(self.opp_flop_bet)
                 self.total_opp_flop_actions.append(round(self.opp_flop_bet, 3))
-                if len(self.opp_flop_actions) > 30:
-                    if self.opp_flop_actions[0] != 0:
-                        self.opp_flop_bets.pop(0)
-                    self.opp_flop_actions.pop(0)
+                # if len(self.opp_flop_actions) > 30:
+                #     if self.opp_flop_actions[0] != 0:
+                #         self.opp_flop_bets.pop(0)
+                #     self.opp_flop_actions.pop(0)
             if street >= 4:
                 self.opp_turn_actions.append(self.opp_turn_bet)
                 if self.opp_turn_bet > 0:
                     self.opp_turn_bets.append(self.opp_turn_bet)
                 self.total_opp_turn_actions.append(round(self.opp_turn_bet, 3))
-                if len(self.opp_turn_actions) > 30:
-                    if self.opp_turn_actions[0] != 0:
-                        self.opp_turn_bets.pop(0)
-                    self.opp_turn_actions.pop(0)
+                # if len(self.opp_turn_actions) > 30:
+                #     if self.opp_turn_actions[0] != 0:
+                #         self.opp_turn_bets.pop(0)
+                #     self.opp_turn_actions.pop(0)
                     
             if street >= 5:
                 self.opp_river_actions.append(self.opp_river_bet)
                 if self.opp_river_bet > 0:
                     self.opp_river_bets.append(self.opp_river_bet)
                 self.total_opp_river_actions.append(round(self.opp_river_bet, 3))
-                if len(self.opp_river_actions) > 30:
-                    if self.opp_river_actions[0] != 0:
-                        self.opp_river_bets.pop(0)
-                    self.opp_river_actions.pop(0)
+                # if len(self.opp_river_actions) > 30:
+                #     if self.opp_river_actions[0] != 0:
+                #         self.opp_river_bets.pop(0)
+                #     self.opp_river_actions.pop(0)
                     
                     
         def calculate_std_dev(numbers):
