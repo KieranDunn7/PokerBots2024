@@ -611,7 +611,10 @@ class Player(Bot):
             else:
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
-            bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 10 - int(opp_bid_stdv)
+            if opp_bid_avg > 50:
+                bid = int(opp_bid_avg - opp_bid_stdv * 1.96)
+            else:
+                bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10)
             return BidAction(min(150, my_stack, max(bid, 2*pot_size)))
         
         if self.all_in:
