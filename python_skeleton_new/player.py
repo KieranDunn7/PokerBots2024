@@ -330,542 +330,68 @@ class Player(Bot):
                     self.opp_bid_cv = 100
                     
                     
-        if len(self.opp_pre_flop_bets) != 0 and len(self.opp_pre_flop_actions) != 0:
+        if len(self.opp_pre_flop_bets) != 0 and len(self.opp_pre_flop_actions) >= 10:
             opp_pre_flop_bet_rate = len(self.opp_pre_flop_bets) / len(self.opp_pre_flop_actions)
             average_opp_pre_flop_bet = min(1, max(0.66, sum(self.opp_pre_flop_bets) / len(self.opp_pre_flop_bets))) + 0.1
-            opp_pre_flop_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_pre_flop_bets)), average_opp_pre_flop_bet/3)
+            opp_pre_flop_bet_stdv = min(max(0.2, calculate_std_dev(self.opp_pre_flop_bets)), average_opp_pre_flop_bet/3)
         else:
-            opp_pre_flop_bet_rate = 0
+            opp_pre_flop_bet_rate = 0.25
             average_opp_pre_flop_bet = 0.66
-            opp_pre_flop_bet_stdv = 0
+            opp_pre_flop_bet_stdv = 0.2
             
-        if len(self.opp_flop_bets) != 0 and len(self.opp_flop_actions) != 0:
+        if len(self.opp_flop_bets) != 0 and len(self.opp_flop_actions) >= 10:
             opp_flop_bet_rate = len(self.opp_flop_bets) / len(self.opp_flop_actions)
             average_opp_flop_bet = min(1, max(0.66, sum(self.opp_flop_bets) / len(self.opp_flop_bets))) + 0.1
-            opp_flop_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_flop_bets)), average_opp_flop_bet/3)
+            opp_flop_bet_stdv = min(max(0.2, calculate_std_dev(self.opp_flop_bets)), average_opp_flop_bet/3)
         else:
-            opp_flop_bet_rate = 0
+            opp_flop_bet_rate = 0.25
             average_opp_flop_bet = 0.66
-            opp_flop_bet_stdv = 0
+            opp_flop_bet_stdv = 0.2
             
-        if len(self.opp_turn_bets) != 0 and len(self.opp_turn_actions) != 0:
+        if len(self.opp_turn_bets) != 0 and len(self.opp_turn_actions) >= 10:
             opp_turn_bet_rate = len(self.opp_turn_bets) / len(self.opp_turn_actions)
             average_opp_turn_bet = min(1, max(0.66, sum(self.opp_turn_bets) / len(self.opp_turn_bets))) + 0.1
-            opp_turn_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_turn_bets)), average_opp_turn_bet/3)
+            opp_turn_bet_stdv = min(max(0.2, calculate_std_dev(self.opp_turn_bets)), average_opp_turn_bet/3)
         else:
-            opp_turn_bet_rate = 0
+            opp_turn_bet_rate = 0.25
             average_opp_turn_bet = 0.66
-            opp_turn_bet_stdv = 0
+            opp_turn_bet_stdv = 0.2
             
-        if len(self.opp_river_bets) != 0 and len(self.opp_river_actions) != 0:
+        if len(self.opp_river_bets) != 0 and len(self.opp_river_actions) >= 10:
             opp_river_bet_rate = len(self.opp_river_bets) / len(self.opp_river_actions)
             average_opp_river_bet = min(1, max(0.66, sum(self.opp_river_bets) / len(self.opp_river_bets))) + 0.1
-            opp_river_bet_stdv = min(max(0.15, calculate_std_dev(self.opp_river_bets)), average_opp_river_bet/3)
+            opp_river_bet_stdv = min(max(0.2, calculate_std_dev(self.opp_river_bets)), average_opp_river_bet/3)
         else:
-            opp_river_bet_rate = 0
+            opp_river_bet_rate = 0.25
             average_opp_river_bet = 0.66
-            opp_river_bet_stdv = 0
+            opp_river_bet_stdv = 0.2
         
-        
-        self.pre_flop_aggression = average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, average_opp_pre_flop_bet, average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.05)
-        self.flop_aggression = average_opp_flop_bet + opp_flop_bet_stdv, average_opp_flop_bet, average_opp_flop_bet - opp_flop_bet_stdv, min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.05)
-        self.turn_aggression = average_opp_turn_bet + opp_turn_bet_stdv, average_opp_turn_bet, average_opp_turn_bet - opp_turn_bet_stdv, min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.05)
-        self.river_aggression = average_opp_river_bet + opp_river_bet_stdv, average_opp_river_bet, average_opp_river_bet - opp_river_bet_stdv, min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.05)
-        
-        
-                    
-        ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
-        suits_dict = {"s": 3, "h": 2, "c": 1, "d": 0}
-        
-        
-        def check_for_straight(board_cards, num_needed):
-            """
-            Takes the board cards as a list of strings and the number in a straight
-            needed and returns a dictionary with straight high rank indexes as keys
-            and a tuple with sets of cards in and cards out as values if there are more
-            than num_needed in that straight
-            """
-            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
-            ranks = set()
-            for card in board_cards:
-                ranks.add(ranks_dict[card[0]])
-            starts_in = {}
-            
-            num_in = 0
-            ace_low_straight = (12, 0, 1, 2, 3)
-            cards_in = set()
-            cards_needed = set()
-            for card in ace_low_straight:
-                if card in ranks:
-                    num_in += 1
-                    cards_in.add(card)
-                else:
-                    cards_needed.add(card)
-            if num_in >= num_needed:
-                starts_in[3] = cards_in, cards_needed
-            for starting_card in range(9):
-                num_in = 0
-                cards_in = set()
-                cards_needed = set()
-                for card in range(starting_card, starting_card + 5):
-                    if card in ranks:
-                        num_in += 1
-                        cards_in.add(card)
-                    else:
-                        cards_needed.add(card)
-                if num_in >= num_needed:
-                    starts_in[starting_card+4] = cards_in, cards_needed
+        if opp_pre_flop_bet_rate >= 0.25:
+            self.pre_flop_aggression = round(average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, 3), round(average_opp_pre_flop_bet, 3), round(average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, 3), round(min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.1), 3)
+        else:
+            self.pre_flop_aggression = round(average_opp_pre_flop_bet, 3), round(average_opp_pre_flop_bet- opp_pre_flop_bet_stdv, 3), round(average_opp_pre_flop_bet - 2*opp_pre_flop_bet_stdv, 3), round(min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.08), 3)
 
-            return starts_in
+        if opp_flop_bet_rate >= 0.25:
+            self.flop_aggression = round(average_opp_flop_bet + opp_flop_bet_stdv, 3), round(average_opp_flop_bet, 3), round(average_opp_flop_bet - opp_flop_bet_stdv, 3), round(min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.1), 3)
+        else:
+            self.flop_aggression = round(average_opp_flop_bet, 3), round(average_opp_flop_bet - opp_flop_bet_stdv, 3), round(average_opp_flop_bet - 2*opp_flop_bet_stdv, 3), round(min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.08), 3)
 
-
-        def check_for_flush(board_cards, num_needed):
-            """
-            Takes the board cards as a list of strings and the number in one suit
-            needed and returns a dictionary with suit indexes as keys and a set of ranks
-            in that suit as values if there are at least num_needed of that suit
-            """
-            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
-            suits_dict = {"s": 3, "h": 2, "c": 1, "d": 0}
-            suits = [set(), set(), set(), set()]
-            for card in board_cards:
-                rank, suit = ranks_dict[card[0]], suits_dict[card[1]]
-                suits[suit].add(rank)
-            suits_in = {}
-            for suit_index, suit in enumerate(suits):
-                if len(suit) >= num_needed:
-                    suits_in[suit_index] = suit
-            return suits_in
-
-
-        def check_for_pair(board_cards):
-            """
-            Takes the board cards as a list of strings returns a dictionary with rank
-            indexes as keys and number of that rank as values if there is more than
-            one card with that rank
-            """
-            ranks_dict = {"2": 0, "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6, "9": 7, "T": 8, "J": 9, "Q": 10, "K": 11, "A": 12}
-            ranks = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0}
-            for card in board_cards:
-                ranks[ranks_dict[card[0]]] += 1
-            ranks_in = {}
-            for rank, num in ranks.items():
-                if num >= 2:
-                    ranks_in[rank] = num
-            return ranks_in            
+        if opp_turn_bet_rate >= 0.25:
+            self.turn_aggression = round(average_opp_turn_bet + opp_turn_bet_stdv, 3), round(average_opp_turn_bet, 3), round(average_opp_turn_bet - opp_turn_bet_stdv, 3), round(min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.1), 3)
+        else:
+            self.turn_aggression = round(average_opp_turn_bet, 3), round(average_opp_turn_bet - opp_turn_bet_stdv, 3), round(average_opp_turn_bet - 2*opp_turn_bet_stdv, 3), round(min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.08), 3)
         
-                    
-        # if opp_cards:
-            
-        #     opp_river_flush = False
-        #     opp_river_flush_suit = -1
-        #     opp_river_flush_high = -1 # high in the flush for tie-break
-            
-        #     opp_river_straight = False
-        #     opp_river_straight_high = -1
-            
-        #     opp_river_trips = False
-        #     opp_river_trips_rank = -1
-            
-        #     opp_river_pair = False
-        #     opp_river_pair_rank = -1
-            
-        #     opp_river_two_pair = False
-        #     opp_river_two_pair_ranks = -1, -1 # higher rank first
-            
-        #     opp_river_full_house = False
-        #     opp_river_full_house_ranks = -1, -1 # three of a kind first
-            
-        #     opp_river_quads = False
-        #     opp_river_quads_rank = -1
-            
-        #     opp_river_high_hand = 0 # string representing the best hand we have
-        #     opp_river_high_hand_numbers = -1
-            
-        #     opp_river_straight_flush = False
+        if opp_river_bet_rate >= 0.25:
+            self.river_aggression = round(average_opp_river_bet + opp_river_bet_stdv, 3), round(average_opp_river_bet, 3), round(average_opp_river_bet - opp_river_bet_stdv, 3), round(min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.1), 3)
+        else:
+            self.river_aggression = round(average_opp_river_bet, 3), round(average_opp_river_bet - opp_river_bet_stdv, 3), round(average_opp_river_bet - 2*opp_river_bet_stdv, 3), round(min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.08), 3)
+
         
-            
-        #     total_river_cards = opp_cards + self.river_cards
-            
-        #     opp_pairs = check_for_pair(total_river_cards)
-        #     pairs = set()
-        #     trips = set()
-        #     quads = set()
-        #     for rank, num in opp_pairs.items():
-        #         if num == 4:
-        #             quads.add(rank)
-        #         if num == 3:
-        #             trips.add(rank)
-        #         if num == 2:
-        #             pairs.add(rank)
-                    
-        #     if quads: # quads
-        #         opp_river_quads = True
-        #         opp_river_quads_rank = max(quads)
-                
-        #     elif len(trips) > 1 or trips and pairs: # full house
-        #         opp_river_full_house = True
-        #         if len(trips) > 1 and pairs:
-        #             opp_river_full_house_ranks = max(trips), max(min(trips), max(pairs))
-        #         elif pairs:
-        #             opp_river_full_house_ranks = max(trips), max(pairs)
-        #         else:
-        #             opp_river_full_house_ranks = max(trips), min(trips)
-                    
-        #     elif trips: # trips
-        #         opp_river_trips = True
-        #         opp_river_trips_rank = max(trips)
-                
-        #     elif len(pairs) > 1: # two pair
-        #         opp_river_two_pair = True
-        #         high_pair = max(pairs)
-        #         pairs.remove(max(pairs))
-        #         low_pair = max(pairs)
-        #         opp_river_two_pair_ranks = high_pair, low_pair
-                
-        #     elif pairs: # pair
-        #         opp_river_pair = True
-        #         opp_river_pair_rank = max(pairs)
-             
-                    
-        #     opp_flush = check_for_flush(total_river_cards, 5)
-        #     opp_river_flush_cards = set()
-        #     if opp_flush:
-        #         for suit_index, cards_in in opp_flush.items():
-        #             opp_river_flush = True
-        #             opp_river_flush_suit = suit_index
-        #             opp_river_flush_cards.update(cards_in)
-        #             opp_river_flush_high = max(cards_in)
-                        
-        #     opp_straight = check_for_straight(total_river_cards, 5)
-        #     opp_river_straight_high = 0
-        #     if opp_straight:
-        #         for high_card, (cards_in, cards_out) in opp_straight.items():
-        #                 if opp_river_flush:
-        #                     if cards_in.issubset(opp_river_flush_cards):
-        #                         opp_river_straight_flush = True
-        #                         opp_river_straight_flush_high = high_card
-        #                 else:
-        #                     opp_river_straight = True
-        #                     if high_card > opp_river_straight_high:
-        #                         opp_river_straight_high = high_card
-        #                         opp_river_straight_cards = cards_in
-                            
-                            
-        #     if opp_river_straight_flush:
-        #         opp_river_high_hand = 8
-        #         opp_river_high_hand_numbers = opp_river_straight_flush_high
-        #     elif opp_river_quads:
-        #         opp_river_high_hand = 7
-        #         opp_river_high_hand_numbers = opp_river_quads_rank
-        #     elif opp_river_full_house:
-        #         opp_river_high_hand = 6
-        #         opp_river_high_hand_numbers = opp_river_full_house_ranks
-        #     elif opp_river_flush:
-        #         opp_river_high_hand = 5
-        #         opp_river_high_hand_numbers = max(opp_river_flush_cards)
-        #     elif opp_river_straight:
-        #         opp_river_high_hand = 4
-        #         opp_river_high_hand_numbers = opp_river_straight_high
-        #     elif opp_river_trips:
-        #         opp_river_high_hand = 3
-        #         opp_river_high_hand_numbers = opp_river_trips_rank
-        #     elif opp_river_two_pair:
-        #         opp_river_high_hand = 2
-        #         opp_river_high_hand_numbers = opp_river_two_pair_ranks
-        #     elif opp_river_pair:
-        #         opp_river_high_hand = 1
-        #         opp_river_high_hand_numbers = opp_river_pair_rank
-        #     else:
-        #         opp_river_high_hand = 0
-                
-                
-        #     opp_turn_flush_draw = False
-        #     opp_turn_flush = False
-        #     opp_turn_flush_suit = -1
-        #     opp_turn_flush_high = -1 # high in the flush for tie-break
-            
-        #     opp_turn_straight_draw = False
-        #     opp_turn_straight = False
-        #     opp_turn_straight_high = -1
-        #     opp_turn_draw_needed = set() # cards needed for a draw
-        #     opp_turn_my_straight_high = -1
-            
-        #     opp_turn_trips = False
-        #     opp_turn_trips_rank = -1
-            
-        #     opp_turn_pair = False
-        #     opp_turn_pair_rank = -1
-            
-        #     opp_turn_two_pair = False
-        #     opp_turn_two_pair_ranks = -1, -1 # higher rank first
-            
-        #     opp_turn_full_house = False
-        #     opp_turn_full_house_ranks = -1, -1 # three of a kind first
-            
-        #     opp_turn_quads = False
-        #     opp_turn_quads_rank = -1
-            
-        #     opp_turn_high_hand = 0 # string representing the best hand we have
-        #     opp_turn_high_hand_numbers = -1
-            
-        #     opp_turn_straight_flush = False
-                
-                
-                
-        #     total_turn_cards = opp_cards + self.turn_cards
-            
-        #     opp_pairs = check_for_pair(total_turn_cards)
-        #     pairs = set()
-        #     trips = set()
-        #     quads = set()
-        #     for rank, num in opp_pairs.items():
-        #         if num == 4:
-        #             quads.add(rank)
-        #         if num == 3:
-        #             trips.add(rank)
-        #         if num == 2:
-        #             pairs.add(rank)
-                    
-        #     if quads: # quads
-        #         opp_turn_quads = True
-        #         opp_turn_quads_rank = max(quads)
-                
-        #     elif len(trips) > 1 or trips and pairs: # full house
-        #         opp_turn_full_house = True
-        #         if len(trips) > 1 and pairs:
-        #             opp_turn_full_house_ranks = max(trips), max(min(trips), max(pairs))
-        #         elif pairs:
-        #             opp_turn_full_house_ranks = max(trips), max(pairs)
-        #         else:
-        #             opp_turn_full_house_ranks = max(trips), min(trips)
-                    
-        #     elif trips: # trips
-        #         opp_turn_trips = True
-        #         opp_turn_trips_rank = max(trips)
-                
-        #     elif len(pairs) > 1: # two pair
-        #         opp_turn_two_pair = True
-        #         high_pair = max(pairs)
-        #         pairs.remove(max(pairs))
-        #         low_pair = max(pairs)
-        #         opp_turn_two_pair_ranks = high_pair, low_pair
-                
-        #     elif pairs: # pair
-        #         opp_turn_pair = True
-        #         opp_turn_pair_rank = max(pairs)
-             
-                    
-        #     opp_flush = check_for_flush(total_turn_cards, 4)
-        #     opp_turn_flush_cards = set()
-        #     if opp_flush:
-        #         for suit_index, cards_in in opp_flush.items():
-        #             if len(cards_in) == 5:
-        #                 opp_turn_flush = True
-        #                 opp_turn_flush_suit = suit_index
-        #                 opp_turn_flush_cards.update(cards_in)
-        #                 opp_turn_flush_high = max(cards_in)
-        #             if len(cards_in) == 4:
-        #                 opp_turn_flush_draw = True
-        #                 opp_turn_flush_draw_suit = suit_index
-        #                 opp_turn_flush_cards.update(cards_in)
-        #                 opp_turn_flush_high = max(cards_in)
-                        
-        #     opp_straight = check_for_straight(total_turn_cards, 4)
-        #     opp_turn_straight_high = 0
-        #     opp_turn_draw_needed = set()
-        #     if opp_straight:
-        #         for high_card, (cards_in, cards_out) in opp_straight.items():
-        #             if len(cards_in) == 5:
-        #                 if opp_turn_flush:
-        #                     if cards_in.issubset(opp_turn_flush_cards):
-        #                         opp_turn_straight_flush = True
-        #                         opp_turn_straight_flush_high = high_card
-        #                 else:
-        #                     opp_turn_straight = True
-        #                     if high_card > opp_turn_straight_high:
-        #                         opp_turn_straight_high = high_card
-        #                         opp_turn_straight_cards = cards_in
-        #             elif len(cards_in) == 4 and not opp_turn_straight: # four in straight with no full straight
-        #                 opp_turn_straight_draw = True
-        #                 opp_turn_draw_needed.add(*cards_out)
-                            
-                            
-        #     if opp_turn_straight_flush:
-        #         opp_turn_high_hand = 8
-        #         opp_turn_high_hand_numbers = opp_turn_straight_flush_high
-        #     elif opp_turn_quads:
-        #         opp_turn_high_hand = 7
-        #         opp_turn_high_hand_numbers = opp_turn_quads_rank
-        #     elif opp_turn_full_house:
-        #         opp_turn_high_hand = 6
-        #         opp_turn_high_hand_numbers = opp_turn_full_house_ranks
-        #     elif opp_turn_flush:
-        #         opp_turn_high_hand = 5
-        #         opp_turn_high_hand_numbers = max(opp_turn_flush_cards)
-        #     elif opp_turn_straight:
-        #         opp_turn_high_hand = 4
-        #         opp_turn_high_hand_numbers = opp_turn_straight_high
-        #     elif opp_turn_trips:
-        #         opp_turn_high_hand = 3
-        #         opp_turn_high_hand_numbers = opp_turn_trips_rank
-        #     elif opp_turn_two_pair:
-        #         opp_turn_high_hand = 2
-        #         opp_turn_high_hand_numbers = opp_turn_two_pair_ranks
-        #     elif opp_turn_pair:
-        #         opp_turn_high_hand = 1
-        #         opp_turn_high_hand_numbers = opp_turn_pair_rank
-        #     else:
-        #         opp_turn_high_hand = 0
-                
-                
-        #     opp_flop_double_flush_draw = False
-        #     opp_flop_flush_draw = False
-        #     opp_flop_flush = False
-        #     opp_flop_flush_suit = -1
-        #     opp_flop_flush_high = -1 # high in the flush for tie-break
-            
-        #     opp_flop_double_straight_draw = False
-        #     opp_flop_straight_draw = False
-        #     opp_flop_straight = False
-        #     opp_flop_straight_high = -1
-        #     opp_flop_draw_needed = set() # cards needed for a draw
-        #     opp_flop_double_draw_needed = set() # pairs of cards needed for a double draw
-            
-        #     opp_flop_trips = False
-        #     opp_flop_trips_rank = -1
-            
-        #     opp_flop_pair = False
-        #     opp_flop_pair_rank = -1
-            
-        #     opp_flop_two_pair = False
-        #     opp_flop_two_pair_ranks = -1, -1 # higher rank first
-            
-        #     opp_flop_full_house = False
-        #     opp_flop_full_house_ranks = -1, -1 # three of a kind first
-            
-        #     opp_flop_quads = False
-        #     opp_flop_quads_rank = -1
-            
-        #     opp_flop_high_hand = 0 # string representing the best hand we have
-        #     opp_flop_high_hand_numbers = -1
-            
-        #     opp_flop_straight_flush = False
-                
-                
-        #     total_flop_cards = opp_cards + self.flop_cards
-            
-        #     opp_pairs = check_for_pair(total_flop_cards)
-        #     pairs = set()
-        #     trips = set()
-        #     quads = set()
-        #     for rank, num in opp_pairs.items():
-        #         if num == 4:
-        #             quads.add(rank)
-        #         if num == 3:
-        #             trips.add(rank)
-        #         if num == 2:
-        #             pairs.add(rank)
-                    
-        #     if quads: # quads
-        #         opp_flop_quads = True
-        #         opp_flop_quads_rank = max(quads)
-                
-        #     elif len(trips) > 1 or trips and pairs: # full house
-        #         opp_flop_full_house = True
-        #         if len(trips) > 1 and pairs:
-        #             opp_flop_full_house_ranks = max(trips), max(min(trips), max(pairs))
-        #         elif pairs:
-        #             opp_flop_full_house_ranks = max(trips), max(pairs)
-        #         else:
-        #             opp_flop_full_house_ranks = max(trips), min(trips)
-                    
-        #     elif trips: # trips
-        #         opp_flop_trips = True
-        #         opp_flop_trips_rank = max(trips)
-                
-        #     elif len(pairs) > 1: # two pair
-        #         opp_flop_two_pair = True
-        #         high_pair = max(pairs)
-        #         pairs.remove(max(pairs))
-        #         low_pair = max(pairs)
-        #         opp_flop_two_pair_ranks = high_pair, low_pair
-                
-        #     elif pairs: # pair
-        #         opp_flop_pair = True
-        #         opp_flop_pair_rank = max(pairs)
-             
-                    
-        #     opp_flush = check_for_flush(total_flop_cards, 3)
-        #     opp_flop_flush_cards = set()
-        #     if opp_flush:
-        #         for suit_index, cards_in in opp_flush.items():
-        #             opp_flop_flush_high = max(cards_in)
-        #             if len(cards_in) == 5:
-        #                 opp_flop_flush = True
-        #                 opp_flop_flush_suit = suit_index
-        #                 opp_flop_flush_cards.update(cards_in)
-        #             if len(cards_in) == 4:
-        #                 opp_flop_flush_draw = True
-        #                 opp_flop_flush_draw_suit = suit_index
-        #                 opp_flop_flush_cards.update(cards_in)
-        #             if len(cards_in) == 3:
-        #                 opp_flop_flush_double_draw = True
-        #                 opp_flop_flush_draw_suit = suit_index
-        #                 opp_flop_flush_cards.update(cards_in)
-                        
-        #     opp_straight = check_for_straight(total_flop_cards, 3)
-        #     opp_flop_straight_high = 0
-        #     opp_flop_draw_needed = set()
-        #     opp_flop_double_draw_needed = set()
-        #     if opp_straight:
-        #         for high_card, (cards_in, cards_out) in opp_straight.items():
-        #             if len(cards_in) == 5:
-        #                 if opp_flop_flush:
-        #                     if cards_in.issubset(opp_flop_flush_cards):
-        #                         opp_flop_straight_flush = True
-        #                         opp_flop_straight_flush_high = high_card
-        #                 else:
-        #                     opp_flop_straight = True
-        #                     if high_card > opp_flop_straight_high:
-        #                         opp_flop_straight_high = high_card
-        #                         opp_flop_straight_cards = cards_in
-        #             elif len(cards_in) == 4 and not opp_flop_straight: # four in straight with no full straight
-        #                 opp_flop_straight_draw = True
-        #                 opp_flop_draw_needed.add(*cards_out)
-        #             elif len(cards_in) == 3 and not opp_flop_straight and not opp_flop_straight_draw: # four in straight with no full straight
-        #                 opp_flop_straight_double_draw = True
-        #                 opp_flop_double_draw_needed.update(cards_out)
-                            
-                            
-        #     if opp_flop_straight_flush:
-        #         opp_flop_high_hand = 8
-        #         opp_flop_high_hand_numbers = opp_flop_straight_flush_high
-        #     elif opp_flop_quads:
-        #         opp_flop_high_hand = 7
-        #         opp_flop_high_hand_numbers = opp_flop_quads_rank
-        #     elif opp_flop_full_house:
-        #         opp_flop_high_hand = 6
-        #         opp_flop_high_hand_numbers = opp_flop_full_house_ranks
-        #     elif opp_flop_flush:
-        #         opp_flop_high_hand = 5
-        #         opp_flop_high_hand_numbers = max(opp_flop_flush_cards)
-        #     elif opp_flop_straight:
-        #         opp_flop_high_hand = 4
-        #         opp_flop_high_hand_numbers = opp_flop_straight_high
-        #     elif opp_flop_trips:
-        #         opp_flop_high_hand = 3
-        #         opp_flop_high_hand_numbers = opp_flop_trips_rank
-        #     elif opp_flop_two_pair:
-        #         opp_flop_high_hand = 2
-        #         opp_flop_high_hand_numbers = opp_flop_two_pair_ranks
-        #     elif opp_flop_pair:
-        #         opp_flop_high_hand = 1
-        #         opp_flop_high_hand_numbers = opp_flop_pair_rank
-        #     else:
-        #         opp_flop_high_hand = 0
-            
-            
+        print("Pre-flop aggression:", self.pre_flop_aggression)
+        print("Flop aggression:", self.flop_aggression)
+        print("Turn aggression:", self.turn_aggression)
+        print("River aggression:", self.river_aggression)
+        
                     
         if round_num == NUM_ROUNDS:
             print("Final Time:", game_clock)
@@ -1085,7 +611,7 @@ class Player(Bot):
             else:
                 opp_bid_avg = self.opp_bid_avg
                 opp_bid_stdv = self.opp_bid_var**(1/2)
-            bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 10
+            bid = int(opp_bid_avg + opp_bid_stdv * 1.96 * (diff-0.3) * 10) - 10 - int(opp_bid_stdv)
             return BidAction(min(150, my_stack, max(bid, 2*pot_size)))
         
         if self.all_in:
@@ -1831,88 +1357,6 @@ class Player(Bot):
                     return action
                     
                 return action
-
-
-            # if big_blind and my_pip == 0:
-                
-            #     # we checked and opponent bet
-                
-            #     print("Opponent bets on flop after we check")
-                
-            #     if pot_size > 120:
-            #         if can_raise:
-            #             high_raise = RaiseAction(max(min_raise,min(50, max_raise)))
-            #             medium_raise = RaiseAction(max(min_raise,min(25, max_raise)))
-            #             small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
-            #         else:
-            #             high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
-            #     else:
-            #         if can_raise:
-            #             high_raise = RaiseAction(max(min_raise,min(25, max_raise)))
-            #             medium_raise = RaiseAction(max(min_raise,min(15, max_raise)))
-            #             small_raise = RaiseAction(max(min_raise, min(10, max_raise)))
-            #         else:
-            #             high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
-                
-            #     if self.high_hand >= 4:
-            #         return high_raise
-                
-            #     if self.high_hand == 3:
-            #         if self.board_trips:
-            #             return action
-            #         if self.board_flush_need_1 or self.board_straight_need_1:
-            #             return action
-            #         if self.board_flush_need_2 or self.board_straight_need_2:
-            #             if not high_flop_bet:
-            #                 return CallAction()
-            #             return action
-            #         if self.board_pair:
-            #             if self.my_high_card >= 10 or self.my_high_card >= 8 and not self.high_cards_or_pair_likely:
-            #                 return small_raise
-            #         return CallAction()
-                
-            #     if self.high_hand == 2:
-            #         if self.board_two_pair:
-            #             if self.my_high_card == 12 and not high_flop_bet:
-            #                 return CallAction()
-            #             return action
-            #         if self.board_flush_need_1 or self.board_straight_need_1:
-            #             return action
-            #         if self.board_pair:
-            #             if self.two_pair_ranks[0] > self.board_pair_rank and not high_flop_bet:
-            #                 return CallAction()
-            #             if medium_flop_bet and self.two_pair_ranks[1] >= self.sorted_board_ranks[2]:
-            #                 return CallAction()
-            #             return action
-                    
-            #         if self.board_flush_need_2 or self.board_flush_need_2 and medium_flop_bet or small_flop_bet:
-            #             return CallAction()
-            #         return action
-                
-            #     if self.flush_draw:
-            #         if self.board_flush_need_2:
-            #             if (self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely and medium_flop_bet) or small_flop_bet:
-            #                 return CallAction()
-            #             return action
-            #         return CallAction()
-                    
-            #     if self.straight_draw:
-            #         if self.board_flush_need_2 and medium_flop_bet or small_flop_bet:
-            #             return CallAction()
-            #         if self.board_straight_need_2:
-            #             if self.my_straight_high > self.board_straight_high or medium_flop_bet:
-            #                 return CallAction()
-            #             return action
-            #         return CallAction()
-                    
-            #     if self.high_hand == 1:
-            #         if self.board_pair or self.board_flush_need_2 or self.board_straight_need_2:
-            #             return action
-            #         if self.pair_rank == self.sorted_board_ranks[0] and medium_flop_bet:
-            #             return CallAction()
-            #         return action
-                    
-            #     return action
                 
             if my_pip != 0:
                 
@@ -3059,14 +2503,14 @@ class Player(Bot):
                     if can_raise:
                         high_raise = RaiseAction(max_raise)
                         medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(28, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 else:
                     if can_raise:
                         high_raise = RaiseAction(max(min_raise,min(60, max_raise)))
                         medium_raise = RaiseAction(max(min_raise,min(35, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(15, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(20, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
@@ -3095,8 +2539,9 @@ class Player(Bot):
                         
                     if self.board_two_pair:
                         if self.full_house_ranks[0] >= self.board_two_pair_ranks[0]: # we have three of a kind on the high card
-
-                            return high_raise
+                            return small_raise
+                        return medium_raise
+                    return small_raise
                        
                 if self.high_hand == 5:
                     
