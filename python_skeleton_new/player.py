@@ -367,10 +367,10 @@ class Player(Bot):
             opp_river_bet_stdv = 0
         
         
-        self.pre_flop_aggression = average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, average_opp_pre_flop_bet, average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv
-        self.flop_aggression = average_opp_flop_bet + opp_flop_bet_stdv, average_opp_flop_bet, average_opp_flop_bet - opp_flop_bet_stdv, average_opp_flop_bet - 3 * opp_flop_bet_stdv
-        self.turn_aggression = average_opp_turn_bet + opp_turn_bet_stdv, average_opp_turn_bet, average_opp_turn_bet - opp_turn_bet_stdv, average_opp_turn_bet - 3 * opp_turn_bet_stdv
-        self.river_aggression = average_opp_river_bet + opp_river_bet_stdv, average_opp_river_bet, average_opp_river_bet - opp_river_bet_stdv, average_opp_river_bet - 3 * opp_river_bet_stdv
+        self.pre_flop_aggression = average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, average_opp_pre_flop_bet, average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.15)
+        self.flop_aggression = average_opp_flop_bet + opp_flop_bet_stdv, average_opp_flop_bet, average_opp_flop_bet - opp_flop_bet_stdv, min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.15)
+        self.turn_aggression = average_opp_turn_bet + opp_turn_bet_stdv, average_opp_turn_bet, average_opp_turn_bet - opp_turn_bet_stdv, min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.15)
+        self.river_aggression = average_opp_river_bet + opp_river_bet_stdv, average_opp_river_bet, average_opp_river_bet - opp_river_bet_stdv, min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.15)
         
         
                     
