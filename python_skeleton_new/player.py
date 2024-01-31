@@ -131,8 +131,13 @@ class Player(Bot):
             rank1,rank2 = rank2,rank1
             suit1,suit2 = suit2,suit1
             
-        self.aggression_betting_factor = (1.5*(NUM_ROUNDS - round_num) - my_bankroll)/1500
-        print("Aggression factor:", self.aggression_betting_factor)
+            
+        try:
+            self.aggression_betting_factor = 1 - my_bankroll/(1.5*(NUM_ROUNDS - round_num))
+        except ZeroDivisionError:
+            self.aggression_betting_factor = 1
+        if not self.forfeit:
+            print("Aggression factor:", round(self.aggression_betting_factor, 3))
 
         if pair:
             self.total_percentage = total_pair_percentages[rank1]
