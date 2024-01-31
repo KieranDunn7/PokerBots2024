@@ -115,11 +115,12 @@ class Player(Bot):
     
         if my_bankroll > (NUM_ROUNDS-round_num)*1.5 + 4 and not self.forfeit:
             self.forfeit = True
-            print(f"Forfeit in Round #{round_num}")
+            #print(f"Forfeit in Round #{round_num}")
         if not self.forfeit:
-             print()
-             print("Round Num:", round_num)
-             print()
+             #print()
+             #print("Round Num:", round_num)
+             #print()
+             pass
             
         rank1,rank2 = ranks_dict[my_cards[0][0]], ranks_dict[my_cards[1][0]]
         suit1,suit2 = my_cards[0][1], my_cards[1][1]
@@ -137,7 +138,8 @@ class Player(Bot):
         except ZeroDivisionError:
             self.aggression_betting_factor = 1
         if not self.forfeit:
-            print("Aggression factor:", round(self.aggression_betting_factor, 3))
+            #print("Aggression factor:", round(self.aggression_betting_factor, 3))
+            pass
 
         if pair:
             self.total_percentage = total_pair_percentages[rank1]
@@ -404,18 +406,19 @@ class Player(Bot):
             self.river_aggression = round(average_opp_river_bet, 3), round(average_opp_river_bet - opp_river_bet_stdv, 3), round(average_opp_river_bet - 2*opp_river_bet_stdv, 3), round(min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.08), 3)
 
         
-        print("Pre-flop aggression:", self.pre_flop_aggression)
-        print("Flop aggression:", self.flop_aggression)
-        print("Turn aggression:", self.turn_aggression)
-        print("River aggression:", self.river_aggression)
+        #print("Pre-flop aggression:", self.pre_flop_aggression)
+        #print("Flop aggression:", self.flop_aggression)
+        #print("Turn aggression:", self.turn_aggression)
+        #print("River aggression:", self.river_aggression)
         
                     
-        if round_num == NUM_ROUNDS:
-            print("Final Time:", game_clock)
-            print("Opp pre-flop actions: ", self.total_opp_pre_flop_actions)
-            print("Opp flop actions: ", self.total_opp_flop_actions)
-            print("Opp turn actions: ", self.total_opp_turn_actions)
-            print("Opp river actions: ", self.total_opp_river_actions)
+        #if round_num == NUM_ROUNDS:
+            # print("Final Time:", game_clock)
+            # print("Opp pre-flop actions: ", self.total_opp_pre_flop_actions)
+            # print("Opp flop actions: ", self.total_opp_flop_actions)
+            # print("Opp turn actions: ", self.total_opp_turn_actions)
+            # print("Opp river actions: ", self.total_opp_river_actions)
+            #pass
         
 
     def get_action(self, game_state, round_state, active):
@@ -668,7 +671,6 @@ class Player(Bot):
                 self.opp_pre_flop_bet = continue_cost / pot_size
                 
             if continue_cost == BIG_BLIND - SMALL_BLIND:
-                print("small blind")
                 # small blind
                 if self.total_percentage < 0.45:
                     return FoldAction()
@@ -799,7 +801,7 @@ class Player(Bot):
             if quads: # quads
                 self.quads = True
                 self.quads_rank = max(quads)
-                print(self.quads_rank, "quads on street", street)
+                #print(self.quads_rank, "quads on street", street)
                 
             elif len(trips) > 1 or trips and pairs: # full house
                 self.full_house = True
@@ -809,12 +811,12 @@ class Player(Bot):
                     self.full_house_ranks = max(trips), max(pairs)
                 else:
                     self.full_house_ranks = max(trips), min(trips)
-                print(self.full_house_ranks, "full house on street", street)
+                #print(self.full_house_ranks, "full house on street", street)
                     
             elif trips: # trips
                 self.trips = True
                 self.trips_rank = max(trips)
-                print(self.trips_rank, "trips on street", street)
+                #print(self.trips_rank, "trips on street", street)
                 
             elif len(pairs) > 1: # two pair
                 self.two_pair = True
@@ -822,19 +824,19 @@ class Player(Bot):
                 pairs.remove(max(pairs))
                 low_pair = max(pairs)
                 self.two_pair_ranks = high_pair, low_pair
-                print(self.two_pair_ranks, "two pair on street", street)
+                #print(self.two_pair_ranks, "two pair on street", street)
                 
             elif pairs: # pair
                 self.pair = True
                 self.pair_rank = max(pairs)
-                print(self.pair_rank, "pair on street", street)
+                #print(self.pair_rank, "pair on street", street)
              
                     
             our_flush = check_for_flush(our_total_cards, street)
             if our_flush:
                 for suit_index, cards_in in our_flush.items():
                     if len(cards_in) >= 5: # full flush
-                        print("Flush on street", street)
+                        #print("Flush on street", street)
                         self.flush = True
                         self.flush_draw = False
                         self.flush_double_draw = False
@@ -853,7 +855,7 @@ class Player(Bot):
                                 
                         
                     elif len(cards_in) == 4: # four in a suit
-                        print("Flush draw on street", street)
+                        #print("Flush draw on street", street)
                         self.flush_draw = True
                         self.double_flush_draw = False
                         self.flush_suit = suit_index
@@ -871,7 +873,7 @@ class Player(Bot):
                         
                     else: # three in a suit
                         self.double_flush_draw = True
-                        print("Flush double draw on street", street)
+                        #print("Flush double draw on street", street)
                         if len(our_flush) == 2: # three in a suit for two suits
                             self.flush_suit = []
                             for suit_index in our_flush:
@@ -927,9 +929,9 @@ class Player(Bot):
                                 self.straight_draw = False
                                 self.double_straight_draw = False
                                 self.straight_flush_high = high_card
-                                print(high_card, "high straight flush on street", street)
+                                #print(high_card, "high straight flush on street", street)
                         elif not self.straight_flush:
-                            print(high_card, "high straight on street", street)
+                            #print(high_card, "high straight on street", street)
                             self.straight = True
                             self.straight_draw = False
                             self.double_straight_draw = False
@@ -948,7 +950,7 @@ class Player(Bot):
                                     self.my_straight_high = max(self.my_straight)
                                         
                     elif len(cards_in) == 4 and not self.straight and not self.straight_flush: # four in straight with no full straight
-                        print(high_card, "high straight draw on street", street)
+                        #print(high_card, "high straight draw on street", street)
                         if not self.straight_draw: # clear extra cards from double straight draw
                             self.my_straight, self.board_straight = set(), set()
                         self.straight_draw = True
@@ -966,7 +968,7 @@ class Player(Bot):
                             self.my_straight_high = max(self.my_straight)
                         
                     elif not self.straight and not self.straight_draw and not self.straight_flush: # three in a straight with no straight draw or full straight
-                        print(high_card, "high straight double draw on street", street)
+                        #print(high_card, "high straight double draw on street", street)
                         self.double_straight_draw = True
                         self.double_draw_needed.add(tuple(cards_out))
                         num_in = 0
@@ -1012,7 +1014,8 @@ class Player(Bot):
                 self.high_hand_numbers = self.my_high_card
                 
             if street == 5:
-                print("Final Hand:", self.high_hand_numbers, high_hand_dict[self.high_hand])
+                #print("Final Hand:", self.high_hand_numbers, high_hand_dict[self.high_hand])
+                pass
                 
                 
             # analyzing their hand
@@ -1140,9 +1143,9 @@ class Player(Bot):
                         self.board_straight_needed.add(tuple(cards_out))
                         self.opp_outs[4] = self.board_straight_needed
                         
-            print()
-            print("Opp outs on street", street, self.opp_outs)
-            print()
+            #print()
+            #print("Opp outs on street", street, self.opp_outs)
+            #print()
 
 
 
@@ -1164,7 +1167,7 @@ class Player(Bot):
             
             if continue_cost == 0 and big_blind:
                 
-                print("Start betting on flop")
+                #print("Start betting on flop")
                 
                 # starting betting
                 
@@ -1262,7 +1265,7 @@ class Player(Bot):
                 
                 # opponent checks (or makes small bet)
                 
-                print("Opponent checks on flop")
+                #print("Opponent checks on flop")
                 
                 if continue_cost == 0:
                     action = CheckAction()
@@ -1356,7 +1359,7 @@ class Player(Bot):
                 
             if my_pip != 0:
                 
-                print("Opponent raises on flop")
+                #print("Opponent raises on flop")
                 
                 # we bet and opponent raised
                 
@@ -1479,7 +1482,7 @@ class Player(Bot):
             
             # opponent bet
             
-            print("Opponent bet on flop")
+            #print("Opponent bet on flop")
             
             if pot_size > 120:
                 if can_raise:
@@ -1624,7 +1627,7 @@ class Player(Bot):
             
             if continue_cost == 0 and big_blind:
                 # starting betting
-                print("Start betting on turn")
+                #print("Start betting on turn")
                 
                 action = CheckAction()
                 if pot_size > 160:
@@ -1746,7 +1749,7 @@ class Player(Bot):
                 
             if my_pip == 0 and continue_cost <= max(5, pot_size/25):
                 
-                print("Opponent checks on turn")
+                #print("Opponent checks on turn")
                 
                 # opponent checks (or makes small bet)
                 if continue_cost == 0:
@@ -1887,7 +1890,7 @@ class Player(Bot):
             
             if big_blind and my_pip == 0:
                 
-                print("Opponent bet on turn after we checked")
+                #print("Opponent bet on turn after we checked")
                 
                 # we checked and opponent bet
                 
@@ -1969,7 +1972,7 @@ class Player(Bot):
                 
                 # we bet and opponent raised
                 
-                print("Opponent raised on turn")
+                #print("Opponent raised on turn")
                 
                 if pot_size > 160:
                     if can_raise:
@@ -2129,7 +2132,7 @@ class Player(Bot):
             
             # opponent bet
             
-            print("Opponent bet on turn")
+            #print("Opponent bet on turn")
             
             if pot_size > 160:
                 if can_raise:
@@ -2310,7 +2313,7 @@ class Player(Bot):
                 
             if continue_cost == 0 and big_blind:
                 
-                print("Start betting on river")
+                #print("Start betting on river")
                 
                 if pot_size > 200:
                     if can_raise:
@@ -2449,7 +2452,7 @@ class Player(Bot):
                 else:
                     action = CallAction()
                     
-                print("Opponent checks on river")
+                #print("Opponent checks on river")
                 # opponent checks (or makes small bet)
                 
                 if pot_size > 200:
@@ -2592,7 +2595,7 @@ class Player(Bot):
                 
             if big_blind and my_pip == 0:
                 
-                print("Opponent bets on river after we checked")
+                #print("Opponent bets on river after we checked")
                 
                 # we checked and opponent bet
                 
@@ -2646,7 +2649,7 @@ class Player(Bot):
                 
                 # we bet and opponent raised
                 
-                print("Opponent raised on river")
+                #print("Opponent raised on river")
                 
                 if pot_size > 200:
                     if can_raise:
@@ -2773,7 +2776,7 @@ class Player(Bot):
                 
             # opponent bet
             
-            print("Opponent bet on river")
+            #print("Opponent bet on river")
         
             if pot_size > 200:
                 if can_raise:
