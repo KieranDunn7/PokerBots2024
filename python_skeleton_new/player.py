@@ -27,8 +27,6 @@ class Player(Bot):
         Nothing.
         '''
         
-        .
-        
         self.forfeit = False # decides whether the bot can win by folding/checking every future action
 
         self.opp_bids = []
