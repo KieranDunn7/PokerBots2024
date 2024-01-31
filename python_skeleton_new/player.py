@@ -1555,7 +1555,7 @@ class Player(Bot):
                     if self.my_flush_high >= 10 or self.my_flush_high >= 8 and not self.high_cards_or_pair_likely:
                         return CallAction()
                 elif self.board_pair:
-                    if self.high_flop_bet:
+                    if high_flop_bet:
                         return CallAction()
                 else:
                     return CallAction()
