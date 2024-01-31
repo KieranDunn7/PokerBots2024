@@ -130,6 +130,9 @@ class Player(Bot):
         if rank1 < rank2:
             rank1,rank2 = rank2,rank1
             suit1,suit2 = suit2,suit1
+            
+        self.aggression_betting_factor = (1.5*(NUM_ROUNDS - round_num) - my_bankroll)/1500
+        print("Aggression factor:", self.aggression_betting_factor)
 
         if pair:
             self.total_percentage = total_pair_percentages[rank1]
@@ -369,21 +372,29 @@ class Player(Bot):
         
         if opp_pre_flop_bet_rate >= 0.25 and my_bankroll < NUM_ROUNDS - round_num:
             self.pre_flop_aggression = round(average_opp_pre_flop_bet + opp_pre_flop_bet_stdv, 3), round(average_opp_pre_flop_bet, 3), round(average_opp_pre_flop_bet - opp_pre_flop_bet_stdv, 3), round(min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.1), 3)
+        elif opp_pre_flop_bet_rate >= 0.66:
+            self.pre_flop_aggression = round(average_opp_pre_flop_bet + 2*opp_pre_flop_bet_stdv, 3), round(average_opp_pre_flop_bet+opp_pre_flop_bet_stdv, 3), round(average_opp_pre_flop_bet, 3), round(min(average_opp_pre_flop_bet - 2 * opp_pre_flop_bet_stdv, 0.1), 3)
         else:
             self.pre_flop_aggression = round(average_opp_pre_flop_bet, 3), round(average_opp_pre_flop_bet- opp_pre_flop_bet_stdv, 3), round(average_opp_pre_flop_bet - 2*opp_pre_flop_bet_stdv, 3), round(min(average_opp_pre_flop_bet - 3 * opp_pre_flop_bet_stdv, 0.08), 3)
 
         if opp_flop_bet_rate >= 0.25 and my_bankroll < NUM_ROUNDS - round_num:
             self.flop_aggression = round(average_opp_flop_bet + opp_flop_bet_stdv, 3), round(average_opp_flop_bet, 3), round(average_opp_flop_bet - opp_flop_bet_stdv, 3), round(min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.1), 3)
+        elif opp_flop_bet_rate >= 0.66:
+            self.flop_aggression = round(average_opp_flop_bet + 2*opp_flop_bet_stdv, 3), round(average_opp_flop_bet+opp_flop_bet_stdv, 3), round(average_opp_flop_bet, 3), round(min(average_opp_flop_bet - 2 * opp_flop_bet_stdv, 0.1), 3)
         else:
             self.flop_aggression = round(average_opp_flop_bet, 3), round(average_opp_flop_bet - opp_flop_bet_stdv, 3), round(average_opp_flop_bet - 2*opp_flop_bet_stdv, 3), round(min(average_opp_flop_bet - 3 * opp_flop_bet_stdv, 0.08), 3)
 
         if opp_turn_bet_rate >= 0.25 and my_bankroll < NUM_ROUNDS - round_num:
             self.turn_aggression = round(average_opp_turn_bet + opp_turn_bet_stdv, 3), round(average_opp_turn_bet, 3), round(average_opp_turn_bet - opp_turn_bet_stdv, 3), round(min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.1), 3)
+        elif opp_turn_bet_rate >= 0.66:
+            self.turn_aggression = round(average_opp_turn_bet + 2*opp_turn_bet_stdv, 3), round(average_opp_turn_bet+opp_turn_bet_stdv, 3), round(average_opp_turn_bet, 3), round(min(average_opp_turn_bet - 2 * opp_turn_bet_stdv, 0.1), 3)
         else:
             self.turn_aggression = round(average_opp_turn_bet, 3), round(average_opp_turn_bet - opp_turn_bet_stdv, 3), round(average_opp_turn_bet - 2*opp_turn_bet_stdv, 3), round(min(average_opp_turn_bet - 3 * opp_turn_bet_stdv, 0.08), 3)
         
         if opp_river_bet_rate >= 0.25 and my_bankroll < NUM_ROUNDS - round_num:
             self.river_aggression = round(average_opp_river_bet + opp_river_bet_stdv, 3), round(average_opp_river_bet, 3), round(average_opp_river_bet - opp_river_bet_stdv, 3), round(min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.1), 3)
+        elif opp_river_bet_rate >= 0.66:
+            self.river_aggression = round(average_opp_river_bet + 2*opp_river_bet_stdv, 3), round(average_opp_river_bet + opp_river_bet_stdv, 3), round(average_opp_river_bet, 3), round(min(average_opp_river_bet - 2 * opp_river_bet_stdv, 0.1), 3)
         else:
             self.river_aggression = round(average_opp_river_bet, 3), round(average_opp_river_bet - opp_river_bet_stdv, 3), round(average_opp_river_bet - 2*opp_river_bet_stdv, 3), round(min(average_opp_river_bet - 3 * opp_river_bet_stdv, 0.08), 3)
 
@@ -565,38 +576,55 @@ class Player(Bot):
         self.all_in = my_stack == 0
         self.opp_all_in = opp_stack == 0
         
-        if continue_cost > pot_size * self.flop_aggression[0]:
-            high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = False, False, False, False
-        elif continue_cost > pot_size * self.flop_aggression[1]:
-            high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, False, False, False
-        elif continue_cost > pot_size * self.flop_aggression[2]:
-            high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, True, False, False
-        elif continue_cost > pot_size * self.flop_aggression[3]:
-            high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, True, True, False
-        else:
-            high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, True, True, True
+        if street == 0:
+            if continue_cost > pot_size * self.pre_flop_aggression[0]:
+                high_pre_flop_bet, medium_pre_flop_bet, small_pre_flop_bet, tiny_pre_flop_bet = False, False, False, False
+            elif continue_cost > pot_size * self.flop_aggression[1]:
+                high_pre_flop_bet, medium_pre_flop_bet, small_pre_flop_bet, tiny_pre_flop_bet = True, False, False, False
+            elif continue_cost > pot_size * self.flop_aggression[2]:
+                high_pre_flop_bet, medium_pre_flop_bet, small_pre_flop_bet, tiny_pre_flop_bet = True, True, False, False
+            elif continue_cost > pot_size * self.flop_aggression[3]:
+                high_pre_flop_bet, medium_pre_flop_bet, small_pre_flop_bet, tiny_pre_flop_bet = True, True, True, False
+            else:
+                high_pre_flop_bet, medium_pre_flop_bet, small_pre_flop_bet, tiny_pre_flop_bet = True, True, True, True
+        
+        
+        if street == 3:
+            if continue_cost > pot_size * self.flop_aggression[0]:
+                high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = False, False, False, False
+            elif continue_cost > pot_size * self.flop_aggression[1]:
+                high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, False, False, False
+            elif continue_cost > pot_size * self.flop_aggression[2]:
+                high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, True, False, False
+            elif continue_cost > pot_size * self.flop_aggression[3]:
+                high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, True, True, False
+            else:
+                high_flop_bet, medium_flop_bet, small_flop_bet, tiny_flop_bet = True, True, True, True
+                
             
-        if continue_cost > pot_size * self.turn_aggression[0]:
-            high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = False, False, False, False
-        elif continue_cost > pot_size * self.turn_aggression[1]:
-            high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, False, False, False
-        elif continue_cost > pot_size * self.turn_aggression[2]:
-            high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, True, False, False
-        elif continue_cost > pot_size * self.turn_aggression[3]:
-            high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, True, True, False
-        else:
-            high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, True, True, True
-            
-        if continue_cost > pot_size * self.river_aggression[0]:
-            high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = False, False, False, False
-        elif continue_cost > pot_size * self.river_aggression[1]:
-            high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, False, False, False
-        elif continue_cost > pot_size * self.river_aggression[2]:
-            high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, True, False, False
-        elif continue_cost > pot_size * self.river_aggression[3]:
-            high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, True, True, False
-        else:
-            high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, True, True, True
+        if street == 4:
+            if continue_cost > pot_size * self.turn_aggression[0]:
+                high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = False, False, False, False
+            elif continue_cost > pot_size * self.turn_aggression[1]:
+                high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, False, False, False
+            elif continue_cost > pot_size * self.turn_aggression[2]:
+                high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, True, False, False
+            elif continue_cost > pot_size * self.turn_aggression[3]:
+                high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, True, True, False
+            else:
+                high_turn_bet, medium_turn_bet, small_turn_bet, tiny_turn_bet = True, True, True, True
+                
+        if street == 5:
+            if continue_cost > pot_size * self.river_aggression[0]:
+                high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = False, False, False, False
+            elif continue_cost > pot_size * self.river_aggression[1]:
+                high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, False, False, False
+            elif continue_cost > pot_size * self.river_aggression[2]:
+                high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, True, False, False
+            elif continue_cost > pot_size * self.river_aggression[3]:
+                high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, True, True, False
+            else:
+                high_river_bet, medium_river_bet, small_river_bet, tiny_river_bet = True, True, True, True
     
         if BidAction in legal_actions:
             if self.all_in:
@@ -649,7 +677,15 @@ class Player(Bot):
                     return RaiseAction(int(max(min_raise, min(1.38 * pot_size, max_raise))))
                 return CheckAction()
             self.high_cards_or_pair_likely = not(continue_cost == BIG_BLIND - SMALL_BLIND)
-            if self.total_percentage * (continue_cost + pot_size) - (1-self.total_percentage) * continue_cost < 0 and self.total_percentage < 0.52:
+            if tiny_pre_flop_bet:
+                adder = 0.1
+            if small_pre_flop_bet:
+                adder = 0.05
+            if medium_pre_flop_bet:
+                adder = 0.0375
+            if high_pre_flop_bet:
+                adder = 0.025
+            if (self.total_percentage+adder) * (continue_cost + pot_size) - (1-(self.total_percentage+adder)) * continue_cost < 0 and self.total_percentage < 0.52 - adder:
                 return FoldAction()
             
             # opp raised
@@ -667,6 +703,8 @@ class Player(Bot):
             opp_hand_size = 2
         
         if self.street_num < street: # new card dealt
+        
+            self.board_flush_min = 12
         
             self.double_flush_draw = False
             self.flush_draw = False
@@ -1043,7 +1081,7 @@ class Player(Bot):
                         self.on_board_hands.add(5)
                         self.board_flush_suit = suit_index
                         self.board_flush_max = max(cards_in)
-                        self.board_flush_min= min(cards_in)
+                        self.board_flush_min = min(cards_in)
                         
                     elif len(cards_in) == 4 and not self.board_flush: # four in a suit on board
                         self.board_flush_need_1 = True
@@ -1056,7 +1094,7 @@ class Player(Bot):
                         self.board_flush_need_2 = True
                         self.flush_suit = suit_index
                         self.board_flush_max = max(cards_in)
-                        self.board_flush_min= min(cards_in)
+                        self.board_flush_min = min(cards_in)
                         
                 self.opp_outs[5] = self.board_flush_suit
                         
@@ -1127,16 +1165,16 @@ class Player(Bot):
                 
                 if pot_size > 120:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise,min(35, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise,min(24, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(18, max_raise)))
+                        high_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*35, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*24, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*18, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise,min(35*pot_size/120, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise,min(24*pot_size/120, max_raise))))
-                        small_raise = RaiseAction(int(max(5,min_raise, min(18*pot_size/120, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*35*pot_size/120, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*24*pot_size/120, max_raise))))
+                        small_raise = RaiseAction(int(max(5,min_raise, min(self.aggression_betting_factor*18*pot_size/120, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 
@@ -1228,16 +1266,16 @@ class Player(Bot):
                     
                 if pot_size > 120:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise,min(28, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise,min(18, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(14, max_raise)))
+                        high_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*28, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*18, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*14, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise,min(28*pot_size/120, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise,min(18*pot_size/120, max_raise))))
-                        small_raise = RaiseAction(int(max(5,min_raise, min(14*pot_size/120, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*28*pot_size/120, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*18*pot_size/120, max_raise))))
+                        small_raise = RaiseAction(int(max(5,min_raise, min(self.aggression_betting_factor*14*pot_size/120, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
@@ -1319,16 +1357,16 @@ class Player(Bot):
                 
                 if pot_size > 120:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise,min(120, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(28, max_raise)))
+                        high_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*120, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*50, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*28, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise,min(120*pot_size/120, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise,min(50*pot_size/120, max_raise))))
-                        small_raise = RaiseAction(int(max(5,min_raise, min(28*pot_size/120, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*120*pot_size/120, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*50*pot_size/120, max_raise))))
+                        small_raise = RaiseAction(int(max(5,min_raise, min(self.aggression_betting_factor*28*pot_size/120, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
@@ -1440,16 +1478,16 @@ class Player(Bot):
             
             if pot_size > 120:
                 if can_raise:
-                    high_raise = RaiseAction(max(min_raise,min(150, max_raise)))
-                    medium_raise = RaiseAction(max(min_raise,min(60, max_raise)))
-                    small_raise = RaiseAction(max(min_raise, min(32, max_raise)))
+                    high_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*150, max_raise)))
+                    medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*60, max_raise)))
+                    small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*32, max_raise)))
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             else:
                 if can_raise:
-                    high_raise = RaiseAction(int(max(min_raise,min(150*pot_size/120, max_raise))))
-                    medium_raise = RaiseAction(int(max(min_raise,min(60*pot_size/120, max_raise))))
-                    small_raise = RaiseAction(int(max(5,min_raise, min(32*pot_size/120, max_raise))))
+                    high_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*150*pot_size/120, max_raise))))
+                    medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*60*pot_size/120, max_raise))))
+                    small_raise = RaiseAction(int(max(5,min_raise, min(self.aggression_betting_factor*32*pot_size/120, max_raise))))
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             
@@ -1586,16 +1624,16 @@ class Player(Bot):
                 action = CheckAction()
                 if pot_size > 160:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise, min(50, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise,min(28, max_raise)))
-                        small_raise = RaiseAction(max(min_raise,min(20, max_raise)))
+                        high_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*50, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*28, max_raise)))
+                        small_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*20, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise,min(50*pot_size/160, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise,min(28*pot_size/160, max_raise))))
-                        small_raise = RaiseAction(int(max(6,min_raise,min(20*pot_size/160, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*50*pot_size/160, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*28*pot_size/160, max_raise))))
+                        small_raise = RaiseAction(int(max(6,min_raise,min(self.aggression_betting_factor*20*pot_size/160, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
@@ -1713,16 +1751,16 @@ class Player(Bot):
                     
                 if pot_size > 160:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise,min(40, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise,min(22, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(13, max_raise)))
+                        high_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*40, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*22, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*13, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise,min(40*pot_size/160, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise,min(22*pot_size/160, max_raise))))
-                        small_raise = RaiseAction(int(max(6,min_raise, min(13*pot_size/160, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*40*pot_size/160, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*22*pot_size/160, max_raise))))
+                        small_raise = RaiseAction(int(max(6,min_raise, min(self.aggression_betting_factor*13*pot_size/160, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
@@ -1850,16 +1888,16 @@ class Player(Bot):
                 
                 if pot_size > 160:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise, min(75, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise, min(50, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(28, max_raise)))
+                        high_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*75, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*50, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*28, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise, min(75*pot_size/160, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise, min(50*pot_size/160, max_raise))))
-                        small_raise = RaiseAction(int(6,max(min_raise, min(28*pot_size/160, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise, min(self.aggression_betting_factor*75*pot_size/160, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise, min(self.aggression_betting_factor*50*pot_size/160, max_raise))))
+                        small_raise = RaiseAction(int(max(6,min_raise, min(self.aggression_betting_factor*28*pot_size/160, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
@@ -1930,16 +1968,16 @@ class Player(Bot):
                 
                 if pot_size > 160:
                     if can_raise:
-                        high_raise = RaiseAction(max(min_raise, min(120, max_raise)))
-                        medium_raise = RaiseAction(max(min_raise, min(65, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(32, max_raise)))
+                        high_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*120, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*65, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*32, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
-                        high_raise = RaiseAction(int(max(min_raise, min(120*pot_size/160, max_raise))))
-                        medium_raise = RaiseAction(int(max(min_raise, min(65*pot_size/160, max_raise))))
-                        small_raise = RaiseAction(int(max(6,min_raise, min(32*pot_size/160, max_raise))))
+                        high_raise = RaiseAction(int(max(min_raise, min(self.aggression_betting_factor*120*pot_size/160, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise, min(self.aggression_betting_factor*65*pot_size/160, max_raise))))
+                        small_raise = RaiseAction(int(max(6,min_raise, min(self.aggression_betting_factor*32*pot_size/160, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
@@ -2090,16 +2128,16 @@ class Player(Bot):
             
             if pot_size > 160:
                 if can_raise:
-                    high_raise = RaiseAction(max(min_raise, min(120, max_raise)))
-                    medium_raise = RaiseAction(max(min_raise, min(50, max_raise)))
-                    small_raise = RaiseAction(max(min_raise, min(30, max_raise)))
+                    high_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*120, max_raise)))
+                    medium_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*50, max_raise)))
+                    small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*30, max_raise)))
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             else:
                 if can_raise:
-                    high_raise = RaiseAction(int(max(min_raise, min(120*pot_size/160, max_raise))))
-                    medium_raise = RaiseAction(int(max(min_raise, min(50*pot_size/160, max_raise))))
-                    small_raise = RaiseAction(int(max(6,min_raise, min(30*pot_size/160, max_raise))))
+                    high_raise = RaiseAction(int(max(min_raise, min(self.aggression_betting_factor*120*pot_size/160, max_raise))))
+                    medium_raise = RaiseAction(int(max(min_raise, min(self.aggression_betting_factor*50*pot_size/160, max_raise))))
+                    small_raise = RaiseAction(int(max(6,min_raise, min(self.aggression_betting_factor*30*pot_size/160, max_raise))))
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             
@@ -2272,15 +2310,15 @@ class Player(Bot):
                 if pot_size > 200:
                     if can_raise:
                         high_raise = RaiseAction(max_raise)
-                        medium_raise = RaiseAction(max(min_raise,min(100, max_raise)))
-                        small_raise = RaiseAction(max(min_raise,min(50, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*100, max_raise)))
+                        small_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*50, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 else:
                     if can_raise:
                         high_raise = RaiseAction(int(max(min_raise, max_raise*pot_size/200)))
-                        medium_raise = RaiseAction(int(max(min_raise,min(100*pot_size/200, max_raise))))
-                        small_raise = RaiseAction(int(max(8,min_raise,min(50*pot_size/200, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*100*pot_size/200, max_raise))))
+                        small_raise = RaiseAction(int(max(8,min_raise,min(self.aggression_betting_factor*50*pot_size/200, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CheckAction(), CheckAction(), CheckAction()
                 
@@ -2412,15 +2450,15 @@ class Player(Bot):
                 if pot_size > 200:
                     if can_raise:
                         high_raise = RaiseAction(max_raise)
-                        medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*50, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*25, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 else:
                     if can_raise:
                         high_raise = RaiseAction(int(max(min_raise,max_raise*pot_size/200)))
-                        medium_raise = RaiseAction(int(max(min_raise,min(50*pot_size/200, max_raise))))
-                        small_raise = RaiseAction(int(max(8,min_raise, min(25*pot_size/200, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*50*pot_size/200, max_raise))))
+                        small_raise = RaiseAction(int(max(8,min_raise, min(self.aggression_betting_factor*25*pot_size/200, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = action, action, action
                 
@@ -2556,15 +2594,15 @@ class Player(Bot):
                 if pot_size > 200:
                     if can_raise:
                         high_raise = RaiseAction(max_raise)
-                        medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(40, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*50, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*40, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
                         high_raise = RaiseAction(int(max(min_raise, max_raise*pot_size/200)))
-                        medium_raise = RaiseAction(int(max(min_raise,min(50*pot_size/200, max_raise))))
-                        small_raise = RaiseAction(int(max(8,min_raise, min(40*pot_size/200, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*50*pot_size/200, max_raise))))
+                        small_raise = RaiseAction(int(max(8,min_raise, min(self.aggression_betting_factor*40*pot_size/200, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
@@ -2608,15 +2646,15 @@ class Player(Bot):
                 if pot_size > 200:
                     if can_raise:
                         high_raise = RaiseAction(max_raise)
-                        medium_raise = RaiseAction(max(min_raise,min(55, max_raise)))
-                        small_raise = RaiseAction(max(min_raise, min(30, max_raise)))
+                        medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*60, max_raise)))
+                        small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*30, max_raise)))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 else:
                     if can_raise:
                         high_raise = RaiseAction(int(max(min_raise, max_raise*pot_size/200)))
-                        medium_raise = RaiseAction(int(max(min_raise,min(55*pot_size/200, max_raise))))
-                        small_raise = RaiseAction(int(max(8,min_raise, min(30*pot_size/200, max_raise))))
+                        medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*60*pot_size/200, max_raise))))
+                        small_raise = RaiseAction(int(max(8,min_raise, min(self.aggression_betting_factor*30*pot_size/200, max_raise))))
                     else:
                         high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
                 
@@ -2735,15 +2773,15 @@ class Player(Bot):
             if pot_size > 200:
                 if can_raise:
                     high_raise = RaiseAction(max_raise)
-                    medium_raise = RaiseAction(max(min_raise,min(50, max_raise)))
-                    small_raise = RaiseAction(max(min_raise, min(25, max_raise)))
+                    medium_raise = RaiseAction(max(min_raise,min(self.aggression_betting_factor*50, max_raise)))
+                    small_raise = RaiseAction(max(min_raise, min(self.aggression_betting_factor*25, max_raise)))
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
             else:
                 if can_raise:
                     high_raise = RaiseAction(int(max(min_raise, max_raise*pot_size/200)))
-                    medium_raise = RaiseAction(int(max(min_raise,min(50*pot_size/200, max_raise))))
-                    small_raise = RaiseAction(int(max(8,min_raise, min(25*pot_size/200, max_raise))))
+                    medium_raise = RaiseAction(int(max(min_raise,min(self.aggression_betting_factor*50*pot_size/200, max_raise))))
+                    small_raise = RaiseAction(int(max(8,min_raise, min(self.aggression_betting_factor*25*pot_size/200, max_raise))))
                 else:
                     high_raise, medium_raise, small_raise = CallAction(), CallAction(), CallAction()
 
